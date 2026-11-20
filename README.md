@@ -6,11 +6,11 @@ and open it in a browser. No server, install, sign-in, trackers, or external ass
 ## Use it
 
 - It opens on **today** in your device's local time. This is a single
-  phone-first screen at all widths. See one exercise at a time with its movement
-  cue, prescription and large **Previous / Next** buttons. Tap another weekday
-  to see that workout.
+  phone-first screen at all widths. See the exercises in workout order and check
+  off each set as you finish. Tap an exercise name to show the movement cue;
+  only its visible diagram animates. Tap a weekday to see that workout.
 - Use **Plan workout** or **Edit plan** to name and edit the day's workout.
-  Leave a day unplanned or mark it as rest. The expandable exercise library
+  Leave a day unplanned. Existing rest days are retained. The expandable exercise library
   offers simplified start/end poses and filters by muscle group or machine,
   cable, dumbbell (halteres), barbell, and bodyweight. Use the diagrams as cues,
   not as a substitute for instruction. The selected movement loops while visible;
@@ -32,15 +32,21 @@ and open it in a browser. No server, install, sign-in, trackers, or external ass
   a guarantee or a recommendation to lift five days or train to failure.
 - Use **Print / save PDF** for a printable copy of the selected day.
 
-## Private storage and backups
+## Private on-device storage
 
-The browser stores the weekly plan locally when storage is available. Existing v1
-sessions at the same browser file location go to **Saved workouts** without
-deleting the old storage. Copy one to any weekday. To move to another browser or
-file path, export a JSON backup from the old copy, then import it in the new copy.
-This version imports v1 and v2; it fills vacant days and keeps conflicts as saved
-copies. Replacement and removal of scheduled workouts are explicit. Do not commit
-backup files or real training data.
+The browser stores the weekly plan and completion checkmarks on the device
+when local storage is available. Checkmarks are separate by local calendar date,
+workout and exercise row (including repeated exercises). They are retained for
+the latest 84 logged dates. A recurring weekday starts with unchecked sets the
+next week. Changing the number of sets only changes the controls that are shown.
+
+Existing v1 sessions at the same browser file location go to **Saved workouts**
+without deleting the old storage. Existing v2 plans, archived workouts and
+previously marked rest days are kept. Copy a saved workout to any weekday.
+Keep using the same file path and browser profile; moving the file or device,
+opening in private mode or clearing browser storage can make prior data
+unavailable. This version has no in-app backup, restore, or sync controls.
+Nothing is uploaded from the app.
 
 The exercise sketches and text are original and simplified. The generator is a
 general planning starting point, not individualized coaching. See [CDC adult

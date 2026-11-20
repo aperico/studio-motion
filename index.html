@@ -1,33 +1,29 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion v4 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion v5 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:213px;overflow:auto;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
 .app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}.contact-cue{font-size:.72rem;color:#9ccecc;line-height:1.22;margin:3px 0}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
 .generator-fields .field select{display:block}.build{color:var(--muted);font-size:.67rem;font-weight:500;letter-spacing:0;margin-left:3px}.auto-actions{margin:8px 0 10px}.auto-actions button{min-height:44px}.week-card{border-top:1px solid var(--line);padding:7px 0;display:grid;grid-template-columns:minmax(100px,.8fr) minmax(0,2fr);gap:6px;font-size:.85rem}.week-card label{display:flex;gap:5px;align-items:flex-start}.week-card small{display:block}.week-card details summary{min-height:32px!important}
+.train-progress{color:var(--mint);font-size:.82rem;margin:2px 0 10px}.train-list{margin:0;padding-left:24px;list-style:decimal}.train-list li::marker{color:#a8bab9;font-size:.85rem}.train-card{padding:6px 8px 8px;margin:0 0 7px;border:1px solid var(--line);border-radius:11px;background:var(--panel)}.exercise-pick{font:inherit;font-weight:720;text-align:left;min-height:44px;padding:3px 2px;margin:0;border:0;background:none;max-width:100%;overflow-wrap:anywhere}.exercise-pick[aria-expanded=true]{color:var(--mint)}.train-dose{margin:0 0 4px;font-size:.8rem;color:var(--muted)}.checks{padding:0;border:0;gap:3px 5px}.checks legend{font-size:.7rem;color:var(--muted)}.set-box{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:3px;border:1px solid var(--line);border-radius:8px;background:var(--inner);cursor:pointer}.set-box input{width:17px;height:17px;padding:0;accent-color:var(--mint);margin:0}.set-box:focus-within{outline:2px solid var(--mint)}.exercise-art .stage svg{max-height:clamp(110px,24vh,202px)}.exercise-art p{overflow-wrap:anywhere}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand">◈ STUDIO MOTION <small class="build">v4</small></span>
+  <span class="brand">◈ STUDIO MOTION <small class="build">v5</small></span>
   <button class="primary no-print" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
   <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
   <div id="trainEmpty" class="empty" hidden></div>
-  <div id="trainExercise" hidden>
-    <div class="train-row" aria-live="polite"><div><p class="kicker" id="trainCount"></p><h2 id="trainName"></h2></div><span id="trainDose"></span></div>
-    <div id="trainDiagram"></div>
-    <p id="trainCue" class="coach"></p>
-    <div id="trainNote" class="guide muted"></div>
-    <div id="trainControlSlot"></div>
-  </div>
+  <p class="train-progress" id="trainProgress" role="status" hidden></p>
+  <ol id="trainList" class="train-list"></ol>
 </section>
 <div id="editView" hidden><div class="columns"><section class="panel" aria-labelledby="planheading"><p class="kicker">WEEKLY PLAN</p><h2 id="planheading" tabindex="-1"><span id="weekday"></span></h2>
 <div class="buttons auto-actions no-print"><button id="trainingGenerate">Auto Plan Day</button><button id="weekGenerate">Auto Plan Week</button></div>
 <label class="field">Workout name<input id="title" maxlength="80" autocomplete="off" placeholder="Name this day’s workout"></label>
 <div class="stats" id="stats"></div>
-<div class="buttons actions no-print"><button id="markRest">Mark rest day</button><button id="clearDay">Clear day</button><button id="print">Print / save PDF</button></div>
+<div class="buttons actions no-print"><button id="print">Print / save PDF</button></div>
 <details class="toolbox no-print" id="autoOptions"><summary>Equipment &amp; auto-plan settings</summary>
 <p class="muted guide">Preview first. The weekday split alternates upper and lower training, with core and calves midweek. Use a light warm-up and recover as needed; do not train through pain or to failure.</p>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
@@ -38,18 +34,14 @@
 <div id="preview" class="workout-view" hidden><strong id="previewHeading"></strong><label id="variantsLabel" class="field">Variation<select id="dayVariant"></select></label><ol id="previewList"></ol><p id="previewWarning" class="guide muted"></p><button id="applyTraining" class="primary">Save workout</button></div>
 <div id="weekPreview" class="workout-view" hidden><strong>Monday–Friday preview</strong><div id="weekCards"></div><p id="weekStatus" class="guide muted"></p><button id="applyWeek" class="primary">Save selected days</button></div>
 <div id="items"></div><div class="save no-print" role="status" id="save"></div>
-<details class="toolbox no-print"><summary>Saved workouts · <span id="archiveCount"></span></summary><p class="guide muted">Legacy, replaced, and conflicting imports are kept here. Copy a workout to the selected day.</p><div class="buttons"><select id="archivePicker" aria-label="Choose saved workout"></select><button id="archiveCopy">Copy to this day</button></div></details>
-<details class="toolbox no-print"><summary>Backup and restore</summary><p class="muted guide">Browser storage may be cleared or tied to this file’s location. Backups are private. Import fills empty days and keeps conflicts as saved copies.</p><div class="buttons"><button id="export">Export workouts (.json)</button><button id="import">Import workouts</button><input type="file" id="file" accept=".json,application/json" hidden></div></details></section>
+<details class="toolbox no-print"><summary>Saved workouts · <span id="archiveCount"></span></summary><p class="guide muted">Legacy and replaced workouts are kept here. Copy a workout to the selected day.</p><div class="buttons"><select id="archivePicker" aria-label="Choose saved workout"></select><button id="archiveCopy">Copy to this day</button></div></details>
+</section>
 <details class="panel library" id="libraryPanel">
   <summary id="libheading">Exercise library</summary>
   <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div class="choices" id="choices"></div>
 <div id="libraryDiagram"></div><div id="diagramShared"><div id="movementStage" class="stage"><span class="stage-label" id="phase">START POSITION</span><svg id="picture" role="img" viewBox="0 0 380 245" aria-labelledby="movement"><title id="movement">Exercise diagram</title></svg></div>
 <p id="contactCue" class="contact-cue" hidden></p><div class="controls"><button id="poses" hidden>End pose</button></div></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
 </details></div></div>
-<div id="workoutView" class="training-actions no-print" hidden>
-<button id="prevEx" aria-label="Previous exercise">← Previous</button>
-<button id="nextEx" aria-label="Next exercise">Next →</button>
-</div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer></main>
 <script>
 "use strict";
@@ -313,22 +305,37 @@ function draw(t){
  $("phase").textContent=f.hold?"HOLD POSITION":t<.06?"START":t>.94?"FINISH":"MOVEMENT";$("poses").textContent=t>.5?"Start pose":"End pose";
 }
 function stop(){playing=false;cancelAnimationFrame(raf);raf=0;}
-const movementVisible=()=>editing?$("libraryPanel").open:Boolean(current().items[cursor]);
+const movementActive=()=>editing?$("libraryPanel").open:Boolean(current().items[cursor]);
+let visibleDiagram=true;
+const movementVisible=()=>movementActive()&&visibleDiagram;
+const watches=typeof IntersectionObserver==="function"?new IntersectionObserver(entries=>{
+ const onscreen=entries[0]?.isIntersecting===true;
+ if(onscreen!==visibleDiagram){visibleDiagram=onscreen;syncAnimation();}
+},{threshold:.08}):null;
+watches?.observe($("movementStage"));
 function loop(now){if(!playing||!movementVisible()||document.hidden){stop();return;}if(!t0)t0=now;const cycle=((now-t0)%4300)/4300;const t=cycle<.11?0:cycle<.48?(cycle-.11)/.37:cycle<.61?1:1-(cycle-.61)/.39;draw((1-Math.cos(t*Math.PI))/2);raf=requestAnimationFrame(loop);}
 function syncAnimation(){
  stop();t0=0;draw(0);
- const visible=movementVisible();
+ const visible=movementActive();
  $("poses").hidden=!visible||!reducedMotion.matches;
  const contact=contactCopy[selected.id];
  $("contactCue").textContent=contact||"";
  $("contactCue").hidden=!contact;
  if(selected.hold){draw(1);$("poses").hidden=true;return;}
- if(!visible||document.hidden||reducedMotion.matches)return;
+ if(!movementVisible()||document.hidden||reducedMotion.matches)return;
  playing=true;raf=requestAnimationFrame(loop);
 }
 $("poses").onclick=()=>{stop();draw(phase>.5?0:1);};
 $("libraryPanel").ontoggle=()=>{if(editing)syncAnimation();};
-document.addEventListener("visibilitychange",syncAnimation);
+document.addEventListener("visibilitychange",()=>{
+ if(!document.hidden){
+  const now=(new Date().getDay()+6)%7;
+  if(now!==today||$("trainList").dataset.date!==dateForDay(day)){
+   const wasToday=day===today;today=now;setDay(wasToday&&!editing?today:day);
+  }
+ }
+ syncAnimation();
+});
 reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function choose(id){selected=E.find(e=>e.id===id);syncAnimation();$("group").textContent=(selected.g+" · "+selected.eq).toUpperCase();$("name").textContent=selected.n;$("muscle").textContent=selected.m;$("cue").textContent=selected.c;list()}
@@ -338,22 +345,26 @@ function list(){
 }
 $("choices").onclick=e=>{const b=e.target.closest("[data-ex]");if(b){cursor=-1;choose(b.dataset.ex);nav();$("choices").querySelector('[data-ex="'+b.dataset.ex+'"]')?.focus()}};$("query").oninput=list;$("filter").onchange=list;$("equipmentFilter").onchange=list;
 const KEY1="studio-motion-sessions-v1",KEY2="studio-motion-plan-v2",DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
-const today=(new Date().getDay()+6)%7;
+let today=(new Date().getDay()+6)%7;
+const localId=()=>globalThis.crypto?.randomUUID?.()??Date.now().toString(36)+"-"+Math.random().toString(36).slice(2);
+const validId=x=>typeof x==="string"&&/^[a-z0-9-]{8,100}$/.test(x);
 let day=today, cursor=-1, proposed=null, editing=false;
-const blank=(title="")=>({title,items:[],rest:false});
+const blank=(title="")=>({id:localId(),title,items:[],rest:false});
 const emptyPlan=()=>({version:2,days:Array.from({length:7},()=>blank()),archive:[]});
 const number=(v,d,a,b)=>typeof v==="number"&&Number.isFinite(v)?Math.min(b,Math.max(a,v)):d;
-function cleanSession(s,legacy=false){
+function cleanSession(s,legacy=false,fresh=false){
  if(!s||typeof s.title!=="string"||!Array.isArray(s.items)||s.items.length>70)throw Error("Invalid workout.");
+ const rowIds=new Set();
  const items=s.items.map(x=>{
   if(!x||!byId(x.exercise))throw Error("Unknown exercise.");
   const e=byId(x.exercise);
-  return {exercise:x.exercise,sets:Math.round(number(x.sets,legacy?3:2,1,50)),reps:Math.round(number(x.reps,10,1,300)),
+  const id=!fresh&&validId(x.id)&&!rowIds.has(x.id)?x.id:localId();rowIds.add(id);
+  return {id,exercise:x.exercise,sets:Math.round(number(x.sets,legacy?3:2,1,50)),reps:Math.round(number(x.reps,10,1,300)),
    seconds:Math.round(number(x.seconds,e.hold?20:0,e.hold?1:0,300)),kg:number(x.kg,null,0,1000),
    rest:Math.round(number(x.rest,60,0,3600)),note:typeof x.note==="string"?x.note.slice(0,200):"",...(Array.isArray(x.repRange)&&x.repRange.length===2&&x.repRange[0]===10&&x.repRange[1]===12?{repRange:[10,12]}:{})};
  });
  if(s.rest===true&&items.length)throw Error("Rest days cannot contain exercises.");
- return {title:s.title.slice(0,80),items,rest:s.rest===true};
+ return {id:!fresh&&validId(s.id)?s.id:localId(),title:s.title.slice(0,80),items,rest:s.rest===true};
 }
 function decode(data){
  if(data?.version===1&&Array.isArray(data.sessions)&&data.sessions.length<=80){
@@ -362,34 +373,92 @@ function decode(data){
  if(data?.version!==2||!Array.isArray(data.days)||data.days.length!==7||!Array.isArray(data.archive)||data.archive.length>160)throw Error("Not a Studio Motion backup.");
  return {version:2,days:data.days.map(s=>cleanSession(s)),archive:data.archive.map(s=>cleanSession(s))};
 }
-function mergePlan(base,incoming){
- const days=base.days.slice(),archive=[...base.archive,...incoming.archive];let assignments=0,kept=0;
- for(let i=0;i<7;i++){
-  const next=incoming.days[i];if(!hasWorkout(next))continue;
-  if(hasWorkout(days[i])){archive.push(next);kept++;}else{days[i]=next;assignments++;}
- }
- if(archive.length>160)throw Error("Saved workouts limit reached. Export a backup before removing any.");
- return {plan:{version:2,days,archive},assignments,kept};
-}
 const hasWorkout=x=>Boolean(x.title.trim()||x.rest||x.items.length);
 let plan=emptyPlan(),bootMessage="";
 let storageReadFailure=false;
 try{
  const old=localStorage.getItem(KEY1), current=localStorage.getItem(KEY2);
- if(current)plan=decode(JSON.parse(current));
+ if(current){
+  plan=decode(JSON.parse(current));
+  if(JSON.stringify(plan)!==current)localStorage.setItem(KEY2,JSON.stringify(plan));
+ }
  else if(old){
   plan=decode(JSON.parse(old));
   bootMessage="Older sessions kept under Saved workouts. Assign a copy to any day.";
   localStorage.setItem(KEY2,JSON.stringify(plan));
  }
-}catch{storageReadFailure=true;bootMessage="Saved workouts could not load. Nothing was overwritten. Export new work as a backup.";}
+}catch{storageReadFailure=true;bootMessage="Saved workouts could not load. Nothing was overwritten. New edits stay in this tab.";}
 const current=()=>plan.days[day];
+const checkKey="studio-motion-completion-v1";
+let completion={},progressWritable=true;
+try{
+ const r=JSON.parse(localStorage.getItem(checkKey)||"{}");
+ if(!r||Array.isArray(r)||typeof r!=="object")throw Error("Invalid checklists");
+ for(const d of Object.keys(r).filter(k=>/^\d{4}-\d{2}-\d{2}$/.test(k)).sort().slice(-84)){
+  const rows=r[d];if(!rows||Array.isArray(rows)||typeof rows!=="object")continue;
+  completion[d]={};
+  for(const k of Object.keys(rows).filter(k=>/^[a-z0-9-]{8,100}\/[a-z0-9-]{8,100}$/.test(k)).slice(0,600)){
+   if(Array.isArray(rows[k]))completion[d][k]=[...new Set(rows[k].filter(x=>Number.isInteger(x)&&x>=1&&x<=50))].sort((a,b)=>a-b);
+  }
+ }
+}catch{progressWritable=false;}
+function dateForDay(index){
+ const d=new Date();d.setDate(d.getDate()+index-(d.getDay()+6)%7);
+ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+const marksFor=(row,w=current(),date=dateForDay(day))=>completion[date]?.[w.id+"/"+row.id]||[];
+function storeMark(row,set,checked,date){
+ if(date!==dateForDay(day)){renderTrainList();nav();return;}
+ const k=current().id+"/"+row.id,byRow=completion[date]??(completion[date]={});
+ const setOf=new Set(byRow[k]||[]);
+ if(checked)setOf.add(set);else setOf.delete(set);
+ byRow[k]=[...setOf].sort((a,b)=>a-b);
+ for(const old of Object.keys(completion).sort().slice(0,-84))delete completion[old];
+ let status="";
+ try{if(!progressWritable)throw Error();localStorage.setItem(checkKey,JSON.stringify(completion));}
+ catch{status=" · Browser did not save the checkmarks";}
+ progressCount(status);
+}
+function progressCount(status=""){
+ const w=current(),sets=w.items.reduce((total,x)=>total+x.sets,0);
+ const done=w.items.reduce((total,x)=>total+marksFor(x).filter(n=>n<=x.sets).length,0);
+ $("trainProgress").textContent=sets?done+" / "+sets+" sets · "+dateForDay(day)+status:"";
+ $("trainProgress").hidden=!sets;
+}
+function renderTrainList(){
+ const root=$("trainList"),stage=$("diagramShared");
+ if(root.contains(stage))$("libraryDiagram").append(stage);
+ const date=dateForDay(day);
+ root.dataset.date=date;
+ root.innerHTML=current().items.map((row,i)=>{
+  const e=byId(row.exercise),marks=marksFor(row,current(),date);
+  const boxes=Array.from({length:row.sets},(_,j)=>{
+   const set=j+1;
+   return '<label class="set-box"><input type="checkbox" data-row="'+i+'" data-set="'+set+'" aria-label="'+esc(e.n+" set "+set)+'" '+(marks.includes(set)?"checked":"")+'><span>'+set+'</span></label>';
+  }).join("");
+  return '<li class="train-card"><button class="exercise-pick" type="button" data-train-row="'+i+'" aria-controls="trainArt'+i+'" aria-expanded="false">'+esc(e.n)+'</button>'+
+    '<p class="train-dose">'+esc(dose(row))+'</p><fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
+    '<div class="exercise-art" id="trainArt'+i+'" hidden><div class="art-slot"></div><p class="coach">'+esc(e.c)+'</p>'+
+    (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+'</div></li>';
+ }).join("");
+ progressCount();
+}
+$("trainList").onclick=e=>{
+ const pick=e.target.closest("[data-train-row]");
+ if(pick&&+pick.dataset.trainRow!==cursor)step(+pick.dataset.trainRow);
+};
+$("trainList").onchange=e=>{
+ const x=e.target,i=+x.dataset.row,set=+x.dataset.set,row=current().items[i];
+ if(x.type!=="checkbox"||!row||!Number.isInteger(set)||set<1||set>row.sets)return;
+ storeMark(row,set,x.checked,$("trainList").dataset.date);
+};
+
 function say(x){$("save").textContent=x;}
 function save(x="Saved in this browser."){
- if(storageReadFailure){say(x+" Browser storage is not being written. Export a backup.");return;}
- try{localStorage.setItem(KEY2,JSON.stringify(plan));say(x);}catch{say(x+" Browser storage unavailable. Export a backup.");}
+ if(storageReadFailure){say(x+" Browser storage is not being written. New edits stay in this tab.");return;}
+ try{localStorage.setItem(KEY2,JSON.stringify(plan));say(x);}catch{say(x+" Browser storage unavailable. New edits stay in this tab.");}
 }
-const make=(exercise,reps=10)=>({exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
+const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
 function dose(x){const e=byId(x.exercise),unit=e.hold?x.seconds+" sec":(x.repRange?x.repRange.join("–"):x.reps)+" reps";return x.sets+" × "+unit+(e.side?" per side":"")+" · "+x.rest+" sec rest"+(x.kg===null?"":" · "+x.kg+" kg");}
 const split=[
  {name:"Upper A · chest & back",groups:["Chest","Back","Shoulders","Chest","Back","Arms"],focus:"Upper"},
@@ -499,7 +568,7 @@ function commitWeek(){
  const days=[...$("weekCards").querySelectorAll("input:checked")].map(x=>+x.dataset.weekDay).filter(i=>proposedWeek.drafts[i]);
  const replacing=days.filter(i=>hasWorkout(plan.days[i]));
  if(!days.length)return;
- if(plan.archive.length+replacing.length>160){say("Saved workouts limit reached. Export a backup before replacing.");return;}
+ if(plan.archive.length+replacing.length>160){say("Saved workouts limit reached. Nothing was replaced.");return;}
  if(replacing.length&&!confirm("Replace "+replacing.map(i=>DAYS[i]).join(", ")+"? Existing workouts will be kept as saved copies."))return;
  for(const i of days){
   if(hasWorkout(plan.days[i]))plan.archive.push(plan.days[i]);
@@ -521,36 +590,28 @@ function stats(){
  $("stats").textContent=x.rest?"Rest day":x.items.length?x.items.length+" exercise"+(x.items.length===1?"":"s")+" · "+count+" set"+(count===1?"":"s"):"No exercises";
 }
 function nav(){
- const x=current(),items=x.items,selectedItem=items[cursor];
+ const x=current(),items=x.items,selected=items[cursor];
  $("modeSwitch").textContent=editing?"Done":hasWorkout(x)?"Edit plan":"Plan workout";
  $("modeSwitch").setAttribute("aria-expanded",String(editing));
  $("trainDay").textContent=(day===today?"Today · ":"")+DAYS[day];
  $("trainTitle").textContent=x.title.trim()||(x.rest?"Rest day":items.length?"Workout":"No workout planned");
- $("trainExercise").hidden=!selectedItem;
- $("trainEmpty").hidden=!!selectedItem;
+ $("trainEmpty").hidden=!!items.length;
  $("trainEmpty").textContent=x.rest?"Take a recovery day.":"Tap Plan workout to add exercises or auto-plan.";
- $("workoutView").hidden=!selectedItem||editing;
- $("prevEx").disabled=cursor<=0;
- $("nextEx").disabled=cursor<0||cursor>=items.length-1;
- if(selectedItem){
-  const exercise=byId(selectedItem.exercise);
-  $("trainCount").textContent="Exercise "+(cursor+1)+" / "+items.length;
-  $("trainName").textContent=exercise.n;
-  $("trainDose").textContent=dose(selectedItem);
-  $("trainCue").textContent=exercise.c;
-  $("trainNote").textContent=selectedItem.note;
-  $("trainNote").hidden=!selectedItem.note;
- }
+ $("trainList").querySelectorAll("[data-train-row]").forEach((button,i)=>{
+  const open=!editing&&i===cursor;
+  button.setAttribute("aria-expanded",String(open));$("trainArt"+i).hidden=!open;
+  if(open)$("trainArt"+i).querySelector(".art-slot").append($("diagramShared"));
+ });
+ if(!selected||editing)$("libraryDiagram").append($("diagramShared"));
+ progressCount();
 }
-function step(index,scroll=false){
+function step(index){
  const x=current().items[index];if(!x)return;
- cursor=index;choose(x.exercise);nav();
- if(scroll)$("movementStage").scrollIntoView({block:"nearest"});
+ cursor=index;selected=byId(x.exercise);nav();choose(x.exercise);
 }
 function setMode(value,focus=false){
  stop();editing=value;$("editView").hidden=!value;$("trainView").hidden=value;$("editFooter").hidden=!value;
- $(value?"libraryDiagram":"trainDiagram").append($("diagramShared"));
- $("trainControlSlot").append($("workoutView"));
+ renderTrainList();
  if(!value&&current().items.length)step(Math.max(0,Math.min(cursor,current().items.length-1)));
  else {nav();syncAnimation();}
  if(focus)$(value?"planheading":"modeSwitch").focus();
@@ -558,7 +619,7 @@ function setMode(value,focus=false){
 $("modeSwitch").onclick=()=>setMode(!editing,true);
 function render(){
  week();$("weekday").textContent=DAYS[day]+(day===today?" · Today":"");$("title").value=current().title;stats();
- const rows=current().items;$("markRest").textContent=current().rest?"Clear rest day":"Mark rest day";
+ const rows=current().items;
  $("items").innerHTML=rows.map((x,i)=>{const e=byId(x.exercise),n=e.n;
  const f=(k,l,min,max,step)=>'<label class="field">'+l+'<input data-k="'+k+'" type="number" inputmode="'+(step===1?"numeric":"decimal")+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+(x[k]??"")+'" aria-label="'+l+' for '+n+'"></label>';
  return '<article class="item" data-i="'+i+'"><div class="row"><button class="view" data-a="view">'+(i+1)+'. '+n+'</button><div class="buttons"><button data-a="up" aria-label="Move '+n+' up" '+(i===0?"disabled":"")+'>↑</button><button data-a="down" aria-label="Move '+n+' down" '+(i===rows.length-1?"disabled":"")+'>↓</button><button data-a="delete" aria-label="Remove '+n+'">×</button></div></div><div class="prescription">'+f("sets","Sets",1,50,1)+(e.hold?f("seconds","Hold sec"+(e.side?" / side":""),1,300,1):f("reps","Reps"+(x.repRange?" (10–12)":"")+(e.side?" / side":""),1,300,1))+(e.eq==="Bodyweight"?"":f("kg","Load kg",0,1000,.01))+f("rest","Rest sec",0,3600,1)+'</div><label class="field note">Note<input data-k="note" maxlength="200" value="'+esc(x.note)+'" placeholder="Position, tempo, or reminder"></label></article>';
@@ -567,7 +628,7 @@ function render(){
  $("archiveCopy").disabled=!plan.archive.length;
  $("archiveCount").textContent=plan.archive.length+" saved";
  $("add").disabled=rows.length>=70;
- nav();
+ renderTrainList();nav();
 }
 function setDay(index,focus=false){
  day=index;cursor=-1;resetPreview();render();
@@ -575,8 +636,7 @@ function setDay(index,focus=false){
  if(focus)$("days").querySelector('[data-day="'+index+'"]')?.focus();
 }
 $("days").onclick=e=>{const b=e.target.closest("[data-day]");if(b)setDay(+b.dataset.day,true);};
-$("prevEx").onclick=()=>step(cursor-1);
-$("nextEx").onclick=()=>step(cursor+1);
+
 
 $("trainingGenerate").onclick=showPreview;
 $("dayVariant").onchange=e=>{if(proposed)setVariant(+e.target.value);};
@@ -587,27 +647,15 @@ for(const target of ["trainingFocus","trainingSize","trainingEquipment","trainin
 $("applyTraining").onclick=()=>{
  if(!proposed||proposed.day!==day)return;
  if(hasWorkout(current())&&!confirm("Replace the workout for "+DAYS[day]+"? The current workout will be kept under Saved workouts."))return;
- if(hasWorkout(current())){if(plan.archive.length>=160){say("Saved workouts limit reached. Export a backup before replacing.");return;}plan.archive.push(current());}
+ if(hasWorkout(current())){if(plan.archive.length>=160){say("Saved workouts limit reached. Nothing was replaced.");return;}plan.archive.push(current());}
  plan.days[day]=cleanSession(proposed.variants[proposed.active]);setDay(day);save(DAYS[day]+" workout saved.");
-};
-$("markRest").onclick=()=>{
- if(current().items.length&&!confirm("Mark "+DAYS[day]+" as rest? The current workout will be kept under Saved workouts."))return;
- if(current().items.length){if(plan.archive.length>=160){say("Saved workouts limit reached.");return;}plan.archive.push(current());}
- plan.days[day]=current().rest?blank():{...blank("Rest day"),rest:true};
- setDay(day);save();
-};
-$("clearDay").onclick=()=>{
- if(!hasWorkout(current()))return;
- if(!confirm("Clear "+DAYS[day]+"? This moves the workout to Saved workouts."))return;
- if(plan.archive.length>=160){say("Saved workouts limit reached.");return;}
- plan.archive.push(current());plan.days[day]=blank();setDay(day);save();
 };
 $("archiveCopy").onclick=()=>{
  const original=plan.archive[+$("archivePicker").value];if(!original)return;
  if(hasWorkout(current())&&!confirm("Replace the workout for "+DAYS[day]+" with a copy? The current workout stays under Saved workouts."))return;
  if(hasWorkout(current())&&plan.archive.length>=160){say("Saved workouts limit reached.");return;}
  if(hasWorkout(current()))plan.archive.push(current());
- plan.days[day]=cleanSession(original);setDay(day);save("Copied to "+DAYS[day]+".");
+ plan.days[day]=cleanSession(original,false,true);setDay(day);save("Copied to "+DAYS[day]+".");
 };
 $("items").onclick=e=>{
  const a=e.target.dataset.a,i=+e.target.closest("[data-i]")?.dataset.i,items=current().items;
@@ -632,15 +680,6 @@ $("add").onclick=()=>{
  current().items.push(make(selected.id));resetPreview();render();step(current().items.length-1,false);save(selected.n+" added.");
 };
 $("print").onclick=()=>window.print();
-$("export").onclick=()=>{const u=URL.createObjectURL(new Blob([JSON.stringify(plan,null,2)],{type:"application/json"}));const a=document.createElement("a");a.href=u;a.download="studio-motion-sessions.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);say("Backup exported.");};
-$("import").onclick=()=>$("file").click();
-$("file").onchange=async e=>{
- try{
-  const f=e.target.files[0];if(!f)return;if(f.size>3e6)throw Error("Backup is too large.");
-  const incoming=decode(JSON.parse(await f.text())), {plan:next,assignments,kept}=mergePlan(plan,incoming);
-  plan=next;setDay(day);save("Backup imported: "+assignments+" empty days filled; "+kept+" day conflicts saved as copies.");
- }catch(err){say("Import failed: "+err.message);}finally{e.target.value="";}
-};
 $("trainingEquipment").innerHTML=equipments.map(x=>'<label><input type="checkbox" value="'+x+'" '+(x==="Machine"||x==="Cable"?"checked":"")+'> '+x+"</label>").join("");
 $("filter").innerHTML='<option value="">All muscle groups</option>'+groups.map(x=>'<option>'+x+"</option>").join("");
 $("equipmentFilter").innerHTML='<option value="">All equipment</option>'+equipments.map(x=>'<option>'+x+"</option>").join("");
