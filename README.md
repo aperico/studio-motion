@@ -13,12 +13,23 @@ and open it in a browser. No server, install, sign-in, trackers, or external ass
   Leave a day unplanned or mark it as rest. The expandable exercise library
   offers simplified start/end poses and filters by muscle group or machine,
   cable, dumbbell (halteres), barbell, and bodyweight. Use the diagrams as cues,
-  not as a substitute for instruction. Tap **Done** to return to training.
-- **Auto Create Training** previews a repeatable suggestion for the selected day
-  using the chosen equipment, focus, and session size. It favors combined moves
-  before isolation, suggests editable sets/reps (or holds) and rest, and leaves
-  load unset. Neighboring primary muscle groups are used to suggest variety or
-  recovery, not to forbid edits. There is no requirement to train every day.
+  not as a substitute for instruction. The selected movement loops while visible;
+  if your device has reduced motion enabled, you can switch between static poses.
+  Tap **Done** to return to training.
+- **Auto Plan Day** previews up to three different workouts for your selected
+  day and focus. Select the option you want and save it; only the chosen workout
+  becomes active.
+- **Auto Plan Week** previews a Monday–Friday rotation: upper A, lower A,
+  core/calves, upper B, lower B. Machine and cable equipment are selected
+  initially; change those filters to match your gym. Empty weekdays are checked
+  for saving by default, not existing workouts or weekends. Explicitly check and
+  confirm a replacement to keep the prior workout under **Saved workouts**.
+- This five-day preset uses up to six exercises per day and **4 sets of 10–12
+  reps** by default, with timed holds where appropriate and no suggested weight.
+  Reduce to 2 or 3 sets if you want less volume. The time estimate includes
+  8 minutes to warm up, roughly 40 seconds per rep-based set (per side when
+  needed), scheduled between-set rest, and 1.5 minutes per changeover. It is not
+  a guarantee or a recommendation to lift five days or train to failure.
 - Use **Print / save PDF** for a printable copy of the selected day.
 
 ## Private storage and backups
