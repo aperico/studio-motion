@@ -3,16 +3,26 @@
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:213px;overflow:auto;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
+.app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}.train-view .controls>.buttons:last-child{display:none}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
 </style></head>
-<body><main><header><div class="top"><span class="brand">◈ STUDIO MOTION</span><span class="pill">OFFLINE / LOCAL ONLY</span></div><h1>Plan your training week.</h1><p class="intro">Choose a day, preview a movement, and build a repeatable weekly plan.</p></header>
-<nav id="days" class="week no-print" aria-label="Training week"></nav><p class="no-print guide quicklink"><a href="#planheading">Jump to workout ↓</a></p><div class="columns"><section class="panel library" aria-labelledby="libheading"><p class="kicker">01 / MOVEMENT LIBRARY</p><h2 id="libheading">Choose an exercise</h2><div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div class="choices" id="choices"></div>
-<div id="movementStage" class="stage"><span class="stage-label" id="phase">START POSITION</span><svg id="picture" role="img" viewBox="0 0 380 245" aria-labelledby="movement"><title id="movement">Exercise diagram</title></svg></div>
-<div class="row controls"><div class="buttons"><button id="play">Play</button><button id="poses">End pose</button></div><div class="buttons"><label for="scrub"><small>Position</small></label><input id="scrub" type="range" min="0" max="100" value="0"></div></div>
-<div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">＋ Add to workout</button>
-<div id="workoutView" class="workout-view" hidden><div id="navLabel" aria-live="polite"></div><div class="buttons">
-<button id="prevEx">← Previous exercise</button><button id="openExercise">Start at first exercise</button><button id="nextEx">Next exercise →</button>
-</div></div>
-</section><section class="panel" aria-labelledby="planheading"><p class="kicker">02 / REPEATING WEEKLY PLAN</p><h2 id="planheading"><span id="weekday"></span></h2>
+<body><main class="app">
+<header class="masthead">
+  <span class="brand">◈ STUDIO MOTION</span>
+  <button class="primary no-print" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button>
+</header>
+<nav id="days" class="week no-print" aria-label="Training week"></nav>
+<section id="trainView" aria-labelledby="trainTitle" class="train-view">
+  <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
+  <div id="trainEmpty" class="empty" hidden></div>
+  <div id="trainExercise" hidden>
+    <div class="train-row" aria-live="polite"><div><p class="kicker" id="trainCount"></p><h2 id="trainName"></h2></div><span id="trainDose"></span></div>
+    <div id="trainDiagram"></div>
+    <p id="trainCue" class="coach"></p>
+    <div id="trainNote" class="guide muted"></div>
+    <div id="trainControlSlot"></div>
+  </div>
+</section>
+<div id="editView" hidden><div class="columns"><section class="panel" aria-labelledby="planheading"><p class="kicker">WEEKLY PLAN</p><h2 id="planheading" tabindex="-1"><span id="weekday"></span></h2>
 <label class="field">Workout name<input id="title" maxlength="80" autocomplete="off" placeholder="Name this day’s workout"></label>
 <div class="stats" id="stats"></div>
 <div class="buttons actions no-print"><button id="markRest">Mark rest day</button><button id="clearDay">Clear day</button><button id="print">Print / save PDF</button></div>
@@ -26,8 +36,19 @@
 </details>
 <div id="items"></div><div class="save no-print" role="status" id="save"></div>
 <details class="toolbox no-print"><summary>Saved workouts · <span id="archiveCount"></span></summary><p class="guide muted">Legacy, replaced, and conflicting imports are kept here. Copy a workout to the selected day.</p><div class="buttons"><select id="archivePicker" aria-label="Choose saved workout"></select><button id="archiveCopy">Copy to this day</button></div></details>
-<details class="toolbox no-print"><summary>Backup and restore</summary><p class="muted guide">Browser storage may be cleared or tied to this file’s location. Backups are private. Import fills empty days and keeps conflicts as saved copies.</p><div class="buttons"><button id="export">Export workouts (.json)</button><button id="import">Import workouts</button><input type="file" id="file" accept=".json,application/json" hidden></div></details></section></div>
-<footer>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer></main>
+<details class="toolbox no-print"><summary>Backup and restore</summary><p class="muted guide">Browser storage may be cleared or tied to this file’s location. Backups are private. Import fills empty days and keeps conflicts as saved copies.</p><div class="buttons"><button id="export">Export workouts (.json)</button><button id="import">Import workouts</button><input type="file" id="file" accept=".json,application/json" hidden></div></details></section>
+<details class="panel library" id="libraryPanel">
+  <summary id="libheading">Exercise library</summary>
+  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div class="choices" id="choices"></div>
+<div id="libraryDiagram"></div><div id="diagramShared"><div id="movementStage" class="stage"><span class="stage-label" id="phase">START POSITION</span><svg id="picture" role="img" viewBox="0 0 380 245" aria-labelledby="movement"><title id="movement">Exercise diagram</title></svg></div>
+<div class="row controls"><div class="buttons"><button id="play">Play</button><button id="poses">End pose</button></div><div class="buttons"><label for="scrub"><small>Position</small></label><input id="scrub" type="range" min="0" max="100" value="0"></div></div>
+</div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
+</details></div></div>
+<div id="workoutView" class="training-actions no-print" hidden>
+<button id="prevEx" aria-label="Previous exercise">← Previous</button>
+<button id="nextEx" aria-label="Next exercise">Next →</button>
+</div>
+<footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer></main>
 <script>
 "use strict";
 const E=[
@@ -178,7 +199,7 @@ function list(){
 $("choices").onclick=e=>{const b=e.target.closest("[data-ex]");if(b){cursor=-1;choose(b.dataset.ex);nav();$("choices").querySelector('[data-ex="'+b.dataset.ex+'"]')?.focus()}};$("query").oninput=list;$("filter").onchange=list;$("equipmentFilter").onchange=list;
 const KEY1="studio-motion-sessions-v1",KEY2="studio-motion-plan-v2",DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 const today=(new Date().getDay()+6)%7;
-let day=today, cursor=-1, proposed=null;
+let day=today, cursor=-1, proposed=null, editing=false;
 const blank=(title="")=>({title,items:[],rest:false});
 const emptyPlan=()=>({version:2,days:Array.from({length:7},()=>blank()),archive:[]});
 const number=(v,d,a,b)=>typeof v==="number"&&Number.isFinite(v)?Math.min(b,Math.max(a,v)):d;
@@ -269,25 +290,53 @@ function showPreview(){
  $("applyTraining").textContent=hasWorkout(current())?"Replace "+DAYS[day]+"…":"Save to "+DAYS[day];
 }
 function week(){
- $("days").innerHTML=DAYS.map((name,i)=>'<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" aria-label="'+name+(i===today?", today":"")+'">'+name.slice(0,3)+(i===today?" · today":"")+'<small>'+esc(plan.days[i].rest?"Rest":plan.days[i].title.trim()|| (plan.days[i].items.length?"Workout":"Unplanned"))+'</small></button>').join("");
+ const short=["Mo","Tu","We","Th","Fr","Sa","Su"];
+ $("days").innerHTML=DAYS.map((name,i)=>{
+  const w=plan.days[i],state=w.rest?"Rest":w.items.length?"Plan":"—";
+  return '<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" '+(i===today?'aria-current="date" ':'')+
+   'aria-label="'+name+(i===today?", today":"")+", "+esc(w.rest?"rest":w.title||"unplanned")+'">'+short[i]+'<small>'+state+'</small></button>';
+ }).join("");
 }
 function stats(){
  const x=current(),count=x.items.reduce((a,b)=>a+b.sets,0);
  $("stats").textContent=x.rest?"Rest day":x.items.length?x.items.length+" exercise"+(x.items.length===1?"":"s")+" · "+count+" set"+(count===1?"":"s"):"No exercises";
 }
 function nav(){
- const items=current().items;
- $("workoutView").hidden=!items.length;
+ const x=current(),items=x.items,selectedItem=items[cursor];
+ $("modeSwitch").textContent=editing?"Done":hasWorkout(x)?"Edit plan":"Plan workout";
+ $("modeSwitch").setAttribute("aria-expanded",String(editing));
+ $("trainDay").textContent=(day===today?"Today · ":"")+DAYS[day];
+ $("trainTitle").textContent=x.title.trim()||(x.rest?"Rest day":items.length?"Workout":"No workout planned");
+ $("trainExercise").hidden=!selectedItem;
+ $("trainEmpty").hidden=!!selectedItem;
+ $("trainEmpty").textContent=x.rest?"Take a recovery day.":"Use Plan workout to build this day.";
+ $("workoutView").hidden=!selectedItem||editing;
  $("prevEx").disabled=cursor<=0;
  $("nextEx").disabled=cursor<0||cursor>=items.length-1;
- $("openExercise").hidden=cursor>=0||!items.length;
- $("navLabel").textContent=cursor<0?"Choose an exercise to preview":("Exercise "+(cursor+1)+" of "+items.length+" · "+byId(items[cursor].exercise).n+" · "+dose(items[cursor]));
+ if(selectedItem){
+  const exercise=byId(selectedItem.exercise);
+  $("trainCount").textContent="Exercise "+(cursor+1)+" / "+items.length;
+  $("trainName").textContent=exercise.n;
+  $("trainDose").textContent=dose(selectedItem);
+  $("trainCue").textContent=exercise.c;
+  $("trainNote").textContent=selectedItem.note;
+  $("trainNote").hidden=!selectedItem.note;
+ }
 }
-function step(index,scroll=true){
+function step(index,scroll=false){
  const x=current().items[index];if(!x)return;
  cursor=index;choose(x.exercise);nav();
  if(scroll)$("movementStage").scrollIntoView({block:"nearest"});
 }
+function setMode(value,focus=false){
+ stop();editing=value;$("editView").hidden=!value;$("trainView").hidden=value;$("editFooter").hidden=!value;
+ $(value?"libraryDiagram":"trainDiagram").append($("diagramShared"));
+ $("trainControlSlot").append($("workoutView"));
+ if(!value&&current().items.length)step(Math.max(0,Math.min(cursor,current().items.length-1)));
+ else nav();
+ if(focus)$(value?"planheading":"modeSwitch").focus();
+}
+$("modeSwitch").onclick=()=>setMode(!editing,true);
 function render(){
  week();$("weekday").textContent=DAYS[day]+(day===today?" · Today":"");$("title").value=current().title;stats();
  const rows=current().items;$("markRest").textContent=current().rest?"Clear rest day":"Mark rest day";
@@ -309,7 +358,7 @@ function setDay(index,focus=false){
 $("days").onclick=e=>{const b=e.target.closest("[data-day]");if(b)setDay(+b.dataset.day,true);};
 $("prevEx").onclick=()=>step(cursor-1);
 $("nextEx").onclick=()=>step(cursor+1);
-$("openExercise").onclick=()=>step(0);
+
 $("trainingGenerate").onclick=showPreview;
 for(const target of ["trainingFocus","trainingSize","trainingEquipment"])$(target).onchange=resetPreview;
 $("applyTraining").onclick=()=>{
@@ -340,7 +389,7 @@ $("archiveCopy").onclick=()=>{
 $("items").onclick=e=>{
  const a=e.target.dataset.a,i=+e.target.closest("[data-i]")?.dataset.i,items=current().items;
  if(!a||!Number.isInteger(i)||!items[i])return;
- if(a==="view"){step(i);return;}
+ if(a==="view"){cursor=i;setMode(false);return;}
  if(a==="delete"){items.splice(i,1);cursor=-1;}
  else{const j=i+(a==="up"?-1:1);if(j<0||j>=items.length)return;[items[j],items[i]]=[items[i],items[j]];cursor=-1;}
  render();save();
@@ -372,6 +421,6 @@ $("file").onchange=async e=>{
 $("trainingEquipment").innerHTML=equipments.map(x=>'<label><input type="checkbox" value="'+x+'" checked> '+x+"</label>").join("");
 $("filter").innerHTML='<option value="">All muscle groups</option>'+groups.map(x=>'<option>'+x+"</option>").join("");
 $("equipmentFilter").innerHTML='<option value="">All equipment</option>'+equipments.map(x=>'<option>'+x+"</option>").join("");
-choose(E[0].id);setDay(today);if(bootMessage)say(bootMessage);
+choose(E[0].id);setDay(today);setMode(false);if(bootMessage)say(bootMessage);
 
 </script></body></html>

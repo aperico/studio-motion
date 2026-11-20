@@ -5,12 +5,15 @@ and open it in a browser. No server, install, sign-in, trackers, or external ass
 
 ## Use it
 
-- It opens on **today** in your device's local time. Pick another weekday to name
-  and edit that day's workout. Leave days unplanned or explicitly mark rest.
-- Filter the illustrated library by muscle group or by machine, cable, dumbbell
-  (halteres), barbell, and bodyweight. Use the start/end poses as simplified
-  movement cues, not as a substitute for instruction. **Previous/Next exercise**
-  walks through the selected day's workout. Set reps or holds per side where shown.
+- It opens on **today** in your device's local time. This is a single
+  phone-first screen at all widths. See one exercise at a time with its movement
+  cue, prescription and large **Previous / Next** buttons. Tap another weekday
+  to see that workout.
+- Use **Plan workout** or **Edit plan** to name and edit the day's workout.
+  Leave a day unplanned or mark it as rest. The expandable exercise library
+  offers simplified start/end poses and filters by muscle group or machine,
+  cable, dumbbell (halteres), barbell, and bodyweight. Use the diagrams as cues,
+  not as a substitute for instruction. Tap **Done** to return to training.
 - **Auto Create Training** previews a repeatable suggestion for the selected day
   using the chosen equipment, focus, and session size. It favors combined moves
   before isolation, suggests editable sets/reps (or holds) and rest, and leaves
