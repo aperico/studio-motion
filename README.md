@@ -47,3 +47,22 @@ general planning starting point, not individualized coaching. See [CDC adult
 activity guidance](https://www.cdc.gov/physical-activity-basics/guidelines/adults.html),
 [CDC on muscle-strengthening activity](https://www.cdc.gov/physical-activity-basics/adding-adults/what-counts.html),
 and [AHA on recovery between strength sessions](https://www.heart.org/en/healthy-living/exercise-and-physical-activity/fitness-basics/strength-and-resistance-training-exercise).
+
+## Movement diagram references
+
+Diagrams are original simplified drawings. The purple handle/roller represents
+moving equipment; teal crosses identify support points where shown. The short
+orange arrow marks the movement direction. Animations pause briefly at the start
+and finish; isometric movements show a steady hold instead of repeating reps.
+Some less common exercises still use a shared simplified rig, so confirm the
+machine instructions rather than treating the drawing as a precise setup guide.
+
+Machine geometry and contact-point references:
+[Life Fitness equipment manual](https://resources.lifefitness.com/hub/life-fitness/en-US/1000419-0001-xd_32ce9968be620066-6b5ac64-1817a3e5ec1--7f3d.ditamap?onepage=true),
+[Technogym seated leg curl](https://www.technogym.com/en-INT/product/selection-900-leg-curl_MNIP.html),
+[Technogym leg extension](https://www.technogym.com/en-INT/product/selection-900-leg-extension_MNJP.html),
+[Technogym linear leg press](https://www.technogym.com/en-US/product/pure-strength-linear-leg-press_MG75.html),
+[Technogym chest press setup](https://www.technogym.com/en-RO/stories/training-with-the-chest-press-machine/),
+[ACE cable examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/resistance-bands-cables/?page=2),
+and [ACE barbell examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/barbell/).
+These are optional documentation links; the HTML loads no external assets.

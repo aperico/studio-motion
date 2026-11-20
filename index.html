@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion v4 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:213px;overflow:auto;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
-.app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
-.generator-fields .field select{display:block}.week-card{border-top:1px solid var(--line);padding:7px 0;display:grid;grid-template-columns:minmax(100px,.8fr) minmax(0,2fr);gap:6px;font-size:.85rem}.week-card label{display:flex;gap:5px;align-items:flex-start}.week-card small{display:block}.week-card details summary{min-height:32px!important}
+.app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}.contact-cue{font-size:.72rem;color:#9ccecc;line-height:1.22;margin:3px 0}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
+.generator-fields .field select{display:block}.build{color:var(--muted);font-size:.67rem;font-weight:500;letter-spacing:0;margin-left:3px}.auto-actions{margin:8px 0 10px}.auto-actions button{min-height:44px}.week-card{border-top:1px solid var(--line);padding:7px 0;display:grid;grid-template-columns:minmax(100px,.8fr) minmax(0,2fr);gap:6px;font-size:.85rem}.week-card label{display:flex;gap:5px;align-items:flex-start}.week-card small{display:block}.week-card details summary{min-height:32px!important}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand">◈ STUDIO MOTION</span>
+  <span class="brand">◈ STUDIO MOTION <small class="build">v4</small></span>
   <button class="primary no-print" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
@@ -24,19 +24,19 @@
   </div>
 </section>
 <div id="editView" hidden><div class="columns"><section class="panel" aria-labelledby="planheading"><p class="kicker">WEEKLY PLAN</p><h2 id="planheading" tabindex="-1"><span id="weekday"></span></h2>
+<div class="buttons auto-actions no-print"><button id="trainingGenerate">Auto Plan Day</button><button id="weekGenerate">Auto Plan Week</button></div>
 <label class="field">Workout name<input id="title" maxlength="80" autocomplete="off" placeholder="Name this day’s workout"></label>
 <div class="stats" id="stats"></div>
 <div class="buttons actions no-print"><button id="markRest">Mark rest day</button><button id="clearDay">Clear day</button><button id="print">Print / save PDF</button></div>
-<details class="toolbox no-print"><summary>Auto Plan Day / Week</summary>
+<details class="toolbox no-print" id="autoOptions"><summary>Equipment &amp; auto-plan settings</summary>
 <p class="muted guide">Preview first. The weekday split alternates upper and lower training, with core and calves midweek. Use a light warm-up and recover as needed; do not train through pain or to failure.</p>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
 <div class="row generator-fields"><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option></select></label>
 <label class="field">Exercises<select id="trainingSize"><option value="3">3 · Short</option><option value="5">5 · Standard</option><option value="6" selected>6 · Longer</option></select></label>
 <label class="field">Sets<select id="trainingSets"><option value="4">4 sets</option><option value="3">3 sets</option><option value="2">2 sets</option></select></label></div>
-<div class="buttons"><button id="trainingGenerate">Auto Plan Day</button><button id="weekGenerate">Auto Plan Week</button></div><p id="generatorStatus" class="guide muted" role="status"></p>
+</details><p id="generatorStatus" class="guide muted" role="status"></p>
 <div id="preview" class="workout-view" hidden><strong id="previewHeading"></strong><label id="variantsLabel" class="field">Variation<select id="dayVariant"></select></label><ol id="previewList"></ol><p id="previewWarning" class="guide muted"></p><button id="applyTraining" class="primary">Save workout</button></div>
 <div id="weekPreview" class="workout-view" hidden><strong>Monday–Friday preview</strong><div id="weekCards"></div><p id="weekStatus" class="guide muted"></p><button id="applyWeek" class="primary">Save selected days</button></div>
-</details>
 <div id="items"></div><div class="save no-print" role="status" id="save"></div>
 <details class="toolbox no-print"><summary>Saved workouts · <span id="archiveCount"></span></summary><p class="guide muted">Legacy, replaced, and conflicting imports are kept here. Copy a workout to the selected day.</p><div class="buttons"><select id="archivePicker" aria-label="Choose saved workout"></select><button id="archiveCopy">Copy to this day</button></div></details>
 <details class="toolbox no-print"><summary>Backup and restore</summary><p class="muted guide">Browser storage may be cleared or tied to this file’s location. Backups are private. Import fills empty days and keeps conflicts as saved copies.</p><div class="buttons"><button id="export">Export workouts (.json)</button><button id="import">Import workouts</button><input type="file" id="file" accept=".json,application/json" hidden></div></details></section>
@@ -44,7 +44,7 @@
   <summary id="libheading">Exercise library</summary>
   <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div class="choices" id="choices"></div>
 <div id="libraryDiagram"></div><div id="diagramShared"><div id="movementStage" class="stage"><span class="stage-label" id="phase">START POSITION</span><svg id="picture" role="img" viewBox="0 0 380 245" aria-labelledby="movement"><title id="movement">Exercise diagram</title></svg></div>
-<div class="controls"><button id="poses" hidden>End pose</button></div></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
+<p id="contactCue" class="contact-cue" hidden></p><div class="controls"><button id="poses" hidden>End pose</button></div></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <div id="workoutView" class="training-actions no-print" hidden>
 <button id="prevEx" aria-label="Previous exercise">← Previous</button>
@@ -152,8 +152,87 @@ for(const [id,n,g,eq,style,m,c,side,hold] of additions){
  E.push({id,n,g,eq,m,c,f:frame,p,q,d:[p[8],p[9],q[8],q[9]],side:!!side,hold:!!hold,style,extra:true,equipmentRequired: style==="pullup"&&eq==="Bodyweight"});
 }
 
+// Original simplified side-view rigs. Contacts follow the illustrated user and resistance point;
+// they describe setup, not manufacturer tolerances or a universal body position.
+function rig(id,f,p,q){
+ const exercise=byId(id);Object.assign(exercise,{f,p,q,d:[p[8],p[9],q[8],q[9]]});
+}
+rig("assist-pull","assisted",
+ [181,159,183,100,184,69,159,62,157,40,192,194,157,203],
+ [181,124,183,66,184,35,143,72,157,40,192,159,157,168]);
+rig("bw-plank","floor",
+ [155,178,223,183,247,176,224,221,255,221,111,197,65,222],
+ [155,178,223,183,247,176,224,221,255,221,111,197,65,222]);
+rig("machine-row","chestrow",
+ [151,172,151,103,151,72,187,132,224,139,198,174,203,219],
+ [151,172,151,103,151,72,115,138,158,139,198,174,203,219]);
+rig("machine-rear","rear",
+ [190,177,190,109,190,76,168,140,183,132,163,181,157,219],
+ [190,177,190,109,190,76,149,114,114,116,163,181,157,219]);
+byId("machine-rear").mirror=true;
+rig("machine-biceps","preacher",
+ [139,172,138,104,142,73,173,139,209,162,194,177,197,222],
+ [139,172,138,104,142,73,173,139,183,104,194,177,197,222]);
+rig("machine-abs","seatabs",
+ [145,171,150,101,152,68,182,110,159,85,193,178,191,221],
+ [145,171,182,121,194,96,202,139,195,113,193,178,191,221]);
+rig("machine-rotation","turn",
+ [190,167,190,108,190,76,155,117,144,107,167,186,163,219],
+ [190,167,185,111,184,78,208,119,221,113,167,186,163,219]);
+rig("machine-hip","hipbench",
+ [153,194,218,152,246,147,176,171,167,191,107,174,90,222],
+ [145,158,220,150,248,143,178,160,161,159,104,166,90,222]);
+rig("machine-seated-calf","calfseat",
+ [151,171,149,108,151,78,175,142,186,167,204,179,207,209],
+ [151,171,149,108,151,78,175,142,186,167,204,171,210,195]);
+rig("db-seated-calf","calfbench",
+ [151,171,149,108,151,78,175,142,186,167,204,179,207,209],
+ [151,171,149,108,151,78,175,142,186,167,204,171,210,195]);
+rig("cable-crunch","cablehigh",
+ [165,151,175,91,174,60,198,90,184,68,165,218,111,220],
+ [155,152,201,145,220,120,223,148,215,131,165,218,111,220]);
+rig("cable-pull","cablelow",
+ [172,151,174,92,175,61,192,117,178,151,168,189,166,220],
+ [144,160,198,119,223,104,180,151,154,177,177,185,166,220]);
+rig("cable-pallof","cableside",
+ [176,153,181,96,182,63,163,119,185,102,177,184,176,220],
+ [176,153,181,96,182,63,211,107,246,106,177,184,176,220]);
+rig("db-hold","floor",
+ [183,149,184,94,183,61,190,127,194,164,190,185,190,219],
+ [183,149,184,94,183,61,190,127,194,164,190,185,190,219]);
+const contactCopy={
+ press:"Back pad stays fixed; hands follow the handles.", shoulder:"Back pad stays fixed; handles travel overhead.",
+ pulldown:"Thighs stay under the pad; bar moves toward upper chest.", row:"Feet stay planted; cable follows the handle.",
+ fly:"Back and seat stay supported; handles close in front.", "machine-rear":"Chest stays supported; move the arms outward.",
+ legpress:"Feet move with the plate; back and hips stay on the sled pad.",
+ extension:"Knee stays at the pivot; padded roller is in front of the shin.",
+ curl:"Knee stays at the pivot; roller is behind the lower leg and thigh pad stays fixed.",
+ "machine-row":"Chest stays at the support pad; pull the handle toward ribs.",
+ "machine-biceps":"Upper arm stays on the angled pad; only the forearm turns.",
+ "machine-hip":"Upper back stays supported; the hip pad rises with the pelvis.",
+ "machine-seated-calf":"Thigh pad moves with the knees; toes stay on the platform.",
+ "assist-pull":"Knees stay on the assistance pad as you pull toward the fixed bar.",
+ "db-seated-calf":"Weight is supported on the thighs; toes stay on the platform.",
+ calf:"Toes keep contact with the platform; heels rise.",
+ "cable-pallof":"Hold the hands out while the cable pulls sideways.",
+ "bw-plank":"Hold this supported position; breathe normally.",
+ "db-hold":"Hold the weight by your side without leaning."
+};
+
 const $=x=>document.getElementById(x);
 const frames={
+ assisted:'<path d="M70 228H310M102 228V37H284V228M111 44H249M242 219H294"/><path d="M134 39H220" stroke-width="9"/>',
+ chestrow:'<path d="M64 222H318M253 222V48H286V222M133 175H184M141 175V222M175 111V218"/><path d="M169 112V159M128 170H177" stroke-width="10"/>',
+ rear:'<path d="M61 225H318M104 222V65H278V222M140 177H239M190 176V222"/><path d="M190 107V153M153 174H229" stroke-width="12"/>',
+ preacher:'<path d="M61 228H319M128 177H182M140 177V228M169 138L202 152M185 147V228"/><path d="M131 171H179M156 129L202 153" stroke-width="12"/>',
+ seatabs:'<path d="M61 226H318M120 168H192M143 168V225M119 87H251V222"/><path d="M122 171H170" stroke-width="11"/>',
+ turn:'<path d="M61 225H318M120 222V77H257V222M152 170H228M190 170V222"/><path d="M160 166H218" stroke-width="12"/>',
+ hipbench:'<path d="M61 228H318M201 156H269M216 157V228M262 155V228M142 219H258"/><path d="M207 153H265" stroke-width="11"/>',
+ calfseat:'<path d="M61 228H318M119 176H193M131 175V227M222 228V219H260V228M247 221V103H278"/><path d="M123 173H176" stroke-width="10"/>',
+ calfbench:'<path d="M61 228H318M119 176H193M131 175V227M222 228V219H260V228"/><path d="M123 173H176" stroke-width="10"/>',
+ cablehigh:'<path d="M61 228H319M281 218V38H249M295 220V38H281"/>',
+ cablelow:'<path d="M61 228H319M85 228V48H108V216M83 218H115"/>',
+ cableside:'<path d="M61 228H319M89 228V48H109V218M105 105H133"/>',
  floor:'<path d="M53 228H325"/>',
  bench:'<path d="M55 228H325M126 149H258M142 149V228M244 149V228" stroke-width="7"/>',
  bar:'<path d="M55 228H325M115 228V38H265V228"/>',
@@ -180,27 +259,70 @@ function draw(t){
  if(f.f==="row")mech=line(wx,wy,272,148,"#85a4a7",2)+line(wx-5,wy-5,wx+6,wy+5,"#cf98fc",7);
  if(f.f==="upright")mech=line(264,69,dx,dy,"#54737c",5)+line(dx-8,dy,dx+10,dy,"#cf98fc",7);
  if(f.f==="sled")mech=line(dx-15,dy-20,dx+19,dy+21,"#cf98fc",8);
- if(f.f==="lever")mech=circle(199,177,8,"#54737c")+line(199,177,dx,dy,"#54737c",5)+circle(dx,dy,8,"#cf98fc");
- if(f.id==="fly")mech=line(100,69,108,113,"#54737c",4)+line(280,69,272,113,"#54737c",4)+circle(dx,dy,6,"#cf98fc")+circle(380-dx,dy,6,"#cf98fc");
- if(f.id==="abduct")mech=circle(dx-8,dy,8,"#cf98fc")+circle(388-dx,dy,8,"#cf98fc");
+ const pad=(x,y)=>circle(x,y,5,"#cf98fc");
+ const support=(x,y)=>circle(x,y,5,"#102a2d")+line(x-5,y,x+5,y,"#8ad4d4",2)+line(x,y-5,x,y+5,"#8ad4d4",2);
+ const cable=(x,y,ax,ay)=>line(x,y,ax,ay,"#8ad4d4",2)+circle(ax,ay,4,"#8ad4d4");
+ let contacts="";
+ if(f.f==="lever"){
+   const axish=ay-ky,axisw=ax-kx;
+   const flip=f.id==="curl"?-1:1,len=Math.hypot(axish,axisw)||1;
+   const px=kx+.78*axisw+flip*10*axish/len,py=ky+.78*axish-flip*10*axisw/len;
+   mech=circle(kx,ky,7,"#567078")+line(kx,ky,px,py,"#768b99",4)+circle(px,py,8,"#cf98fc");
+   if(f.id==="curl")contacts+=line(kx-20,ky-10,kx+6,ky-10,"#8ad4d4",7);
+   contacts+=support(kx,ky);
+ }
+ if(f.id==="fly")mech=line(100,69,wx,wy,"#54737c",4)+line(280,69,380-wx,wy,"#54737c",4)+pad(wx,wy)+pad(380-wx,wy);
+ if(f.id==="abduct")mech=pad(kx-7,ky)+pad(387-kx,ky);
  if(f.f==="calf")mech=line(165,sy+2,222,sy+2,"#cf98fc",7);
  if(f.extra){
-   if(f.eq==="Dumbbell"||f.eq==="Barbell")mech=line(wx-(f.eq==="Barbell"?19:8),wy,wx+(f.eq==="Barbell"?19:8),wy,"#cf98fc",7);
-   else if(f.eq==="Cable")mech=line(f.style==="kick"?ax:wx,f.style==="kick"?ay:wy, f.style==="kick"?85:292,["fly","rotation","reach"].includes(f.style)?106:f.style==="pulldown"||f.style==="pushdown"?52:218,"#85a4a7",2);
-   else if(f.eq==="Machine")mech=line(257,87,wx,wy,"#54737c",5)+circle(wx,wy,5,"#cf98fc");
+   if(f.eq==="Dumbbell"||f.eq==="Barbell"){
+    const width=f.eq==="Barbell"?18:9;
+    const x=f.f==="calfbench"?kx-7:wx,y=f.f==="calfbench"?ky-8:wy;
+    mech=line(x-width,y,x+width,y,"#cf98fc",4)+line(x-width,y-7,x-width,y+7,"#cf98fc",5)+line(x+width,y-7,x+width,y+7,"#cf98fc",5);
+   }else if(f.eq==="Cable"){
+    const anchor=f.f==="cablehigh"?[249,38]:f.f==="cablelow"?[112,211]:f.f==="cableside"?[129,105]:[f.style==="kick"?85:292,["fly","rotation","reach"].includes(f.style)?106:f.style==="pulldown"||f.style==="pushdown"?52:218];
+    mech=cable(f.style==="kick"?ax:wx,f.style==="kick"?ay:wy,...anchor)+pad(f.style==="kick"?ax:wx,f.style==="kick"?ay:wy);
+   }else if(f.eq==="Machine"){
+    if(f.f==="assisted"){
+     mech=line(281,ky+8,kx,ky+8,"#84a8ad",4)+line(kx-32,ky+8,kx+15,ky+8,"#cf98fc",9);
+     contacts+=support(kx,ky+8);
+    }else if(f.f==="hipbench")mech=line(hx-15,hy-6,hx+15,hy-6,"#cf98fc",9);
+    else if(f.f==="calfseat")mech=line(247,150,kx,ky-8,"#8ad4d4",3)+line(kx-12,ky-8,kx+9,ky-8,"#cf98fc",8);
+    else if(f.f==="rear")mech=line(105,84,wx,wy,"#54737c",4)+line(275,84,380-wx,wy,"#54737c",4)+pad(wx,wy)+pad(380-wx,wy);
+    else mech=line(f.f==="chestrow"?253:257,f.f==="chestrow"?139:87,wx,wy,"#54737c",5)+pad(wx,wy);
+   }
  }
+ if(f.id==="bw-plank")contacts+=support(ex,ey)+support(ax,ay);
+ if(f.f==="cableside")contacts+=line(129,105,wx,wy,"#8ad4d4",2)+pad(wx,wy);
+ if(f.f==="sled")contacts+=support(ax,ay);
+ if(["upright","lever","seatabs","turn"].includes(f.f))contacts+=support(hx,hy);
+ if(f.f==="chestrow")contacts+=support(sx+10,sy+27);
+ if(f.f==="preacher")contacts+=support(ex,ey);
+ if(["tower","row","chestrow","preacher"].includes(f.f))contacts+=support(ax,ay);
+ if(["hipbench","bench"].includes(f.f))contacts+=support(sx,sy+7);
+ if(["calf","calfseat","calfbench"].includes(f.f))contacts+=support(f.f==="calf"?198:224,219);
+ const movingPad=f.f==="lever"||f.f==="sled"||f.f==="calfseat";
+ const pattern=f.style;
+ const indices=movingPad||pattern==="kick"||f.id==="abduct"?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
+ const [mi,mj]=indices,from=[f.p[mi],f.p[mj]],to=[f.q[mi],f.q[mj]];
+ const arrow=f.hold?"":Math.hypot(to[0]-from[0],to[1]-from[1])>16?
+    '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#ffbf78" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#guide-arrow)" fill="none" opacity=".88"/>':"";
  const other=f.mirror?limb(380-hx,hy,380-kx,ky,380-ax,ay,"#769d86",12)+limb(380-sx,sy,380-ex,ey,380-wx,wy,"#769d86",10):limb(hx-7,hy+4,kx-9,ky-3,ax-10,ay-2,"#497261",9);
  const color="#bcf57c";
- $("picture").innerHTML='<title id="movement">'+f.n+' movement diagram</title><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+limb(sx,sy,ex,ey,wx,wy,color,11)+line(ax,ay,ax+(f.id==="legpress"?10:13),ay+(f.id==="legpress"?11:1),color,8)+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>';
- $("phase").textContent=t<.06?"START POSITION":t>.94?"END POSITION":"MOVEMENT";$("poses").textContent=t>.5?"Start pose":"End pose";
+ $("picture").innerHTML='<title id="movement">'+f.n+' movement diagram</title><defs><marker id="guide-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path fill="#ffbf78" d="M0 0l9 5-9 5z"/></marker><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+limb(sx,sy,ex,ey,wx,wy,color,11)+(f.f==="calfseat"||f.f==="calfbench"?line(ax,ay,224,219,color,8):f.f==="calf"?line(ax,ay,198,219,color,8):line(ax,ay,ax+(f.id==="legpress"?10:13),ay+(f.id==="legpress"?11:1),color,8))+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>'+contacts+arrow;
+ $("phase").textContent=f.hold?"HOLD POSITION":t<.06?"START":t>.94?"FINISH":"MOVEMENT";$("poses").textContent=t>.5?"Start pose":"End pose";
 }
 function stop(){playing=false;cancelAnimationFrame(raf);raf=0;}
 const movementVisible=()=>editing?$("libraryPanel").open:Boolean(current().items[cursor]);
-function loop(now){if(!playing||!movementVisible()||document.hidden){stop();return;}if(!t0)t0=now;draw((1-Math.cos((now-t0)/3700*Math.PI*2))/2);raf=requestAnimationFrame(loop);}
+function loop(now){if(!playing||!movementVisible()||document.hidden){stop();return;}if(!t0)t0=now;const cycle=((now-t0)%4300)/4300;const t=cycle<.11?0:cycle<.48?(cycle-.11)/.37:cycle<.61?1:1-(cycle-.61)/.39;draw((1-Math.cos(t*Math.PI))/2);raf=requestAnimationFrame(loop);}
 function syncAnimation(){
  stop();t0=0;draw(0);
  const visible=movementVisible();
  $("poses").hidden=!visible||!reducedMotion.matches;
+ const contact=contactCopy[selected.id];
+ $("contactCue").textContent=contact||"";
+ $("contactCue").hidden=!contact;
+ if(selected.hold){draw(1);$("poses").hidden=true;return;}
  if(!visible||document.hidden||reducedMotion.matches)return;
  playing=true;raf=requestAnimationFrame(loop);
 }
@@ -406,7 +528,7 @@ function nav(){
  $("trainTitle").textContent=x.title.trim()||(x.rest?"Rest day":items.length?"Workout":"No workout planned");
  $("trainExercise").hidden=!selectedItem;
  $("trainEmpty").hidden=!!selectedItem;
- $("trainEmpty").textContent=x.rest?"Take a recovery day.":"Use Plan workout to build this day.";
+ $("trainEmpty").textContent=x.rest?"Take a recovery day.":"Tap Plan workout to add exercises or auto-plan.";
  $("workoutView").hidden=!selectedItem||editing;
  $("prevEx").disabled=cursor<=0;
  $("nextEx").disabled=cursor<0||cursor>=items.length-1;
