@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v18 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v19 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -45,10 +45,11 @@
 #weekPreview,#exerciseGuide{max-width:calc(100% - 20px)}
 @media(max-width:395px){.masthead .brand{grid-column:1/3;padding-right:min(34%,5rem);grid-row:1}.masthead #aboutToggle{z-index:1}}
 #guideMedia{margin:5px 0 9px;min-width:0}#guideMedia[hidden],#guideInlineFigure[hidden],#guideInlineStatus[hidden]{display:none}#guideInlineToggle{min-height:44px;max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:start}#guideInlineFigure{margin:8px 0 0}#guideInlineArt{min-width:0}#guideInlineArt img{display:block;max-inline-size:100%;max-block-size:min(36dvh,260px);height:auto;object-fit:contain;margin-inline:auto;border-radius:9px}#guideInlineCredit{margin-top:4px;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}#guideInlineCredit a{color:var(--mint)}
+ .tip-media{margin-top:7px;min-width:0}.tip-media [hidden]{display:none!important}.tip-media button,.tip-media .guide-online{min-height:44px;max-inline-size:100%;white-space:normal;overflow-wrap:anywhere;text-align:start}.tip-media figure{margin:8px 0 0;min-width:0}.tip-media img{display:block;max-inline-size:100%;max-block-size:min(36dvh,260px);height:auto;object-fit:contain;margin-inline:auto;border-radius:9px}.tip-media figcaption{margin-top:4px;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}.tip-media figcaption a{color:var(--mint)}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v18</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v19</small></span>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span></button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -332,6 +333,8 @@ const PT={
  "Form demonstration":"Demonstração do exercício",
  "Show form image":"Mostrar imagem da execução",
  "Hide form image":"Ocultar imagem da execução",
+ "Short demos in form tips":"Demonstrações nas dicas de execução",
+ "See an image or reach the verified source without opening a separate exercise guide.":"Veja a imagem ou acesse a fonte verificada sem abrir outro guia.",
  "Loading form image…":"Carregando a imagem…",
  "Couldn’t load the image. The drawing above still works offline.":"Não foi possível carregar a imagem. O desenho acima funciona offline.",
  "Open the source":"Abrir a fonte",
@@ -1355,6 +1358,63 @@ $("undoSets").onclick=()=>{
  renderTrainList();
  $("clearSets").focus({preventScroll:true});
 };
+function tipMediaLink(ref){
+ return (ref.kind==="image"?t("Open form image"):t("Open "+ref.seconds+"-sec "+(ref.kind==="gif"?"loop":"clip"),"Ver "+(ref.kind==="gif"?"animação":"vídeo")+" de "+displayNumber(ref.seconds)+" s"))+" · "+ref.source+" ↗";
+}
+function tipMediaMarkup(e,i){
+ const inline=inlineFormImages[e.id],ref=guideSource(e);
+ if(!inline&&!ref)return "";
+ if(!inline)return '<div class="tip-media"><a class="guide-online" href="'+esc(ref.url)+'" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">'+esc(tipMediaLink(ref))+'</a></div>';
+ const id="tip-media-"+i;
+ return '<div class="tip-media" data-tip-ex="'+esc(e.id)+'"><button type="button" data-tip-toggle aria-expanded="false" aria-controls="'+id+'">'+t("Show form image")+'</button>'+
+  '<figure id="'+id+'" hidden><div data-tip-art></div><figcaption><a href="'+esc(inline[1])+'" target="_blank" rel="noopener noreferrer">Nitin Raturi</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></figcaption></figure>'+
+  '<p class="guide muted" data-tip-status role="status" hidden></p><a class="guide-online" data-tip-source hidden href="'+esc(inline[1])+'" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">'+t("Open the source")+' ↗</a></div>';
+}
+const tipLoaders=new WeakMap();
+function closeTipMedia(host){
+ const token=tipLoaders.get(host);
+ if(token){clearTimeout(token.timeout);tipLoaders.delete(host);}
+ host.querySelector('[data-tip-art]').replaceChildren();
+ host.querySelector('figure').hidden=true;
+ const status=host.querySelector('[data-tip-status]');status.hidden=true;status.textContent="";
+ host.querySelector('[data-tip-source]').hidden=true;
+ const button=host.querySelector('[data-tip-toggle]');
+ button.setAttribute("aria-expanded","false");button.textContent=t("Show form image");
+}
+function showTipMedia(host){
+ const entry=inlineFormImages[host.dataset.tipEx],exercise=byId(host.dataset.tipEx);
+ if(!entry||!exercise)return;
+ const figure=host.querySelector('figure');
+ if(!figure.hidden){closeTipMedia(host);return;}
+ closeTipMedia(host);
+ const button=host.querySelector('[data-tip-toggle]'),area=host.querySelector('[data-tip-art]'),status=host.querySelector('[data-tip-status]');
+ const token={timeout:0};
+ tipLoaders.set(host,token);
+ const relevant=()=>host.isConnected&&tipLoaders.get(host)===token;
+ const fail=()=>{
+  if(!relevant())return;
+  closeTipMedia(host);status.textContent=t("Couldn’t load the image. The drawing above still works offline.");
+  status.hidden=false;host.querySelector('[data-tip-source]').hidden=false;
+ };
+ if(navigator.onLine===false){fail();return;}
+ button.setAttribute("aria-expanded","true");button.textContent=t("Hide form image");
+ figure.hidden=false;status.hidden=false;status.textContent=t("Loading form image…");
+ const img=document.createElement('img');
+ img.alt=t("Setup for ")+nameOf(exercise);img.referrerPolicy="no-referrer";img.decoding="async";
+ img.onload=()=>{if(relevant()){clearTimeout(token.timeout);status.hidden=true;}};
+ img.onerror=fail;
+ token.timeout=setTimeout(fail,8000);
+ area.append(img);img.src=entry[0];
+}
+$("trainList").addEventListener("click",event=>{
+ const button=event.target.closest("[data-tip-toggle]");
+ if(button)showTipMedia(button.closest("[data-tip-ex]"));
+});
+$("trainList").addEventListener("toggle",event=>{
+ if(event.target.tagName==="DETAILS"&&!event.target.open){
+  const host=event.target.querySelector("[data-tip-ex]");if(host)closeTipMedia(host);
+ }
+},true);
 function renderTrainList(){
  const root=$("trainList");clearArt(root);
  const date=dateForDay(day);
@@ -1370,7 +1430,7 @@ function renderTrainList(){
     '<dl class="workout-dose">'+workoutDose(row)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>'+t("Form tips")+'</summary><p class="coach">'+esc(cueOf(e))+'</p>'+
     (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
-    (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+'</details></li>';
+    (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i)+'</details></li>';
  }).join("");
  watchArt(root);progressCount();
 }
@@ -1958,6 +2018,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"form-tips-v19",date:"2026-11-21",title:"Short demos in form tips",body:"See an image or reach the verified source without opening a separate exercise guide."},
  {id:"inline-forms-v18",date:"2026-11-21",title:"Inline form images and a roomier menu",body:"View licensed form images inside the guide. Menus fit more comfortably on narrow screens."},
  {id:"goals-language-v17",date:"2026-11-21",title:"Goal-based planning and clearer recovery",body:"Pick a training goal, regenerate one day, and use English or Brazilian Portuguese offline. Recovery days have fewer movements; guides show the setup more clearly."},
  {id:"short-demos-v16",date:"2026-11-21",title:"Short exercise demos and visible progress",body:"Verified external demos go straight to the movement. The workout keeps progress visible and marks the first unfinished exercise without changing the list."},

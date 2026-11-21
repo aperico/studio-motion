@@ -24,7 +24,8 @@ locally, including offline. Your saved exercises, workout names, and notes are n
   off each set as you finish. Progress stays visible while you scroll. The first unfinished
   exercise is marked, and you can jump straight to its next unchecked set.
   Each exercise has its own diagram, rendered immediately.
-  Only on-screen diagrams animate. Form tips are optional. Tap a day to see its workout.
+  Only on-screen diagrams animate. **Form tips** on each training card show an optional
+  in-place image or a direct source demo when verified. Tap a day to see its workout.
 - Use **Plan workout** or **Edit plan** to name and edit the day's workout.
   Leave a day unplanned. Existing rest days are retained. The expandable exercise library
   offers simplified start/end poses and filters by muscle group or machine,
