@@ -63,9 +63,11 @@ locally, including offline. Your saved exercises, workout names, and notes are n
   day and focus. Select the option you want and save it; only the chosen workout
   becomes active. **Regenerate this day** makes another full preview for that day
   without touching other days; limited equipment can constrain variation.
+  Choose **Triceps** or **Chest & triceps** for a targeted, randomized plan, or use
+  the library’s **Triceps** filter to find exercises whose primary target is triceps.
 - **Auto Plan Week** is in the top bar on every day. Each preview randomizes
   exercise selection within a repeatable Monday–Sunday plan: upper A, lower A,
-  core/calves, upper B, lower B, and two short no-equipment recovery sessions. Choose Balanced, Glutes & legs, or Upper body.
+  core/calves, upper B, lower B, a lighter Saturday strength day (up to two sets per exercise), and one short Sunday recovery session. Choose Balanced, Glutes & legs, or Upper body.
   Goal choices are available to everyone and never change the plan until you save.
   Machine and cable equipment are selected initially for the strength days.
   Change equipment in Plan/Edit. Empty days are checked for saving by default. With restricted equipment, a
@@ -77,7 +79,7 @@ locally, including offline. Your saved exercises, workout names, and notes are n
   Reduce to 2 or 3 sets if you want less volume. The estimate includes 8 minutes
   to warm up, roughly 40 seconds per rep-based set (per side when needed),
   scheduled between-set rest, and 1.5 minutes per changeover. Eight movements
-  at four sets will often take more than an hour; choose fewer sets to shorten it. The weekend uses
+  at four sets will often take more than an hour; choose fewer sets to shorten it. Sunday uses
   one easy set per movement, across three gentle mobility and activation movements. Random options provide choice, not evidence that
   continually changing a saved routine is better or that you should lift hard
   on seven days or train to failure.

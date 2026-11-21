@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v19 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v20 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
-.app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}.contact-cue{font-size:.72rem;color:#9ccecc;line-height:1.22;margin:3px 0}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
+.app{width:min(760px,100%);padding:12px clamp(10px,3.5vw,24px) 20px}.masthead{display:grid;grid-template-columns:minmax(0,1fr);gap:7px;margin:0 0 11px}.masthead .brand{font-size:.78rem;letter-spacing:.12em}.masthead button,.training-actions button{min-height:46px}.week{grid-template-columns:repeat(7,minmax(0,1fr));gap:3px;margin-bottom:10px}.week button{text-align:center;min-height:47px;padding:4px 1px;font-size:.8rem}.week small{font-size:.58rem}.week button[aria-current=date]{border-bottom:3px solid var(--mint)}.train-heading{margin:0 0 10px}.train-heading .kicker{margin:0}.train-heading h1{margin:1px 0;font-size:clamp(1.35rem,5.5vw,2.4rem);line-height:1.12}.train-row{display:flex;flex-direction:column;gap:3px}.train-row .kicker{margin:0}.train-row h2{font-size:clamp(1.15rem,5vw,1.7rem);line-height:1.15}#trainDose{color:var(--mint);font-size:.84rem}.train-view .stage{margin:8px 0 6px}.train-view .stage svg{max-height:clamp(134px,27vh,235px)}.train-view .controls{gap:5px}.train-view .controls button{min-height:44px;padding:5px 8px;font-size:.85rem}.train-view .controls input{width:72px}.contact-cue{font-size:.72rem;color:#9ccecc;line-height:1.22;margin:3px 0}@media(max-height:660px){.train-view .stage svg{max-height:min(135px,22vh)}}.train-view .coach{font-size:.88rem;line-height:1.35;margin:8px 0}.training-actions{margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px}.training-actions button{font-size:.95rem}.training-actions button:last-child:not(:disabled){background:var(--mint);color:#17230e;border-color:var(--mint)}.train-view .empty{padding:14px}.columns{grid-template-columns:minmax(0,1fr);gap:10px}.library>summary{cursor:pointer;font-weight:720;min-height:30px}.panel summary:focus-visible{outline:2px solid var(--mint)}#editView .toolbox summary{min-height:36px;padding-block:5px}#editView .actions button,#editView .buttons button{min-height:40px}@media print{#trainView{display:none!important}#editView[hidden]{display:block!important}.masthead{display:none}}
 .generator-fields .field select{display:block}.build{color:var(--muted);font-size:.67rem;font-weight:500;letter-spacing:0;margin-left:3px}.auto-actions{margin:8px 0 10px}.auto-actions button{min-height:44px}.week-card{border-top:1px solid var(--line);padding:7px 0;display:grid;grid-template-columns:minmax(100px,.8fr) minmax(0,2fr);gap:6px;font-size:.85rem}.week-card label{display:flex;gap:5px;align-items:flex-start}.week-card small{display:block}.week-card details summary{min-height:32px!important}
 .train-progress{color:var(--mint);font-size:.82rem;margin:2px 0 10px}.train-list{margin:0;padding-left:24px;list-style:decimal}.train-list li::marker{color:#a8bab9;font-size:.85rem}.train-card{padding:6px 8px 8px;margin:0 0 7px;border:1px solid var(--line);border-radius:11px;background:var(--panel)}.exercise-pick{font:inherit;font-weight:720;text-align:left;min-height:44px;padding:3px 2px;margin:0;border:0;background:none;max-width:100%;overflow-wrap:anywhere}.exercise-pick[aria-expanded=true]{color:var(--mint)}.train-dose{margin:0 0 4px;font-size:.8rem;color:var(--muted)}.checks{padding:0;border:0;gap:3px 5px}.checks legend{font-size:.7rem;color:var(--muted)}.set-box{min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;gap:3px;border:1px solid var(--line);border-radius:8px;background:var(--inner);cursor:pointer}.set-box input{width:17px;height:17px;padding:0;accent-color:var(--mint);margin:0}.set-box:focus-within{outline:2px solid var(--mint)}.exercise-art .stage svg{max-height:clamp(110px,24vh,202px)}.exercise-art p{overflow-wrap:anywhere}
-.masthead .buttons{justify-content:flex-end;gap:5px}.masthead button{font-size:.78rem;padding:5px 6px}.card-art{margin:4px 0 6px}.rig{display:block}.rig svg{aspect-ratio:380 / 245;max-height:184px}.choices .rig svg{max-height:80px}.choices .stage{margin:0 0 4px}.choices .stage-label{display:none}.choices button{overflow-wrap:anywhere}.motion-pose,#weekClose,#weekPreview .buttons button{min-height:44px}.exercise-label{font-size:1rem;margin:0}.train-card details summary{cursor:pointer;color:var(--muted);padding:6px 0;font-size:.8rem}#weekPreview{width:min(calc(100vw - 20px),560px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);overscroll-behavior:contain}#weekPreview::backdrop{background:#060a0bc9}#weekPreview h2{font-size:1.05rem}@media print{#weekPreview{display:none!important}}
+.masthead .buttons{gap:7px}.masthead button{font-size:.78rem;padding:5px 6px}.card-art{margin:4px 0 6px}.rig{display:block}.rig svg{aspect-ratio:380 / 245;max-height:184px}.choices .rig svg{max-height:80px}.choices .stage{margin:0 0 4px}.choices .stage-label{display:none}.choices button{overflow-wrap:anywhere}.motion-pose,#weekClose,#weekPreview .buttons button{min-height:44px}.exercise-label{font-size:1rem;margin:0}.train-card details summary{cursor:pointer;color:var(--muted);padding:6px 0;font-size:.8rem}#weekPreview{width:min(calc(100vw - 20px),560px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);overscroll-behavior:contain}#weekPreview::backdrop{background:#060a0bc9}#weekPreview h2{font-size:1.05rem}@media print{#weekPreview{display:none!important}}
 #items .replace,.replace,.swap button,.swap select{min-height:44px}.swap{padding:9px;margin:7px 0;background:var(--inner);border:1px solid var(--line);border-radius:9px}.swap .field{margin-top:4px}.swap select{display:block;width:100%}.swap h3{font-size:.82rem;margin:10px 0 2px}.swap ul{list-style:none;padding:0;margin:0}.swap li{padding:2px 0}.swap [data-swap-ex]{text-align:left;width:100%;font-size:.87rem}.swap-result{color:var(--mint);font-size:.85rem;margin:0 0 8px}.replace-tag{font-size:.73rem;color:var(--muted);margin:2px 0}
 .selection-link{display:inline-flex;min-height:44px;align-items:center;color:var(--mint);font-size:.81rem}.choices{scrollbar-gutter:stable}
 .body-maps{margin:6px 0;font-size:.82rem;color:var(--muted)}.body-maps svg{width:min(155px,100%);height:112px;display:block}.body-maps .map-text,.targets-text{margin:3px 0;font-size:.77rem;color:var(--muted)}.targets-text strong,.map-text strong{color:var(--txt)}.target-primary,.target-assist{display:inline-block;width:.7em;height:.7em;margin-right:.3em;border-radius:50%}.target-primary{background:#ff914d}.target-assist{background:#ee83bc}.rig svg[data-wide]{aspect-ratio:468 / 245}#muscleOverview{border-left:2px solid var(--line);padding-left:7px}
@@ -15,18 +15,17 @@
 #setActions button{min-height:44px;font-size:.84rem}#setActions{margin-top:10px}
 .brandmark{width:30px;height:30px}.masthead .brand{white-space:nowrap}.masthead #aboutToggle{min-height:44px;min-width:44px;font-size:1rem}.mast-actions{flex-wrap:nowrap}
 #studioAbout{margin-bottom:10px}#aboutClose,#copyUpdates,.launch-notice button{min-height:44px}#studioAbout a{color:var(--mint)}#studioAbout details summary{cursor:pointer;min-height:44px;padding:8px 0;font-size:.86rem}#updates{border-top:1px solid var(--line);margin-top:4px;padding-top:8px;scroll-margin-top:10px}#updateHistory{margin:0 0 8px;padding-left:20px;font-size:.84rem}#updateHistory time{font-size:.75rem;color:var(--muted)}.launch-notice{display:flex;align-items:center;gap:6px;margin:0 0 8px;padding:0 2px;border-bottom:1px solid var(--line);font-size:.76rem;color:var(--muted)}.launch-notice span{flex:1;line-height:1.25}.launch-notice button{font-size:.75rem}.launch-notice #noticeDismiss{min-width:44px}
-@media(max-width:395px){.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px}.mast-actions{display:contents}.masthead .brand{grid-column:1;grid-row:1}.masthead #aboutToggle{grid-column:2;grid-row:1;justify-self:end}.masthead #weekGenerate{grid-column:1;grid-row:2;justify-self:end}.masthead #modeSwitch{grid-column:2;grid-row:2}.masthead #weekGenerate,.masthead #modeSwitch{min-width:113px}}
 .workout-progress{display:block;width:100%;height:.55rem;accent-color:var(--mint);margin:0 0 8px}.workout-progress[hidden],.workout-dose[hidden],.repeat-dose[hidden]{display:none}.workout-dose{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:8px 0}.workout-dose>div{min-width:0;border-radius:8px;background:var(--inner);border:1px solid var(--line);padding:5px;text-align:center}.workout-dose dt{font-size:.67rem;color:var(--muted)}.workout-dose dd{margin:0;font-size:.84rem;font-weight:700;overflow-wrap:anywhere}.repeat-dose{display:flex;min-height:44px;align-items:center;gap:8px;color:var(--muted);font-size:.82rem}.repeat-dose input{width:21px;height:21px;accent-color:var(--mint)}
 .training-progress{position:sticky;top:env(safe-area-inset-top,0px);z-index:3;background:var(--bg);border-bottom:1px solid var(--line);padding:5px 0 6px;margin-bottom:8px}.training-progress[hidden],.next-exercise[hidden]{display:none}.training-progress .train-progress{margin:0 0 3px}.training-progress .workout-progress{margin:0}.train-card{scroll-margin-top:6rem}.train-card.is-next{border-color:#9bd26e}.next-exercise{display:inline-block;color:var(--mint);font-size:.72rem;font-weight:700;margin:0 0 3px}.training-progress .progress-row{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;column-gap:7px}.training-progress button{min-height:44px;font-size:.74rem;padding:3px 7px}.next-exercise:focus-visible{outline-offset:3px}@media print{.training-progress,.next-exercise{display:none!important}}
 .language-choice{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:7px 0}.language-choice select{min-height:44px}
 #planThisDay{margin:0 0 9px;min-height:44px}.day-preview-note{margin:3px 0;color:var(--muted)}.exercise-info .label{display:none}#exerciseGuide .guide-online{font-weight:700}
-@media(max-width:395px){.masthead{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.masthead .brand{width:max-content}.masthead #weekGenerate{justify-self:stretch}.masthead #modeSwitch{width:100%}.masthead #aboutToggle{padding-inline:9px}.generator-fields .field{min-width:98px}.generator-fields .field select{max-width:100%}}
+@media(max-width:395px){.generator-fields .field{min-width:98px}.generator-fields .field select{max-width:100%}}
 
 /* Let Portuguese labels and enlarged text reflow instead of clipping controls. */
 .app button,.app summary,.week-card,.guide-title-row h2{overflow-wrap:anywhere;white-space:normal}
 .app select{max-width:100%;min-width:0}
-.masthead .brand{width:auto;min-width:0;white-space:normal;overflow-wrap:anywhere}
-.mast-actions{min-width:0;flex-wrap:wrap}
+.masthead .brand{width:auto;min-width:0;white-space:normal;overflow-wrap:normal}
+.masthead .mast-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;min-width:0}
 .masthead #weekGenerate,.masthead #modeSwitch{min-width:0}
 .week{grid-template-columns:repeat(auto-fit,minmax(min(100%,2.35rem),1fr))}
 .launch-notice{flex-wrap:wrap}
@@ -43,29 +42,33 @@
 .week-card{grid-template-columns:minmax(min(6.25rem,33%),.8fr) minmax(0,2fr)}
 .week-card>*{min-width:0;overflow-wrap:anywhere}
 #weekPreview,#exerciseGuide{max-width:calc(100% - 20px)}
-@media(max-width:395px){.masthead .brand{grid-column:1/3;padding-right:min(34%,5rem);grid-row:1}.masthead #aboutToggle{z-index:1}}
+
 #guideMedia{margin:5px 0 9px;min-width:0}#guideMedia[hidden],#guideInlineFigure[hidden],#guideInlineStatus[hidden]{display:none}#guideInlineToggle{min-height:44px;max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:start}#guideInlineFigure{margin:8px 0 0}#guideInlineArt{min-width:0}#guideInlineArt img{display:block;max-inline-size:100%;max-block-size:min(36dvh,260px);height:auto;object-fit:contain;margin-inline:auto;border-radius:9px}#guideInlineCredit{margin-top:4px;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}#guideInlineCredit a{color:var(--mint)}
  .tip-media{margin-top:7px;min-width:0}.tip-media [hidden]{display:none!important}.tip-media button,.tip-media .guide-online{min-height:44px;max-inline-size:100%;white-space:normal;overflow-wrap:anywhere;text-align:start}.tip-media figure{margin:8px 0 0;min-width:0}.tip-media img{display:block;max-inline-size:100%;max-block-size:min(36dvh,260px);height:auto;object-fit:contain;margin-inline:auto;border-radius:9px}.tip-media figcaption{margin-top:4px;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}.tip-media figcaption a{color:var(--mint)}
+.mast-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}.mast-top .brand{display:flex;min-width:0;flex:1;gap:5px}.brand-title{flex:0 1 auto;min-width:0;overflow-wrap:normal}.mast-top .build{flex:none;white-space:nowrap;margin-inline-start:1px}.mast-top #aboutToggle{flex:none;max-width:44%;min-width:44px;padding-inline:9px}.masthead .mast-actions>button{width:100%;min-width:0;min-height:46px;white-space:normal;overflow-wrap:anywhere;line-height:1.2}
+@media print{.masthead .mast-actions,#aboutToggle{display:none!important}}
+.train-list{padding-inline-start:0;list-style:none}.exercise-heading{display:flex;align-items:baseline;gap:7px;flex:1 1 9rem;min-width:0}.exercise-heading .exercise-label{min-width:0;overflow-wrap:anywhere}.exercise-number{flex:none;min-width:1.65em;text-align:center;padding:1px 4px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:.78em;font-variant-numeric:tabular-nums;font-weight:650}.menu-unread{display:inline-block;width:.38em;height:.38em;border-radius:50%;background:var(--mint);margin-inline-start:.35em;vertical-align:middle}.menu-unread[hidden]{display:none}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v19</small></span>
-  <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v20</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
   <div class="row"><h2 id="aboutHeading" tabindex="-1">About Studio Motion</h2><button id="aboutClose" type="button">Close</button></div>
   <label class="field language-choice"><span>Language / Idioma</span><select id="language" aria-label="Language / Idioma"><option value="en" lang="en">English</option><option value="pt-BR" lang="pt-BR">Português (Brasil)</option></select></label><p class="guide">Studio Motion is a hobby project, not made by fitness specialists. The illustrations are simplified cues, not professional training or medical guidance. Follow your equipment’s instructions.</p>
   <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
   <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each external demo names its source.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.strengthlog.com/exercise-directory/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
+  <aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
   <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
 </section>
-<aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
+
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
   <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
   <div id="trainEmpty" class="empty" hidden></div><button type="button" class="primary no-print" id="planThisDay" hidden>Plan this day</button>
   <p id="swapResult" class="swap-result" role="status" hidden></p><div class="training-progress" id="trainingProgress" hidden><div class="progress-row"><p class="train-progress" id="trainProgress" role="status" hidden></p><button type="button" id="jumpIncomplete" hidden>First unfinished</button></div><progress class="workout-progress" id="trainBar" aria-label="Workout sets completed" value="0" max="1" hidden></progress></div>
-  <ol id="trainList" class="train-list"></ol>
+  <ol id="trainList" class="train-list" role="list"></ol>
   <div class="buttons no-print" id="setActions" hidden><button id="clearSets" type="button">Clear all sets</button><button id="undoSets" type="button" hidden>Undo clear</button></div>
 </section>
 <div id="editView" hidden><div class="columns"><section class="panel" aria-labelledby="planheading"><p class="kicker">WEEKLY PLAN</p><h2 id="planheading" tabindex="-1"><span id="weekday"></span></h2>
@@ -77,7 +80,7 @@
 <p class="muted guide">Preview first. Goal guides the weekday split, not your weight, sex, or training experience. If you pick a specific day focus below, that takes priority. Use a light warm-up and keep recovery gentle.</p>
 <label class="field">Training goal<select id="trainingGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
-<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option><option>Chest &amp; triceps</option></select></label>
+<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option><option>Chest &amp; triceps</option><option>Triceps</option></select></label>
 <label class="field">Exercises<select id="trainingSize"><option value="3">3 · Short</option><option value="5">5 · Standard</option><option value="6">6 · Longer</option><option value="8" selected>8 · Extended</option></select></label>
 <label class="field">Sets<select id="trainingSets"><option value="4">4 sets</option><option value="3">3 sets</option><option value="2">2 sets</option></select></label></div>
 </details><p id="generatorStatus" class="guide muted" role="status"></p>
@@ -138,6 +141,10 @@ const PT={
  "Upper": "Superiores",
  "Lower": "Inferiores",
  "Chest & triceps":"Peito e tríceps",
+ "Triceps workout":"Treino de tríceps",
+ "Full body · lighter strength":"Corpo todo · força leve",
+ "Triceps in the planner and one recovery day":"Tríceps no gerador e um dia de recuperação",
+ "Find direct triceps exercises and plan a lighter Saturday plus one recovery day. Saved workouts are unchanged.":"Encontre exercícios diretos de tríceps e gere um sábado mais leve com um dia de recuperação. Os treinos salvos não mudam.",
  "Chest & triceps workout":"Treino de peito e tríceps",
  "Core & calves": "Core e panturrilhas",
  "Exercises": "Exercícios",
@@ -871,7 +878,7 @@ const regions={
  calf:["Calves","B","M18 84L23 85 23 94 19 101 16 101 16 93ZM42 84L37 85 37 94 41 101 44 101 44 93Z"],
  shin:["Shins / ankles","F","M18 84L23 85 22 93 19 101 16 101 17 92ZM42 84L37 85 38 93 41 101 44 101 43 92Z"]
 };
-const groupRegions={Chest:["pec"],Back:["lat","upper","trap","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
+const groupRegions={Triceps:["tri"],Chest:["pec"],Back:["lat","upper","trap","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
 const targets={};
 function target(ids,focus,assist=""){for(const id of ids.split(" "))targets[id]=[focus.split(" "),assist?assist.split(" "):[]];}
 target("press cable-chest db-bench bb-bench bw-pushup","pec","tri delt");
@@ -1173,6 +1180,8 @@ document.addEventListener("visibilitychange",()=>{
 reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(t(selected.g)+" · "+t(selected.eq)).toUpperCase();$("name").textContent=nameOf(selected);$("libraryGuideButton").innerHTML=infoButton(selected);$("muscle").textContent=musclesOf(selected);$("setupInfo").textContent=setup(selected);$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=cueOf(selected);list()}
+const directTriceps=e=>e.g==="Arms"&&forTarget(e)[0].includes("tri");
+const matchesGroup=(e,g)=>g==="Triceps"?directTriceps(e):e.g===g;
 function list(){
  const term=normalized($("query").value.trim()).split(/\s+/).filter(Boolean),
   g=$("filter").value,eq=$("equipmentFilter").value,bench=$("benchFilter").value;
@@ -1180,7 +1189,7 @@ function list(){
  const root=$("choices");clearArt(root);const top=root.scrollTop;
  root.innerHTML=E.filter(e=>{
   const haystack=normalized([e.n,e.m,e.eq,e.g,PT_EX[e.id]?.[0],PT_EX[e.id]?.[1],t(e.g),t(e.eq),setup(e),aliases[e.id],e.eq==="Dumbbell"?"halteres halter":"",e.bench?"bench banco":""].filter(Boolean).join(" "));
-  return (!g||g===e.g)&&(!eq||eq===e.eq)&&(!bench||(bench==="none"?!e.bench:e.bench===bench))&&term.every(t=>haystack.includes(t));
+  return (!g||matchesGroup(e,g))&&(!eq||eq===e.eq)&&(!bench||(bench==="none"?!e.bench:e.bench===bench))&&term.every(t=>haystack.includes(t));
  }).map(e=>'<button data-ex="'+e.id+'" aria-pressed="'+(selected.id===e.id)+'">'+artMarkup(e,true)+esc(nameOf(e))+(e.bench?'<small>'+esc(setup(e))+'</small>':'')+'</button>').join("")||'<small>'+t("No matches. Try a different search.")+'</small>';
  root.scrollTop=top;watchArt(root);
 }
@@ -1425,7 +1434,7 @@ function renderTrainList(){
    const set=j+1;
    return '<label class="set-box"><input type="checkbox" data-row="'+i+'" data-set="'+set+'" aria-label="'+esc(nameOf(e)+t(" set ",", série ")+set)+'" '+(marks.includes(set)?"checked":"")+'><span>'+set+'</span></label>';
   }).join("");
-  return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><h2 class="exercise-label">'+esc(nameOf(e))+'</h2><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
+  return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">'+t("Alternate for")+" "+esc(displayDate(date))+'</p>':'')+
     '<dl class="workout-dose">'+workoutDose(row)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>'+t("Form tips")+'</summary><p class="coach">'+esc(cueOf(e))+'</p>'+
@@ -1697,17 +1706,18 @@ for(const [root,mode] of [[$("trainList"),"date"],[$("items"),"week"]]){
  });
 }
 const split=[
- {name:"Upper A · chest & back",groups:["Chest","Back","Shoulders","Arms","Chest","Back","Shoulders","Arms"],focus:"Upper"},
+ {name:"Upper A · chest & back",groups:["Chest","Back", "Triceps","Shoulders","Chest","Back","Shoulders","Arms"],focus:"Upper"},
  {name:"Lower A · quads & glutes",groups:["Quads","Glutes","Hamstrings","Calves","Quads","Glutes","Hamstrings","Glutes"],focus:"Lower"},
  {name:"Core & calves",groups:["Core","Calves","Core","Core","Calves","Core","Core","Core"],focus:"Core & calves"},
- {name:"Upper B · back & shoulders",groups:["Back","Chest","Shoulders","Arms","Back","Shoulders","Arms","Chest"],focus:"Upper"},
+ {name:"Upper B · back & shoulders",groups:["Back","Chest","Triceps","Shoulders","Back","Shoulders","Arms","Chest"],focus:"Upper"},
  {name:"Lower B · hamstrings & glutes",groups:["Hamstrings","Glutes","Quads","Calves","Hamstrings","Glutes","Quads","Calves"],focus:"Lower"}
 ];
-const pushFocus="Chest & triceps";
+const pushFocus="Chest & triceps",triFocus="Triceps";
 const pattern={
- [pushFocus]:["Chest","Arms","Chest","Arms","Chest","Arms","Chest","Arms"],
- "Full body":["Quads","Chest","Back","Hamstrings","Core","Shoulders","Glutes","Arms","Calves"],
- Upper:["Chest","Back","Shoulders","Arms","Back","Chest","Shoulders","Arms"],
+ [pushFocus]:["Chest",triFocus,"Chest",triFocus,"Chest",triFocus,"Chest",triFocus],
+ [triFocus]:[triFocus,triFocus],
+ "Full body":["Quads","Chest","Back","Triceps","Hamstrings","Core","Shoulders","Glutes","Calves"],
+ Upper:["Chest","Back","Triceps","Shoulders","Back","Chest","Shoulders","Arms"],
  Lower:["Quads","Hamstrings","Glutes","Calves","Quads","Hamstrings","Glutes","Calves"],
  "Core & calves":["Core","Calves","Core","Calves","Core","Core","Core","Core"]
 };
@@ -1736,22 +1746,27 @@ function selectGoal(value){
 }
 selectGoal(trainingGoal);
 const lowerExtra={name:"Lower · glutes & hips",focus:"Lower",groups:["Glutes","Quads","Hamstrings","Core","Glutes","Calves","Glutes","Hamstrings"]};
-const upperExtra={name:"Upper · shoulders & arms",focus:"Upper",groups:["Shoulders","Back","Chest","Arms","Core","Shoulders","Arms","Back"]};
+const upperExtra={name:"Upper · shoulders & arms",focus:"Upper",groups:["Shoulders","Back","Triceps","Chest","Core","Shoulders","Arms","Back"]};
+const saturday={name:"Full body · lighter strength",focus:"Full body",groups:pattern["Full body"],lighter:true};
 const goalWeeks={
- balanced:split,
- lower:[split[1],split[0],lowerExtra,split[3],split[4]],
- upper:[split[0],split[1],upperExtra,split[4],split[3]]
+ balanced:[...split,saturday],
+ lower:[split[1],split[0],lowerExtra,split[3],split[4],saturday],
+ upper:[split[0],split[1],upperExtra,split[4],split[3],saturday]
 };
+function lighterDraft(draft){
+ if(!draft)return null;
+ return {...draft,lighter:true,items:draft.items.map(row=>({...row,sets:Math.min(row.sets,2)}))};
+}
 const pushManual=new Set(["db-incline-fly-30","db-seated-overhead-triceps","cable-pressdown-bar","cable-pressdown-rope"]);
 function strengthPool(equipment,order,focus){
- return E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&
-  (!e.manualOnly||(focus===pushFocus&&pushManual.has(e.id)))&&
-  (focus!==pushFocus||(e.g==="Chest"&&forTarget(e)[0].includes("pec"))||(e.g==="Arms"&&forTarget(e)[0].includes("tri"))));
+ return E.filter(e=>equipment.includes(e.eq)&&order.some(g=>matchesGroup(e,g))&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&
+  (!e.manualOnly||(pushManual.has(e.id)&&(focus===pushFocus||(order.includes(triFocus)&&directTriceps(e)))))&&
+  (focus!==pushFocus||(e.g==="Chest"&&forTarget(e)[0].includes("pec"))||directTriceps(e)));
 }
 function strengthDraft(equipment,focus,order,size){
  const pool=strengthPool(equipment,order,focus);
  if(focus===pushFocus&&(!pool.some(e=>e.g==="Chest")||!pool.some(e=>e.g==="Arms")))return null;
- const groups=[...new Set(order)],byGroup=new Map(groups.map(g=>[g,shuffled(pool.filter(e=>e.g===g))]));
+ const groups=[...new Set(order)],byGroup=new Map(groups.map(g=>[g,shuffled(pool.filter(e=>matchesGroup(e,g)))]));
  const items=[],used=new Set();
  function pick(g){
   const e=byGroup.get(g).find(x=>!used.has(x.id));
@@ -1762,7 +1777,7 @@ function strengthDraft(equipment,focus,order,size){
  while(items.length<size&&items.length<pool.length)for(const g of shuffled(groups)){
   if(items.length>=size)break;pick(g);
  }
- if(items.length<Math.min(3,size))return null;
+ if(items.length<(focus===triFocus?1:Math.min(3,size)))return null;
  return strengthFrom(items,focus,size,groups.filter(g=>!byGroup.get(g).length));
 }
 function strengthFrom(items,focus,size,missing){
@@ -1779,7 +1794,7 @@ function freshStrength(equipment,focus,order,size,avoid){
  const occupied=new Set(draft.items.map(i=>i.exercise)),used=draft.items.map(i=>byId(i.exercise));
  const replacements=shuffled(strengthPool(equipment,order,focus).filter(e=>!occupied.has(e.id)));
  for(const [i,e] of used.entries())for(const replace of replacements){
-  if(e.g!==replace.g)continue;
+  if(e.g!==replace.g||(order.includes(triFocus)&&directTriceps(e)!==directTriceps(replace)))continue;
   const alt=strengthFrom(used.map((x,j)=>j===i?replace:x),focus,size,draft.missing);
   if(!avoid.has(fixtureKey(alt)))return {draft:alt,repeated:false};
  }
@@ -1791,60 +1806,60 @@ function adjacentWarning(index,draft){
  return repeated.size?t("Adjacent saved days also train ","Dias vizinhos também trabalham ")+[...repeated].map(x=>t(x)).join(", ")+t(". Consider recovery.",". Considere a recuperação."):"";
 }
 let proposedWeek=null;
-const lastDayPreviews=new Map(),lastWeekPreviews=new Map();
+const lastDayPreviews=new Map(),lastShownDayPreview=new Map(),lastWeekPreviews=new Map();
 function resetPreview(){proposed=null;$("preview").hidden=true;$("generatorStatus").textContent="";}
 function setVariant(index){
  proposed.active=index;const drafted=proposed.variants[index];
+ lastShownDayPreview.set(day,fixtureKey(drafted));
  $("previewHeading").textContent=dayName(day)+" · "+displayTitle(drafted.title);
  $("previewList").innerHTML=drafted.items.map(x=>'<li>'+esc(nameOf(byId(x.exercise)))+" · "+dose(x)+'</li>').join("");
  $("dayVariant").value=String(index);
  $("previewWarning").textContent=[drafted.easy?t("About ","Cerca de ")+minutes(drafted)+t(" min of gentle movement and easy transitions."," min de movimentos leves e trocas tranquilas."):t("About ","Cerca de ")+minutes(drafted)+t(" min, with warm-up, inter-set rest and changeovers."," min, incluindo aquecimento, descanso e trocas de exercício."),
   drafted.items.length<drafted.requested?t("Fewer matches than requested; no duplicates were added."):"",
   drafted.missing.length?t("No matching equipment for: ","Sem equipamento compatível para: ")+drafted.missing.map(x=>t(x)).join(", ")+".":"",
+  drafted.lighter?t("This draft uses at most two sets per exercise for a lighter strength day.","Esta prévia usa até duas séries por exercício para um treino mais leve."):"",
+  drafted.title===triFocus+" workout"?t("Focused session: up to 2 direct triceps exercises.","Treino focado: até 2 exercícios diretos de tríceps."):"",
   drafted.title===pushFocus+" workout"?t("Focused session: up to 5 exercises for chest and triceps.","Treino focado: até 5 exercícios de peito e tríceps."):"",
   drafted.easy?t("Stay in a comfortable range; skip any movement that is unclear or uncomfortable."):adjacentWarning(day,drafted),hasWorkout(current())?t("Existing workout will be kept as a saved copy if replaced."):""].filter(Boolean).join(" ");
  $("applyTraining").textContent=hasWorkout(current())?t("Replace ","Substituir ")+dayName(day)+"…":t("Save to ","Salvar em ")+dayName(day);
 }
 function showPreview(){
- const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):+$("trainingSize").value;
- const daySplit=goalWeeks[trainingGoal][day],easy=selected==="Day split"&&day>=5;
+ const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):selected===triFocus?Math.min(2,+$("trainingSize").value):+$("trainingSize").value;
+ const daySplit=goalWeeks[trainingGoal][day],easy=selected==="Day split"&&day===6;
  const focus=selected==="Day split"?(daySplit?.focus||"Full body"):selected;
  const order=selected==="Day split"&&daySplit?daySplit.groups:pattern[focus];
  const eq=equipmentNow(),old=lastDayPreviews.get(day)||new Set();resetPreview();
  const seen=new Set(),avoid=new Set([...old,...(current().items.length?[fixtureKey(current())]:[])]),variants=[];
  for(let i=0;i<8&&variants.length<3;i++){
-  const {draft,repeated}=easy?easyDay(day,avoid):freshStrength(eq,focus,order,n,avoid);
+  let {draft,repeated}=easy?easyDay(avoid):freshStrength(eq,focus,order,n,avoid);
+  if(repeated&&!variants.length&&lastShownDayPreview.has(day)){
+   const avoidShown=new Set([lastShownDayPreview.get(day)]);
+   ({draft,repeated}=easy?easyDay(avoidShown):freshStrength(eq,focus,order,n,avoidShown));
+  }
+  if(selected==="Day split"&&daySplit?.lighter)draft=lighterDraft(draft);
   if(!draft||(repeated&&variants.length))break;
   const key=fixtureKey(draft);
   if(seen.has(key))break;
   if(repeated)$("generatorStatus").textContent=easy?t("This recovery option keeps the same simple movements."):t("These settings have limited alternatives; this option matches a recent or saved plan.");
   seen.add(key);avoid.add(key);variants.push(draft);
  }
- if(!variants.length){$("generatorStatus").textContent=selected===pushFocus?t("Select equipment with both chest and triceps exercises, such as Machine and Cable.","Selecione equipamentos para peito e tríceps, como Máquina e Polia."):t("Not enough matching exercises. Select more equipment or another focus.");return;}
+ if(!variants.length){$("generatorStatus").textContent=selected===pushFocus?t("Select equipment with both chest and triceps exercises, such as Machine and Cable.","Selecione equipamentos para peito e tríceps, como Máquina e Polia."):selected===triFocus?t("Select cable or dumbbells for direct triceps exercises.","Selecione polia ou halteres para exercícios específicos de tríceps."):t("Not enough matching exercises. Select more equipment or another focus.");return;}
  lastDayPreviews.set(day,seen);
  proposed={day,variants,active:0};$("preview").hidden=false;
  $("dayVariant").innerHTML=variants.map((_,i)=>'<option value="'+i+'">'+t("Option ","Opção ")+(i+1)+'</option>').join("");
  $("variantsLabel").hidden=variants.length===1;
  setVariant(0);
 }
-function easyDay(index,avoid){
+function easyDay(avoid){
  const move=id=>({...make(id,5),sets:1,rest:20,...(byId(id).hold?{seconds:15}:{})});
- // Three deliberately simple movements per easy day. No load, progression, or equipment.
- const choices=index===5?[
-  ["mob-ankle","mob-scap","mob-brace"],
-  ["mob-ankle","mob-scap","mob-cat"],
-  ["mob-scap","mob-open","mob-brace"],
-  ["mob-ankle","mob-open","mob-cat"]
- ]:[
+ const eligible=shuffled([
   ["mob-ankle","mob-cat","mob-brace"],
   ["mob-scap","mob-cat","mob-brace"],
   ["mob-scap","mob-open","mob-brace"],
   ["mob-ankle","mob-open","mob-brace"]
- ];
- const eligible=shuffled(choices);
+ ]);
  const fresh=eligible.find(ids=>!avoid.has(ids.slice().sort().join("|")));
- const title=index===5?"Easy recovery · gentle mobility":"Easy recovery · move and breathe";
- const draft={title,easy:true,rest:false,items:(fresh||eligible[0]).map(move),requested:3,missing:[]};
+ const draft={title:"Easy recovery · move and breathe",easy:true,rest:false,items:(fresh||eligible[0]).map(move),requested:3,missing:[]};
  return {draft,repeated:!fresh};
 }
 function showWeek(){
@@ -1853,7 +1868,8 @@ function showWeek(){
   const previous=lastWeekPreviews.get(i);
   const avoid=new Set([...(previous?[previous]:[]),...(plan.days[i].items.length?[fixtureKey(plan.days[i])]:[])]);
   const x=goalWeeks[trainingGoal][i];
-  const {draft,repeated}=x?freshStrength(eq,x.focus,x.groups,size,avoid):easyDay(i,avoid);
+  let {draft,repeated}=x?freshStrength(eq,x.focus,x.groups,size,avoid):easyDay(avoid);
+  if(x?.lighter)draft=lighterDraft(draft);
   if(draft){
    lastWeekPreviews.set(i,fixtureKey(draft));
    if(x)draft.title=x.name;
@@ -1867,14 +1883,14 @@ function showWeek(){
  else dialog.scrollTop=0;
  $("weekCards").innerHTML=drafts.map((w,i)=>{
   const occupied=hasWorkout(plan.days[i]);
-  const warning=[occupied?t("Existing workout protected by default."):"",w&&i<5&&w.items.length<size?t("Fewer than 8 valid options with this equipment."):"",limit.has(i)&&i<5?t("Limited variety with these settings."):""].filter(Boolean).join(" ");
+  const warning=[occupied?t("Existing workout protected by default."):"",w&&i<6&&w.items.length<size?t("Fewer than 8 valid options with this equipment."):"",limit.has(i)&&i<6?t("Limited variety with these settings."):""].filter(Boolean).join(" ");
   const names=w?[...new Set(w.items.map(x=>t(byId(x.exercise).g)))].join(" · "):"";
   return '<div class="week-card"><label><input type="checkbox" data-week-day="'+i+'" '+(!w?"disabled":occupied?"":"checked")+'><strong>'+dayName(i)+'</strong></label><div>'+
    (w?esc(displayTitle(w.title))+' <span class="muted">· ~'+minutes(w)+' min</span><small>'+esc(names)+'</small><details><summary>'+t("Exercises")+' ('+w.items.length+')</summary><ol>'+
     w.items.map(x=>'<li>'+esc(nameOf(byId(x.exercise)))+' · '+dose(x)+'</li>').join("")+'</ol></details>':t("Not enough matches for this day. Adjust equipment in Plan/Edit."))+
     '<small>'+warning+'</small></div></div>';
  }).join("");
- $("weekStatus").textContent=t("Goal: ","Objetivo: ")+t(goalLabels[trainingGoal])+t(". Weekend recovery has three gentle, no-equipment movements per day. Strength estimates include 8 min warm-up, inter-set rest and equipment changes.",". A recuperação no fim de semana tem três movimentos leves por dia, sem equipamento. As estimativas de treino incluem 8 min de aquecimento, descanso entre séries e trocas de exercício.");
+ $("weekStatus").textContent=t("Goal: ","Objetivo: ")+t(goalLabels[trainingGoal])+t(". Saturday is a lighter strength day (up to two sets per exercise). Sunday has three gentle, no-equipment movements. Strength estimates include 8 min warm-up, inter-set rest and equipment changes.",". Sábado é treino de força leve (até duas séries por exercício). Domingo tem três movimentos leves, sem equipamento. As estimativas de treino incluem 8 min de aquecimento, descanso entre séries e trocas de exercício.");
  updateWeekChoice();
 }
 function updateWeekChoice(){
@@ -2010,7 +2026,7 @@ function localizedFilters(){
  const checked=new Set($("trainingEquipment").querySelector("input")?equipmentNow():["Machine","Cable"]);
  $("trainingEquipment").querySelectorAll("label").forEach(x=>x.remove());
  $("trainingEquipment").insertAdjacentHTML("beforeend",autoEquipment.map(x=>'<label><input type="checkbox" value="'+esc(x)+'" '+(checked.has(x)?"checked":"")+'> '+esc(t(x))+"</label>").join(""));
- for(const [id,values,label] of [["filter",groups,"All muscle groups"],["equipmentFilter",equipments,"All equipment"]]){
+ for(const [id,values,label] of [["filter",[...groups,"Triceps"],"All muscle groups"],["equipmentFilter",equipments,"All equipment"]]){
   const control=$(id),old=control.value;
   control.innerHTML='<option value="">'+t(label)+'</option>'+values.map(x=>'<option value="'+esc(x)+'">'+esc(t(x,compactPt[x]))+"</option>").join("");
   control.value=values.includes(old)?old:"";
@@ -2018,6 +2034,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"triceps-and-sunday-v20",date:"2026-11-21",title:"Triceps in the planner and one recovery day",body:"Find direct triceps exercises and plan a lighter Saturday plus one recovery day. Saved workouts are unchanged."},
  {id:"form-tips-v19",date:"2026-11-21",title:"Short demos in form tips",body:"See an image or reach the verified source without opening a separate exercise guide."},
  {id:"inline-forms-v18",date:"2026-11-21",title:"Inline form images and a roomier menu",body:"View licensed form images inside the guide. Menus fit more comfortably on narrow screens."},
  {id:"goals-language-v17",date:"2026-11-21",title:"Goal-based planning and clearer recovery",body:"Pick a training goal, regenerate one day, and use English or Brazilian Portuguese offline. Recovery days have fewer movements; guides show the setup more clearly."},
@@ -2053,7 +2070,7 @@ $("noticeDismiss").onclick=()=>{
  const id=announcements[0]?.id;if(!id)return;
  seenUpdates=[...new Set([...seenUpdates,id])].slice(-40);
  try{localStorage.setItem(seenUpdatesKey,JSON.stringify(seenUpdates));}catch{}
- $("launchNotice").hidden=true;$("aboutToggle").focus({preventScroll:true});
+ $("launchNotice").hidden=true;$("menuUnread").hidden=true;$("updatesHeading").focus({preventScroll:true});
 };
 $("copyUpdates").onclick=async()=>{
  const status=$("copyUpdateStatus");
@@ -2067,7 +2084,7 @@ function drawAnnouncements(){
  '<li><time datetime="'+esc(entry.date)+'">'+esc(displayDate(entry.date))+'</time><br><strong>'+esc(t(entry.title))+'</strong><p>'+esc(t(entry.body))+'</p></li>').join("");
 }
 if(announcements[0]&&!seenUpdates.includes(announcements[0].id)){
- $("noticeTitle").textContent=t(announcements[0].title);$("launchNotice").hidden=false;
+ $("noticeTitle").textContent=t(announcements[0].title);$("launchNotice").hidden=false;$("menuUnread").hidden=false;
 }
 captureStaticLanguage();applyStaticLanguage();localizedFilters();drawAnnouncements();
 $("language").onchange=event=>{
