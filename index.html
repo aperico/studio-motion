@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v33 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v34 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -112,7 +112,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v33</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v34</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -126,6 +126,7 @@
 </section>
 
 <p id="blockStatus" class="guide muted" role="status" hidden></p><button id="resumeRecurring" type="button" hidden>Resume recurring week</button>
+<div id="trainWeeks" class="block-planner no-print" hidden><label class="field"><span id="trainWeekLabel"></span><select id="trainWeek"></select></label><button id="returnToday" type="button"></button><p id="trainWeekNotice" class="guide muted" role="status"></p></div>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
   <header class="train-heading"><div class="train-heading-meta"><p id="trainDay" class="kicker"></p><button id="weekSummaryOpen" class="no-print" type="button" aria-haspopup="dialog">Week summary</button></div><h1 id="trainTitle" tabindex="-1"></h1></header>
@@ -1486,7 +1487,11 @@ function blockWeekIndex(date=localDateString()){
  const index=Math.floor((dayNumber(date)-dayNumber(block.start))/7);
  return index<0?-1:index<block.weeks.length?index:-2;
 }
+let trainWeekStart=null;
+function realWeekStart(){const d=new Date();return addCalendarDays(localDateString(d),-(d.getDay()+6)%7);}
+function trainReadOnly(){return trainWeekStart!==null&&trainWeekStart!==realWeekStart();}
 function currentWeekDays(){
+ if(trainWeekStart!==null&&block){const slot=(dayNumber(trainWeekStart)-dayNumber(block.start))/7;if(Number.isInteger(slot)&&block.weeks[slot])return block.weeks[slot];}
  const index=blockWeekIndex();
  return index>=0?block.weeks[index]:index===-2?noProgramDays:plan.days;
 }
@@ -1523,6 +1528,7 @@ function snapshotWithWorkout(index,workout){
  return {...plan,days:plan.days.map((row,i)=>i===index?workout:row)};
 }
 function saveActiveDayData(){
+ if(trainReadOnly())throw Error("Read-only week.");
  if(blockWeekIndex()===-2)throw Error("The program has ended.");
  if(dayWriteKey()===blockKey)persistBlock(block);else writeStudioValue(KEY2,JSON.stringify(plan));
 }
@@ -1557,6 +1563,7 @@ function localDateString(d=new Date()){
  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 }
 function dateForDay(index){
+ if(trainWeekStart!==null)return addCalendarDays(trainWeekStart,index);
  const d=new Date();d.setDate(d.getDate()+index-(d.getDay()+6)%7);
  return localDateString(d);
 }
@@ -1570,7 +1577,7 @@ function refreshDates(){
  const now=new Date(),date=localDateString(now),activeDay=(now.getDay()+6)%7;
  if(lastLocalDate===date&&today===activeDay&&$("trainList").dataset.date===dateForDay(day))return false;
  const wasToday=day===today;
- if(lastLocalDate!==date)currentExercises.clear();
+ if(lastLocalDate!==date){currentExercises.clear();trainWeekStart=null;}
  lastLocalDate=date;today=activeDay;
  setDay(wasToday?today:day);
  if($("weekSummary").open)renderWeekSummary();
@@ -1596,6 +1603,7 @@ try{
 const swapSlot=(w,row)=>w.id+"/"+row.id;
 const effectiveRows=(w=current(),date=dateForDay(day))=>w.items.map(row=>dateSwaps[date]?.[swapSlot(w,row)]||row);
 function saveSwap(date,w,base,row){
+ if(trainReadOnly())return;
  (dateSwaps[date]??(dateSwaps[date]={}))[swapSlot(w,base)]=row;
  for(const old of Object.keys(dateSwaps).sort().slice(0,-84))delete dateSwaps[old];
  try{if(!swapsWritable)throw Error();writeStudioValue(swapKey,JSON.stringify(dateSwaps));return true;}catch{return false;}
@@ -1610,6 +1618,7 @@ function persistCompletion(){
  catch{return false;}
 }
 function storeMark(row,set,checked,date){
+ if(trainReadOnly())return;
  if(date!==dateForDay(day)){renderTrainList();nav();return;}
  const k=current().id+"/"+row.id,byRow=completion[date]??(completion[date]={});
  const setOf=new Set(byRow[k]||[]);
@@ -1643,7 +1652,7 @@ function progressCount(status=setNotice){
  $("trainProgress").textContent=sets?done+" / "+sets+t(" sets · "," séries · ")+displayDate(dateForDay(day))+status:"";
  $("trainProgress").hidden=!sets;const bar=$("trainBar");bar.hidden=!sets;bar.max=sets||1;bar.value=done;
  $("setActions").hidden=!sets;
- $("clearSets").disabled=!rows.some(row=>marksFor(row).length);
+ $("clearSets").disabled=trainReadOnly()||!rows.some(row=>marksFor(row).length);
  const undo=undoCompletion;
  $("undoSets").hidden=!undo||undo.date!==dateForDay(day)||undo.wid!==current().id;
 }
@@ -1654,6 +1663,7 @@ $("jumpIncomplete").onclick=()=>{
  card.scrollIntoView({block:"start"});set.focus({preventScroll:true});
 };
 $("clearSets").onclick=()=>{
+ if(trainReadOnly())return;
  if(refreshDates())return;
  const w=current(),date=dateForDay(day),saved=completion[date];
  if(!saved)return;
@@ -1669,6 +1679,7 @@ $("clearSets").onclick=()=>{
  $("undoSets").focus({preventScroll:true});
 };
 $("undoSets").onclick=()=>{
+ if(trainReadOnly())return;
  if(refreshDates())return;
  const undo=undoCompletion;
  if(!undo||undo.date!==dateForDay(day)||undo.wid!==current().id)return;
@@ -1810,6 +1821,7 @@ function renderTrainList(){
     '<dl class="workout-dose">'+workoutDose(row,true)+'</dl><button type="button" data-edit-routine>'+(e.hold?t("Edit sets & hold","Editar séries e duração"):t("Edit sets & reps","Editar séries e repetições"))+'</button>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<button class="current-exercise" type="button" data-current-exercise="'+i+'" data-current-row-key="'+esc(row.id)+'"></button><fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset><button class="set-complete" type="button" data-complete-set="'+i+'" data-row-key="'+row.id+'"></button>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><section class="training-inline-guide" id="training-guide-'+i+'" aria-labelledby="training-guide-heading-'+i+'" hidden></section></li>';
  }).join("");
+ if(trainReadOnly())for(const control of root.querySelectorAll("input, .replace, [data-edit-weight], [data-edit-routine], [data-complete-set]"))control.disabled=true;
  watchArt(root);progressCount();updateCurrentExercise();refreshTrainingGroups();
 }
 $("trainList").addEventListener("click",event=>{
@@ -1893,6 +1905,7 @@ const weightMessage=(message,field="weightInput")=>{
  if(message)$(field).setAttribute("aria-invalid","true");
 };
 function openWeight(button,routine=false){
+ if(trainReadOnly())return;
  if(refreshDates()||editing||weightEdit||!button.isConnected)return;
  const index=+button.closest("[data-swap-row]").dataset.swapRow,w=current(),base=w.items[index],date=dateForDay(day);
  if(!base)return;
@@ -1987,7 +2000,7 @@ function integerDose(id,max){
 }
 $("weightForm").onsubmit=event=>{
  event.preventDefault();
- const edit=weightEdit;if(!edit||!$("weightDialog").open)return;
+ const edit=weightEdit;if(trainReadOnly()||!edit||!$("weightDialog").open)return;
  const next=draftLoad(edit),sets=integerDose("doseSets",50),repRaw=$("doseReps").value.trim(),keepRange=!!edit.row.repRange&&!repRaw;
  const reps=keepRange?edit.row.reps:integerDose("doseReps",300);
  const effectiveRepKey=edit.exercise.hold?"seconds":"reps";
@@ -2310,6 +2323,7 @@ function closeSwap(card,focus=true){
  if(focus)button.focus({preventScroll:true});
 }
 function openSwap(root,card,mode){
+ if(trainReadOnly())return;
  for(const other of root.querySelectorAll("[data-swap-row]"))if(other!==card)closeSwap(other,false);
  const i=+card.dataset.swapRow,w=current(),date=dateForDay(day),rows=mode==="date"?effectiveRows():w.items;
  const row=rows[i];
@@ -2334,7 +2348,7 @@ function openSwap(root,card,mode){
  panel.onclick=event=>{
   if(event.target.closest("[data-swap-cancel]")){closeSwap(card);return;}
   const pick=event.target.closest("[data-swap-ex]");
-  if(!pick||w!==current()||date!==dateForDay(day))return;
+  if(trainReadOnly()||!pick||w!==current()||date!==dateForDay(day))return;
   const id=pick.dataset.swapEx,next=byId(id),allowed=swapChoices(row,occupied(),gear.value,bench.value).flat();
   if(!next||!allowed.includes(next))return;
   if(mode==="date"&&marksFor(row,w,date).length){choices();return;}
@@ -2488,6 +2502,7 @@ function setVariant(index){
  $("applyTraining").textContent=hasWorkout(current())?t("Replace ","Substituir ")+dayName(day)+"…":t("Save to ","Salvar em ")+dayName(day);
 }
 function showPreview(){
+ if(trainReadOnly())return;
  const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):selected===trapFocus?1:[triFocus,forearmFocus].includes(selected)?Math.min(2,+$("trainingSize").value):+$("trainingSize").value;
  const daySplit=goalWeeks[trainingGoal][day],easy=selected==="Day split"&&day===6;
  const focus=selected==="Day split"?(daySplit?.focus||"Full body"):selected;
@@ -2563,7 +2578,7 @@ function drawProgramControls(){
  $("weekLengthHint").hidden=enabled;
  $("weekSlotLabel").hidden=$("weekStartLabel").hidden=$("weekGenerateAll").hidden=$("blockDraftRange").hidden=!enabled;
  $("weekLength").disabled=programRunning();
- $("weekLength").options[0].disabled=blockWeekIndex()===-2;
+ $("weekLength").options[0].disabled=trainReadOnly()||blockWeekIndex()===-2;
  $("weekLength").value=String(programDraft?.length||1);
  $("regenerateWeek").textContent=enabled?t("Generate this week","Gerar esta semana"):t("Generate again");
  if(!enabled)return;
@@ -2604,6 +2619,7 @@ function generateProgramSlot(slot){
  programDraft.entries.set(slot,{...built,selected,selectionChanged:!!previous?.selectionChanged});
 }
 function showWeek(){
+ if(trainReadOnly())return;
  if(!$("weekPreview").open){
   programDraft=null;$("blockFeedback").hidden=true;
   if(programRunning())startProgramDraft(block.weeks.length);else if(blockWeekIndex()===-2)startProgramDraft(2);else drawProgramControls();
@@ -2664,6 +2680,7 @@ function updateWeekChoice(){
  $("applyWeek").disabled=!n;$("applyWeek").textContent=n?t("Save ","Salvar ")+n+" "+plural(n,t("day","dia"),t("days","dias")):t("Select days to save");
 }
 function commitProgram(){
+ if(trainReadOnly())return;
  const draft=programDraft;if(!draft)return;
  const existing=draft.existing;
  const weeks=(existing?.weeks||Array.from({length:draft.length},blankWeek)).map(slot=>[...slot]);
@@ -2695,6 +2712,7 @@ function saveProgramNotice(n){
  $("blockStatus").textContent+=" · "+t("Saved ","Salvo: ")+n+" "+plural(n,t("day","dia"),t("days","dias"));
 }
 function commitWeek(){
+ if(trainReadOnly())return;
  if(programDraft){commitProgram();return;}
  if(!proposedWeek)return;
  const days=[...$("weekCards").querySelectorAll("input:checked")].map(x=>+x.dataset.weekDay).filter(i=>proposedWeek.drafts[i]);
@@ -2709,12 +2727,28 @@ function commitWeek(){
  $("weekPreview").close();setDay(day);save(t("Saved ","Salvo: ")+days.length+t(" days."," dias."));
 }
 
+function drawTrainWeeks(){
+ const box=$("trainWeeks"),select=$("trainWeek");box.hidden=!block||editing;
+ if(!block)return;
+ $("trainWeekLabel").textContent=t("Saved weeks","Semanas salvas");
+ $("returnToday").textContent=t("Return to today","Voltar para hoje");
+ const real=realWeekStart(),starts=block.weeks.map((_,i)=>addCalendarDays(block.start,i*7));
+ const selected=trainWeekStart||real;
+ const options=[...new Set([real,...starts])].sort();
+ select.innerHTML=options.map(start=>'<option value="'+start+'">'+esc((start===real?t("Current week","Semana atual"):t("Week ","Semana ")+(starts.indexOf(start)+1))+" · "+displayDate(start)+" – "+displayDate(addCalendarDays(start,6)))+'</option>').join("");
+ select.value=selected;
+ $("returnToday").hidden=!trainReadOnly()&&day===today;
+ $("trainWeekNotice").textContent=trainReadOnly()?t("Read-only saved week","Semana salva · somente leitura"):"";
+}
+$("trainWeek").onchange=()=>{trainWeekStart=$("trainWeek").value===realWeekStart()?null:$("trainWeek").value;setDay(day);};
+$("returnToday").onclick=()=>{trainWeekStart=null;setDay(today);};
 function week(){
+ drawTrainWeeks();
  const short=isPt()?["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"]:["Mo","Tu","We","Th","Fr","Sa","Su"];
  $("days").innerHTML=DAYS.map((name,i)=>{
   const w=currentWeekDays()[i],state=w.rest?t("Rest"):w.items.length?t("Plan"):"—";
-  return '<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" '+(i===today?'aria-current="date" ':'')+
-   'aria-label="'+dayName(i)+(i===today?", "+t("today"):"")+", "+esc(w.rest?t("rest"):displayTitle(w.title)||t("unplanned"))+'">'+short[i]+'<small>'+state+'</small></button>';
+  return '<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" '+(i===today&&!trainReadOnly()?'aria-current="date" ':'')+
+   'aria-label="'+dayName(i)+(i===today&&!trainReadOnly()?", "+t("today"):"")+", "+esc(w.rest?t("rest"):displayTitle(w.title)||t("unplanned"))+'">'+short[i]+'<small>'+state+'</small></button>';
  }).join("");
 }
 function stats(){
@@ -2766,8 +2800,8 @@ function renderWeekSummary(){
   const map=summaryMap(primary),mapId="summary-map-description-"+i;
   const title=displayTitle(w.title.trim())||t(w.rest?"Rest day":count?"Workout":"No workout scheduled");
   const details=[count?exerciseTotal(count):"",groupLabels(dayGroups)].filter(Boolean).join(" · ");
-  return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today?'aria-current="date"':'')+'>'+
-   '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
+  return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today&&!trainReadOnly()?'aria-current="date"':'')+'>'+
+   '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today&&!trainReadOnly()?" · "+t("Today"):""))+'</span>'+
    '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</span>'+map+'</button>'+(map?'<span id="'+mapId+'" hidden>'+esc(primaryMapName(primary))+'</span>':'')+'</li>';
  }).join("");
  if(focused!==undefined)list.querySelector('[data-summary-day="'+focused+'"]')?.focus({preventScroll:true});
@@ -2792,19 +2826,22 @@ $("weekSummaryList").onclick=event=>{
  $("weekSummary").close();setDay(index);$("trainTitle").focus();
 };
 function nav(){
+ for(const id of ["trainingGenerate","weekGenerate","resumeRecurring"])$(id).disabled=trainReadOnly();
  const x=current(),items=x.items;
- programStatus();$("modeSwitch").disabled=blockWeekIndex()===-2;
- $("planThisDay").disabled=blockWeekIndex()===-2;
+ drawTrainWeeks();
+ programStatus();$("modeSwitch").disabled=trainReadOnly()||blockWeekIndex()===-2;
+ $("planThisDay").disabled=trainReadOnly()||blockWeekIndex()===-2;
  if(blockWeekIndex()===-2&&editing){editing=false;$("editView").hidden=true;$("trainView").hidden=false;}
  $("modeSwitch").textContent=t(editing?"Done":hasWorkout(x)?"Edit plan":"Plan workout");
  $("modeSwitch").setAttribute("aria-expanded",String(editing));
- $("trainDay").textContent=(day===today?t("Today")+" · ":"")+dayName(day);
+ $("trainDay").textContent=(day===today&&!trainReadOnly()?t("Today")+" · ":"")+dayName(day)+" · "+displayDate(dateForDay(day));
  $("trainTitle").textContent=displayTitle(x.title.trim())||t(x.rest?"Rest day":items.length?"Workout":"No workout planned");
  $("trainEmpty").hidden=!!items.length;$("planThisDay").hidden=!!items.length||x.rest||blockWeekIndex()===-2;
  $("trainEmpty").textContent=blockWeekIndex()===-2?t("Start a new program or resume your recurring week.","Inicie um novo programa ou retome sua semana recorrente."):t(x.rest?"Take a recovery day.":"Choose exercises yourself or generate a workout for this day.");
  progressCount();
 }
 function setMode(value,focus=false){
+ if(value&&trainReadOnly())return;
  editing=value;if(value&&!current().items.length)$("libraryPanel").open=true;$("editView").hidden=!value;$("trainView").hidden=value;$("editFooter").hidden=!value;
  if(!value)renderTrainList();
  nav();syncAnimation();
@@ -2924,6 +2961,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"train-weeks-v34",date:"2026-11-21",title:"Browse saved weeks in Train",body:"Choose a saved week above the weekdays. Other weeks are read-only; Return to today restores today’s workout.",titlePt:"Veja semanas salvas em Treinar",bodyPt:"Escolha uma semana salva acima dos dias. Outras semanas são somente leitura; Voltar para hoje abre o treino de hoje."},
  {id:"media-references-v33",date:"2026-11-21",title:"More exercise form references",body:"Optional online form references now cover 94 of 95 exercises. Every exercise still works offline with original illustrations."},
  {id:"inline-exercise-guide-v32",date:"2026-11-21",title:"Open exercise guides in the workout",body:"Tap ⓘ to see the start and finish positions and instructions in the exercise card. No separate window is needed.",titlePt:"Abra o guia de execução no treino",bodyPt:"Toque em ⓘ para ver as posições e instruções no próprio cartão do exercício, sem abrir outra janela."},
  {id:"configuration-backup-v31",date:"2026-11-21",title:"Transfer your workout configuration",body:"Find Configuration backup under Local data to download and restore routines and preferences on another device."},

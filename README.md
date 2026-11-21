@@ -182,3 +182,7 @@ Open **Menu → Local data → Configuration backup**. **Download JSON** saves a
 On the other device choose that file, review what it replaces and explicitly confirm. Existing checkmarks and temporary substitutions are left untouched but will not match different workouts. Nothing is uploaded. For a safe restore or interruption recovery, the browser must support Web Locks and allow local storage.
 
 In Train, tap **ⓘ** to open one exercise guide inline. It keeps offline form diagrams and instructions together; optional linked or inline source media is not automatically downloaded. The library guide still opens in its own dialog.
+
+### Browse saved weeks in Train
+
+Use **Saved weeks** above the weekdays to inspect each saved dated week without opening Plan. Dates and date-specific logs follow the displayed week. Other weeks are read-only. Switching weeks keeps your weekday; **Return to today** restores today. Browsing does not save or activate a program, and refresh opens the real current week. Paused programs keep the recurring week active; ended programs keep their existing empty fallback until explicitly resumed.

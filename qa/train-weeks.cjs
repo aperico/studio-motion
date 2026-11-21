@@ -1,0 +1,23 @@
+const assert=require('node:assert/strict');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {pathToFileURL}=require('node:url');const path=require('node:path');
+(async()=>{const b=await chromium.launch();try{for(const [width,lang] of [[320,'pt-BR'],[800,'en']]){
+ const c=await b.newContext({viewport:{width,height:800},locale:lang});const p=await c.newPage();const errors=[];p.on('pageerror',e=>errors.push(e.message));
+ await p.clock.install({time:new Date('2026-10-13T12:00:00Z')});await p.goto(process.env.STUDIO_QA_URL||pathToFileURL(path.resolve(__dirname,'../index.html')).href);
+ await p.evaluate(()=>{plan.days[1]=cleanSession({title:'Recurring',items:[make('press',10)]});save();persistBlock({version:1,epoch:resetEpoch,start:'2026-10-05',paused:false,weeks:Array.from({length:4},(_,i)=>Array.from({length:7},(_,j)=>cleanSession({title:'Week '+i+' day '+j,items:[make('press',10)]}))),archive:[]});setDay(1);window.writes=[];const original=Storage.prototype.setItem;Storage.prototype.setItem=function(...args){writes.push(args[0]);return original.apply(this,args)};});
+ const baseline=await p.evaluate(()=>JSON.stringify(localStorage));
+ await p.locator('#trainWeek').selectOption('2026-10-19');
+ assert.equal(await p.evaluate(()=>dateForDay(day)),'2026-10-20');assert.equal(await p.evaluate(()=>current().title),'Week 2 day 1');assert(await p.locator('#trainList input').first().isDisabled());
+ assert(await p.locator('#modeSwitch').isDisabled());await p.evaluate(()=>{storeMark(effectiveRows()[0],1,true,dateForDay(day));$('clearSets').onclick();$('undoSets').onclick();showPreview();showWeek();refreshDates();window.dispatchEvent(new Event('focus'));});
+ assert.equal(await p.locator('#trainWeek').inputValue(),'2026-10-19');assert.equal(await p.evaluate(()=>JSON.stringify(localStorage)),baseline);assert.deepEqual(await p.evaluate(()=>writes),[]);
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth),width);
+ await p.locator('#trainWeek').focus();await p.keyboard.press('Home');await p.keyboard.press('Enter');
+ await p.locator('#trainWeek').selectOption('2026-10-05');assert.equal(await p.evaluate(()=>day),1);
+ await p.locator('#returnToday').click();assert.equal(await p.evaluate(()=>dateForDay(day)),'2026-10-13');assert(!await p.locator('#trainList input').first().isDisabled());
+ await p.locator('#trainList [data-edit-weight]').first().click();await p.evaluate(()=>{trainWeekStart='2026-10-19';$('weightInput').value='99';$('weightForm').requestSubmit();});assert.equal(await p.evaluate(()=>block.weeks[1][1].items[0].kg),null);await p.locator('#weightCancel').click();
+ await p.reload();assert.equal(await p.locator('#trainWeek').inputValue(),'2026-10-12');
+ await p.evaluate(()=>{block.paused=true;setDay(1)});assert.equal(await p.evaluate(()=>current().title),'Recurring');await p.locator('#trainWeek').selectOption('2026-10-19');assert(await p.locator('#modeSwitch').isDisabled());await p.locator('#returnToday').click();assert.equal(await p.evaluate(()=>current().title),'Recurring');
+ await p.evaluate(()=>{block.paused=false;setDay(1)});await p.locator('#trainWeek').selectOption('2026-10-19');await p.clock.setSystemTime(new Date('2026-10-19T12:00:00Z'));await p.evaluate(()=>refreshDates());assert(!await p.locator('#trainList input').first().isDisabled());assert.equal(await p.evaluate(()=>trainWeekStart),null);
+ await p.clock.setSystemTime(new Date('2026-11-10T12:00:00Z'));await p.evaluate(()=>refreshDates());assert.equal(await p.locator('#trainList li').count(),0);await p.locator('#trainWeek').selectOption('2026-10-05');assert(await p.locator('#modeSwitch').isDisabled());await p.locator('#returnToday').click();assert.equal(await p.locator('#trainList li').count(),0);
+ assert.deepEqual(errors,[]);console.log(width,lang,'saved-week navigation, read-only, stale form, dates, focus/midnight, paused/ended, refresh PASS');await c.close();
+}}finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});
