@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v9 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v10 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -14,7 +14,7 @@
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v9</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v10</small></span>
   <div class="buttons no-print"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
@@ -32,7 +32,7 @@
 <details class="toolbox no-print" id="autoOptions"><summary>Equipment &amp; auto-plan settings</summary>
 <p class="muted guide">Preview first. The weekday split alternates upper and lower training, with core and calves midweek. Use a light warm-up and recover as needed; do not train through pain or to failure.</p>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
-<div class="row generator-fields"><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option></select></label>
+<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option></select></label>
 <label class="field">Exercises<select id="trainingSize"><option value="3">3 · Short</option><option value="5">5 · Standard</option><option value="6">6 · Longer</option><option value="8" selected>8 · Extended</option></select></label>
 <label class="field">Sets<select id="trainingSets"><option value="4">4 sets</option><option value="3">3 sets</option><option value="2">2 sets</option></select></label></div>
 </details><p id="generatorStatus" class="guide muted" role="status"></p>
@@ -43,8 +43,8 @@
 </section>
 <details class="panel library" id="libraryPanel">
   <summary id="libheading">Exercise library</summary>
-  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div id="muscleOverview" hidden></div><a class="selection-link" href="#selectedExercise">Selected exercise &amp; add</a><div class="choices" id="choices"></div>
-<div id="selectedExercise"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
+  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench exercises</option><option value="adjustable">Incline bench exercises</option><option value="none">No bench needed</option></select></div><div id="muscleOverview" hidden></div><a class="selection-link" href="#selectedExercise">Selected exercise &amp; add</a><div class="choices" id="choices"></div>
+<div id="selectedExercise"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog></main>
 <script>
@@ -109,7 +109,7 @@ const additions=[
 ["cable-pull","Cable pull-through","Hamstrings","Cable","hinge","Hamstrings · glutes","Hinge at the hips and stand tall without leaning back."],
 ["cable-crunch","Kneeling cable crunch","Core","Cable","crunch","Abdominals","Curl gently through the ribs without tugging on the rope."],
 ["cable-pallof","Pallof press hold","Core","Cable","rotation","Abdominals · anti-rotation","Press straight out and resist the cable turning your torso.",true,true],
-["db-bench","Dumbbell bench press","Chest","Dumbbell","chest","Chest · triceps","Use a stable bench and control the weights down."],
+["db-bench","Flat dumbbell bench press","Chest","Dumbbell","chest","Chest · triceps","Use a stable bench and control the weights down."],
 ["db-row","One-arm dumbbell row","Back","Dumbbell","row","Lats · upper back","Support yourself on a bench and row without turning.",true],
 ["db-shoulder","Dumbbell shoulder press","Shoulders","Dumbbell","vertical","Shoulders · triceps","Press overhead with ribs stacked over hips."],
 ["db-lateral","Dumbbell lateral raise","Shoulders","Dumbbell","raise","Side shoulders","Lift slowly with soft elbows and no shoulder shrug."],
@@ -121,7 +121,7 @@ const additions=[
 ["db-calf","Dumbbell calf raise","Calves","Dumbbell","calf","Calves","Rise smoothly and use support if balance is limited."],
 ["db-seated-calf","Seated dumbbell calf raise","Calves","Dumbbell","seatedcalf","Calves","Support the weights on your thighs and rise smoothly through your ankles."],
 ["db-hold","Suitcase hold","Core","Dumbbell","raise","Core · grip","Hold one weight at your side and stay upright without leaning.",true,true],
-["bb-bench","Barbell bench press","Chest","Barbell","chest","Chest · triceps","Use safeties or a spotter and a comfortable range."],
+["bb-bench","Flat barbell bench press","Chest","Barbell","chest","Chest · triceps","Use safeties or a spotter and a comfortable range."],
 ["bb-row","Barbell bent-over row","Back","Barbell","row","Upper back · lats","Hold the hinge steady and draw the bar toward your torso."],
 ["bb-press","Barbell overhead press","Shoulders","Barbell","vertical","Shoulders · triceps","Start at shoulder height and press without leaning back."],
 ["bb-curl","Barbell biceps curl","Arms","Barbell","curl","Biceps","Keep elbows near your sides and lower under control."],
@@ -204,6 +204,26 @@ customMove("cable-chop","High-to-low cable chop","Core","Cable","anti-rotation",
  [177,154,178,98,174,65,198,93,231,83,167,184,159,220],[174,158,166,102,162,68,145,126,122,153,167,184,159,220],true,false,[274,42]);
 customMove("cable-lift","Low-to-high cable lift","Core","Cable","diagonal lift","Obliques","Guide the handle from one hip toward the opposite shoulder. Avoid twisting through an uncomfortable range.",
  [177,154,174,100,174,68,151,128,121,149,167,184,159,220],[177,153,190,98,191,65,213,101,237,82,167,184,159,220],true,false,[106,211]);
+customMove("db-incline","Incline dumbbell press","Chest","Dumbbell","incline press","Upper chest · triceps · front shoulders","Set an adjustable bench to a comfortable moderate incline. Keep your head and upper back on the pad and press above the upper chest.",
+ [161,151,118,108,103,83,157,125,150,98,212,162,202,220],[161,151,118,108,103,83,133,75,145,55,212,162,202,220]);
+customMove("db-shrug","Dumbbell shrug","Back","Dumbbell","shrug","Upper trapezius","Stand tall with arms long. Lift your shoulders toward your ears, then lower smoothly; do not roll your shoulders.",
+ [184,151,184,91,184,62,190,125,193,158,188,185,190,221],[184,151,184,79,184,62,190,113,193,146,188,185,190,221]);
+rig("db-incline","inclinebench",byId("db-incline").p,byId("db-incline").q);
+for(const id of ["db-bench","bb-bench","db-row","bb-thrust"])byId(id).bench="flat";
+byId("db-incline").bench="adjustable";
+const aliases={
+ "db-bench":"supino reto com halteres supino com halter chest press",
+ "db-incline":"supino inclinado com halteres supino inclinado incline bench upper chest",
+ "bb-bench":"supino reto com barra supino com barra bench press",
+ "db-row":"remada unilateral com halter remada com halteres banco",
+ "db-shrug":"encolhimento trapézio trapezius traps shoulder shrug encolhimento com halteres",
+ "machine-row":"remada trapézio costas",
+ "machine-rear":"trapézio parte superior das costas reverse fly",
+ "bb-thrust":"elevação pélvica banco"
+};
+const normalized=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const setup=e=>e.bench==="adjustable"?"Adjustable incline bench required":e.id==="bb-bench"?"Flat bench and supported rack required":e.bench==="flat"?"Flat bench required":"";
+const benchFits=(e,available)=>!e.bench||available==="adjustable"||e.bench==="flat"&&available==="flat";
 const mobility=[
  ["mob-ankle","Ankle rock","Calves","ankle mobility","Ankles · calves","From a staggered stance, move the front knee over the toes and keep the front heel down.",
  [149,143,140,91,139,60,142,122,154,135,203,164,217,220],[164,145,149,93,147,63,153,124,166,137,219,163,217,220],true],
@@ -231,7 +251,17 @@ const mobility=[
  [153,211,217,213,239,214,225,192,191,195,115,160,83,220],[153,211,217,213,239,214,225,192,191,195,115,160,83,220],false,true]
 ];
 for(const [id,n,g,style,m,c,p,q,side,hold] of mobility)customMove(id,n,g,"Bodyweight",style,m,c,p,q,side,hold);
+rig("db-bench","flatpress",
+ [124,143,194,142,217,136,179,167,164,139,109,171,101,222],
+ [124,143,194,142,217,136,183,111,176,77,109,171,101,222]);
+rig("bb-bench","flatpress",
+ [124,143,194,142,217,136,179,167,164,139,109,171,101,222],
+ [124,143,194,142,217,136,183,111,176,77,109,171,101,222]);
 const contactCopy={
+ "db-bench":"Upper back and head stay on the bench. Keep wrists over elbows as the weights move.",
+ "bb-bench":"Upper back and head stay on the bench. Use rack safeties or a spotter.",
+ "db-incline":"Upper back and head stay on the inclined pad. Keep your feet planted.",
+ "db-shrug":"Keep your arms long. The shoulders lift vertically without rolling.",
  press:"Back pad stays fixed; hands follow the handles.", shoulder:"Back pad stays fixed; handles travel overhead.",
  pulldown:"Thighs stay under the pad; bar moves toward upper chest.", row:"Feet stay planted; cable follows the handle.",
  fly:"Back and seat stay supported; handles close in front.", "machine-rear":"Chest stays supported; move the arms outward.",
@@ -252,6 +282,8 @@ const contactCopy={
 
 const $=x=>document.getElementById(x);
 const frames={
+ flatpress:'<path d="M55 228H325M114 153H243M137 154V228M225 154V228" stroke-width="7"/>',
+ inclinebench:'<path d="M55 228H325M112 111L163 158L203 151M145 145V229M200 155V229" stroke-width="7"/>',
  wall:'<path d="M63 224H308M151 224V35" stroke="#537078"/>',
  assisted:'<path d="M70 228H310M102 228V37H284V228M111 44H249M242 219H294"/><path d="M134 39H220" stroke-width="9"/>',
  chestrow:'<path d="M64 222H318M253 222V48H286V222M133 175H184M141 175V222M175 111V218"/><path d="M169 112V159M128 170H177" stroke-width="10"/>',
@@ -285,6 +317,7 @@ const regions={
  rear:["Rear shoulders","B","M13 29Q14 24 21 25L19 34 15 38 12 34ZM47 29Q46 24 39 25L41 34 45 38 48 34Z"],
  bi:["Biceps","F","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
  tri:["Triceps","B","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
+ trap:["Upper trapezius","B","M21 27L28 23H32L39 27 36 32 33 29 30 34 27 29 24 32Z"],
  grip:["Forearms","F","M9 48L13 49 9 60 5 60ZM51 48L47 49 51 60 55 60Z"],
  lat:["Lats","B","M20 33L26 38 28 49 23 47 18 36ZM40 33L34 38 32 49 37 47 42 36Z"],
  upper:["Upper back","B","M22 25L30 23 38 25 37 33 32 39 28 39 23 33Z"],
@@ -300,11 +333,13 @@ const regions={
  calf:["Calves","B","M18 84L23 85 23 94 19 101 16 101 16 93ZM42 84L37 85 37 94 41 101 44 101 44 93Z"],
  shin:["Shins / ankles","F","M18 84L23 85 22 93 19 101 16 101 17 92ZM42 84L37 85 38 93 41 101 44 101 43 92Z"]
 };
-const groupRegions={Chest:["pec"],Back:["lat","upper","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
+const groupRegions={Chest:["pec"],Back:["lat","upper","trap","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
 const targets={};
 function target(ids,focus,assist=""){for(const id of ids.split(" "))targets[id]=[focus.split(" "),assist?assist.split(" "):[]];}
 target("press cable-chest db-bench bb-bench bw-pushup","pec","tri delt");
 target("fly cable-fly","pec","delt");
+target("db-incline","pec","tri delt");
+target("db-shrug","trap");
 target("shoulder db-shoulder bb-press bw-pike","delt","tri");
 target("pulldown assist-pull cable-lat bw-pullup","lat","bi upper");
 target("row machine-row db-row bb-row","upper lat","bi rear");
@@ -355,7 +390,7 @@ function mapPose(f,coords,sets){
  const [hx,hy,sx,sy,bx,by,ex,ey,wx,wy,kx,ky,ax,ay]=coords;
  const torsoSide=48<Math.abs(sx-hx)&&!f.mirror;
  const spots={
-  delt:[sx,sy,5,4],rear:[sx-3,sy-2,5,4],bi:[(sx+ex)/2,(sy+ey)/2,4.5,4],tri:[(sx+ex)/2,(sy+ey)/2,4.5,4],
+  trap:[sx-.8,sy-3,6,3],delt:[sx,sy,5,4],rear:[sx-3,sy-2,5,4],bi:[(sx+ex)/2,(sy+ey)/2,4.5,4],tri:[(sx+ex)/2,(sy+ey)/2,4.5,4],
   grip:[(ex+wx)/2,(ey+wy)/2,4,3],quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
   calf:[kx+.48*(ax-kx),ky+.48*(ay-ky),4,4],shin:[kx+.61*(ax-kx),ky+.61*(ay-ky),4,3],
   pec:f.mirror||torsoSide?[sx+.19*(hx-sx),sy+.19*(hy-sy),5,5]:null,
@@ -426,11 +461,11 @@ function draw(f,t,key){
  if(f.f==="chestrow")contacts+=support(sx+10,sy+27);
  if(f.f==="preacher")contacts+=support(ex,ey);
  if(["tower","row","chestrow","preacher"].includes(f.f))contacts+=support(ax,ay);
- if(["hipbench","bench"].includes(f.f))contacts+=support(sx,sy+7);
+ if(["hipbench","bench","flatpress","inclinebench"].includes(f.f))contacts+=support(sx,sy+7);
  if(["calf","calfseat","calfbench"].includes(f.f))contacts+=support(f.f==="calf"?198:224,219);
  const movingPad=f.f==="lever"||f.f==="sled"||f.f==="calfseat";
  const pattern=f.style;
- const indices=movingPad||pattern==="kick"||f.id==="abduct"?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
+ const indices=f.id==="db-shrug"?[2,3]:movingPad||pattern==="kick"||f.id==="abduct"?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
  const [mi,mj]=indices,from=[f.p[mi],f.p[mj]],to=[f.q[mi],f.q[mj]];
  const arrow=f.hold?"":Math.hypot(to[0]-from[0],to[1]-from[1])>16?
     '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#f7da87" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#'+key+'-guide-arrow)" fill="none" opacity=".88"/>':"";
@@ -525,15 +560,19 @@ document.addEventListener("visibilitychange",()=>{
 });
 reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(selected.g+" · "+selected.eq).toUpperCase();$("name").textContent=selected.n;$("muscle").textContent=selected.m;$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=selected.c;list()}
+function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(selected.g+" · "+selected.eq).toUpperCase();$("name").textContent=selected.n;$("muscle").textContent=selected.m;$("setupInfo").textContent=setup(selected);$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=selected.c;list()}
 function list(){
- const term=$("query").value.trim().toLowerCase(), g=$("filter").value, eq=$("equipmentFilter").value;
+ const term=normalized($("query").value.trim()).split(/\s+/).filter(Boolean),
+  g=$("filter").value,eq=$("equipmentFilter").value,bench=$("benchFilter").value;
  const overview=$("muscleOverview");overview.hidden=!g;overview.innerHTML=g?bodyMaps([groupRegions[g],[]]):"";
  const root=$("choices");clearArt(root);const top=root.scrollTop;
- root.innerHTML=E.filter(e=>(!g||g===e.g)&&(!eq||eq===e.eq)&&(e.n+" "+e.m+" "+e.eq+" "+e.g+(e.eq==="Dumbbell"?" halteres":"")).toLowerCase().includes(term)).map(e=>'<button data-ex="'+e.id+'" aria-pressed="'+(selected.id===e.id)+'">'+artMarkup(e,true)+e.n+'</button>').join("")||'<small>No matches. Try a different search.</small>';
+ root.innerHTML=E.filter(e=>{
+  const haystack=normalized([e.n,e.m,e.eq,e.g,setup(e),aliases[e.id],e.eq==="Dumbbell"?"halteres halter":"",e.bench?"bench banco":""].filter(Boolean).join(" "));
+  return (!g||g===e.g)&&(!eq||eq===e.eq)&&(!bench||(bench==="none"?!e.bench:e.bench===bench))&&term.every(t=>haystack.includes(t));
+ }).map(e=>'<button data-ex="'+e.id+'" aria-pressed="'+(selected.id===e.id)+'">'+artMarkup(e,true)+esc(e.n)+(e.bench?'<small>'+esc(setup(e))+'</small>':'')+'</button>').join("")||'<small>No matches. Try a different search.</small>';
  root.scrollTop=top;watchArt(root);
 }
-$("choices").onclick=e=>{const b=e.target.closest("[data-ex]");if(b){choose(b.dataset.ex);nav();$("choices").querySelector('[data-ex="'+b.dataset.ex+'"]')?.focus()}};$("query").oninput=list;$("filter").onchange=list;$("equipmentFilter").onchange=list;
+$("choices").onclick=e=>{const b=e.target.closest("[data-ex]");if(b){choose(b.dataset.ex);nav();$("choices").querySelector('[data-ex="'+b.dataset.ex+'"]')?.focus()}};$("query").oninput=list;$("filter").onchange=list;$("equipmentFilter").onchange=list;$("benchFilter").onchange=list;
 const KEY1="studio-motion-sessions-v1",KEY2="studio-motion-plan-v2",DAYS=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
 let today=(new Date().getDay()+6)%7;
 const localId=()=>globalThis.crypto?.randomUUID?.()??Date.now().toString(36)+"-"+Math.random().toString(36).slice(2);
@@ -650,7 +689,7 @@ function renderTrainList(){
   }).join("");
   return '<li class="train-card" data-swap-row="'+i+'"><div class="row"><h2 class="exercise-label">'+esc(e.n)+'</h2>'+replaceBtn(e)+'</div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">Alternate for '+esc(date)+'</p>':'')+
-    '<p class="train-dose">'+esc(dose(row))+'</p><fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
+    '<p class="train-dose">'+esc(dose(row)+(setup(e)?' · '+setup(e):''))+'</p><fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>Form tips</summary><p class="coach">'+esc(e.c)+'</p>'+
     (contactCopy[e.id]?'<p class="contact-cue">'+esc(contactCopy[e.id])+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+'</details></li>';
@@ -686,9 +725,9 @@ const typeOverrides={
 function movementType(e){
  return typeOverrides[e.id]||e.g+":"+(e.style||e.f);
 }
-function swapChoices(row,rows,gear){
+function swapChoices(row,rows,gear,bench){
  const exercise=byId(row.exercise),occupied=new Set(rows.map(x=>x.exercise));
- const candidates=E.filter(e=>!occupied.has(e.id)&&(!gear||e.eq===gear));
+ const candidates=E.filter(e=>!occupied.has(e.id)&&(!gear||e.eq===gear)&&benchFits(e,bench));
  const similar=candidates.filter(e=>movementType(e)===movementType(exercise));
  const targeted=candidates.filter(e=>e.g===exercise.g&&!similar.includes(e));
  return [similar,targeted];
@@ -706,24 +745,25 @@ function openSwap(root,card,mode){
  const panel=card.querySelector(".swap"),button=card.querySelector(".replace"),exercise=byId(row.exercise);
  panel.innerHTML='<div class="row"><strong>Replace exercise</strong><button type="button" data-swap-cancel>Cancel</button></div>'+
   '<p class="guide muted">'+(mode==="date"?"Only "+esc(DAYS[day])+" "+date+". The weekly plan won’t change.":"Changes the saved weekly plan. A date-specific replacement takes priority.")+'</p>'+
-  '<label class="field">Equipment<select data-swap-gear><option value="">All equipment</option>'+equipments.map(k=>'<option>'+esc(k)+'</option>').join("")+'</select></label><div data-swap-results></div>';
+  '<label class="field">Equipment<select data-swap-gear><option value="">All equipment</option>'+equipments.map(k=>'<option>'+esc(k)+'</option>').join("")+'</select></label><label class="field">Bench available<select data-swap-bench><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><div data-swap-results></div>';
  panel.hidden=false;button.setAttribute("aria-expanded","true");
- const gear=panel.querySelector("[data-swap-gear]");
+ const gear=panel.querySelector("[data-swap-gear]"),bench=panel.querySelector("[data-swap-bench]");
+ bench.value=$("trainingBench").value;
  const occupied=()=>mode==="date"?effectiveRows():[...w.items,...effectiveRows()];
  function choices(){
   const currentDone=mode==="date"&&marksFor(row,w,date).length;
   const result=panel.querySelector("[data-swap-results]");if(!result)return;
-  if(currentDone){result.innerHTML='<p class="guide">This exercise already has checked sets. Keep it for this workout so those sets stay visible.</p>';gear.disabled=true;return;}
-  const [same,muscle]=swapChoices(row,occupied(),gear.value);
-  const section=(title,xs)=>xs.length?'<h3>'+title+'</h3><ul>'+xs.map(e=>'<li><button type="button" data-swap-ex="'+e.id+'">'+esc(e.n)+' <small>· '+esc(e.eq)+'</small></button></li>').join("")+'</ul>':"";
+  if(currentDone){result.innerHTML='<p class="guide">This exercise already has checked sets. Keep it for this workout so those sets stay visible.</p>';gear.disabled=true;bench.disabled=true;return;}
+  const [same,muscle]=swapChoices(row,occupied(),gear.value,bench.value);
+  const section=(title,xs)=>xs.length?'<h3>'+title+'</h3><ul>'+xs.map(e=>'<li><button type="button" data-swap-ex="'+e.id+'">'+esc(e.n)+' <small>· '+esc(e.eq+(setup(e)?' · '+setup(e):''))+'</small></button></li>').join("")+'</ul>':"";
   result.innerHTML=section("Same movement",same)+section("Same muscle group",muscle)||'<p class="guide">No other matches with this equipment. Try a different filter.</p>';
  }
- gear.onchange=choices;choices();
+ gear.onchange=bench.onchange=choices;choices();
  panel.onclick=event=>{
   if(event.target.closest("[data-swap-cancel]")){closeSwap(card);return;}
   const pick=event.target.closest("[data-swap-ex]");
   if(!pick||w!==current()||date!==dateForDay(day))return;
-  const id=pick.dataset.swapEx,next=byId(id),allowed=swapChoices(row,occupied(),gear.value).flat();
+  const id=pick.dataset.swapEx,next=byId(id),allowed=swapChoices(row,occupied(),gear.value,bench.value).flat();
   if(!next||!allowed.includes(next))return;
   if(mode==="date"&&marksFor(row,w,date).length){choices();return;}
   const swap={...make(id),sets:row.sets,rest:row.rest};
@@ -778,7 +818,7 @@ function shuffled(xs){
  xs=[...xs];for(let i=xs.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[xs[i],xs[j]]=[xs[j],xs[i]];}return xs;
 }
 function planDraft(equipment,focus,order,size,variant,offset=0,randomize=false){
- const preferred=E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&!e.id.startsWith("mob-")&&!e.equipmentRequired);
+ const preferred=E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired);
  const byGroup=new Map([...new Set(order)].map(g=>[g,preferred.filter(e=>e.g===g).sort((a,b)=>priorityEquipment.indexOf(a.eq)-priorityEquipment.indexOf(b.eq)||isolation(a)-isolation(b)||a.n.localeCompare(b.n))]));
  const used=new Set(),items=[],occurrence=new Map();
  for(const g of order){
@@ -949,7 +989,7 @@ $("weekClose").onclick=()=>$("weekPreview").close();
 $("weekPreview").onclose=()=>{proposedWeek=null;syncAnimation();$("weekGenerate").focus({preventScroll:true});};
 $("weekCards").onchange=updateWeekChoice;
 $("applyWeek").onclick=commitWeek;
-for(const target of ["trainingFocus","trainingSize","trainingEquipment","trainingSets"])$(target).onchange=resetPreview;
+for(const target of ["trainingFocus","trainingSize","trainingEquipment","trainingBench","trainingSets"])$(target).onchange=resetPreview;
 $("applyTraining").onclick=()=>{
  if(!proposed||proposed.day!==day)return;
  if(hasWorkout(current())&&!confirm("Replace the workout for "+DAYS[day]+"? The current workout will be kept under Saved workouts."))return;

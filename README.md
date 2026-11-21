@@ -28,6 +28,10 @@ Use the same browser and address to keep using the same saved plan.
   Visible movements loop automatically;
   if your device has reduced motion enabled, you can switch between static poses.
   Use **Selected exercise & add** to jump past the larger library list.
+  Search supports **supino**, **halteres**, **trapézio** and English names;
+  filter flat/incline bench exercises or show movements that need no bench.
+  The planner and alternatives respect **Bench available** for exercises
+  that require a flat or adjustable bench.
   Tap **Done** to return to training.
 - Use **Replace** beside an exercise if the equipment is unavailable. In
   Training this swaps only the selected calendar date; in Plan/Edit it changes
@@ -103,3 +107,5 @@ and [ACE barbell examples](https://www.acefitness.org/resources/everyone/exercis
 These are optional documentation links; the HTML loads no external assets.
 
 Target region terminology: [ACE Exercise Library](https://www.acefitness.org/resources/everyone/exercise-library/).
+
+Bench movement reference: [ACE incline chest press](https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/).
