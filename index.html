@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v31 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v32 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -93,6 +93,17 @@
 .workout-dose{grid-template-columns:repeat(auto-fit,minmax(min(100%,3.9rem),1fr))}.workout-dose dt{overflow-wrap:anywhere}
 #weightDialog{scroll-padding-bottom:60px}#weightForm>.buttons{position:sticky;bottom:-1px;z-index:1;background:var(--panel);padding-block:4px}
 #configDialog{width:min(calc(100% - 20px),560px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);background:var(--panel);overflow:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:14px}#configDialog::backdrop{background:#060a0bc9}#configDialog h2{font-size:1.1rem;margin:0;min-width:0;overflow-wrap:anywhere}#configDialog h3,#configDialog h4{font-size:.93rem;margin:.45rem 0}#configDialog section{padding:.35rem 0;border-top:1px solid var(--line)}#configDialog p{font-size:.83rem;overflow-wrap:anywhere}#configDialog button,#configDialog input,#openConfig,#recoverConfig{min-height:44px}#configDialog input[type="email"],#configDialog input[type="file"]{display:block;width:100%;max-width:100%}#configDialog .config-check{display:flex;align-items:center;gap:8px;font-size:.83rem;min-height:44px}#configDialog input[type="checkbox"]{min-height:auto;flex:none;width:22px;height:22px}#configPreview{margin-top:.45rem;padding:.45rem;border:1px solid var(--line);border-radius:8px}#configClose{flex:none}
+.training-inline-guide{padding:8px;margin-top:8px;border:1px solid var(--line);border-radius:10px;min-width:0;scroll-margin-block-start:86px}
+.training-inline-guide[hidden]{display:none}
+.inline-guide-art{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin:.55rem 0}
+.inline-guide-art figure{min-width:0;margin:0;padding:4px;border:1px solid var(--line);border-radius:9px;background:var(--inner)}
+.inline-guide-art figure[data-hold]{grid-column:1/-1;width:min(100%,310px);justify-self:center}
+.inline-guide-art svg{display:block;width:100%;height:auto}
+.inline-guide-art figcaption{text-align:center;font-size:.76rem;font-weight:700;padding:2px;overflow-wrap:anywhere}
+.training-inline-guide ol{padding-inline-start:1.2rem;margin:.35rem 0;line-height:1.4}
+.training-inline-guide li+li{margin-top:.35rem}
+.training-inline-guide h3{min-width:0;margin:0;font-size:1rem;overflow-wrap:anywhere;scroll-margin-block-start:86px}
+.training-inline-guide .inline-guide-close{flex:0 0 44px;width:44px;height:44px;padding:0;font-size:1.4rem}
 </style></head>
 <body><main class="app">
 <aside id="configInterrupted" class="guide" hidden><p>A configuration import was interrupted. Recover your previous configuration before editing.</p><button id="recoverConfig" type="button">Recover previous configuration</button><p id="recoverConfigFeedback" role="status"></p></aside>
@@ -101,7 +112,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v31</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v32</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -154,7 +165,7 @@
  <button id="weekGenerateAll" type="button" hidden>Generate all weeks</button>
 </div><p id="weekLengthHint" class="guide muted">Choose 2 to 4 weeks to generate a specific week or all weeks.</p><p id="blockDraftRange" class="guide muted" hidden></p><p id="blockFeedback" class="guide muted" role="status" hidden></p>
 <p class="guide muted" id="weekDraftMapNote">The maps show proposed workouts. Only selected days will be saved.</p><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
-<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button" aria-label="Close"><span aria-hidden="true">×</span></button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p class="guide muted" id="guideWeightHelp" hidden></p><p id="guideTargets" class="targets-text"></p><h3 id="guideStepsHeading"></h3><ol id="guideInstructions"></ol><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden></p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a></dialog>
+<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button" aria-label="Close"><span aria-hidden="true">×</span></button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><h3 id="guideStepsHeading"></h3><ol id="guideInstructions"></ol><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden></p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a></dialog>
 <dialog id="weekSummary" class="workout-view" aria-labelledby="weekSummaryHeading">
  <header class="guide-title-row"><h2 id="weekSummaryHeading" tabindex="-1">Week summary</h2><button type="button" id="weekSummaryClose">Close</button></header>
  <p class="guide muted" id="weekSummaryTotals"></p><p class="guide muted" id="weekSummaryGroups"></p>
@@ -1744,8 +1755,46 @@ function updateCurrentExercise(){
   button.setAttribute("aria-label",button.textContent+": "+nameOf(byId(row.exercise)));
  }
 }
+function trainingGuideButton(e,i){
+ const label=t("Exercise guide for ","Guia de execução: ")+nameOf(e);
+ return '<button type="button" class="exercise-info" title="'+esc(label)+'" data-training-guide aria-expanded="false" aria-controls="training-guide-'+i+'" aria-label="'+esc(label)+'"><span aria-hidden="true">ⓘ</span></button>';
+}
+function toggleTrainingGuide(card,forceClose=false,restoreFocus=true){
+ const button=card.querySelector("[data-training-guide]"),panel=card.querySelector(".training-inline-guide");
+ if(!button||!panel)return;
+ if(!panel.hidden){
+  const media=panel.querySelector("[data-tip-ex]");if(media)closeTipMedia(media);
+  panel.hidden=true;panel.replaceChildren();button.setAttribute("aria-expanded","false");
+  if(restoreFocus)button.focus();
+  return;
+ }
+ if(forceClose)return;
+ for(const other of $("trainList").querySelectorAll(".training-inline-guide:not([hidden])")){
+  toggleTrainingGuide(other.closest(".train-card"),true,false);
+ }
+ const i=Number(card.dataset.swapRow),row=effectiveRows()[i],e=row&&byId(row.exercise);
+ if(!e)return;
+ panel.innerHTML='<div class="guide-title-row"><h3 tabindex="-1" id="training-guide-heading-'+i+'">'+esc(t("Exercise guide","Guia de execução"))+'</h3><button class="inline-guide-close" type="button" data-training-guide-close aria-label="'+esc(t("Close"))+'"><span aria-hidden="true">×</span></button></div>'+
+  '<div class="inline-guide-art">'+guidePoses(e)+'</div><ol>'+guideSteps(e).map(step=>'<li>'+esc(step)+'</li>').join("")+'</ol>'+
+  (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
+  (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i);
+ panel.hidden=false;button.setAttribute("aria-expanded","true");
+ panel.querySelector("h3").focus();
+}
+$("trainList").addEventListener("click",event=>{
+ const trigger=event.target.closest("[data-training-guide],[data-training-guide-close]");
+ if(trigger)toggleTrainingGuide(trigger.closest(".train-card"),trigger.hasAttribute("data-training-guide-close"));
+});
+$("trainList").addEventListener("keydown",event=>{
+ if(event.key!=="Escape")return;
+ const panel=event.target.closest(".training-inline-guide");
+ if(!panel||panel.hidden)return;
+ event.preventDefault();toggleTrainingGuide(panel.closest(".train-card"),true);
+});
 function renderTrainList(){
- const root=$("trainList");clearArt(root);
+ const root=$("trainList");
+ for(const media of root.querySelectorAll(".training-inline-guide [data-tip-ex]"))closeTipMedia(media);
+ clearArt(root);
  const date=dateForDay(day);
  root.dataset.date=date;
  root.innerHTML=effectiveRows(current(),date).map((row,i)=>{
@@ -1754,12 +1803,10 @@ function renderTrainList(){
    const set=j+1;
    return '<label class="set-box"><input type="checkbox" data-row="'+i+'" data-set="'+set+'" aria-label="'+esc(nameOf(e)+t(" set ",", série ")+set)+'" '+(marks.includes(set)?"checked":"")+'><span>'+set+'</span></label>';
   }).join("");
-  return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
+  return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+trainingGuideButton(e,i)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">'+t("Alternate for")+" "+esc(displayDate(date))+'</p>':'')+
     '<dl class="workout-dose">'+workoutDose(row,true)+'</dl><button type="button" data-edit-routine>'+(e.hold?t("Edit sets & hold","Editar séries e duração"):t("Edit sets & reps","Editar séries e repetições"))+'</button>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<button class="current-exercise" type="button" data-current-exercise="'+i+'" data-current-row-key="'+esc(row.id)+'"></button><fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset><button class="set-complete" type="button" data-complete-set="'+i+'" data-row-key="'+row.id+'"></button>'+
-    '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>'+t("Form tips")+'</summary><p class="coach">'+esc(cueOf(e))+'</p>'+
-    (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
-    (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i)+'</details></li>';
+    '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><section class="training-inline-guide" id="training-guide-'+i+'" aria-labelledby="training-guide-heading-'+i+'" hidden></section></li>';
  }).join("");
  watchArt(root);progressCount();updateCurrentExercise();refreshTrainingGroups();
 }
@@ -2149,11 +2196,9 @@ function openGuide(id,trigger){
  const ref=guideSource(e);
  $("guideName").textContent=nameOf(e);
  $("guideInfo").textContent=[t(e.eq),setup(e)].filter(Boolean).join(" · ");
- const rowNode=trigger.closest("[data-swap-row]"),inTraining=rowNode?.closest("#trainList");
- const row=rowNode?(inTraining?effectiveRows():current().items)[Number(rowNode.dataset.swapRow)]:null;
+ const rowNode=trigger.closest("[data-swap-row]");
+ const row=rowNode?current().items[Number(rowNode.dataset.swapRow)]:null;
  const guideDose=$("guideDose");guideDose.innerHTML=row?.exercise===id?workoutDose(row,false,true):"";guideDose.hidden=!guideDose.innerHTML;
- const weightHelp=$("guideWeightHelp");weightHelp.hidden=!inTraining||row?.exercise!==id||e.eq==="Bodyweight";
- weightHelp.textContent=t("To change the weight, close this guide and tap the weight on the workout card.","Para alterar a carga, feche este guia e toque na carga no cartão do exercício.");
  $("guideTargets").innerHTML=targetText(forTarget(e));
  $("guideClose").setAttribute("aria-label",t("Close"));
  $("guideStepsHeading").textContent=t("How to do it","Como executar");
@@ -2825,6 +2870,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"inline-exercise-guide-v32",date:"2026-11-21",title:"Open exercise guides in the workout",body:"Tap ⓘ to see the start and finish positions and instructions in the exercise card. No separate window is needed.",titlePt:"Abra o guia de execução no treino",bodyPt:"Toque em ⓘ para ver as posições e instruções no próprio cartão do exercício, sem abrir outra janela."},
  {id:"configuration-backup-v31",date:"2026-11-21",title:"Transfer your workout configuration",body:"Find Configuration backup under Local data to download and restore routines and preferences on another device."},
  {id:"weight-units-dose-v30",date:"2026-11-21",title:"Weight units and workout doses",body:"Change sets, reps or weights from each exercise card, using kilograms or pounds."},
  {id:"current-exercise-v29",date:"2026-11-21",title:"Mark your current exercise",body:"Highlight any exercise in today’s workout, even if you finished its sets. The marker does not change your saved workout or set progress.",titlePt:"Marque o exercício atual",bodyPt:"Destaque qualquer exercício do treino de hoje, mesmo com as séries concluídas. Isso não muda o treino salvo nem o registro das séries."},

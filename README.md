@@ -180,3 +180,5 @@ In Train, **Mark as current** highlights one exercise for the selected workout, 
 Open **Menu → Local data → Configuration backup**. **Download JSON** saves a local file with the recurring week, archived workouts, dated program and planner preferences, including language, units and goal. Checkmarks, temporary dated substitutions and your profile email are excluded by default. Add your saved local email as author metadata only by checking the optional box; importing someone else’s file won’t update your local profile. Keep the file private unless you intend to share it.
 
 On the other device choose that file, review what it replaces and explicitly confirm. Existing checkmarks and temporary substitutions are left untouched but will not match different workouts. Nothing is uploaded. For a safe restore or interruption recovery, the browser must support Web Locks and allow local storage.
+
+In Train, tap **ⓘ** to open one exercise guide inline. It keeps offline form diagrams and instructions together; optional linked or inline source media is not automatically downloaded. The library guide still opens in its own dialog.
