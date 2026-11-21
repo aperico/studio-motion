@@ -42,9 +42,7 @@ Use the same browser and address to keep using the same saved plan.
   timed, otherwise the new exercise uses the usual default for reps or holds.
 - Tap **ⓘ Exercise guide** on a workout row or the selected library exercise
   to see the original diagram, technique cue, equipment, and target muscles
-  offline. Optional named links open a specific exercise reference when
-  available, or a clearly marked related equipment/stretching guide.
-  External links load only when tapped and require internet.
+  offline. Optional **Watch demonstration** links open a specific verified YouTube video for the movement. No video is linked when an exact match is not verified. External links load only when tapped and require internet.
 - **Auto Plan Day** previews up to three different workouts for your selected
   day and focus. Select the option you want and save it; only the chosen workout
   becomes active.

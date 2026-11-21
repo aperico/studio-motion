@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v12 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v13 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -16,7 +16,7 @@
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v12</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v13</small></span>
   <div class="buttons no-print"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
@@ -50,7 +50,7 @@
 <div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
-<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. The linked guide opens a separate site and needs internet.</p></dialog></main>
+<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>No exact demonstration video verified for this exercise.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. The linked guide opens a separate site and needs internet.</p></dialog></main>
 <script>
 "use strict";
 const E=[
@@ -767,45 +767,87 @@ function save(x="Saved in this browser."){
 }
 const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
 function dose(x){const e=byId(x.exercise),unit=e.hold?x.seconds+" sec":(x.repRange?x.repRange.join("–"):x.reps)+" reps";return x.sets+" × "+unit+(e.side?" per side":"")+" · "+x.rest+" sec rest"+(x.kg===null?"":" · "+x.kg+" kg");}
-const ace="https://www.acefitness.org/resources/everyone/exercise-library/";
-const relatedEquipment={
- Machine:["ACE machine exercise library",ace+"equipment/weight-machines-selectorized/"],
- Cable:["ACE cable exercise library",ace+"equipment/resistance-bands-cables/"],
- Dumbbell:["ACE dumbbell exercise library",ace+"equipment/dumbbells/"],
- Barbell:["ACE barbell exercise library",ace+"equipment/barbell/"],
- Bodyweight:["ACE no-equipment exercise library",ace+"equipment/no-equipment/"]
+// Exact-match public YouTube demonstrations. No embed, prefetch, or external request until chosen.
+const videoGuides={
+ "press":["sqNwDkUU_Ps", "PureGym"],
+ "pulldown":["JGeRYIZdojU", "PureGym"],
+ "row":["lJoozxC0Rns", "PureGym"],
+ "shoulder":["GcY6TZxfS0k", "PureGym"],
+ "fly":["eGjt4lk6g34", "PureGym"],
+ "legpress":["q4W4_VJbKW0", "PureGym"],
+ "extension":["4ZDm5EbiFI8", "PureGym"],
+ "curl":["4QX1xgnBEJc", "James Cooper"],
+ "calf":["95itLfMBG40", "BrooklynFitness"],
+ "abduct":["G_8LItOiZ0Q", "PureGym"],
+ "machine-row":["FU6YQawma2Q", "Colossus Fitness"],
+ "assist-pull":["wFj808u2HWU", "PureGym"],
+ "machine-rear":["LzsSQzHFuLU", "Hypertrophy Coach"],
+ "machine-biceps":["h-Nm769kmrc", "Darren Cavazos"],
+ "machine-rotation":["gXOg-UTRkqY", "Gymleco"],
+ "machine-abs":["3h2dF58DLuc", "Dr Donald A Ozello DC, NSCA-CPT"],
+ "machine-hip":["SfvKKFDMono", "Walkyria Whitlock"],
+ "machine-seated-calf":["eT8tqSyjsWg", "Hayden Steele"],
+ "cable-chest":["u74FbPhR8iE", "OriGym"],
+ "cable-fly":["QcTcWpkn_bw", "PureGym"],
+ "cable-lat":["LPahgWM7eUU", "PureGym"],
+ "cable-lateral":["1AmmsXlf8MU", "Elite Performance"],
+ "cable-curl":["u9XtfyqeJd4", "OriGym"],
+ "cable-triceps":["LXkCrxn3caQ", "PureGym"],
+ "cable-kick":["ifP5sFBT7IE", "Seriously Strong Training"],
+ "cable-pull":["EZOHJsNePJs", "SET FOR SET"],
+ "cable-crunch":["dhLlV3xeKC4", "SET FOR SET"],
+ "cable-pallof":["4ZZjpJJYOcg", "Adams Performance Fitness and Physical Therapy"],
+ "cable-chop":["Qx9V1zuzSVA", "MenoMojo"],
+ "cable-lift":["VtLAtFkZWQE", "Miguel Aragoncillo"],
+ "db-bench":["9y0_-g8nxSc", "Dan HomePhysique"],
+ "db-row":["bpwr36y97n8", "Follow Me Fit"],
+ "db-shoulder":["MMjBnEBnZKM", "National Academy of Sports Medicine (NASM)"],
+ "db-lateral":["XPPfnSEATJA", "National Academy of Sports Medicine (NASM)"],
+ "db-hammer":["CFBZ4jN1CMI", "National Academy of Sports Medicine (NASM)"],
+ "db-triceps":["TsNoEJGyUw0", "FITBODY with Julie Lohre"],
+ "db-goblet":["Elx2y-Qb1nM", "FITBODY with Julie Lohre"],
+ "db-rdl":["QFbZevA7dps", "National Academy of Sports Medicine (NASM)"],
+ "db-split":["X2zpAX0qPk0", "The Sustainable Training Method"],
+ "db-calf":["ADIDoYt_ko4", "OPEX Fitness"],
+ "db-seated-calf":["wtBKmESLI98", "Steph Gaudreau - Fuel Your Strength"],
+ "db-hold":["eAdujYvZaCE", "Josh Avison"],
+ "db-incline":["oZVCBM9f8Eo", "PureGym"],
+ "db-shrug":["VhdLYDCecqY", "Physical Therapy First"],
+ "bb-bench":["CayG6UYqL8g", "National Academy of Sports Medicine (NASM)"],
+ "bb-row":["FsK19s8eGFs", "PureGym"],
+ "bb-press":["I9bektFYKOA", "Pike Fitness"],
+ "bb-curl":["pQfJR-sSIvA", "National Academy of Sports Medicine (NASM)"],
+ "bb-squat":["-bJIpOq-LWk", "National Academy of Sports Medicine (NASM)"],
+ "bb-rdl":["xgusDooVfKU", "National Academy of Sports Medicine (NASM)"],
+ "bb-thrust":["4hYRM_60BD4", "Kelly Matthews"],
+ "bb-calf":["SGvaVbbssTg", "Lyfta"],
+ "bw-calf":["IphGZ8OlfYg", "PureGym"],
+ "bw-pushup":["WDIpL0pjun0", "National Academy of Sports Medicine (NASM)"],
+ "bw-pullup":["HRV5YKKaeVw", "CrossFit"],
+ "bw-pike":["2b5t0Cu2nQI", "National Academy of Sports Medicine (NASM)"],
+ "bw-close":["oJuKRHxkpUs", "Ballina Rehab Clinic with Peter O'Grady"],
+ "bw-squat":["sUJB010F9Fw", "Om Bisht Fitness Coach"],
+ "bw-lunge":["15xBNu0ME3s", "Luciano Petrella"],
+ "bw-hinge":["Kdeq15AvUVU", "PLT4M"],
+ "bw-bridge":["i0Bb96lWf6k", "Abbey Munro"],
+ "bw-plank":["3QZlgJ40LfU", "Hospital for Special Surgery"],
+ "bw-deadbug":["1sVtpc0zO4g", "ThriveTraining"],
+ "bw-crunch":["lCEI5x7ATtE", "MELOS -メロス-┃スポーツ×ライフスタイルWEBマガジン"],
+ "mob-ankle":["vu3NIhb_zX8", "UNBROKEN FITNESS SOLUTIONS"],
+ "mob-adductor":["HfApsCFgnQY", "Exerclinic"],
+ "mob-quad":["XBLIiQS5RQI", "National Academy of Sports Medicine (NASM)"],
+ "mob-ham":["9wK11AvPp1A", "Leap Fitness"],
+ "mob-hip":["F55tzqJggAY", "Cara Giusti, PT, DPT"],
+ "mob-clock":["8z2FywqXSY4", "Buffalo Performance Physio"],
+ "mob-cat":["mqKD7YtffzQ", "HD Performance"],
+ "mob-bird":["SlNTXO1fD9c", "National University Hospital (NUH) Singapore"],
+ "mob-open":["j-JoxWp3cSI", "Seattle Fire Department"],
+ "mob-scap":["u_7VgcoVbpQ", "Arthritis Foundation"],
+ "mob-brace":["tdycae6cbYA", "Phyx"],
 };
-const movementGuides={
- press:["ACE: Seated machine chest press",ace+"188/seated-chest-press/"],
- "machine-row":["ACE: Chest-supported seated row machine",ace+"168/seated-row/"],
- row:["ACE: Seated cable row",ace+"48/seated-row/"],
- extension:["ACE: Seated leg extension",ace+"183/seated-leg-extension/"],
- pulldown:["ACE: Seated lat pulldown",ace+"158/seated-lat-pulldown/"],
- "db-incline":["ACE: Incline dumbbell chest press",ace+"25/incline-chest-press/"],
- "db-bench":["ACE: Flat dumbbell chest press",ace+"19/chest-press/"],
- "bb-bench":["ACE: Barbell bench press",ace+"5/chest-press/"],
- "db-shrug":["ACE: Standing dumbbell shrug",ace+"75/standing-shrug/"],
- "db-hammer":["ACE: Hammer curl",ace+"10/hammer-curl/"],
- "db-goblet":["ACE: Goblet squat",ace+"362/goblet-squat/"],
- "db-triceps":["ACE: Dumbbell triceps kickback",ace+"55/triceps-kickback/"],
- "bb-squat":["ACE: Barbell back squat",ace+"11/back-squat/"],
- "bb-rdl":["ACE: Barbell Romanian deadlift",ace+"317/romanian-deadlift/"],
- "bb-curl":["ACE: Barbell biceps curl",ace+"70/bicep-curl/"],
- "bb-calf":["ACE: Barbell calf raise",ace+"51/calf-raises/"],
- "bw-pushup":["ACE: Push-up",ace+"41/push-up/"],
- "bw-squat":["ACE: Bodyweight squat",ace+"135/bodyweight-squat/"],
- "bw-plank":["ACE: Forearm plank",ace+"32/front-plank/"],
- "mob-bird":["ACE: Bird dog",ace+"14/bird-dog/"],
- "cable-triceps":["ACE: Cable triceps pushdown",ace+"185/triceps-pushdowns/"]
-};
-const relatedMovement={legpress:["ACE seated leg press technique",ace+"154/seated-leg-press/"]};
-const stretchGuide=["NHS stretching guide","https://www.nhs.uk/live-well/exercise/how-to-stretch-after-exercising/"];
-const mobilityGuide=["NHS flexibility exercises","https://www.nhs.uk/live-well/exercise/flexibility-exercises/"];
 function guideSource(e){
- const exact=movementGuides[e.id];
- if(exact)return {label:exact[0],url:exact[1],specific:true};
- const related=relatedMovement[e.id]||(e.id.startsWith("mob-")?(e.hold?stretchGuide:mobilityGuide):relatedEquipment[e.eq]);
- return {label:related[0],url:related[1],specific:false};
+ const video=videoGuides[e.id];
+ return video?{url:"https://www.youtube.com/watch?v="+video[0],channel:video[1]}:null;
 }
 function infoButton(e){
  return '<button type="button" class="exercise-info" data-guide="'+e.id+'" aria-haspopup="dialog" aria-label="'+esc("Exercise guide for "+e.n)+'"><span aria-hidden="true">ⓘ</span></button>';
@@ -824,8 +866,9 @@ function openGuide(id,trigger){
  $("guideInstructions").textContent=e.c;
  $("guideContact").textContent=contactCopy[e.id]||"";
  $("guideContact").hidden=!contactCopy[e.id];
- $("guideLink").href=ref.url;
- $("guideLink").textContent=(ref.specific?"":"Related guide · ")+ref.label+" ↗ Online";
+ const link=$("guideLink");
+ link.hidden=!ref;$("guideLinkUnavailable").hidden=Boolean(ref);
+ if(ref){link.href=ref.url;link.textContent="Watch demonstration · "+ref.channel+" ↗ YouTube";}else{link.removeAttribute("href");link.textContent="";}
  art.innerHTML=artMarkup(e);watchArt(art);
  dialog.showModal();$("guideName").focus({preventScroll:true});syncAnimation();
 }
