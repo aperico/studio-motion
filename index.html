@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v13 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v14 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -13,12 +13,23 @@
 .masthead .brand{display:inline-flex;align-items:center;gap:4px}.brandmark{width:22px;height:22px;flex:none}
 #items .exercise-info,.exercise-info{display:inline-grid;place-items:center;min-width:44px;min-height:44px;font-size:1rem;padding:4px;border-radius:12px}.guide-title-row{display:flex;justify-content:space-between;align-items:center;gap:8px}.guide-online{display:inline-flex;align-items:center;min-height:44px;color:var(--mint);font-size:.84rem}#exerciseGuide{width:min(calc(100vw - 20px),560px);max-height:calc(100dvh - 20px);border:1px solid var(--line);padding:12px;margin:auto;color:var(--txt);overscroll-behavior:contain}#exerciseGuide::backdrop{background:#060a0bc9}#guideClose{min-height:44px}#guideInfo{margin:4px 0;color:var(--muted)}@media print{#exerciseGuide{display:none!important}}
 #setActions button{min-height:44px;font-size:.84rem}#setActions{margin-top:10px}
+.brandmark{width:30px;height:30px}.masthead .brand{white-space:nowrap}.masthead #aboutToggle{min-height:44px;min-width:44px;font-size:1rem}.mast-actions{flex-wrap:nowrap}
+#studioAbout{margin-bottom:10px}#aboutClose,#copyUpdates,.launch-notice button{min-height:44px}#studioAbout a{color:var(--mint)}#studioAbout details summary{cursor:pointer;min-height:44px;padding:8px 0;font-size:.86rem}#updates{border-top:1px solid var(--line);margin-top:4px;padding-top:8px;scroll-margin-top:10px}#updateHistory{margin:0 0 8px;padding-left:20px;font-size:.84rem}#updateHistory time{font-size:.75rem;color:var(--muted)}.launch-notice{display:flex;align-items:center;gap:6px;margin:0 0 8px;padding:0 2px;border-bottom:1px solid var(--line);font-size:.76rem;color:var(--muted)}.launch-notice span{flex:1;line-height:1.25}.launch-notice button{font-size:.75rem}.launch-notice #noticeDismiss{min-width:44px}
+@media(max-width:395px){.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px}.mast-actions{display:contents}.masthead .brand{grid-column:1;grid-row:1}.masthead #aboutToggle{grid-column:2;grid-row:1;justify-self:end}.masthead #weekGenerate{grid-column:1;grid-row:2;justify-self:end}.masthead #modeSwitch{grid-column:2;grid-row:2}.masthead #weekGenerate,.masthead #modeSwitch{min-width:113px}}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v13</small></span>
-  <div class="buttons no-print"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v14</small></span>
+  <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button><button type="button" id="aboutToggle" aria-label="About and updates" aria-controls="studioAbout" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
 </header>
+<section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
+  <div class="row"><h2 id="aboutHeading" tabindex="-1">About Studio Motion</h2><button id="aboutClose" type="button">Close</button></div>
+  <p class="guide">Studio Motion is a hobby project, not made by fitness specialists. The illustrations are simplified cues, not professional training or medical guidance. Follow your equipment’s instructions.</p>
+  <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
+  <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each demonstration names its video creator.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.acefitness.org/resources/everyone/exercise-library/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
+  <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
+</section>
+<aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
   <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
@@ -1203,7 +1214,53 @@ $("print").onclick=()=>window.print();
 $("trainingEquipment").innerHTML=equipments.map(x=>'<label><input type="checkbox" value="'+x+'" '+(x==="Machine"||x==="Cable"?"checked":"")+'> '+x+"</label>").join("");
 $("filter").innerHTML='<option value="">All muscle groups</option>'+groups.map(x=>'<option>'+x+"</option>").join("");
 $("equipmentFilter").innerHTML='<option value="">All equipment</option>'+equipments.map(x=>'<option>'+x+"</option>").join("");
-choose(E[0].id);setDay(today);setMode(false);scheduleMidnight();if(bootMessage)say(bootMessage);
+// Owner-editable announcements. Newest first; plain text only and stable unique IDs.
+const announcements=[
+ {id:"exercise-guides-v14",date:"2026-11-20",title:"Exercise guides and local progress",body:"Tap the info icon for form cues and an exact video where verified. Sets belong to a calendar date and can be cleared without deleting the workout."},
+ {id:"home-screen-v9",date:"2026-11-20",title:"Studio Motion on your Home Screen",body:"Open the web app once while online, then add it to your Home Screen. The workout view works offline after it caches."}
+];
+const updatesURL="https://aperico.github.io/studio-motion/#updates";
+const seenUpdatesKey="studio-motion-announcements-v1";
+let seenUpdates=[];
+try{
+ const seen=JSON.parse(localStorage.getItem(seenUpdatesKey)||"[]");
+ if(Array.isArray(seen))seenUpdates=seen.filter(x=>typeof x==="string").slice(-40);
+}catch{}
+function about(open,updates=false){
+ $("studioAbout").hidden=!open;$("aboutToggle").setAttribute("aria-expanded",String(open));
+ if(open){
+  const title=$(updates?"updatesHeading":"aboutHeading");title.focus({preventScroll:true});
+  if(updates)$("updates").scrollIntoView({block:"start"});
+ }else $("aboutToggle").focus({preventScroll:true});
+}
+$("aboutToggle").onclick=()=>about($("studioAbout").hidden);
+$("aboutClose").onclick=()=>{
+ if(location.hash==="#updates"){try{history.replaceState(null,"",location.pathname+location.search);}catch{}}
+ about(false);
+};
+$("studioAbout").onkeydown=event=>{if(event.key==="Escape"){$("aboutClose").click();event.preventDefault();}};
+$("noticeOpen").onclick=()=>{
+ if(location.hash!=="#updates")location.hash="updates";else about(true,true);
+};
+$("noticeDismiss").onclick=()=>{
+ const id=announcements[0]?.id;if(!id)return;
+ seenUpdates=[...new Set([...seenUpdates,id])].slice(-40);
+ try{localStorage.setItem(seenUpdatesKey,JSON.stringify(seenUpdates));}catch{}
+ $("launchNotice").hidden=true;$("aboutToggle").focus({preventScroll:true});
+};
+$("copyUpdates").onclick=async()=>{
+ const status=$("copyUpdateStatus");
+ try{await navigator.clipboard.writeText(updatesURL);status.textContent="Update link copied.";}
+ catch{status.textContent="Use the public permalink below to copy or share the link.";}
+};
+function openUpdatesHash(){if(location.hash==="#updates")about(true,true);}
+window.addEventListener("hashchange",openUpdatesHash);
+$("updateHistory").innerHTML=announcements.map(entry=>
+ '<li><time datetime="'+esc(entry.date)+'">'+esc(entry.date)+'</time><br><strong>'+esc(entry.title)+'</strong><p>'+esc(entry.body)+'</p></li>').join("");
+if(announcements[0]&&!seenUpdates.includes(announcements[0].id)){
+ $("noticeTitle").textContent=announcements[0].title;$("launchNotice").hidden=false;
+}
+choose(E[0].id);setDay(today);setMode(false);scheduleMidnight();if(bootMessage)say(bootMessage);openUpdatesHash();
 // The standalone HTML remains self-contained on file://. Only the hosted shell registers.
 const hosted=location.protocol==="https:"||(location.protocol==="http:"&&["127.0.0.1","localhost"].includes(location.hostname));
 if(hosted){

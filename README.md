@@ -116,3 +116,14 @@ These are optional documentation links; the HTML loads no external assets.
 Target region terminology: [ACE Exercise Library](https://www.acefitness.org/resources/everyone/exercise-library/).
 
 Bench movement reference: [ACE incline chest press](https://www.acefitness.org/resources/everyone/exercise-library/25/incline-chest-press/).
+
+
+## Publish an announcement
+
+In `index.html`, find `const announcements` and add a newest-first entry
+with a unique `id`, a date in `YYYY-MM-DD` form, a short `title`, and plain
+`body` text. Keep prior IDs unchanged so dismissed notices do not reappear.
+Commit to `main` and verify the public [What’s new](https://aperico.github.io/studio-motion/#updates)
+link after Pages deploys. If changing hosted content for a release, bump the
+app badge and the service-worker shell version. Announcements do not require
+an account, backend, or analytics.
