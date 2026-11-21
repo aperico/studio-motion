@@ -1,7 +1,7 @@
 "use strict";
 const scope = self.registration.scope;
 const namespace = "studio-motion:" + scope + ":";
-const shellName = namespace + "v24";
+const shellName = namespace + "v25";
 const shellFiles = ["./", "index.html", "manifest.webmanifest", "icons/studio-motion.svg",
   "icons/studio-motion-180.png", "icons/studio-motion-192.png", "icons/studio-motion-512.png"];
 const files = new Set(shellFiles.map(path => new URL(path, scope).href));
