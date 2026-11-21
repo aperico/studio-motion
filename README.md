@@ -74,8 +74,10 @@ and [AHA on recovery between strength sessions](https://www.heart.org/en/healthy
 ## Movement diagram references
 
 Diagrams are original simplified drawings. The purple handle/roller represents
-moving equipment; teal crosses identify support points where shown. The short
-orange arrow marks the movement direction. Animations pause briefly at the start
+moving equipment; teal crosses identify support points where shown. A gold arrow marks movement direction. Orange marks the main muscle focus and
+pink a meaningful supporting region. The compact front/back maps and text
+show these targets when a body surface is not visible in a moving pose.
+These are approximate exercise focus areas, not muscle activation measurements. Animations pause briefly at the start
 and finish; isometric movements show a steady hold instead of repeating reps.
 Some less common exercises still use a shared simplified rig, so confirm the
 machine instructions rather than treating the drawing as a precise setup guide.
@@ -89,3 +91,5 @@ Machine geometry and contact-point references:
 [ACE cable examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/resistance-bands-cables/?page=2),
 and [ACE barbell examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/barbell/).
 These are optional documentation links; the HTML loads no external assets.
+
+Target region terminology: [ACE Exercise Library](https://www.acefitness.org/resources/everyone/exercise-library/).

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion v7 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Studio Motion v8 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -9,10 +9,11 @@
 .masthead .buttons{justify-content:flex-end;gap:5px}.masthead button{font-size:.78rem;padding:5px 6px}.card-art{margin:4px 0 6px}.rig{display:block}.rig svg{aspect-ratio:380 / 245;max-height:184px}.choices .rig svg{max-height:80px}.choices .stage{margin:0 0 4px}.choices .stage-label{display:none}.choices button{overflow-wrap:anywhere}.motion-pose,#weekClose,#weekPreview .buttons button{min-height:44px}.exercise-label{font-size:1rem;margin:0}.train-card details summary{cursor:pointer;color:var(--muted);padding:6px 0;font-size:.8rem}#weekPreview{width:min(calc(100vw - 20px),560px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);overscroll-behavior:contain}#weekPreview::backdrop{background:#060a0bc9}#weekPreview h2{font-size:1.05rem}@media print{#weekPreview{display:none!important}}
 #items .replace,.replace,.swap button,.swap select{min-height:44px}.swap{padding:9px;margin:7px 0;background:var(--inner);border:1px solid var(--line);border-radius:9px}.swap .field{margin-top:4px}.swap select{display:block;width:100%}.swap h3{font-size:.82rem;margin:10px 0 2px}.swap ul{list-style:none;padding:0;margin:0}.swap li{padding:2px 0}.swap [data-swap-ex]{text-align:left;width:100%;font-size:.87rem}.swap-result{color:var(--mint);font-size:.85rem;margin:0 0 8px}.replace-tag{font-size:.73rem;color:var(--muted);margin:2px 0}
 .selection-link{display:inline-flex;min-height:44px;align-items:center;color:var(--mint);font-size:.81rem}.choices{scrollbar-gutter:stable}
+.body-maps{margin:6px 0;font-size:.82rem;color:var(--muted)}.body-maps svg{width:min(155px,100%);height:112px;display:block}.body-maps .map-text,.targets-text{margin:3px 0;font-size:.77rem;color:var(--muted)}.targets-text strong,.map-text strong{color:var(--txt)}.target-primary,.target-assist{display:inline-block;width:.7em;height:.7em;margin-right:.3em;border-radius:50%}.target-primary{background:#ff914d}.target-assist{background:#ee83bc}.rig svg[data-wide]{aspect-ratio:468 / 245}#muscleOverview{border-left:2px solid var(--line);padding-left:7px}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand">◈ STUDIO MOTION <small class="build">v7</small></span>
+  <span class="brand">◈ STUDIO MOTION <small class="build">v8</small></span>
   <div class="buttons no-print"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
@@ -41,8 +42,8 @@
 </section>
 <details class="panel library" id="libraryPanel">
   <summary id="libheading">Exercise library</summary>
-  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><a class="selection-link" href="#selectedExercise">Selected exercise &amp; add</a><div class="choices" id="choices"></div>
-<div id="selectedExercise"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
+  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select></div><div id="muscleOverview" hidden></div><a class="selection-link" href="#selectedExercise">Selected exercise &amp; add</a><div class="choices" id="choices"></div>
+<div id="selectedExercise"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><h2 id="name"></h2><p id="muscle"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog></main>
 <script>
@@ -275,6 +276,101 @@ const frames={
  lever:'<path d="M70 228H313M97 228V91H116L127 151M144 171H198M145 173V228M199 177V228M260 228V80H298V228"/><path d="M124 105L134 154M141 171H188" stroke-width="12"/>',
  calf:'<path d="M62 228H319M101 228V47H273V227M122 72H229M148 228V219H214V228"/><path d="M132 75H169M210 75H241" stroke-width="11"/>'
 };
+// Broad target regions only. Orange = focus; pink = an intentionally listed assistant.
+const skin="#bcf57c",primaryColor="#ff914d",helperColor="#ee83bc";
+const regions={
+ pec:["Chest","F","M20 28L27 26 30 29V36L21 36 19 33ZM40 28L33 26 30 29V36L39 36 41 33Z"],
+ delt:["Front/side shoulders","F","M13 29Q14 24 21 25L19 34 15 38 12 34ZM47 29Q46 24 39 25L41 34 45 38 48 34Z"],
+ rear:["Rear shoulders","B","M13 29Q14 24 21 25L19 34 15 38 12 34ZM47 29Q46 24 39 25L41 34 45 38 48 34Z"],
+ bi:["Biceps","F","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
+ tri:["Triceps","B","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
+ grip:["Forearms","F","M9 48L13 49 9 60 5 60ZM51 48L47 49 51 60 55 60Z"],
+ lat:["Lats","B","M20 33L26 38 28 49 23 47 18 36ZM40 33L34 38 32 49 37 47 42 36Z"],
+ upper:["Upper back","B","M22 25L30 23 38 25 37 33 32 39 28 39 23 33Z"],
+ spine:["Back extensors","B","M27 37H33L34 52H26Z"],
+ abs:["Abdominals","F","M25 37H35L35 52 30 55 25 52Z"],
+ side:["Obliques","F","M20 37L24 38V49L21 51ZM40 37L36 38V49L39 51Z"],
+ glute:["Glutes","B","M20 52L29 53 30 61 25 64 20 61ZM40 52L31 53 30 61 35 64 40 61Z"],
+ hip:["Outer hips","B","M19 50L23 53 23 60 19 64 17 57ZM41 50L37 53 37 60 41 64 43 57Z"],
+ flex:["Front hips","F","M22 50L29 54 26 62 21 59ZM38 50L31 54 34 62 39 59Z"],
+ inner:["Inner thighs","F","M28 60L29 65 27 77 24 77 25 66ZM32 60L31 65 33 77 36 77 35 66Z"],
+ quad:["Quads","F","M20 62L25 64 24 76 21 83 18 81 18 71ZM40 62L35 64 36 76 39 83 42 81 42 71Z"],
+ ham:["Hamstrings","B","M20 64L26 65 24 77 21 81 18 80 18 72ZM40 64L34 65 36 77 39 81 42 80 42 72Z"],
+ calf:["Calves","B","M18 84L23 85 23 94 19 101 16 101 16 93ZM42 84L37 85 37 94 41 101 44 101 44 93Z"],
+ shin:["Shins / ankles","F","M18 84L23 85 22 93 19 101 16 101 17 92ZM42 84L37 85 38 93 41 101 44 101 43 92Z"]
+};
+const groupRegions={Chest:["pec"],Back:["lat","upper","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
+const targets={};
+function target(ids,focus,assist=""){for(const id of ids.split(" "))targets[id]=[focus.split(" "),assist?assist.split(" "):[]];}
+target("press cable-chest db-bench bb-bench bw-pushup","pec","tri delt");
+target("fly cable-fly","pec","delt");
+target("shoulder db-shoulder bb-press bw-pike","delt","tri");
+target("pulldown assist-pull cable-lat bw-pullup","lat","bi upper");
+target("row machine-row db-row bb-row","upper lat","bi rear");
+target("machine-rear","rear","upper");
+target("machine-biceps cable-curl db-hammer bb-curl","bi");
+target("cable-triceps db-triceps","tri");
+target("bw-close","tri","pec");
+target("cable-lateral db-lateral","delt");
+target("legpress db-goblet bb-squat bw-squat bw-lunge db-split","quad","glute");
+target("extension","quad");
+target("curl","ham");
+target("calf machine-seated-calf db-calf db-seated-calf bb-calf bw-calf","calf");
+target("abduct","hip");
+target("machine-hip bb-thrust bw-bridge cable-kick","glute","ham");
+target("cable-pull db-rdl bb-rdl bw-hinge","ham glute","spine");
+target("machine-rotation cable-chop cable-lift cable-pallof","side","abs");
+target("machine-abs cable-crunch bw-crunch bw-deadbug","abs");
+target("db-hold","side","grip");
+target("bw-plank","abs","side");
+target("mob-ankle mob-heel","shin","calf");
+target("mob-adductor","inner");
+target("mob-quad","quad");
+target("mob-ham","ham");
+target("mob-hip","flex");
+target("mob-clock","delt","upper");
+target("mob-cat","spine");
+target("mob-bird","spine glute");
+target("mob-open","upper");
+target("mob-scap","upper");
+target("mob-brace","abs");
+const forTarget=e=>targets[e.id]||[groupRegions[e.g]||[],[]];
+const anatomySilhouette='M23 16A7 8 0 0 1 37 16Q36 23 34 23L38 25Q45 24 48 32L49 42 55 57 56 63 51 67 48 63 43 52 40 41 39 48 42 58 43 69 42 82 44 95 41 107 44 112 44 116 35 116 34 111 36 102 34 94 33 84 31 70H29L27 84 26 94 24 102 26 111 25 116H16V112L19 107 16 95 18 82 17 69 18 58 21 48 20 41 17 52 12 63 9 67 4 63 5 57 11 42 12 32Q15 24 22 25L26 23Q24 22 23 16Z';
+const namesOf=xs=>xs.map(x=>regions[x][0]).join(", ");
+function anatomySVG(sets){
+ return ["F","B"].map((view,i)=>'<g transform="translate('+(i*65)+' 0)" aria-hidden="true"><path d="'+anatomySilhouette+'" fill="#485963" stroke="#71858b" stroke-width="1"/>'+
+  sets.flatMap((xs,h)=>xs.filter(x=>regions[x][1]===view).map(x=>'<path data-region="'+x+'" d="'+regions[x][2]+'" fill="'+(h?helperColor:primaryColor)+'"/>')).join("")+
+  '<text x="30" y="125" text-anchor="middle" fill="#c2ccd0" font-size="8">'+(view==="F"?"Front":"Back")+'</text></g>').join("");
+}
+function targetText(sets){
+ return '<strong><span class="target-primary" aria-hidden="true"></span>Focus:</strong> '+esc(namesOf(sets[0]))+
+   (sets[1].length?' · <strong><span class="target-assist" aria-hidden="true"></span>Supports:</strong> '+esc(namesOf(sets[1])):'');
+}
+function bodyMaps(sets){
+ return '<div class="body-maps"><svg role="img" viewBox="0 0 125 128" aria-label="'+esc("Front and back body map. Focus: "+namesOf(sets[0])+(sets[1].length?". Supports: "+namesOf(sets[1]):""))+'">'+anatomySVG(sets)+'</svg><p class="map-text">'+targetText(sets)+'</p></div>';
+}
+// Add highlights only where the illustrated pose exposes a reliably located region.
+function mapPose(f,coords,sets){
+ const [hx,hy,sx,sy,bx,by,ex,ey,wx,wy,kx,ky,ax,ay]=coords;
+ const torsoSide=48<Math.abs(sx-hx)&&!f.mirror;
+ const spots={
+  delt:[sx,sy,5,4],rear:[sx-3,sy-2,5,4],bi:[(sx+ex)/2,(sy+ey)/2,4.5,4],tri:[(sx+ex)/2,(sy+ey)/2,4.5,4],
+  grip:[(ex+wx)/2,(ey+wy)/2,4,3],quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
+  calf:[kx+.48*(ax-kx),ky+.48*(ay-ky),4,4],shin:[kx+.61*(ax-kx),ky+.61*(ay-ky),4,3],
+  pec:f.mirror||torsoSide?[sx+.19*(hx-sx),sy+.19*(hy-sy),5,5]:null,
+  abs:f.mirror||torsoSide?[sx+.57*(hx-sx),sy+.57*(hy-sy),5,4]:null,
+  glute:torsoSide?[hx-.11*(kx-hx),hy-.11*(ky-hy),5,4]:null,
+  hip:f.mirror?[hx+(kx-hx)*.2,hy+(ky-hy)*.2,4,4]:null
+ };
+ const used=new Set();
+ const out=sets.flatMap((xs,i)=>xs.map(x=>{
+  const spot=spots[x];if(!spot)return "";
+  const [px,py,rx,ry]=spot,key=Math.round(px)+"/"+Math.round(py);
+  if(used.has(key))return "";used.add(key);
+  return '<ellipse data-target="'+x+'" cx="'+px+'" cy="'+py+'" rx="'+rx+'" ry="'+ry+'" fill="'+(i?helperColor:primaryColor)+'" stroke="#302531" stroke-width="1"/>';
+ })).join("");
+ return out;
+}
 let selected=E[0];
 const reducedMotion=window.matchMedia("(prefers-reduced-motion: reduce)");
 const line=(x1,y1,x2,y2,col,w=4)=>'<path d="M'+x1+' '+y1+'L'+x2+' '+y2+'" stroke="'+col+'" stroke-width="'+w+'"/>';
@@ -336,7 +432,7 @@ function draw(f,t,key){
  const indices=movingPad||pattern==="kick"||f.id==="abduct"?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
  const [mi,mj]=indices,from=[f.p[mi],f.p[mj]],to=[f.q[mi],f.q[mj]];
  const arrow=f.hold?"":Math.hypot(to[0]-from[0],to[1]-from[1])>16?
-    '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#ffbf78" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#'+key+'-guide-arrow)" fill="none" opacity=".88"/>':"";
+    '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#f7da87" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#'+key+'-guide-arrow)" fill="none" opacity=".88"/>':"";
  const other=f.mirror?limb(380-hx,hy,380-kx,ky,380-ax,ay,"#769d86",12)+limb(380-sx,sy,380-ex,ey,380-wx,wy,"#769d86",10):limb(hx-7,hy+4,kx-9,ky-3,ax-10,ay-2,"#497261",9);
  // Some recovery poses have one planted side; draw it rather than implying both limbs leave the floor.
  const planted={
@@ -345,8 +441,9 @@ function draw(f,t,key){
  }[f.id];
  const fixedArm=f.id==="mob-bird"?limb(sx-5,sy,213,185,213,220,"#497261",9):"";
  const fixedLeg=planted?limb(hx-5,hy,...planted[0],...planted[1],"#497261",10):"";
- const color="#bcf57c";
- return '<title >'+f.n+' movement diagram</title><defs><marker id="'+key+'-guide-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path fill="#ffbf78" d="M0 0l9 5-9 5z"/></marker><pattern id="'+key+'-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#'+key+'-grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+fixedArm+fixedLeg+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+limb(sx,sy,ex,ey,wx,wy,color,11)+(f.f==="calfseat"||f.f==="calfbench"?line(ax,ay,224,219,color,8):f.f==="calf"?line(ax,ay,198,219,color,8):line(ax,ay,ax+(f.id==="legpress"?10:13),ay+(f.id==="legpress"?11:1),color,8))+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>'+contacts+arrow;
+ const color=skin;
+ const sets=forTarget(f),poseHighlights=mapPose(f,p,sets);
+ return '<title >'+f.n+' movement diagram</title><defs><marker id="'+key+'-guide-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path fill="#f7da87" d="M0 0l9 5-9 5z"/></marker><pattern id="'+key+'-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#'+key+'-grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+fixedArm+fixedLeg+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+limb(sx,sy,ex,ey,wx,wy,color,11)+(f.f==="calfseat"||f.f==="calfbench"?line(ax,ay,224,219,color,8):f.f==="calf"?line(ax,ay,198,219,color,8):line(ax,ay,ax+(f.id==="legpress"?10:13),ay+(f.id==="legpress"?11:1),color,8))+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>'+poseHighlights+contacts+arrow;
 }
 let artID=0,frameID=0,lastFrame=0;
 const artStates=new Map(),onscreen=new Set();
@@ -362,7 +459,7 @@ function artMarkup(e,small=false){
  const key="rig"+(++artID);
  try{
   const caption=e.hold?"HOLD POSITION":"START";
-  const image='<span class="stage rig" data-rig="'+e.id+'" data-key="'+key+'"><span class="stage-label" aria-hidden="true">'+caption+'</span><svg '+(small?'aria-hidden="true"':'role="img" aria-label="'+esc(e.n+" movement diagram")+'"')+' viewBox="0 0 380 245">'+draw(e,e.hold?1:0,key)+'</svg></span>';
+  const image='<span class="stage rig" data-rig="'+e.id+'" data-key="'+key+'" data-small="'+Number(small)+'"><span class="stage-label" aria-hidden="true">'+caption+'</span><svg '+(small?'aria-hidden="true"':'role="img" aria-label="'+esc(e.n+" movement diagram. Focus: "+namesOf(forTarget(e)[0])+(forTarget(e)[1].length?". Supports: "+namesOf(forTarget(e)[1]):""))+'"')+' viewBox="0 0 '+(small?380:468)+' 245" '+(small?'':'data-wide')+'>'+ '<g data-live-rig>'+draw(e,e.hold?1:0,key)+'</g>'+(small?'':'<g transform="translate(374 88) scale(.71)">'+anatomySVG(forTarget(e))+'</g>')+'</svg></span>' ;
   return image+(small||e.hold?"":'<button type="button" class="motion-pose" hidden>End pose</button>');
  }catch{return '<div class="stage" role="img" aria-label="Diagram unavailable">Diagram unavailable · '+esc(e.n)+'</div>';}
 }
@@ -373,7 +470,7 @@ function watchArt(root){
  for(const node of root.querySelectorAll(".rig")){
   const e=byId(node.dataset.rig),button=node.nextElementSibling;
   if(e.hold)continue;
-  const state={e,key:node.dataset.key,svg:node.querySelector("svg"),label:node.querySelector(".stage-label"),button:button?.classList.contains("motion-pose")?button:null,started:0,t:0};
+  const state={e,key:node.dataset.key,svg:node.querySelector("[data-live-rig]"),label:node.querySelector(".stage-label"),button:button?.classList.contains("motion-pose")?button:null,started:0,t:0};
   artStates.set(node,state);
   if(state.button){state.button.hidden=!reducedMotion.matches;state.button.onclick=()=>paint(node,state,state.t>.5?0:1);}
   artObserver?.observe(node);
@@ -427,9 +524,10 @@ document.addEventListener("visibilitychange",()=>{
 });
 reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(selected.g+" · "+selected.eq).toUpperCase();$("name").textContent=selected.n;$("muscle").textContent=selected.m;$("cue").textContent=selected.c;list()}
+function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(selected.g+" · "+selected.eq).toUpperCase();$("name").textContent=selected.n;$("muscle").textContent=selected.m;$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=selected.c;list()}
 function list(){
  const term=$("query").value.trim().toLowerCase(), g=$("filter").value, eq=$("equipmentFilter").value;
+ const overview=$("muscleOverview");overview.hidden=!g;overview.innerHTML=g?bodyMaps([groupRegions[g],[]]):"";
  const root=$("choices");clearArt(root);const top=root.scrollTop;
  root.innerHTML=E.filter(e=>(!g||g===e.g)&&(!eq||eq===e.eq)&&(e.n+" "+e.m+" "+e.eq+" "+e.g+(e.eq==="Dumbbell"?" halteres":"")).toLowerCase().includes(term)).map(e=>'<button data-ex="'+e.id+'" aria-pressed="'+(selected.id===e.id)+'">'+artMarkup(e,true)+e.n+'</button>').join("")||'<small>No matches. Try a different search.</small>';
  root.scrollTop=top;watchArt(root);
@@ -552,7 +650,7 @@ function renderTrainList(){
   return '<li class="train-card" data-swap-row="'+i+'"><div class="row"><h2 class="exercise-label">'+esc(e.n)+'</h2>'+replaceBtn(e)+'</div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">Alternate for '+esc(date)+'</p>':'')+
     '<p class="train-dose">'+esc(dose(row))+'</p><fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
-    '<div class="card-art">'+artMarkup(e)+'</div><details><summary>Form tips</summary><p class="coach">'+esc(e.c)+'</p>'+
+    '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>Form tips</summary><p class="coach">'+esc(e.c)+'</p>'+
     (contactCopy[e.id]?'<p class="contact-cue">'+esc(contactCopy[e.id])+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+'</details></li>';
  }).join("");
@@ -825,7 +923,7 @@ function render(){
  const rows=current().items;clearArt($("items"));
  $("items").innerHTML=rows.map((x,i)=>{const e=byId(x.exercise),n=e.n;
  const f=(k,l,min,max,step)=>'<label class="field">'+l+'<input data-k="'+k+'" type="number" inputmode="'+(step===1?"numeric":"decimal")+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+(x[k]??"")+'" aria-label="'+l+' for '+n+'"></label>';
- return '<article class="item" data-i="'+i+'" data-swap-row="'+i+'"><div class="row"><button class="view" data-a="view">'+(i+1)+'. '+n+'</button><div class="buttons">'+replaceBtn(e)+'<button data-a="up" aria-label="Move '+n+' up" '+(i===0?"disabled":"")+'>↑</button><button data-a="down" aria-label="Move '+n+' down" '+(i===rows.length-1?"disabled":"")+'>↓</button><button data-a="delete" aria-label="Remove '+n+'">×</button></div></div><div class="swap" hidden></div><div class="card-art">'+artMarkup(e)+'</div><div class="prescription">'+f("sets","Sets",1,50,1)+(e.hold?f("seconds","Hold sec"+(e.side?" / side":""),1,300,1):f("reps","Reps"+(x.repRange?" (10–12)":"")+(e.side?" / side":""),1,300,1))+(e.eq==="Bodyweight"?"":f("kg","Load kg",0,1000,.01))+f("rest","Rest sec",0,3600,1)+'</div><label class="field note">Note<input data-k="note" maxlength="200" value="'+esc(x.note)+'" placeholder="Position, tempo, or reminder"></label></article>';
+ return '<article class="item" data-i="'+i+'" data-swap-row="'+i+'"><div class="row"><button class="view" data-a="view">'+(i+1)+'. '+n+'</button><div class="buttons">'+replaceBtn(e)+'<button data-a="up" aria-label="Move '+n+' up" '+(i===0?"disabled":"")+'>↑</button><button data-a="down" aria-label="Move '+n+' down" '+(i===rows.length-1?"disabled":"")+'>↓</button><button data-a="delete" aria-label="Remove '+n+'">×</button></div></div><div class="swap" hidden></div><div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><div class="prescription">'+f("sets","Sets",1,50,1)+(e.hold?f("seconds","Hold sec"+(e.side?" / side":""),1,300,1):f("reps","Reps"+(x.repRange?" (10–12)":"")+(e.side?" / side":""),1,300,1))+(e.eq==="Bodyweight"?"":f("kg","Load kg",0,1000,.01))+f("rest","Rest sec",0,3600,1)+'</div><label class="field note">Note<input data-k="note" maxlength="200" value="'+esc(x.note)+'" placeholder="Position, tempo, or reminder"></label></article>';
  }).join("")||'<div class="empty">'+(current().rest?"Recovery day. Add an exercise to change it to a training day.":"Nothing planned. Add an exercise or preview an automatic workout.")+'</div>';
  watchArt($("items"));
  $("archivePicker").innerHTML=plan.archive.map((s,i)=>'<option value="'+i+'">'+esc(s.title||"Untitled workout")+"</option>").join("");
