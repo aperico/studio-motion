@@ -17,7 +17,9 @@ Use the same browser and address to keep using the same saved plan.
 
 - It opens on **today** in your device's local time. This is a single
   phone-first screen at all widths. See the exercises in workout order and check
-  off each set as you finish. Each exercise has its own diagram, rendered immediately.
+  off each set as you finish. Progress stays visible while you scroll. The first unfinished
+  exercise is marked, and you can jump straight to its next unchecked set.
+  Each exercise has its own diagram, rendered immediately.
   Only on-screen diagrams animate. Form tips are optional. Tap a day to see its workout.
 - Use **Plan workout** or **Edit plan** to name and edit the day's workout.
   Leave a day unplanned. Existing rest days are retained. The expandable exercise library
@@ -47,7 +49,9 @@ Use the same browser and address to keep using the same saved plan.
   timed, otherwise the new exercise uses the usual default for reps or holds.
 - Tap **ⓘ Exercise guide** on a workout row or the selected library exercise
   to see the original diagram, technique cue, equipment, and target muscles
-  offline. Optional **Watch demonstration** links open a specific verified YouTube video for the movement. No video is linked when an exact match is not verified. External links load only when tapped and require internet.
+  offline. Optional short demo links open the verified movement directly, without
+  a long introduction or search results. Other exercises use their built-in loop; no
+  approximate external demo is linked. External demos load only when tapped and require internet.
 - **Auto Plan Day** previews up to three different workouts for your selected
   day and focus. Select the option you want and save it; only the chosen workout
   becomes active.
