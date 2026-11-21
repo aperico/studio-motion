@@ -15,6 +15,9 @@ Use the same browser and address to keep using the same saved plan.
 
 ## Use it
 
+**Week summary** shows the saved sessions and main muscle groups for the current week.
+Tap a day in the summary to open it. Opening the summary does not generate or save a plan.
+
 In **Menu**, choose **English** or **Português (Brasil)**. The app remembers your choice
 locally, including offline. Your saved exercises, workout names, and notes are not migrated.
 
@@ -86,6 +89,10 @@ locally, including offline. Your saved exercises, workout names, and notes are n
 - Use **Print / save PDF** for a printable copy of the selected day.
 
 ## Private on-device storage
+
+**Menu → Local data → Reset app** clears Studio Motion workouts, checkmarks,
+date-specific replacements and settings in this browser only after a typed confirmation.
+Close other Studio Motion tabs, especially older versions, before confirming.
 
 The browser stores the weekly plan and completion checkmarks on the device
 when local storage is available. Checkmarks are separate by local calendar date,

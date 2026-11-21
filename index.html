@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v20 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v21 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -48,10 +48,19 @@
 .mast-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}.mast-top .brand{display:flex;min-width:0;flex:1;gap:5px}.brand-title{flex:0 1 auto;min-width:0;overflow-wrap:normal}.mast-top .build{flex:none;white-space:nowrap;margin-inline-start:1px}.mast-top #aboutToggle{flex:none;max-width:44%;min-width:44px;padding-inline:9px}.masthead .mast-actions>button{width:100%;min-width:0;min-height:46px;white-space:normal;overflow-wrap:anywhere;line-height:1.2}
 @media print{.masthead .mast-actions,#aboutToggle{display:none!important}}
 .train-list{padding-inline-start:0;list-style:none}.exercise-heading{display:flex;align-items:baseline;gap:7px;flex:1 1 9rem;min-width:0}.exercise-heading .exercise-label{min-width:0;overflow-wrap:anywhere}.exercise-number{flex:none;min-width:1.65em;text-align:center;padding:1px 4px;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:.78em;font-variant-numeric:tabular-nums;font-weight:650}.menu-unread{display:inline-block;width:.38em;height:.38em;border-radius:50%;background:var(--mint);margin-inline-start:.35em;vertical-align:middle}.menu-unread[hidden]{display:none}
+#resetApp,#confirmReset{color:#ffc8c8;border-color:#a85661}
+#resetAppDialog{inline-size:min(92vw,440px);max-block-size:88dvh;overflow:auto}
+#resetAppDialog button,#resetPhrase,#resetApp{min-block-size:44px}
+#resetAppDialog .buttons{flex-wrap:wrap}
+ .train-heading-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 8px}.train-heading-meta>*{min-width:0;max-width:100%}#weekSummaryOpen,#weekSummaryClose{min-height:44px;white-space:normal;overflow-wrap:anywhere}#weekSummaryOpen{font-size:.78rem}#trainDayGroups{margin:.3rem 0 0;overflow-wrap:anywhere}#weekSummary{width:min(calc(100% - 20px),560px);max-width:calc(100% - 20px);max-height:calc(100dvh - 20px);color:var(--txt);margin:auto;overscroll-behavior:contain}#weekSummary::backdrop{background:#060a0bc9}#weekSummaryHeading,#weekSummaryGroups{overflow-wrap:anywhere}#weekSummaryList{margin:.5rem 0 0;padding:0;display:grid;gap:.3rem;list-style:none}#weekSummaryList button{display:grid;gap:2px;min-width:0;width:100%;min-height:44px;text-align:start;white-space:normal;overflow-wrap:anywhere}#weekSummaryList .summary-date{color:var(--muted);font-size:.73rem}#weekSummaryList small{color:var(--muted)}#weekSummaryList [aria-current="date"]{border-color:var(--mint)}@media print{#weekSummaryOpen,#weekSummary{display:none!important}}
 </style></head>
 <body><main class="app">
+<div id="resetInterrupted" class="guide" hidden>
+  <p id="resetInterruptedText" role="status"></p>
+  <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
+</div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v20</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v21</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -60,12 +69,13 @@
   <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
   <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each external demo names its source.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.strengthlog.com/exercise-directory/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
   <aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
+  <details id="localData"><summary>Local data</summary><p class="guide">Reset only Studio Motion data saved in this browser.</p><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
   <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
 </section>
 
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
-  <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
+  <header class="train-heading"><div class="train-heading-meta"><p id="trainDay" class="kicker"></p><button id="weekSummaryOpen" class="no-print" type="button" aria-haspopup="dialog">Week summary</button></div><h1 id="trainTitle" tabindex="-1"></h1><p class="guide muted" id="trainDayGroups" hidden></p></header>
   <div id="trainEmpty" class="empty" hidden></div><button type="button" class="primary no-print" id="planThisDay" hidden>Plan this day</button>
   <p id="swapResult" class="swap-result" role="status" hidden></p><div class="training-progress" id="trainingProgress" hidden><div class="progress-row"><p class="train-progress" id="trainProgress" role="status" hidden></p><button type="button" id="jumpIncomplete" hidden>First unfinished</button></div><progress class="workout-progress" id="trainBar" aria-label="Workout sets completed" value="0" max="1" hidden></progress></div>
   <ol id="trainList" class="train-list" role="list"></ol>
@@ -95,11 +105,39 @@
 <div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><label class="repeat-dose" id="repeatDoseOption" hidden><input id="repeatDose" type="checkbox"> Reuse last exercise’s sets, reps and rest</label><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
-<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>The movement loop above works offline; no short external demo has been verified.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. An external demo needs internet.</p></dialog></main>
+<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>The movement loop above works offline; no short external demo has been verified.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. An external demo needs internet.</p></dialog>
+<dialog id="weekSummary" class="workout-view" aria-labelledby="weekSummaryHeading">
+ <header class="guide-title-row"><h2 id="weekSummaryHeading" tabindex="-1">Week summary</h2><button type="button" id="weekSummaryClose">Close</button></header>
+ <p class="guide muted" id="weekSummaryTotals"></p><p class="guide muted" id="weekSummaryGroups"></p>
+ <ol id="weekSummaryList" role="list"></ol>
+</dialog>
+<dialog id="resetAppDialog" class="workout-view" aria-labelledby="resetAppHeading" aria-describedby="resetScope">
+  <form id="resetAppForm">
+    <h2 id="resetAppHeading">Reset Studio Motion?</h2>
+    <p class="guide" id="resetScope">Permanently delete plans, archived workouts, dated set checkmarks, exercise replacements, and preferences from this browser's copy of Studio Motion. This cannot be undone. Other sites and offline app files are not affected.</p>
+    <p class="guide">Close Studio Motion tabs running older versions before resetting.</p>
+    <label class="field" for="resetPhrase"><span id="resetPhraseLabel"></span><input id="resetPhrase" type="text" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false"></label>
+    <p class="guide" id="resetFailure" role="alert" hidden></p>
+    <div class="buttons"><button type="button" id="cancelReset">Cancel reset</button><button type="submit" id="confirmReset" disabled>Permanently reset app</button></div>
+  </form>
+</dialog></main>
 <script>
 "use strict";
 
 const PT={
+ "Local data":"Dados locais",
+ "Reset only Studio Motion data saved in this browser.":"Redefina apenas os dados do Studio Motion salvos neste navegador.",
+ "Reset app":"Redefinir aplicativo",
+ "Week summary":"Resumo da semana",
+ "Muscle groups":"Grupos musculares",
+ "No workout scheduled":"Sem treino planejado",
+ "Weekly overview and local reset":"Resumo da semana e redefinição local",
+ "See saved workouts and muscle groups for the week. A protected reset is available under Local data in Menu.":"Consulte os treinos salvos e grupos musculares da semana. A redefinição com confirmação fica em Dados locais no Menu.",
+ "Reset Studio Motion?":"Redefinir o Studio Motion?",
+ "Permanently delete plans, archived workouts, dated set checkmarks, exercise replacements, and preferences from this browser's copy of Studio Motion. This cannot be undone. Other sites and offline app files are not affected.":"Exclua permanentemente os planos, treinos arquivados, séries marcadas por data, substituições de exercícios e preferências desta cópia do Studio Motion. Não é possível desfazer. Outros sites e os arquivos do aplicativo offline não são afetados.",
+ "Close Studio Motion tabs running older versions before resetting.":"Feche as abas do Studio Motion com versões anteriores antes de redefinir.",
+ "Cancel reset":"Cancelar redefinição",
+ "Permanently reset app":"Redefinir aplicativo permanentemente",
  "Auto Plan Week": "Planejar semana",
  "Plan workout": "Montar treino",
  "Menu: language, credits and updates":"Menu: idioma, créditos e novidades",
@@ -445,7 +483,45 @@ const PT_EX={
  "mob-brace":["Respiração deitada de costas", "Costelas · abdômen", "Deite-se de costas com joelhos flexionados e pés no chão. Respire devagar, sem forçar."]
 };
 const languageKey="studio-motion-language-v1";
-let locale=/^pt(?:-|$)/i.test(navigator.language)?"pt-BR":"en",languageWritable=true;
+const deviceLocale=()=>/^pt(?:-|$)/i.test(navigator.language)?"pt-BR":"en";
+const resetEpochKey="studio-motion-reset-epoch-v1";
+let resetEpoch=null,resetReloadQueued=false;
+try{resetEpoch=localStorage.getItem(resetEpochKey);}catch{}
+function reloadAfterReset(){
+ if(resetReloadQueued)return;
+ resetReloadQueued=true;
+ setTimeout(()=>location.reload(),0);
+}
+function writeStudioValue(key,value){
+ const epoch=localStorage.getItem(resetEpochKey);
+ if(epoch!==resetEpoch || epoch?.startsWith("pending:")){
+  if(epoch!==resetEpoch && !epoch?.startsWith("pending:"))reloadAfterReset();
+  throw Error("Studio Motion reset is in progress or this view is stale.");
+ }
+ localStorage.setItem(key,value);
+ const after=localStorage.getItem(resetEpochKey);
+ if(after!==epoch){
+  if(localStorage.getItem(key)===value)localStorage.removeItem(key);
+  if(!after?.startsWith("pending:"))reloadAfterReset();
+  throw Error("A Studio Motion reset superseded this write.");
+ }
+}
+function drawResetInterrupted(){
+ let pending=false;
+ try{pending=!!localStorage.getItem(resetEpochKey)?.startsWith("pending:");}catch{}
+ $("resetInterrupted").hidden=!pending;
+ $("resetInterruptedText").textContent=pending?t("A confirmed reset did not finish. To clear any remaining data, finish the reset and confirm again.","Uma redefinição confirmada não foi concluída. Para apagar os dados restantes, finalize a redefinição e confirme novamente."):"";
+ $("finishReset").textContent=t("Finish reset","Finalizar redefinição");
+}
+window.addEventListener("storage",event=>{
+ if(event.key!==resetEpochKey)return;
+ try{
+  const epoch=localStorage.getItem(resetEpochKey);
+  drawResetInterrupted();
+  if(epoch!==resetEpoch&&!epoch?.startsWith("pending:"))reloadAfterReset();
+ }catch{}
+});
+let locale=deviceLocale(),languageWritable=true;
 try{const saved=localStorage.getItem(languageKey);if(saved==="en"||saved==="pt-BR")locale=saved;}catch{languageWritable=false;}
 const isPt=()=>locale==="pt-BR";
 const t=(x,y)=>isPt()?(y??(Object.hasOwn(PT,x)?PT[x]:x)):x;
@@ -474,6 +550,7 @@ function captureStaticLanguage(){
  }
 }
 function applyStaticLanguage(){
+ drawResetInterrupted();
  document.documentElement.lang=locale;
  localizedStatic.forEach(fn=>fn());
  $("language").value=locale;
@@ -1144,12 +1221,13 @@ function paint(node,state,t,phase=t>.5?1:0){
   if(state.button)state.button.textContent=translatePose(t>.5);
  }catch{onscreen.delete(node);artObserver?.unobserve(node);artStates.delete(node);}
 }
+function blockingDialog(){return $("weekPreview").open||$("weekSummary").open||$("resetAppDialog").open;}
 function queueMotion(){
- if(!frameID&&onscreen.size&&!document.hidden&&!reducedMotion.matches&&!$("weekPreview").open)frameID=requestAnimationFrame(motion);
+ if(!frameID&&onscreen.size&&!document.hidden&&!reducedMotion.matches&&!blockingDialog())frameID=requestAnimationFrame(motion);
 }
 function motion(now){
  frameID=0;
- if(document.hidden||reducedMotion.matches||$("weekPreview").open)return;
+ if(document.hidden||reducedMotion.matches||blockingDialog())return;
  if(now-lastFrame>=40){
   lastFrame=now;
   for(const node of onscreen){
@@ -1230,12 +1308,12 @@ try{
  const old=localStorage.getItem(KEY1), current=localStorage.getItem(KEY2);
  if(current){
   plan=decode(JSON.parse(current));
-  if(JSON.stringify(plan)!==current)localStorage.setItem(KEY2,JSON.stringify(plan));
+  if(JSON.stringify(plan)!==current)writeStudioValue(KEY2,JSON.stringify(plan));
  }
  else if(old){
   plan=decode(JSON.parse(old));
   bootMessage=t("Older sessions kept under Saved workouts. Assign a copy to any day.");
-  localStorage.setItem(KEY2,JSON.stringify(plan));
+  writeStudioValue(KEY2,JSON.stringify(plan));
  }
 }catch{storageReadFailure=true;bootMessage=t("Saved workouts could not load. Nothing was overwritten. New edits stay in this tab.");}
 const current=()=>plan.days[day];
@@ -1295,7 +1373,7 @@ const effectiveRows=(w=current(),date=dateForDay(day))=>w.items.map(row=>dateSwa
 function saveSwap(date,w,base,row){
  (dateSwaps[date]??(dateSwaps[date]={}))[swapSlot(w,base)]=row;
  for(const old of Object.keys(dateSwaps).sort().slice(0,-84))delete dateSwaps[old];
- try{if(!swapsWritable)throw Error();localStorage.setItem(swapKey,JSON.stringify(dateSwaps));return true;}catch{return false;}
+ try{if(!swapsWritable)throw Error();writeStudioValue(swapKey,JSON.stringify(dateSwaps));return true;}catch{return false;}
 }
 function tellSwap(message){
  const status=$("swapResult");status.hidden=!message;status.textContent=message;
@@ -1303,7 +1381,7 @@ function tellSwap(message){
 const marksFor=(row,w=current(),date=dateForDay(day))=>completion[date]?.[w.id+"/"+row.id]||[];
 function persistCompletion(){
  for(const old of Object.keys(completion).sort().slice(0,-84))delete completion[old];
- try{if(!progressWritable)throw Error();localStorage.setItem(checkKey,JSON.stringify(completion));return true;}
+ try{if(!progressWritable)throw Error();writeStudioValue(checkKey,JSON.stringify(completion));return true;}
  catch{return false;}
 }
 function storeMark(row,set,checked,date){
@@ -1441,7 +1519,7 @@ function renderTrainList(){
     (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i)+'</details></li>';
  }).join("");
- watchArt(root);progressCount();
+ watchArt(root);progressCount();refreshTrainingGroups();
 }
 $("trainList").onchange=e=>{
  const x=e.target;
@@ -1454,7 +1532,7 @@ $("trainList").onchange=e=>{
 function say(x){$("save").textContent=x;}
 function save(x=t("Saved in this browser.")){
  if(storageReadFailure){say(x+t(" Browser storage is not being written. New edits stay in this tab."," Não foi possível gravar no navegador. As alterações ficam apenas nesta aba."));return;}
- try{localStorage.setItem(KEY2,JSON.stringify(plan));say(x);}catch{say(x+t(" Browser storage unavailable. New edits stay in this tab."," Armazenamento indisponível. As alterações ficam apenas nesta aba."));}
+ try{writeStudioValue(KEY2,JSON.stringify(plan));say(x);}catch{say(x+t(" Browser storage unavailable. New edits stay in this tab."," Armazenamento indisponível. As alterações ficam apenas nesta aba."));}
 }
 const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
 function workoutDose(x){
@@ -1739,12 +1817,12 @@ try{
  const savedGoal=localStorage.getItem(goalKey);
  if(Object.hasOwn(goalLabels,savedGoal))trainingGoal=savedGoal;
 }catch{}
-function selectGoal(value){
+function selectGoal(value,persist=true){
  if(!Object.hasOwn(goalLabels,value))return;
  trainingGoal=value;$("trainingGoal").value=value;$("weekGoal").value=value;
- try{localStorage.setItem(goalKey,value);}catch{}
+ if(persist)try{writeStudioValue(goalKey,value);}catch{}
 }
-selectGoal(trainingGoal);
+selectGoal(trainingGoal,false);
 const lowerExtra={name:"Lower · glutes & hips",focus:"Lower",groups:["Glutes","Quads","Hamstrings","Core","Glutes","Calves","Glutes","Hamstrings"]};
 const upperExtra={name:"Upper · shoulders & arms",focus:"Upper",groups:["Shoulders","Back","Triceps","Chest","Core","Shoulders","Arms","Back"]};
 const saturday={name:"Full body · lighter strength",focus:"Full body",groups:pattern["Full body"],lighter:true};
@@ -1923,6 +2001,48 @@ function stats(){
  const x=current(),count=x.items.reduce((a,b)=>a+b.sets,0);
  $("stats").textContent=x.rest?t("Rest day"):x.items.length?x.items.length+" "+plural(x.items.length,t("exercise","exercício"),t("exercises","exercícios"))+" · "+count+" "+plural(count,t("set","série"),t("sets","séries")):t("No exercises");
 }
+function workoutGroups(w,date){
+ const chosen=new Set(effectiveRows(w,date).map(row=>byId(row.exercise)).filter(Boolean).map(ex=>directTriceps(ex)?"Triceps":ex.g));
+ return [...groups,"Triceps"].filter(g=>chosen.has(g));
+}
+function groupLabels(keys){return keys.map(g=>t(g)).join(" · ");}
+function refreshTrainingGroups(){
+ const dayGroup=workoutGroups(current(),dateForDay(day));
+ $("trainDayGroups").hidden=!dayGroup.length;
+ $("trainDayGroups").textContent=dayGroup.length?t("Muscle groups")+": "+groupLabels(dayGroup):"";
+}
+function exerciseTotal(n){return n+" "+plural(n,t("exercise","exercício"),t("exercises","exercícios"));}
+function showWeekSummary(){
+ refreshDates();
+ const overview=$("weekSummary"),rows=plan.days.map((w,i)=>{
+  const date=dateForDay(i);
+  return {w,date,groups:workoutGroups(w,date),count:effectiveRows(w,date).length};
+ });
+ const total=rows.filter(x=>x.count>0).length,allGroups=new Set(rows.flatMap(x=>x.groups));
+ $("weekSummaryTotals").textContent=total+t(" of 7 days with exercises"," de 7 dias com exercícios");
+ const caption=$("weekSummaryGroups");
+ caption.textContent=allGroups.size?t("Muscle groups")+": "+groupLabels([...groups,"Triceps"].filter(g=>allGroups.has(g))):"";
+ caption.hidden=!allGroups.size;
+ $("weekSummaryList").innerHTML=rows.map(({w,date,groups:dayGroups,count},i)=>{
+  const title=displayTitle(w.title.trim())||t(w.rest?"Rest day":count?"Workout":"No workout scheduled");
+  const details=[count?exerciseTotal(count):"",groupLabels(dayGroups)].filter(Boolean).join(" · ");
+  return '<li><button type="button" data-summary-day="'+i+'" '+(i===today?'aria-current="date"':'')+'>'+
+   '<span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
+   '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</button></li>';
+ }).join("");
+ if(!overview.open){overview.showModal();$("weekSummaryHeading").focus({preventScroll:true});syncAnimation();}
+}
+$("weekSummaryOpen").onclick=showWeekSummary;
+$("weekSummaryClose").onclick=()=>$("weekSummary").close();
+$("weekSummary").onclose=()=>{
+ const active=document.activeElement;
+ if(active===document.body||$("weekSummary").contains(active))$("weekSummaryOpen").focus({preventScroll:true});
+ syncAnimation();
+};
+$("weekSummaryList").onclick=event=>{
+ const button=event.target.closest("[data-summary-day]");if(!button)return;
+ $("weekSummary").close();setDay(+button.dataset.summaryDay);$("trainTitle").focus();
+};
 function nav(){
  const x=current(),items=x.items;
  $("modeSwitch").textContent=t(editing?"Done":hasWorkout(x)?"Edit plan":"Plan workout");
@@ -2034,6 +2154,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"overview-reset-v21",date:"2026-11-21",title:"Weekly overview and local reset",body:"See saved workouts and muscle groups for the week. A protected reset is available under Local data in Menu."},
  {id:"triceps-and-sunday-v20",date:"2026-11-21",title:"Triceps in the planner and one recovery day",body:"Find direct triceps exercises and plan a lighter Saturday plus one recovery day. Saved workouts are unchanged."},
  {id:"form-tips-v19",date:"2026-11-21",title:"Short demos in form tips",body:"See an image or reach the verified source without opening a separate exercise guide."},
  {id:"inline-forms-v18",date:"2026-11-21",title:"Inline form images and a roomier menu",body:"View licensed form images inside the guide. Menus fit more comfortably on narrow screens."},
@@ -2050,6 +2171,104 @@ try{
  const seen=JSON.parse(localStorage.getItem(seenUpdatesKey)||"[]");
  if(Array.isArray(seen))seenUpdates=seen.filter(x=>typeof x==="string").slice(-40);
 }catch{}
+// Keep this exact allowlist in step with Studio Motion's persisted data. The reset
+// epoch is not a preference or workout: it prevents a stale tab from restoring data.
+const resetDataKeys=[KEY1,KEY2,checkKey,swapKey,languageKey,goalKey,seenUpdatesKey];
+function eraseStudioData(){
+ let saved,oldEpoch,pendingEpoch;
+ try{
+  saved=resetDataKeys.map(key=>[key,localStorage.getItem(key)]);
+  oldEpoch=localStorage.getItem(resetEpochKey);
+  if(oldEpoch!==resetEpoch&&!oldEpoch?.startsWith("pending:")){
+   reloadAfterReset();return false;
+  }
+  const nextEpoch=localId();
+  pendingEpoch="pending:"+nextEpoch;
+  localStorage.setItem(resetEpochKey,pendingEpoch);
+  for(const [key,value] of saved)if(value!==null)localStorage.removeItem(key);
+  if(resetDataKeys.some(key=>localStorage.getItem(key)!==null))throw Error("Storage did not remove all data.");
+  localStorage.setItem(resetEpochKey,"done:"+nextEpoch);
+  resetEpoch="done:"+nextEpoch;
+  return true;
+ }catch{
+  if(pendingEpoch){
+   try{
+    if(localStorage.getItem(resetEpochKey)!==pendingEpoch)return false;
+    for(const [key,value] of saved){
+     if(localStorage.getItem(key)===value)continue;
+     if(value===null)localStorage.removeItem(key);else localStorage.setItem(key,value);
+    }
+    if(oldEpoch===null)localStorage.removeItem(resetEpochKey);else localStorage.setItem(resetEpochKey,oldEpoch);
+   }catch{} // Continue blocking stale writes if restoration was incomplete.
+  }
+  return false;
+ }
+}
+let resetBusy=false;
+const resetToken=()=>isPt()?"REDEFINIR":"RESET";
+const resetMatches=()=>$("resetPhrase").value.trim()===resetToken();
+function openResetDialog(){
+ $("resetFeedback").hidden=true;
+ $("resetFailure").hidden=true;
+ $("resetPhrase").value="";
+ $("resetPhraseLabel").textContent=t("Type RESET to confirm.","Digite REDEFINIR para confirmar.");
+ $("confirmReset").disabled=true;
+ $("resetAppDialog").showModal();
+ $("resetPhrase").focus();syncAnimation();
+}
+$("resetApp").onclick=openResetDialog;
+$("finishReset").onclick=openResetDialog;
+$("resetPhrase").oninput=()=>{$("confirmReset").disabled=resetBusy||!resetMatches();$("resetFailure").hidden=true;};
+$("resetPhrase").onkeydown=event=>{if(event.key==="Enter")event.preventDefault();};
+$("cancelReset").onclick=()=>$("resetAppDialog").close();
+$("resetAppDialog").onclose=()=>{
+ $("resetPhrase").value="";$("confirmReset").disabled=true;
+ if($("resetFeedback").hidden)$($("resetInterrupted").hidden?"resetApp":"finishReset").focus({preventScroll:true});
+ else $("resetFeedback").focus({preventScroll:true});
+ syncAnimation();
+};
+$("resetAppForm").onsubmit=async event=>{
+ event.preventDefault();
+ if(resetBusy||!$("resetAppDialog").open||!resetMatches())return;
+ resetBusy=true;
+ $("confirmReset").disabled=true;
+ $("resetFailure").hidden=true;
+ let outcome="unavailable";
+ try{
+  if(navigator.locks?.request) await navigator.locks.request("studio-motion-reset-v1",{mode:"exclusive",ifAvailable:true},lock=>{
+   if(!$("resetAppDialog").open||!resetMatches()){outcome="cancelled";return;}
+   if(!lock){outcome="busy";return;}
+   outcome=eraseStudioData()?"done":"failed";
+  });
+ }catch{outcome="unavailable";}
+ finally{
+  resetBusy=false;
+  $("confirmReset").disabled=!$("resetAppDialog").open||!resetMatches();
+  drawResetInterrupted();
+ }
+ if(outcome!=="done"){
+  if(!$("resetAppDialog").open||outcome==="cancelled")return;
+  $("resetFailure").textContent=outcome==="busy"
+   ?t("A reset is already running in another tab. Try again after it finishes.","Uma redefinição já está em andamento em outra aba. Tente novamente quando terminar.")
+   :outcome==="unavailable"
+    ?t("This browser cannot coordinate a safe reset. No reset was made.","Este navegador não pode coordenar uma redefinição segura. Nenhuma redefinição foi feita.")
+    :t("Reset could not be completed. Some data may remain. Close other Studio Motion tabs and try again.","Não foi possível concluir a redefinição. Alguns dados podem continuar salvos. Feche outras abas do Studio Motion e tente de novo.");
+  $("resetFailure").hidden=false;
+  return;
+ }
+ plan=emptyPlan();completion={};dateSwaps={};seenUpdates=[];
+ storageReadFailure=false;progressWritable=true;swapsWritable=true;languageWritable=true;
+ locale=deviceLocale();selectGoal("balanced",false);
+ lastDayPreviews.clear();lastWeekPreviews.clear();lastShownDayPreview.clear();
+ $("trainingEquipment").querySelectorAll("input").forEach(input=>{input.checked=["Machine","Cable"].includes(input.value);});
+ for(const [id,value] of [["trainingBench","none"],["trainingFocus","Day split"],["trainingSets","4"],["trainingSize","8"],["query",""],["filter",""],["equipmentFilter",""],["benchFilter",""]])$(id).value=value;
+ applyStaticLanguage();localizedFilters();drawAnnouncements();
+ if(announcements[0]){$("noticeTitle").textContent=t(announcements[0].title);$("launchNotice").hidden=false;$("menuUnread").hidden=false;}
+ setDay(today);setMode(false);choose(E[0].id);
+ $("resetFeedback").textContent=t("Studio Motion was reset on this browser.","O Studio Motion foi redefinido neste navegador.");
+ $("resetFeedback").hidden=false;
+ $("resetAppDialog").close();
+};
 function about(open,updates=false){
  $("studioAbout").hidden=!open;$("aboutToggle").setAttribute("aria-expanded",String(open));
  if(open){
@@ -2069,7 +2288,7 @@ $("noticeOpen").onclick=()=>{
 $("noticeDismiss").onclick=()=>{
  const id=announcements[0]?.id;if(!id)return;
  seenUpdates=[...new Set([...seenUpdates,id])].slice(-40);
- try{localStorage.setItem(seenUpdatesKey,JSON.stringify(seenUpdates));}catch{}
+ try{writeStudioValue(seenUpdatesKey,JSON.stringify(seenUpdates));}catch{}
  $("launchNotice").hidden=true;$("menuUnread").hidden=true;$("updatesHeading").focus({preventScroll:true});
 };
 $("copyUpdates").onclick=async()=>{
@@ -2089,7 +2308,7 @@ if(announcements[0]&&!seenUpdates.includes(announcements[0].id)){
 captureStaticLanguage();applyStaticLanguage();localizedFilters();drawAnnouncements();
 $("language").onchange=event=>{
  locale=event.target.value==="pt-BR"?"pt-BR":"en";
- try{localStorage.setItem(languageKey,locale);}catch{languageWritable=false;}
+ try{writeStudioValue(languageKey,locale);}catch{languageWritable=false;}
  applyStaticLanguage();localizedFilters();drawAnnouncements();
  if(announcements[0])$("noticeTitle").textContent=t(announcements[0].title);
  resetPreview();choose(selected.id);render();
