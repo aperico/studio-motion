@@ -160,3 +160,7 @@ an account, backend, or analytics.
 Run the [ten-profile usability check](docs/USABILITY.md) for user-facing changes.
 
 For a focused session, select **Chest & triceps** (Portuguese: **Peito e tríceps**) in the daily planner. It randomizes up to five matching exercises, leaves weights blank, and previews before saving.
+
+### Weight on workout cards
+
+Tap **Set weight** or the current kg value while training. Enter up to two decimal places (comma or point), enter zero for zero added load, or leave it blank to clear the value. **Save weight** applies it to this row of the recurring plan; a dated replacement keeps its own weight for that date only. This never changes checked sets or other days.

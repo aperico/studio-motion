@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v23 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v24 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -59,6 +59,7 @@
 #trainOverview{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin:6px 0 10px;padding:7px 9px;background:var(--inner);border:1px solid var(--line);border-radius:10px}
 #trainOverviewCopy{min-width:0;overflow-wrap:anywhere}#trainOverviewCount{margin:0;font-weight:700}
 #trainOverview #trainDayGroups{margin:2px 0 0}#trainOverviewMap:not(:has(svg)){display:none}
+.workout-dose .weight-button{width:100%;min-height:44px;margin:0;padding:2px 3px;white-space:normal;overflow-wrap:anywhere;font-size:.78rem;border-color:transparent;color:var(--mint);background:transparent}.workout-dose .weight-button:hover{border-color:var(--mint)}#weightDialog{width:min(calc(100% - 20px),420px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);overscroll-behavior:contain}#weightDialog::backdrop{background:#060a0bc9}#weightDialog input,#weightDialog button{min-height:44px}#weightError{color:#ffa998}
 </style></head>
 <body><main class="app">
 <div id="resetInterrupted" class="guide" hidden>
@@ -66,7 +67,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v23</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v24</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -127,7 +128,7 @@
     <p class="guide" id="resetFailure" role="alert" hidden></p>
     <div class="buttons"><button type="button" id="cancelReset">Cancel reset</button><button type="submit" id="confirmReset" disabled>Permanently reset app</button></div>
   </form>
-</dialog></main>
+</dialog><dialog id="weightDialog" aria-labelledby="weightHeading"><form id="weightForm"><h2 id="weightHeading"></h2><p id="weightScope" class="guide"></p><label class="field"><span id="weightLabel"></span><input id="weightInput" type="text" inputmode="decimal" autocomplete="off" aria-describedby="weightScope weightError"></label><p id="weightError" role="alert" hidden></p><div class="buttons"><button id="weightCancel" type="button"></button><button id="weightSave" class="primary" type="submit"></button></div></form></dialog></main>
 <script>
 "use strict";
 
@@ -319,6 +320,8 @@ const PT={
  "Load": "Carga",
  "Hold sec": "Manter (s)",
  "Load kg": "Carga (kg)",
+ "Change weight during a workout": "Altere a carga durante o treino",
+ "Tap the weight on a workout card to update it without leaving your training or changing checked sets.": "Toque na carga do cartão do exercício para alterá-la sem sair do treino nem perder as séries marcadas.",
  "Rest sec": "Descanso (s)",
  "Position, tempo, or reminder": "Posição, ritmo ou lembrete",
  "Note": "Observação",
@@ -1254,7 +1257,7 @@ function paint(node,state,t,phase=t>.5?1:0){
   if(state.button)state.button.textContent=translatePose(t>.5);
  }catch{onscreen.delete(node);artObserver?.unobserve(node);artStates.delete(node);}
 }
-function blockingDialog(){return $("weekPreview").open||$("weekSummary").open||$("resetAppDialog").open;}
+function blockingDialog(){return $("weekPreview").open||$("weekSummary").open||$("resetAppDialog").open||$("weightDialog").open;}
 function queueMotion(){
  if(!frameID&&onscreen.size&&!document.hidden&&!reducedMotion.matches&&!blockingDialog())frameID=requestAnimationFrame(motion);
 }
@@ -1550,7 +1553,7 @@ function renderTrainList(){
   }).join("");
   return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">'+t("Alternate for")+" "+esc(displayDate(date))+'</p>':'')+
-    '<dl class="workout-dose">'+workoutDose(row)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset>'+
+    '<dl class="workout-dose">'+workoutDose(row,true)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>'+t("Form tips")+'</summary><p class="coach">'+esc(cueOf(e))+'</p>'+
     (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i)+'</details></li>';
@@ -1571,10 +1574,85 @@ function save(x=t("Saved in this browser.")){
  try{writeStudioValue(KEY2,JSON.stringify(plan));say(x);}catch{say(x+t(" Browser storage unavailable. New edits stay in this tab."," Armazenamento indisponível. As alterações ficam apenas nesta aba."));}
 }
 const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
-function workoutDose(x){
+const weightCaption=kg=>kg===null?t("Set weight","Definir carga"):displayNumber(kg)+" kg";
+function workoutDose(x,editable=false){
  const e=byId(x.exercise),reps=e.hold?x.seconds+" s":(x.repRange?x.repRange.join("–"):x.reps);
- return [["Sets",x.sets],[e.hold?"Hold":e.side?"Reps / side":"Reps",reps],["Load",x.kg===null?"—":(displayNumber(x.kg))+" kg"],["Rest",x.rest+" s"]].map(([k,v])=>"<div><dt>"+t(k)+"</dt><dd>"+esc(v)+"</dd></div>").join("");
+ return [["Sets",x.sets],[e.hold?"Hold":e.side?"Reps / side":"Reps",reps],["Load",x.kg===null?"—":(displayNumber(x.kg))+" kg"],["Rest",x.rest+" s"]].map(([k,v])=>"<div><dt>"+t(k)+"</dt><dd>"+(k==="Load"&&editable&&e.eq!=="Bodyweight"?'<button type="button" class="weight-button" data-edit-weight aria-label="'+esc(t("Weight for ","Carga de ")+nameOf(e)+": "+weightCaption(x.kg))+'">'+esc(weightCaption(x.kg))+'</button>':esc(v))+"</dd></div>").join("");
 }
+let weightEdit=null;
+const weightMessage=message=>{
+ const box=$("weightError");box.textContent=message;box.hidden=!message;
+ if(message)$("weightInput").setAttribute("aria-invalid","true");else $("weightInput").removeAttribute("aria-invalid");
+};
+function openWeight(button){
+ if(refreshDates()||editing||weightEdit||!button.isConnected)return;
+ const index=+button.closest("[data-swap-row]").dataset.swapRow,w=current(),base=w.items[index],date=dateForDay(day);
+ if(!base)return;
+ const row=effectiveRows(w,date)[index],e=byId(row.exercise);
+ if(e.eq==="Bodyweight")return;
+ const slot=swapSlot(w,base),dated=!!dateSwaps[date]?.[slot],key=dated?swapKey:KEY2;
+ let before,relatedBefore;
+ const relatedKey=dated?KEY2:swapKey;
+ try{
+  before=localStorage.getItem(key);relatedBefore=localStorage.getItem(relatedKey);
+  if((dated?!swapsWritable:storageReadFailure)||before!==JSON.stringify(dated?dateSwaps:plan))throw Error();
+ }catch{
+  tellSwap(t("Weight could not be opened from this browser. Reload to use the latest saved workout.","Não foi possível carregar a carga neste navegador. Recarregue para usar o treino salvo mais recente."));
+  return;
+ }
+ weightEdit={button,index,w,base,row,date,slot,dated,key,before,relatedKey,relatedBefore};
+ $("weightHeading").textContent=t("Weight: ","Carga: ")+nameOf(e);
+ $("weightScope").textContent=dated?t("Only this replacement on ","Somente esta substituição em ")+displayDate(date)+".":t("Updates this exercise in your weekly plan, including next time.","Atualiza a carga deste exercício no plano semanal, inclusive na próxima vez.");
+ $("weightLabel").textContent=t("Weight (kg)","Carga (kg)");
+ $("weightCancel").textContent=t("Cancel");$("weightSave").textContent=t("Save weight","Salvar carga");
+ $("weightInput").value=row.kg===null?"":displayNumber(row.kg);
+ weightMessage("");$("weightDialog").showModal();syncAnimation();$("weightInput").focus();
+}
+$("trainList").addEventListener("click",event=>{
+ const button=event.target.closest("[data-edit-weight]");if(button)openWeight(button);
+});
+$("weightCancel").onclick=()=>$("weightDialog").close();
+$("weightDialog").addEventListener("close",()=>{
+ const button=weightEdit?.button;weightEdit=null;syncAnimation();
+ if(button?.isConnected)button.focus({preventScroll:true});
+});
+$("weightInput").addEventListener("input",()=>weightMessage(""));
+$("weightForm").onsubmit=event=>{
+ event.preventDefault();
+ const edit=weightEdit;if(!edit||!$("weightDialog").open)return;
+ const raw=$("weightInput").value.trim(),next=raw===""?null:Number(raw.replace(",","."));
+ if(raw&&(!/^\d+(?:[,.]\d{1,2})?$/.test(raw)||!Number.isFinite(next)||next<0||next>1000)){
+  weightMessage(t("Enter 0–1,000 kg, with up to two decimal places, or leave blank.","Digite de 0 a 1.000 kg, com até duas casas decimais, ou deixe em branco."));$("weightInput").focus();return;
+ }
+ if(refreshDates()||edit.date!==dateForDay(day)||edit.w!==current()||edit.w.items[edit.index]!==edit.base||
+    effectiveRows(edit.w,edit.date)[edit.index]!==edit.row||!edit.button.isConnected){
+  weightMessage(t("The workout changed. Cancel and open the weight again.","O treino mudou. Cancele e abra a carga novamente."));return;
+ }
+ try{
+  if(localStorage.getItem(edit.key)!==edit.before||localStorage.getItem(edit.relatedKey)!==edit.relatedBefore){
+   weightMessage(t("Saved data changed in another tab. Cancel and reload before editing.","Os dados salvos mudaram em outra aba. Cancele e recarregue antes de editar."));return;
+  }
+  if(next!==edit.row.kg){
+   const updated={...edit.row,kg:next};
+   if(edit.dated){
+    const replacement={...dateSwaps,[edit.date]:{...dateSwaps[edit.date],[edit.slot]:updated}};
+    writeStudioValue(edit.key,JSON.stringify(replacement));dateSwaps=replacement;
+   }else{
+    const replacement={...plan,days:plan.days.map((w,i)=>i===day?{...w,items:w.items.map((row,j)=>j===edit.index?updated:row)}:w)};
+    writeStudioValue(edit.key,JSON.stringify(replacement));
+    edit.w.items[edit.index]=updated;
+    const field=$("items").querySelector('[data-i="'+edit.index+'"] [data-k="kg"]');
+    if(field)field.value=next===null?"":displayNumber(next);
+   }
+   const e=byId(updated.exercise);
+   edit.button.textContent=weightCaption(next);
+   edit.button.setAttribute("aria-label",t("Weight for ","Carga de ")+nameOf(e)+": "+weightCaption(next));
+  }
+ }catch{
+  weightMessage(t("This browser could not save the weight. No change was applied.","O navegador não conseguiu salvar a carga. Nenhuma alteração foi aplicada."));return;
+ }
+ $("weightDialog").close();
+};
 function dose(x){const e=byId(x.exercise),unit=e.hold?x.seconds+t(" sec"," s"):(x.repRange?x.repRange.join("–"):x.reps)+t(" reps"," reps.");return x.sets+" × "+unit+(e.side?t(" per side"," por lado"):"")+" · "+x.rest+t(" sec rest"," s de descanso")+(x.kg===null?"":" · "+(displayNumber(x.kg))+" kg");}
 // Visually checked standalone media. Link only: no embedding, prefetch, redistribution or auto-loading.
 const shortDemos={
@@ -2221,6 +2299,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"workout-card-weight-v24",date:"2026-11-21",title:"Change weight during a workout",body:"Tap the weight on a workout card to update it without leaving your training or changing checked sets."},
  {id:"forearms-traps-v23",date:"2026-11-21",title:"Forearm and trapezius exercises",body:"Find targeted movements using the new Forearms and Trapezius filters and daily focuses."},
  {id:"week-muscle-maps-v22",date:"2026-11-21",title:"Muscle maps in Week Summary",body:"See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements."},
  {id:"overview-reset-v21",date:"2026-11-21",title:"Weekly overview and local reset",body:"See saved workouts and muscle groups for the week. A protected reset is available under Local data in Menu."},
