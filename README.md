@@ -172,3 +172,5 @@ Tap **Set completed** to mark the next unchecked set on that exercise. The numbe
 ### Exercise guides offline
 
 Open an exercise’s information button to see the positions and form steps without internet. The guide identifies exercises with no external weight. If a credited external image or demo is available, open it yourself; form images are fetched only when requested. Additional illustrations are by [Nitin Raturi](https://fitness.raturi.in/credits/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). On supported mobile browsers the weight editor adjusts to the visible window when the keyboard opens.
+
+In Train, **Mark as current** highlights one exercise for the selected workout, including exercises with every set complete. This temporary marker is separate from **First unfinished**, does not change workout data or set progress, and clears on refresh or a local date change.
