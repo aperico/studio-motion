@@ -186,3 +186,11 @@ In Train, tap **ⓘ** to open one exercise guide inline. It keeps offline form d
 ### Browse saved weeks in Train
 
 Use **Saved weeks** above the weekdays to inspect each saved dated week without opening Plan. Dates and date-specific logs follow the displayed week. Other weeks are read-only. Switching weeks keeps your weekday; **Return to today** restores today. Browsing does not save or activate a program, and refresh opens the real current week. Paused programs keep the recurring week active; ended programs keep their existing empty fallback until explicitly resumed.
+
+### Choose the planner week first
+
+In a multiweek **Auto Plan Week** preview, choose **Week** at the top, before the training goal. A single recurring week has no extra week selector. The date range identifies the preview. Below the goal, **Plan length** changes a recurring single week into a dated 2–4 week program; **Start Monday** sets its start. Generate the selected week or all weeks, then review the days before saving. Changing the selected week does not save or generate workouts.
+
+### Menu preferences
+
+Menu groups **Training**, **Preferences**, **Local data**, and **About Studio Motion**. In Preferences choose English or Portuguese independently of **Metric (kg)** / **Imperial (lb)**, and save or clear an optional local profile email. Units change the displayed load; saved workout weights stay in kg. Configuration backup and Reset app remain distinct under Local data. JSON exports omit email by default; the checkbox displays the exact saved address you may choose to include. If that saved address changes, consent is reset and must be given again.

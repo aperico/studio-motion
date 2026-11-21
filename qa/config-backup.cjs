@@ -15,7 +15,7 @@ const url=pathToFileURL(path.join(__dirname,'../index.html')).href;
  await fixture();
  a.match(await l('#configHeading').innerText(),/Backup de configuração/);
  a(await l('#configDialog').evaluate(x=>x.scrollWidth<=x.clientWidth));
- await l('#profileEmail').fill('recipient@example.invalid');await l('#profileSave').tap();
+ await l('#configClose').tap();await l('#profileEmail').fill('recipient@example.invalid');await l('#profileSave').tap();await l('#openConfig').tap();
  a(await l('#exportEmail').isEnabled());a.equal(await l('#exportEmail').isChecked(),false);
  const download=async()=>{const d=p.waitForEvent('download');await l('#configExport').tap();const obj=await d;return JSON.parse(await fs.readFile(await obj.path(),'utf-8'));};
  let build=await download();a.equal(build.format,'studio-motion-backup');a.equal(build.authorEmail,undefined);a.equal(build.history,undefined);a.equal(build.plan.days[0].items[0].kg,12.5);

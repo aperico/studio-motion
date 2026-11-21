@@ -9,7 +9,7 @@ for(const [width,locale] of [[320,'pt-BR'],[390,'en'],[412,'pt-BR']]){
  await p.clock.install({time:new Date('2026-11-23T16:00:00Z')});await p.goto(BASE);
  await p.evaluate(()=>{plan.days[0]=cleanSession({title:'Synthetic dose',items:[{...make('press'),sets:5,kg:12.5,repRange:[10,12]},make('machine-row'),make('bw-plank')]});save();setDay(0);});
  const l=s=>p.locator(s),row=i=>l('#trainList li').nth(i),weight=i=>row(i).locator('[data-edit-weight]'),routine=i=>row(i).locator('[data-edit-routine]');
- const units=l('#weightUnit'),input=l('#weightInput'),sets=l('#doseSets'),reps=l('#doseReps'),submit=l('#weightSave'),dialog=l('#weightDialog'),cancel=l('#weightCancel');
+ const units={selectOption:unit=>p.evaluate(unit=>{document.getElementById('weightUnit').value=unit;document.getElementById('weightUnit').onchange()},unit)},input=l('#weightInput'),sets=l('#doseSets'),reps=l('#doseReps'),submit=l('#weightSave'),dialog=l('#weightDialog'),cancel=l('#weightCancel');
  const saved=()=>p.evaluate(()=>localStorage.getItem(KEY2)),data=()=>p.evaluate(()=>current().items[0]);
  const base=await saved();
  await weight(0).click();assert.equal(await input.inputValue(),locale==='pt-BR'?'12,5':'12.5');

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v34 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v35 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -104,6 +104,13 @@
 .training-inline-guide li+li{margin-top:.35rem}
 .training-inline-guide h3{min-width:0;margin:0;font-size:1rem;overflow-wrap:anywhere;scroll-margin-block-start:86px}
 .training-inline-guide .inline-guide-close{flex:0 0 44px;width:44px;height:44px;padding:0;font-size:1.4rem}
+#weekPreview #weekSlotLabel,#weekPreview #weekSlot,#weekPreview #weekGoal{width:100%}
+#weekPreview #blockDraftRange{margin:4px 0 10px}
+#weekPreview .block-planner{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+#weekPreview .block-planner select{width:100%}
+#weekPreview .planner-actions{margin-block:12px}
+@media(max-width:370px){#weekPreview .block-planner{grid-template-columns:minmax(0,1fr)}}
+#studioAbout section{border-top:1px solid var(--line);padding-block:10px}#studioAbout h3{margin:4px 0;font-size:1rem}#studioAbout input,#studioAbout select{width:100%;max-width:100%;min-height:44px}#studioAbout button{min-height:44px}#studioAbout p{overflow-wrap:anywhere}#exportEmailValue{overflow-wrap:anywhere}
 </style></head>
 <body><main class="app">
 <aside id="configInterrupted" class="guide" hidden><p>A configuration import was interrupted. Recover your previous configuration before editing.</p><button id="recoverConfig" type="button">Recover previous configuration</button><p id="recoverConfigFeedback" role="status"></p></aside>
@@ -112,16 +119,19 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v34</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v35</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
-  <div class="row"><h2 id="aboutHeading" tabindex="-1">About Studio Motion</h2><button id="aboutClose" type="button">Close</button></div>
-  <label class="field language-choice"><span>Language / Idioma</span><select id="language" aria-label="Language / Idioma"><option value="en" lang="en">English</option><option value="pt-BR" lang="pt-BR">Português (Brasil)</option></select></label><p class="guide">Studio Motion is a hobby project, not made by fitness specialists. The illustrations are simplified cues, not professional training or medical guidance. Follow your equipment’s instructions.</p>
+  <div class="row"><h2 id="aboutHeading" tabindex="-1">Menu</h2><button id="aboutClose" type="button">Close</button></div>
+  <section aria-labelledby="menuTraining"><h3 id="menuTraining">Training</h3><div class="buttons"><button type="button" id="menuPlan">Auto Plan Week</button><button type="button" id="menuSummary">Week summary</button></div></section>
+  <section aria-labelledby="menuPreferences"><h3 id="menuPreferences">Preferences</h3><label class="field language-choice"><span>Language / Idioma</span><select id="language" aria-label="Language / Idioma"><option value="en" lang="en">English</option><option value="pt-BR" lang="pt-BR">Português (Brasil)</option></select></label><label class="field"><span id="weightUnitLabel">Units</span><select id="weightUnit"><option value="kg">Metric (kg)</option><option value="lb">Imperial (lb)</option></select></label><section aria-labelledby="profileTitle"><h3 id="profileTitle">Local profile (optional)</h3><label class="field">Email (this device only)<input id="profileEmail" type="email" maxlength="254" autocomplete="off" spellcheck="false"></label><button type="button" id="profileSave">Save email locally</button></section><p class="guide">Your optional email stays on this device. It is included in JSON only when you explicitly choose it during export.</p><p id="preferenceStatus" class="guide" role="status"></p></section>
+  <details id="localData"><summary>Local data</summary><p class="guide">Manage Studio Motion data saved in this browser.</p><button id="openConfig" type="button" aria-haspopup="dialog">Configuration backup</button><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
+  <h3 id="menuAbout">About Studio Motion</h3><p class="guide">Studio Motion is a hobby project, not made by fitness specialists. The illustrations are simplified cues, not professional training or medical guidance. Follow your equipment’s instructions.</p>
   <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
   <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each external demo names its source.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.strengthlog.com/exercise-directory/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
   <aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
-  <details id="localData"><summary>Local data</summary><p class="guide">Reset only Studio Motion data saved in this browser.</p><button id="openConfig" type="button" aria-haspopup="dialog">Configuration backup</button><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
+
   <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
 </section>
 
@@ -159,13 +169,11 @@
   <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench</option><option value="adjustable">Incline bench</option><option value="none">No bench</option></select></div><div id="muscleOverview" hidden></div><button type="button" class="selection-link">Selected exercise &amp; add</button><div class="choices" id="choices"></div>
 <div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><label class="repeat-dose" id="repeatDoseOption" hidden><input id="repeatDose" type="checkbox"> Reuse last exercise’s sets, reps and rest</label><button id="add" class="primary">Add to workout</button>
 </details></div></div>
-<footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><div class="block-planner">
+<footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field" id="weekSlotLabel">Week<select id="weekSlot" aria-describedby="blockDraftRange"></select></label><p id="blockDraftRange" class="guide muted" role="status"></p><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><div class="block-planner">
  <label class="field">Plan length<select id="weekLength"><option value="1">1 week</option><option value="2">2 weeks</option><option value="3">3 weeks</option><option value="4">4 weeks</option></select></label>
- <label class="field" id="weekSlotLabel" hidden>Week to preview<select id="weekSlot"></select></label>
  <label class="field" id="weekStartLabel" hidden>Start Monday<select id="weekStart"></select></label>
- <button id="weekGenerateAll" type="button" hidden>Generate all weeks</button>
-</div><p id="weekLengthHint" class="guide muted">Choose 2 to 4 weeks to generate a specific week or all weeks.</p><p id="blockDraftRange" class="guide muted" hidden></p><p id="blockFeedback" class="guide muted" role="status" hidden></p>
-<p class="guide muted" id="weekDraftMapNote">The maps show proposed workouts. Only selected days will be saved.</p><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
+</div><p id="weekLengthHint" class="guide muted">Choose 2 to 4 weeks to generate a specific week or all weeks.</p><p id="blockFeedback" class="guide muted" role="status" hidden></p>
+<div class="buttons planner-actions"><button id="weekGenerateAll" type="button" hidden>Generate all weeks</button><button id="regenerateWeek" type="button">Generate again</button></div><p class="guide muted" id="weekDraftMapNote">The maps show proposed workouts. Only selected days will be saved.</p><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
 <dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button" aria-label="Close"><span aria-hidden="true">×</span></button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><h3 id="guideStepsHeading"></h3><ol id="guideInstructions"></ol><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden></p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a></dialog>
 <dialog id="weekSummary" class="workout-view" aria-labelledby="weekSummaryHeading">
  <header class="guide-title-row"><h2 id="weekSummaryHeading" tabindex="-1">Week summary</h2><button type="button" id="weekSummaryClose">Close</button></header>
@@ -173,8 +181,8 @@
  <ol id="weekSummaryList" role="list"></ol>
 </dialog>
 <dialog id="configDialog" aria-labelledby="configHeading"><header class="guide-title-row"><h2 id="configHeading" tabindex="-1">Configuration backup</h2><button type="button" id="configClose">Close</button></header><p>Transfer routines and preferences. This does not transfer checkmarks or temporary exercise replacements.</p>
-<section aria-labelledby="profileTitle"><h3 id="profileTitle">Local profile (optional)</h3><label class="field">Email (this device only)<input id="profileEmail" type="email" maxlength="254" autocomplete="off" spellcheck="false"></label><button type="button" id="profileSave">Save email locally</button></section>
-<section aria-labelledby="exportTitle"><h3 id="exportTitle">Export</h3><label class="config-check"><input id="exportEmail" type="checkbox"> Include my email in the downloaded file</label><button type="button" id="configExport">Download JSON</button></section>
+
+<section aria-labelledby="exportTitle"><h3 id="exportTitle">Export</h3><label class="config-check"><input id="exportEmail" type="checkbox"> Include my email in the downloaded file <span id="exportEmailValue"></span></label><button type="button" id="configExport">Download JSON</button></section>
 <section aria-labelledby="importTitle"><h3 id="importTitle">Import</h3><label class="field">Choose a Studio Motion JSON file<input id="configFile" type="file" accept=".json,application/json"></label>
 <div id="configPreview" hidden><h4 id="configPreviewHeading" tabindex="-1">Review before replacing</h4><p id="configExisting"></p><p id="configSummary"></p><p id="configPrefs"></p><p id="configAuthor"></p><p>Local checkmarks and temporary replacements stay stored. They may not appear with different workouts.</p>
 <label class="config-check"><input id="configConfirm" type="checkbox"> Replace my saved workouts, dated program and preferences on this device</label><button id="configApply" type="button" class="primary" disabled>Replace with this file</button></div></section>
@@ -191,7 +199,7 @@
 </dialog><dialog id="weightDialog" aria-labelledby="weightHeading"><form id="weightForm"><h2 id="weightHeading"></h2><p id="weightScope" class="guide"></p>
  <div id="doseEditorFields"><label class="field"><span id="doseSetsLabel"></span><input id="doseSets" inputmode="numeric" maxlength="2" type="text" autocomplete="off"></label><label class="field"><span id="doseRepsLabel"></span><input id="doseReps" inputmode="numeric" maxlength="3" type="text" autocomplete="off" aria-describedby="doseRangeHelp"></label></div>
  <p id="doseRangeHelp" class="guide muted" hidden></p>
- <div id="weightLoadFields"><label class="field"><span id="weightUnitLabel">Weight unit</span><select id="weightUnit"><option value="kg">kg</option><option value="lb">lb</option></select></label>
+ <div id="weightLoadFields">
  <label class="field" id="weightLabel" for="weightInput"></label><div class="weight-stepper"><button id="weightMinus" type="button">−</button><input id="weightInput" type="text" inputmode="decimal" autocomplete="off" aria-describedby="weightScope weightError"><button id="weightPlus" type="button">+</button></div></div><p id="weightError" role="alert" hidden></p><div class="buttons"><button id="weightCancel" type="button"></button><button id="weightSave" class="primary" type="submit"></button></div></form></dialog></main>
 <script>
 "use strict";
@@ -202,9 +210,16 @@ const PT={
  "Choose 2 to 4 weeks to generate a specific week or all weeks.":"Escolha de 2 a 4 semanas para gerar uma semana específica ou todas.",
  "Weight units and workout doses":"Unidades de carga e detalhes do treino",
  "Change sets, reps or weights from each exercise card, using kilograms or pounds.":"Edite séries, repetições ou cargas no próprio exercício, em quilogramas ou libras.",
+ "Training":"Treino",
+ "Preferences":"Preferências",
+ "Units":"Unidades",
+ "Metric (kg)":"Métrico (kg)",
+ "Imperial (lb)":"Imperial (lb)",
+ "Manage Studio Motion data saved in this browser.":"Gerencie os dados do Studio Motion salvos neste navegador.",
+ "Your optional email stays on this device. It is included in JSON only when you explicitly choose it during export.":"Seu e-mail opcional fica neste dispositivo. Ele só entra no JSON quando você o escolhe explicitamente na exportação.",
  "Plan length":"Duração do plano",
  "1 week":"1 semana","2 weeks":"2 semanas","3 weeks":"3 semanas","4 weeks":"4 semanas",
- "Week to preview":"Semana da prévia",
+ "Week":"Semana",
  "Start Monday":"Início na segunda",
  "Generate all weeks":"Gerar todas as semanas",
  "Resume recurring week":"Retomar semana recorrente",
@@ -1943,8 +1958,7 @@ function openWeight(button,routine=false){
  $(routine?"doseSets":"weightInput").focus();
 }
 function refreshWeightControls(edit){
- const unitLabel=t("Weight unit","Unidade de carga");
- $("weightUnitLabel").textContent=unitLabel;$("weightUnit").value=weightUnit;
+ $("weightUnit").value=weightUnit;
  $("weightLabel").textContent=t("Weight","Carga")+" ("+weightUnit+")";
  const step=weightUnit==="kg"?t("0.5 kg","0,5 kg"):"1 lb";
  $("weightMinus").setAttribute("aria-label",t("Decrease by ","Diminuir em ")+step);
@@ -1973,7 +1987,8 @@ function stepLoad(direction){
 $("weightMinus").onclick=()=>stepLoad(-1);
 $("weightPlus").onclick=()=>stepLoad(1);
 $("weightUnit").onchange=()=>{
- const edit=weightEdit,unit=$("weightUnit").value;if(!edit||!["kg","lb"].includes(unit))return;
+ const edit=weightEdit,unit=$("weightUnit").value;if(!["kg","lb"].includes(unit))return;
+ if(!edit){try{writeStudioValue(unitKey,JSON.stringify({unit,epoch:resetEpoch}));weightUnit=unit;render();$("preferenceStatus").textContent=t("Units saved.","Unidades salvas.");}catch{$("weightUnit").value=weightUnit;$("preferenceStatus").textContent=t("Unit preference could not be saved.","Não foi possível salvar a unidade.");}return;}
  const value=draftLoad(edit);
  if(value===invalidWeight){$("weightUnit").value=weightUnit;loadError();return;}
  try{writeStudioValue(unitKey,JSON.stringify({unit,epoch:resetEpoch}));}
@@ -2583,12 +2598,16 @@ function startProgramDraft(length){
 function drawProgramControls(){
  const enabled=Boolean(programDraft);
  $("weekLengthHint").hidden=enabled;
- $("weekSlotLabel").hidden=$("weekStartLabel").hidden=$("weekGenerateAll").hidden=$("blockDraftRange").hidden=!enabled;
+ $("weekSlotLabel").hidden=$("weekStartLabel").hidden=$("weekGenerateAll").hidden=!enabled;
  $("weekLength").disabled=programRunning();
  $("weekLength").options[0].disabled=trainReadOnly()||blockWeekIndex()===-2;
  $("weekLength").value=String(programDraft?.length||1);
  $("regenerateWeek").textContent=enabled?t("Generate this week","Gerar esta semana"):t("Generate again");
- if(!enabled)return;
+ if(!enabled){
+  $("weekSlot").innerHTML='<option value="0">'+t("Week ","Semana ")+'1</option>';
+  $("blockDraftRange").textContent=t("Recurring week","Semana recorrente")+" · "+formatRange(realWeekStart());
+  return;
+ }
  const draft=programDraft;
  const choices=draft.existing?[draft.start]:[...new Set([proposedStart(),...(today===0||!recurringWeek().some(hasWorkout)?[dateForDay(0)]:[]),addCalendarDays(dateForDay(0),7)])];
  $("weekStart").innerHTML=choices.map(date=>'<option value="'+date+'">'+esc(displayDate(date))+'</option>').join("");
@@ -2833,7 +2852,7 @@ $("weekSummaryList").onclick=event=>{
  $("weekSummary").close();setDay(index);$("trainTitle").focus();
 };
 function nav(){
- for(const id of ["trainingGenerate","weekGenerate","resumeRecurring"])$(id).disabled=trainReadOnly();
+ for(const id of ["trainingGenerate","weekGenerate","menuPlan","resumeRecurring"])$(id).disabled=trainReadOnly();
  const x=current(),items=x.items;
  drawTrainWeeks();
  programStatus();$("modeSwitch").disabled=trainReadOnly()||blockWeekIndex()===-2;
@@ -2973,6 +2992,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"planner-week-first-v35",date:"2026-11-21",title:"Week-first planning and menu preferences",body:"Choose the planner week above the goal. Menu groups training, preferences, local data and about; set language, Metric/Imperial units and an optional local email in Preferences.",titlePt:"Semana primeiro e preferências no menu",bodyPt:"Escolha a semana acima do objetivo. O menu reúne treino, preferências, dados locais e informações; configure idioma, unidades e e-mail local em Preferências."},
  {id:"train-weeks-v34",date:"2026-11-21",title:"Browse saved weeks in Train",body:"Choose a saved week above the weekdays. Other weeks are read-only; Return to today restores today’s workout.",titlePt:"Veja semanas salvas em Treinar",bodyPt:"Escolha uma semana salva acima dos dias. Outras semanas são somente leitura; Voltar para hoje abre o treino de hoje."},
  {id:"media-references-v33",date:"2026-11-21",title:"More exercise form references",body:"Optional online form references now cover 94 of 95 exercises. Every exercise still works offline with original illustrations."},
  {id:"inline-exercise-guide-v32",date:"2026-11-21",title:"Open exercise guides in the workout",body:"Tap ⓘ to see the start and finish positions and instructions in the exercise card. No separate window is needed.",titlePt:"Abra o guia de execução no treino",bodyPt:"Toque em ⓘ para ver as posições e instruções no próprio cartão do exercício, sem abrir outra janela."},
@@ -3124,12 +3144,11 @@ function parseConfig(data){
 function readProfileEmail(){
  try{const email=localStorage.getItem(profileKey);return validEmail(email)?email:"";}catch{return "";}
 }
-function downloadConfig(includeEmail=false){
+function downloadConfig(authorEmail=""){
  const {epoch,...portable}=block||{};
  const data={format:configFormat,version:configVersion,createdAt:new Date().toISOString(),plan,block:block?portable:null,
              preferences:{language:locale,goal:trainingGoal,units:exportUnits(),planner:readPlannerSettings()}};
- const email=readProfileEmail();
- if(includeEmail&&email)data.authorEmail=email;
+ if(authorEmail)data.authorEmail=authorEmail;
  // Validate what will be sent to this browser's own download manager; never fetch or upload.
  parseConfig(data);
  const json=JSON.stringify(data,null,2);
@@ -3238,11 +3257,17 @@ function renderConfigPreview(staged){
  $("configPreview").hidden=false;
  $("configConfirm").checked=false;$("configApply").disabled=true;
 }
+let consentEmail="";
+function syncExportEmail(){
+ consentEmail=readProfileEmail();$("exportEmail").checked=false;$("exportEmail").disabled=!consentEmail;
+ $("exportEmailValue").textContent=consentEmail?" · "+consentEmail:"";
+}
+window.addEventListener("storage",event=>{if(event.key===profileKey)syncExportEmail();});
+function preferenceStatus(message){$("preferenceStatus").textContent=message;}
 function openConfig(){
  if(readForeignPending())return;
  clearConfigPreview();configStatus("");$("configFile").value="";
- $("profileEmail").value=readProfileEmail();
- $("exportEmail").checked=false;$("exportEmail").disabled=!readProfileEmail();
+ syncExportEmail();
  $("configDialog").showModal();$("configHeading").focus({preventScroll:true});syncAnimation();
 }
 function readForeignPending(){
@@ -3253,14 +3278,15 @@ $("configClose").onclick=()=>$("configDialog").close();
 $("configDialog").addEventListener("close",()=>{configReadToken++;clearConfigPreview();$("openConfig").focus({preventScroll:true});syncAnimation();});
 $("profileSave").onclick=()=>{
  const input=$("profileEmail"),v=input.value.trim();
- if(v&&!validEmail(v)){configStatus(t("Enter a valid email address or leave it blank.","Digite um e-mail válido ou deixe em branco."));input.focus();return;}
+ if(v&&!validEmail(v)){preferenceStatus(t("Enter a valid email address or leave it blank.","Digite um e-mail válido ou deixe em branco."));input.focus();return;}
  try{
-  writeStudioValue(profileKey,v);$("exportEmail").checked=false;$("exportEmail").disabled=!v;
-  configStatus(v?t("Email saved on this device.","E-mail salvo neste dispositivo."):t("Email cleared on this device.","E-mail removido deste dispositivo."));
- }catch{configStatus(t("This browser could not save the profile.","O navegador não conseguiu salvar o perfil."));}
+  writeStudioValue(profileKey,v);syncExportEmail();
+  preferenceStatus(v?t("Email saved on this device.","E-mail salvo neste dispositivo."):t("Email cleared on this device.","E-mail removido deste dispositivo."));
+ }catch{preferenceStatus(t("This browser could not save the profile.","O navegador não conseguiu salvar o perfil."));}
 };
 $("configExport").onclick=()=>{
- try{downloadConfig($("exportEmail").checked);configStatus(t("Configuration downloaded.","Configuração baixada."));}
+ if($("exportEmail").checked&&(!consentEmail||readProfileEmail()!==consentEmail)){syncExportEmail();configStatus(t("Email changed. Review it and choose again.","O e-mail mudou. Confira e escolha novamente."));return;}
+ try{downloadConfig($("exportEmail").checked?consentEmail:"");configStatus(t("Configuration downloaded.","Configuração baixada."));}
  catch{configStatus(t("Could not export settings from this browser.","Não foi possível exportar as configurações deste navegador."));}
 };
 $("configFile").onchange=async()=>{
@@ -3362,10 +3388,13 @@ $("resetAppForm").onsubmit=async event=>{
 function about(open,updates=false){
  $("studioAbout").hidden=!open;$("aboutToggle").setAttribute("aria-expanded",String(open));
  if(open){
+  $("profileEmail").value=readProfileEmail();$("weightUnit").value=weightUnit;
   const title=$(updates?"updatesHeading":"aboutHeading");title.focus({preventScroll:true});
   if(updates)$("updates").scrollIntoView({block:"start"});
  }else $("aboutToggle").focus({preventScroll:true});
 }
+$("menuPlan").onclick=()=>{if(trainReadOnly())return;about(false);showWeek();};
+$("menuSummary").onclick=()=>{about(false);showWeekSummary();};
 $("aboutToggle").onclick=()=>about($("studioAbout").hidden);
 $("aboutClose").onclick=()=>{
  if(location.hash==="#updates"){try{history.replaceState(null,"",location.pathname+location.search);}catch{}}
@@ -3395,6 +3424,7 @@ function drawAnnouncements(){
 if(announcements[0]&&!seenUpdates.includes(announcements[0].id)){
  $("noticeTitle").textContent=t(announcements[0].title);$("launchNotice").hidden=false;$("menuUnread").hidden=false;
 }
+$("weightUnit").value=weightUnit;
 captureStaticLanguage();applyStaticLanguage();localizedFilters();restorePlannerSettings();watchPlannerSettings();drawAnnouncements();
 $("language").onchange=event=>{
  locale=event.target.value==="pt-BR"?"pt-BR":"en";
