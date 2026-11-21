@@ -13,7 +13,9 @@ Validation on 2026-11-21:
 - `qa/train-weeks.cjs`: 320 px PT-BR and 800 px EN; no navigation storage writes,
   actual dates, read-only controls and direct completion handlers, stale weight
   submission, weekday retention, Return to today, refresh default, focus stability,
-  fake-clock rollover into a current week, paused and ended fallback.
+  fake-clock midnight retention and rollover into a current week, paused and ended fallback,
+  real-current banner dates, guarded stale resume and hidden editor events, and neutral
+  saved empty/rest-day copy.
 - Local HTTP service worker: v34 cache populated, network disabled, reload serves
   the app with the v34 badge and weekday controls.
 - `git diff --check` passed.

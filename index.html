@@ -1576,8 +1576,14 @@ function scheduleMidnight(){
 function refreshDates(){
  const now=new Date(),date=localDateString(now),activeDay=(now.getDay()+6)%7;
  if(lastLocalDate===date&&today===activeDay&&$("trainList").dataset.date===dateForDay(day))return false;
- const wasToday=day===today;
- if(lastLocalDate!==date){currentExercises.clear();trainWeekStart=null;}
+ const wasToday=trainWeekStart===null&&day===today;
+ if(lastLocalDate!==date){
+  currentExercises.clear();
+  if(trainWeekStart!==null){
+   const slot=block?(dayNumber(trainWeekStart)-dayNumber(block.start))/7:-1;
+   if(trainWeekStart===realWeekStart()||!Number.isInteger(slot)||!block?.weeks[slot])trainWeekStart=null;
+  }
+ }
  lastLocalDate=date;today=activeDay;
  setDay(wasToday?today:day);
  if($("weekSummary").open)renderWeekSummary();
@@ -2556,10 +2562,11 @@ function programStatus(){
  status.textContent=!block||block.paused?"":
   index===-2?t("Program complete · ","Programa concluído · ")+suffix:
   index<0?t("Program scheduled · ","Programa agendado · ")+suffix:
-  t("Program · Week ","Programa · Semana ")+(index+1)+" / "+block.weeks.length+" · "+formatRange(dateForDay(0));
+  t("Program · Week ","Programa · Semana ")+(index+1)+" / "+block.weeks.length+" · "+formatRange(realWeekStart());
  $("resumeRecurring").hidden=index!==-2;
 }
 $("resumeRecurring").onclick=()=>{
+ if(trainReadOnly())return;
  if(blockWeekIndex()!==-2||!confirm(t("Resume your recurring week? The finished program and saved history are kept.","Retomar sua semana recorrente? O programa concluído e o histórico ficam salvos.")))return;
  try{persistBlock({...block,paused:true});setDay(today);}catch{say(t("Could not save program settings.","Não foi possível salvar o programa."));}
 };
@@ -2741,7 +2748,7 @@ function drawTrainWeeks(){
  $("trainWeekNotice").textContent=trainReadOnly()?t("Read-only saved week","Semana salva · somente leitura"):"";
 }
 $("trainWeek").onchange=()=>{trainWeekStart=$("trainWeek").value===realWeekStart()?null:$("trainWeek").value;setDay(day);};
-$("returnToday").onclick=()=>{trainWeekStart=null;setDay(today);};
+$("returnToday").onclick=()=>{trainWeekStart=null;setDay(today,true);};
 function week(){
  drawTrainWeeks();
  const short=isPt()?["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"]:["Mo","Tu","We","Th","Fr","Sa","Su"];
@@ -2837,7 +2844,7 @@ function nav(){
  $("trainDay").textContent=(day===today&&!trainReadOnly()?t("Today")+" · ":"")+dayName(day)+" · "+displayDate(dateForDay(day));
  $("trainTitle").textContent=displayTitle(x.title.trim())||t(x.rest?"Rest day":items.length?"Workout":"No workout planned");
  $("trainEmpty").hidden=!!items.length;$("planThisDay").hidden=!!items.length||x.rest||blockWeekIndex()===-2;
- $("trainEmpty").textContent=blockWeekIndex()===-2?t("Start a new program or resume your recurring week.","Inicie um novo programa ou retome sua semana recorrente."):t(x.rest?"Take a recovery day.":"Choose exercises yourself or generate a workout for this day.");
+ $("trainEmpty").textContent=trainReadOnly()?(x.rest?t("Take a recovery day."):t("No workout saved for this date.","Nenhum treino salvo para esta data.")):blockWeekIndex()===-2?t("Start a new program or resume your recurring week.","Inicie um novo programa ou retome sua semana recorrente."):t(x.rest?"Take a recovery day.":"Choose exercises yourself or generate a workout for this day.");
  progressCount();
 }
 function setMode(value,focus=false){
@@ -2903,6 +2910,7 @@ $("weekCards").onchange=event=>{
 $("applyWeek").onclick=commitWeek;
 for(const target of ["trainingFocus","trainingSize","trainingEquipment","trainingBench","trainingSets"])$(target).onchange=resetPreview;
 $("applyTraining").onclick=()=>{
+ if(trainReadOnly())return;
  if(!proposed||proposed.day!==day)return;
  if(dayWriteKey()===blockKey&&protectedProgramDay(current(),dateForDay(day))){say(t("Past or logged day cannot be replaced.","Dias passados ou registrados não podem ser substituídos."));return;}
  if(hasWorkout(current())&&!confirm(t("Replace the workout for ","Substituir o treino de ")+dayName(day)+t("? The current workout will be kept under Saved workouts.","? O treino atual ficará em Treinos salvos.")))return;
@@ -2910,6 +2918,7 @@ $("applyTraining").onclick=()=>{
  currentWeekDays()[day]=cleanSession(proposed.variants[proposed.active]);setDay(day);save(dayName(day)+t(" workout saved.",": treino salvo."));
 };
 $("archiveCopy").onclick=()=>{
+ if(trainReadOnly())return;
  const original=calendarArchive()[+$("archivePicker").value];if(!original)return;
  if(dayWriteKey()===blockKey&&protectedProgramDay(current(),dateForDay(day))){say(t("Past or logged day cannot be replaced.","Dias passados ou registrados não podem ser substituídos."));return;}
  if(hasWorkout(current())&&!confirm(t("Replace the workout for ","Substituir o treino de ")+dayName(day)+t(" with a copy? The current workout stays under Saved workouts."," por uma cópia? O treino atual ficará em Treinos salvos.")))return;
@@ -2917,6 +2926,7 @@ $("archiveCopy").onclick=()=>{
  currentWeekDays()[day]=cleanSession(original,false,true);setDay(day);save(t("Copied to ","Copiado para ")+dayName(day)+".");
 };
 $("items").onclick=e=>{
+ if(trainReadOnly())return;
  const a=e.target.dataset.a,i=+e.target.closest("[data-i]")?.dataset.i,items=current().items;
  if(!a||!Number.isInteger(i)||!items[i])return;
  if(a==="view"){setMode(false);$("trainList").children[i]?.scrollIntoView({block:"nearest"});return;}
@@ -2925,6 +2935,7 @@ $("items").onclick=e=>{
  render();save();
 };
 $("items").oninput=e=>{
+ if(trainReadOnly())return;
  const k=e.target.dataset.k;if(!k)return;
  const x=current().items[+e.target.closest("[data-i]").dataset.i];
  if(k==="note")x.note=e.target.value;else if(k==="kg"){
@@ -2933,9 +2944,10 @@ $("items").oninput=e=>{
  }else if(e.target.value&&e.target.validity.valid){x[k]=+e.target.value;if(k==="reps")delete x.repRange;}
  stats();nav();save();
 };
-$("items").onchange=e=>{const k=e.target.dataset.k;if(k&&k!=="note"){const x=current().items[+e.target.closest("[data-i]").dataset.i];e.target.value=k==="kg"&&x[k]!==null?loadNumber(x[k]):x[k]??"";}};
-$("title").oninput=e=>{current().title=e.target.value;week();save();};
+$("items").onchange=e=>{if(trainReadOnly())return;const k=e.target.dataset.k;if(k&&k!=="note"){const x=current().items[+e.target.closest("[data-i]").dataset.i];e.target.value=k==="kg"&&x[k]!==null?loadNumber(x[k]):x[k]??"";}};
+$("title").oninput=e=>{if(trainReadOnly())return;current().title=e.target.value;week();save();};
 $("add").onclick=()=>{
+ if(trainReadOnly())return;
  if(current().items.length>=70)return;
  if(current().rest&&!confirm(t("Replace this rest day with a workout?")))return;
  current().rest=false;if(!current().title.trim()||current().title==="Rest day") current().title=DAYS[day]+" workout";
