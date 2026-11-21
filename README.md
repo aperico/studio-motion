@@ -168,3 +168,7 @@ Tap **Set weight** or the current kg value while training. Enter up to two decim
 ### Mark a set during a workout
 
 Tap **Set completed** to mark the next unchecked set on that exercise. The numbered checkboxes remain available to correct any set. When all sets on the card are checked, the button shows **All sets completed** and does not move to another exercise. Checkmarks stay on that workout date in this browser.
+
+### Exercise guides offline
+
+Open an exercise’s information button to see the positions and form steps without internet. The guide identifies exercises with no external weight. If a credited external image or demo is available, open it yourself; form images are fetched only when requested. Additional illustrations are by [Nitin Raturi](https://fitness.raturi.in/credits/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). On supported mobile browsers the weight editor adjusts to the visible window when the keyboard opens.
