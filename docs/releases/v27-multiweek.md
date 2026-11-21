@@ -1,0 +1,11 @@
+# v27 · Dated multiweek workout programs
+
+**Auto Plan Week** still opens on the recurring one-week planner when no dated program is running. Choose 2–4 weeks to create a short dated program. Generate the displayed week or the entire program, review the exercise lists and body maps one week at a time, select the days to save, and explicitly confirm the start. The calendar only changes on the scheduled Monday, not when previewing, and the recurring plan is stored separately.
+
+Workout focuses stay consistent while the eligible exercises vary. Equipment constraints may limit variation. Dates are based on the device's local calendar. Checkmarks, replacements, and weights stay attached to their actual scheduled workout. Past days and days with completed sets cannot be replaced by the planner; explicitly replacing a future saved workout keeps it in Saved workouts. At program end Studio Motion does not loop the program. You can resume the kept recurring week or start a new program.
+
+The four-week limit keeps the mobile interface manageable; it is not a claim about optimal training duration. [Resistance-training evidence overview](https://pubmed.ncbi.nlm.nih.gov/41843416/) · [Exercise variation review](https://pubmed.ncbi.nlm.nih.gov/35438660/) · [Example of explicit program scheduling](https://support.trainheroic.com/hc/en-us/articles/18156929058829-Create-a-Library-of-Training-Programs).
+
+The separate epoch-bound browser key preserves the recurring format for earlier app builds. Reset in this version clears dated programs with other Studio Motion data. Planning and working out require no account or network service. Tests use disposable synthetic data, not personal workout records.
+
+Verification: `node qa/multiweek.cjs` with Chromium covered 320/390/412 CSS px in PT-BR and English and the São Paulo, Chicago, and Berlin calendar zones. The suite covers selected-week and program generation, no writes before confirmation, protected prior/current logs, archived future replacement, retiring the program and preserving the legacy plan, dated weight edits and one-tap sets. Installed offline preview, blocked downgrade-epoch revival, exact reset scope, existing mobile/large-text and prior feature suites also passed.
