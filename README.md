@@ -174,3 +174,9 @@ Tap **Set completed** to mark the next unchecked set on that exercise. The numbe
 Open an exercise’s information button to see the positions and form steps without internet. The guide identifies exercises with no external weight. If a credited external image or demo is available, open it yourself; form images are fetched only when requested. Additional illustrations are by [Nitin Raturi](https://fitness.raturi.in/credits/), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). On supported mobile browsers the weight editor adjusts to the visible window when the keyboard opens.
 
 In Train, **Mark as current** highlights one exercise for the selected workout, including exercises with every set complete. This temporary marker is separate from **First unfinished**, does not change workout data or set progress, and clears on refresh or a local date change.
+
+### Transfer routines and preferences between devices
+
+Open **Menu → Local data → Configuration backup**. **Download JSON** saves a local file with the recurring week, archived workouts, dated program and planner preferences, including language, units and goal. Checkmarks, temporary dated substitutions and your profile email are excluded by default. Add your saved local email as author metadata only by checking the optional box; importing someone else’s file won’t update your local profile. Keep the file private unless you intend to share it.
+
+On the other device choose that file, review what it replaces and explicitly confirm. Existing checkmarks and temporary substitutions are left untouched but will not match different workouts. Nothing is uploaded. For a safe restore or interruption recovery, the browser must support Web Locks and allow local storage.

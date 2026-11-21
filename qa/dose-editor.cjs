@@ -45,7 +45,7 @@ for(const [width,locale] of [[320,'pt-BR'],[390,'en'],[412,'pt-BR']]){
  await sets.fill('4');await reps.fill('12');await submit.click();
  assert.equal((await data()).sets,4);assert.equal((await data()).reps,12);assert.equal((await data()).repRange,undefined);
  assert(await row(0).locator('[data-set="4"]').isChecked());
- assert(await routine(0).evaluate(e=>e===document.activeElement));
+ await p.waitForFunction(()=>document.querySelector("#trainList [data-swap-row=\"0\"] [data-edit-routine]")===document.activeElement);
  await routine(2).click();assert(!await l('#weightLoadFields').isVisible());await reps.fill('25');await sets.fill('3');await submit.click();
  assert.equal(await p.evaluate(()=>current().items[2].seconds),25);
  await p.evaluate(()=>{const w=current();saveSwap(dateForDay(0),w,w.items[1],{...make('cable-chest'),sets:5,kg:9});setDay(0);});

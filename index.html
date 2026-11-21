@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v30 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v31 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -92,14 +92,16 @@
 #doseRangeHelp{margin:2px 0}
 .workout-dose{grid-template-columns:repeat(auto-fit,minmax(min(100%,3.9rem),1fr))}.workout-dose dt{overflow-wrap:anywhere}
 #weightDialog{scroll-padding-bottom:60px}#weightForm>.buttons{position:sticky;bottom:-1px;z-index:1;background:var(--panel);padding-block:4px}
+#configDialog{width:min(calc(100% - 20px),560px);max-height:calc(100dvh - 20px);margin:auto;color:var(--txt);background:var(--panel);overflow:auto;overscroll-behavior:contain;border:1px solid var(--line);border-radius:14px}#configDialog::backdrop{background:#060a0bc9}#configDialog h2{font-size:1.1rem;margin:0;min-width:0;overflow-wrap:anywhere}#configDialog h3,#configDialog h4{font-size:.93rem;margin:.45rem 0}#configDialog section{padding:.35rem 0;border-top:1px solid var(--line)}#configDialog p{font-size:.83rem;overflow-wrap:anywhere}#configDialog button,#configDialog input,#openConfig,#recoverConfig{min-height:44px}#configDialog input[type="email"],#configDialog input[type="file"]{display:block;width:100%;max-width:100%}#configDialog .config-check{display:flex;align-items:center;gap:8px;font-size:.83rem;min-height:44px}#configDialog input[type="checkbox"]{min-height:auto;flex:none;width:22px;height:22px}#configPreview{margin-top:.45rem;padding:.45rem;border:1px solid var(--line);border-radius:8px}#configClose{flex:none}
 </style></head>
 <body><main class="app">
+<aside id="configInterrupted" class="guide" hidden><p>A configuration import was interrupted. Recover your previous configuration before editing.</p><button id="recoverConfig" type="button">Recover previous configuration</button><p id="recoverConfigFeedback" role="status"></p></aside>
 <div id="resetInterrupted" class="guide" hidden>
   <p id="resetInterruptedText" role="status"></p>
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v30</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v31</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -108,7 +110,7 @@
   <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
   <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each external demo names its source.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.strengthlog.com/exercise-directory/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
   <aside id="launchNotice" class="launch-notice no-print" aria-label="Latest update" hidden><button type="button" id="noticeOpen">What’s new</button><span id="noticeTitle"></span><button type="button" id="noticeDismiss" aria-label="Dismiss this update">×</button></aside>
-  <details id="localData"><summary>Local data</summary><p class="guide">Reset only Studio Motion data saved in this browser.</p><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
+  <details id="localData"><summary>Local data</summary><p class="guide">Reset only Studio Motion data saved in this browser.</p><button id="openConfig" type="button" aria-haspopup="dialog">Configuration backup</button><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
   <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
 </section>
 
@@ -158,6 +160,13 @@
  <p class="guide muted" id="weekSummaryTotals"></p><p class="guide muted" id="weekSummaryGroups"></p>
  <ol id="weekSummaryList" role="list"></ol>
 </dialog>
+<dialog id="configDialog" aria-labelledby="configHeading"><header class="guide-title-row"><h2 id="configHeading" tabindex="-1">Configuration backup</h2><button type="button" id="configClose">Close</button></header><p>Transfer routines and preferences. This does not transfer checkmarks or temporary exercise replacements.</p>
+<section aria-labelledby="profileTitle"><h3 id="profileTitle">Local profile (optional)</h3><label class="field">Email (this device only)<input id="profileEmail" type="email" maxlength="254" autocomplete="off" spellcheck="false"></label><button type="button" id="profileSave">Save email locally</button></section>
+<section aria-labelledby="exportTitle"><h3 id="exportTitle">Export</h3><label class="config-check"><input id="exportEmail" type="checkbox"> Include my email in the downloaded file</label><button type="button" id="configExport">Download JSON</button></section>
+<section aria-labelledby="importTitle"><h3 id="importTitle">Import</h3><label class="field">Choose a Studio Motion JSON file<input id="configFile" type="file" accept=".json,application/json"></label>
+<div id="configPreview" hidden><h4 id="configPreviewHeading" tabindex="-1">Review before replacing</h4><p id="configExisting"></p><p id="configSummary"></p><p id="configPrefs"></p><p id="configAuthor"></p><p>Local checkmarks and temporary replacements stay stored. They may not appear with different workouts.</p>
+<label class="config-check"><input id="configConfirm" type="checkbox"> Replace my saved workouts, dated program and preferences on this device</label><button id="configApply" type="button" class="primary" disabled>Replace with this file</button></div></section>
+<p id="configStatus" role="status" aria-live="polite"></p></dialog>
 <dialog id="resetAppDialog" class="workout-view" aria-labelledby="resetAppHeading" aria-describedby="resetScope">
   <form id="resetAppForm">
     <h2 id="resetAppHeading">Reset Studio Motion?</h2>
@@ -201,6 +210,26 @@ const PT={
  "Muscle maps in Week Summary":"Mapas musculares no resumo da semana",
  "See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements.":"Veja os principais músculos de cada treino salvo. Os mapas funcionam offline e consideram as substituições de exercícios.",
  "Local data":"Dados locais",
+ "Transfer your workout configuration":"Transfira sua configuração de treino",
+ "Find Configuration backup under Local data to download and restore routines and preferences on another device.":"Abra Backup de configuração em Dados locais para baixar e restaurar rotinas e preferências em outro dispositivo.",
+ "Configuration backup":"Backup de configuração",
+ "Transfer routines and preferences. This does not transfer checkmarks or temporary exercise replacements.":"Transfira rotinas e preferências. Séries marcadas e substituições temporárias não são transferidas.",
+ "Local profile (optional)":"Perfil local (opcional)",
+ "Email (this device only)":"E-mail (apenas neste dispositivo)",
+ "Save email locally":"Salvar e-mail neste dispositivo",
+ "Export":"Exportar",
+ "Include my email in the downloaded file":"Incluir meu e-mail no arquivo baixado",
+ "Download JSON":"Baixar JSON",
+ "Import":"Importar",
+ "Choose a Studio Motion JSON file":"Escolha um arquivo JSON do Studio Motion",
+ "Review before replacing":"Revise antes de substituir",
+ "Local checkmarks and temporary replacements stay stored. They may not appear with different workouts.":"As séries marcadas e substituições temporárias continuam salvas. Elas podem não aparecer em treinos diferentes.",
+ "Replace my saved workouts, dated program and preferences on this device":"Substituir os treinos salvos, o programa com datas e as preferências neste dispositivo",
+ "Replace with this file":"Substituir pelo conteúdo deste arquivo",
+ "A configuration import was interrupted. Recover your previous configuration before editing.":"Uma importação de configuração foi interrompida. Recupere a configuração anterior antes de editar.",
+ "Recover previous configuration":"Recuperar configuração anterior",
+ "No equipment":"Sem equipamento",
+
  "Reset only Studio Motion data saved in this browser.":"Redefina apenas os dados do Studio Motion salvos neste navegador.",
  "Reset app":"Redefinir aplicativo",
  "Week summary":"Resumo da semana",
@@ -591,8 +620,17 @@ function writeStudioValue(key,value){
  }
 }
 function drawResetInterrupted(){
- let pending=false;
- try{pending=!!localStorage.getItem(resetEpochKey)?.startsWith("pending:");}catch{}
+ let pending=false,restoring=false;
+ try{const value=localStorage.getItem(resetEpochKey);restoring=!!value?.startsWith("pending:import:");pending=!!value?.startsWith("pending:")&&!restoring;}catch{}
+ $("configInterrupted").hidden=!restoring;
+ for(const child of document.querySelector(".app").children){
+  if(child.id!=="configInterrupted"&&child.tagName!=="SCRIPT"){
+   if(restoring&&!child.inert){child.inert=true;child.dataset.frozenForImport="";}
+   else if(!restoring&&Object.hasOwn(child.dataset,"frozenForImport")){child.inert=false;delete child.dataset.frozenForImport;}
+  }
+ }
+ $("openConfig").disabled=restoring;
+ $("resetApp").disabled=restoring;
  $("resetInterrupted").hidden=!pending;
  $("resetInterruptedText").textContent=pending?t("A confirmed reset did not finish. To clear any remaining data, finish the reset and confirm again.","Uma redefinição confirmada não foi concluída. Para apagar os dados restantes, finalize a redefinição e confirme novamente."):"";
  $("finishReset").textContent=t("Finish reset","Finalizar redefinição");
@@ -1318,7 +1356,7 @@ function paint(node,state,t,phase=t>.5?1:0){
   if(state.button)state.button.textContent=translatePose(t>.5);
  }catch{onscreen.delete(node);artObserver?.unobserve(node);artStates.delete(node);}
 }
-function blockingDialog(){return $("weekPreview").open||$("weekSummary").open||$("resetAppDialog").open||$("weightDialog").open;}
+function blockingDialog(){return $("weekPreview").open||$("weekSummary").open||$("resetAppDialog").open||$("weightDialog").open||$("configDialog").open;}
 function queueMotion(){
  if(!frameID&&onscreen.size&&!document.hidden&&!reducedMotion.matches&&!blockingDialog())frameID=requestAnimationFrame(motion);
 }
@@ -2787,6 +2825,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"configuration-backup-v31",date:"2026-11-21",title:"Transfer your workout configuration",body:"Find Configuration backup under Local data to download and restore routines and preferences on another device."},
  {id:"weight-units-dose-v30",date:"2026-11-21",title:"Weight units and workout doses",body:"Change sets, reps or weights from each exercise card, using kilograms or pounds."},
  {id:"current-exercise-v29",date:"2026-11-21",title:"Mark your current exercise",body:"Highlight any exercise in today’s workout, even if you finished its sets. The marker does not change your saved workout or set progress.",titlePt:"Marque o exercício atual",bodyPt:"Destaque qualquer exercício do treino de hoje, mesmo com as séries concluídas. Isso não muda o treino salvo nem o registro das séries."},
  {id:"exercise-guide-v28",date:"2026-11-21",title:"Clearer guides and easier weight entry",body:"Exercise guides now show start and finish positions or a hold position. The weight editor is easier to use when the phone keyboard is open."},
@@ -2815,12 +2854,13 @@ try{
 }catch{}
 // Keep this exact allowlist in step with Studio Motion's persisted data. The reset
 // epoch is not a preference or workout: it prevents a stale tab from restoring data.
-const resetDataKeys=[KEY1,KEY2,blockKey,checkKey,swapKey,languageKey,goalKey,unitKey,seenUpdatesKey];
+const resetDataKeys=[KEY1,KEY2,blockKey,checkKey,swapKey,languageKey,goalKey,unitKey,seenUpdatesKey,"studio-motion-profile-v1","studio-motion-planner-settings-v1","studio-motion-config-transaction-v1"];
 function eraseStudioData(){
  let saved,oldEpoch,pendingEpoch;
  try{
   saved=resetDataKeys.map(key=>[key,localStorage.getItem(key)]);
   oldEpoch=localStorage.getItem(resetEpochKey);
+  if(oldEpoch?.startsWith("pending:import:"))return false;
   if(oldEpoch!==resetEpoch&&!oldEpoch?.startsWith("pending:")){
    reloadAfterReset();return false;
   }
@@ -2858,6 +2898,263 @@ function openResetDialog(){
  $("resetAppDialog").showModal();
  $("resetPhrase").focus();syncAnimation();
 }
+const unitConfigKeys=()=>typeof unitKey==="string"?[unitKey]:[];
+const exportUnits=()=>{
+ try{if(!unitConfigKeys().length)return "kg";const saved=JSON.parse(localStorage.getItem(unitKey));return saved?.epoch===resetEpoch&&saved.unit==="lb"?"lb":"kg";}catch{return "kg";}
+};
+const importUnitValues=(unit,epoch)=>unitConfigKeys().length?{[unitKey]:JSON.stringify({unit,epoch})}:{};
+const configFormat="studio-motion-backup",configVersion=1,configLimit=2*1024*1024;
+const profileKey="studio-motion-profile-v1",plannerSettingsKey="studio-motion-planner-settings-v1",configJournalKey="studio-motion-config-transaction-v1";
+const configLock="studio-motion-reset-v1";
+const benchOptions=["none","flat","adjustable"],focusOptions=["Day split","Full body","Upper","Lower","Core & calves","Chest & triceps","Triceps","Forearms","Trapezius"];
+const validEmail=email=>typeof email==="string"&&email.length<=254&&/^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/.test(email);
+const own=(obj,keys)=>obj&&typeof obj==="object"&&!Array.isArray(obj)&&Object.keys(obj).every(k=>keys.includes(k));
+function parsePlannerSettings(value){
+ if(!own(value,["equipment","bench","focus","size","sets"])||!Array.isArray(value.equipment)||value.equipment.length>autoEquipment.length||
+  value.equipment.some(e=>!autoEquipment.includes(e))||new Set(value.equipment).size!==value.equipment.length||
+  !benchOptions.includes(value.bench)||!focusOptions.includes(value.focus)||![3,5,6,8].includes(value.size)||![2,3,4].includes(value.sets))throw Error();
+ return {equipment:[...value.equipment],bench:value.bench,focus:value.focus,size:value.size,sets:value.sets};
+}
+function readPlannerSettings(){
+ return parsePlannerSettings({equipment:equipmentNow(),bench:$("trainingBench").value,focus:$("trainingFocus").value,size:+$("trainingSize").value,sets:+$("trainingSets").value});
+}
+function restorePlannerSettings(){
+ try{
+  const data=localStorage.getItem(plannerSettingsKey);if(!data)return;
+  const p=parsePlannerSettings(JSON.parse(data));
+  for(const input of $("trainingEquipment").querySelectorAll("input"))input.checked=p.equipment.includes(input.value);
+  for(const [key,value] of [["trainingBench",p.bench],["trainingFocus",p.focus],["trainingSize",p.size],["trainingSets",p.sets]])$(key).value=String(value);
+ }catch{}
+}
+function watchPlannerSettings(){
+ for(const id of ["trainingEquipment","trainingBench","trainingFocus","trainingSize","trainingSets"])$(id).addEventListener("change",()=>{
+  try{writeStudioValue(plannerSettingsKey,JSON.stringify(readPlannerSettings()));}catch{}
+ });
+}
+const okDate=d=>typeof d==="string"&&/^(?:19|20|21)\d{2}-\d{2}-\d{2}$/.test(d)&&addCalendarDays(d,0)===d;
+const inRange=(n,min,max,whole=false)=>typeof n==="number"&&Number.isFinite(n)&&(!whole||Number.isInteger(n))&&n>=min&&n<=max;
+function importWorkout(w){
+ if(!own(w,["id","title","items","rest"])||!validId(w.id)||typeof w.title!=="string"||w.title.length>80||typeof w.rest!=="boolean"||!Array.isArray(w.items)||w.items.length>70||(w.rest&&w.items.length))throw Error();
+ const ids=new Set();
+ for(const x of w.items){
+  if(!own(x,["id","exercise","sets","reps","seconds","kg","rest","note","repRange"])||!validId(x.id)||ids.has(x.id)||typeof x.exercise!=="string"||!byId(x.exercise)||
+    !inRange(x.sets,1,50,true)||!inRange(x.reps,1,300,true)||!inRange(x.seconds,byId(x.exercise).hold?1:0,300,true)||
+    (x.kg!==null&&!inRange(x.kg,0,1000))||!inRange(x.rest,0,3600,true)||typeof x.note!=="string"||x.note.length>200||
+    (x.repRange!==undefined&&(!Array.isArray(x.repRange)||x.repRange.length!==2||x.repRange[0]!==10||x.repRange[1]!==12)))throw Error();
+  ids.add(x.id);
+ }
+ return cleanSession(w);
+}
+function configWeek(items){
+ if(!Array.isArray(items)||items.length!==7||new Set(items.map(w=>w?.id)).size!==7)throw Error();
+ return items.map(importWorkout);
+}
+function parseConfig(data){
+ if(!own(data,["format","version","createdAt","plan","block","preferences","authorEmail"])||
+  data.format!==configFormat||data.version!==configVersion||typeof data.createdAt!=="string"||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(data.createdAt)||
+  !okDate(data.createdAt.slice(0,10))||!Number.isFinite(Date.parse(data.createdAt))||
+  (data.authorEmail!==undefined&&!validEmail(data.authorEmail)))throw Error();
+ const p=data.plan,b=data.block,pr=data.preferences;
+ if(!own(p,["version","days","archive"])||p.version!==2||!Array.isArray(p.archive)||p.archive.length>160||
+    !own(pr,["language","goal","units","planner"])||!["en","pt-BR"].includes(pr.language)||!Object.hasOwn(goalLabels,pr.goal)||
+    !["kg","lb"].includes(pr.units))throw Error();
+ const plan={version:2,days:configWeek(p.days),archive:p.archive.map(importWorkout)};
+ let block=null;
+ if(b!==null){
+  if(!own(b,["version","start","paused","weeks","archive"])||b.version!==1||!okDate(b.start)||!isMonday(b.start)||typeof b.paused!=="boolean"||
+   !Array.isArray(b.weeks)||b.weeks.length<2||b.weeks.length>4||!Array.isArray(b.archive)||b.archive.length>160)throw Error();
+  block={version:1,start:b.start,paused:b.paused,weeks:b.weeks.map(configWeek),archive:b.archive.map(entry=>{
+   if(!own(entry,["date","workout"])||!okDate(entry.date))throw Error();
+   return {date:entry.date,workout:importWorkout(entry.workout)};
+  })};
+ }
+ return {plan,block,preferences:{language:pr.language,goal:pr.goal,units:pr.units,planner:parsePlannerSettings(pr.planner)},authorEmail:data.authorEmail||""};
+}
+function readProfileEmail(){
+ try{const email=localStorage.getItem(profileKey);return validEmail(email)?email:"";}catch{return "";}
+}
+function downloadConfig(includeEmail=false){
+ const {epoch,...portable}=block||{};
+ const data={format:configFormat,version:configVersion,createdAt:new Date().toISOString(),plan,block:block?portable:null,
+             preferences:{language:locale,goal:trainingGoal,units:exportUnits(),planner:readPlannerSettings()}};
+ const email=readProfileEmail();
+ if(includeEmail&&email)data.authorEmail=email;
+ // Validate what will be sent to this browser's own download manager; never fetch or upload.
+ parseConfig(data);
+ const json=JSON.stringify(data,null,2);
+ const file=new Blob([json],{type:"application/json"});
+ if(file.size>configLimit)throw Error();
+ const url=URL.createObjectURL(file),a=document.createElement("a");
+ a.download="studio-motion-config-"+localDateString()+".json";a.href=url;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function configDataKeys(){return [KEY2,blockKey,languageKey,goalKey,plannerSettingsKey,...unitConfigKeys()];}
+const configSnapshot=()=>Object.fromEntries(configDataKeys().map(key=>[key,localStorage.getItem(key)]));
+const configHistoryStamp=()=>JSON.stringify([localStorage.getItem(checkKey),localStorage.getItem(swapKey)]);
+let configPreview=null,configBusy=false,configReadToken=0;
+const importPending=epoch=>typeof epoch==="string"&&epoch.startsWith("pending:import:");
+function recoverConfigJournal(){
+ const raw=localStorage.getItem(configJournalKey),pending=localStorage.getItem(resetEpochKey);
+ if(!importPending(pending)||!raw)return false;
+ try{
+  const record=JSON.parse(raw),keys=configDataKeys();
+  if(record.pending!==pending||!own(record.before,keys)||Object.keys(record.before).length!==keys.length||
+     !keys.every(k=>record.before[k]===null||typeof record.before[k]==="string")||
+     !(record.epoch===null||(typeof record.epoch==="string"&&record.epoch.startsWith("done:"))))return false;
+  for(const k of keys){
+   if(localStorage.getItem(resetEpochKey)!==pending)return false;
+   if(localStorage.getItem(k)!==record.before[k]){
+    if(record.before[k]===null)localStorage.removeItem(k);else localStorage.setItem(k,record.before[k]);
+   }
+  }
+  if(!keys.every(k=>localStorage.getItem(k)===record.before[k]))return false;
+  if(record.epoch===null)localStorage.removeItem(resetEpochKey);else localStorage.setItem(resetEpochKey,record.epoch);
+  try{localStorage.removeItem(configJournalKey);}catch{}
+  return true;
+ }catch{return false;}
+}
+async function useConfigLock(action){
+ if(!navigator.locks?.request)return "unavailable";
+ return navigator.locks.request(configLock,{mode:"exclusive",ifAvailable:true},lock=>lock?action():"busy");
+}
+function performConfigImport(staged){
+ const latestHistory=configHistoryStamp();
+ if(!staged||localStorage.getItem(resetEpochKey)!==staged.epoch||JSON.stringify(configSnapshot())!==JSON.stringify(staged.before)||
+  staged.epoch?.startsWith("pending:")||latestHistory!==staged.historyStamp||importConflict(staged.data,latestHistory))return "stale";
+ const data=staged.data,p=data.preferences,id=localId(),pending="pending:import:"+id,done="done:"+id;
+ const next={...staged.before,[KEY2]:JSON.stringify(data.plan),[blockKey]:data.block?JSON.stringify({...data.block,epoch:done}):null,
+  [languageKey]:p.language,[goalKey]:p.goal,[plannerSettingsKey]:JSON.stringify(p.planner),...importUnitValues(p.units,done)};
+ try{
+  localStorage.setItem(configJournalKey,JSON.stringify({pending,epoch:staged.epoch,before:staged.before}));
+  localStorage.setItem(resetEpochKey,pending);
+  if(configHistoryStamp()!==staged.historyStamp)return recoverConfigJournal()?"stale":"interrupted";
+  for(const key of configDataKeys()){
+   if(localStorage.getItem(resetEpochKey)!==pending)throw Error();
+   if(localStorage.getItem(key)!==next[key]){
+    if(next[key]===null)localStorage.removeItem(key);else localStorage.setItem(key,next[key]);
+   }
+  }
+  if(!configDataKeys().every(k=>localStorage.getItem(k)===next[k])||localStorage.getItem(resetEpochKey)!==pending)throw Error();
+  if(configHistoryStamp()!==staged.historyStamp)return recoverConfigJournal()?"stale":"interrupted";
+  localStorage.setItem(resetEpochKey,done);
+  try{localStorage.removeItem(configJournalKey);}catch{}
+  return "ok";
+ }catch{
+  if(localStorage.getItem(resetEpochKey)===pending)return recoverConfigJournal()?"rolled-back":"interrupted";
+  return "unavailable";
+ }
+}
+function importConflict(data,historyStamp){
+ const storedHistory=JSON.parse(historyStamp).map(raw=>{
+  const parsed=JSON.parse(raw??"{}");
+  if(!parsed||Array.isArray(parsed)||typeof parsed!=="object")throw Error();
+  return parsed;
+ });
+ const known=new Map(),incoming=new Map(),minimumSets=new Map();
+ const gather=(target,plan,block)=>{
+  for(const w of [...plan.days,...plan.archive,...(block?.weeks||[]).flat(),...(block?.archive||[]).map(x=>x.workout)])
+   for(const row of w.items){
+    const id=w.id+"/"+row.id;
+    target.set(id,target.has(id)&&target.get(id)!==row.exercise?null:row.exercise);
+    if(target===incoming)minimumSets.set(id,Math.min(minimumSets.get(id)??row.sets,row.sets));
+   }
+ };
+ gather(known,plan,block);gather(incoming,data.plan,data.block);
+ if([...incoming.values()].some(x=>x===null))return true;
+ for(const [kind,dates] of storedHistory.entries())for(const rows of Object.values(dates))for(const [key,value] of Object.entries(rows||{})){
+  if(!incoming.has(key))continue;
+  if(known.get(key)!==incoming.get(key))return true;
+  if(kind===0&&Array.isArray(value)&&value.some(set=>Number.isInteger(set)&&set>minimumSets.get(key)))return true;
+ }
+ return false;
+}
+function configStatus(message){$("configStatus").textContent=message;}
+function clearConfigPreview(){
+ configPreview=null;$("configPreview").hidden=true;$("configConfirm").checked=false;$("configApply").disabled=true;
+}
+function renderConfigPreview(staged){
+ const currentPreview=t("On this device: ","Neste dispositivo: ")+plan.days.filter(hasWorkout).length+
+  t(" recurring day(s), "," dia(s) recorrente(s), ")+(plan.archive.length+(block?.archive.length||0))+
+  t(" saved workout(s), "," treino(s) no arquivo, ")+(block?block.weeks.length+t(" program weeks."," semanas no programa."):t("no dated program.","sem programa com datas."));
+ $("configExisting").textContent=currentPreview;
+ const {plan:incomingPlan,block:incomingBlock,preferences:p,authorEmail}=staged.data;
+ const occupied=incomingPlan.days.filter(hasWorkout).length,archived=incomingPlan.archive.length+(incomingBlock?.archive.length||0);
+ const count=occupied+t(" recurring day(s) and "," dia(s) recorrente(s) e ")+archived+t(" saved workout(s)."," treino(s) no arquivo.");
+ const dated=incomingBlock?t("Dated program: ","Programa com datas: ")+incomingBlock.weeks.length+t(" weeks from "," semanas a partir de ")+displayDate(incomingBlock.start)+".":t("No dated program in this file.","Este arquivo não contém um programa com datas.");
+ const prefs=[p.language==="pt-BR"?"Português (Brasil)":"English",t(goalLabels[p.goal]),p.units==="lb"?"lb":"kg",p.planner.equipment.map(x=>t(x)).join(", ")||t("No equipment","Sem equipamento"),t({"none":"No bench",flat:"Flat bench",adjustable:"Adjustable bench"}[p.planner.bench]),t(p.planner.focus),p.planner.size+t(" exercises"," exercícios"),p.planner.sets+t(" sets"," séries")].join(" · ");
+ $("configSummary").textContent=count+" "+dated;
+ $("configPrefs").textContent=prefs;
+ $("configAuthor").textContent=authorEmail?t("Author email (not imported): ","E-mail do autor (não será importado): ")+authorEmail:"";
+ $("configPreview").hidden=false;
+ $("configConfirm").checked=false;$("configApply").disabled=true;
+}
+function openConfig(){
+ if(readForeignPending())return;
+ clearConfigPreview();configStatus("");$("configFile").value="";
+ $("profileEmail").value=readProfileEmail();
+ $("exportEmail").checked=false;$("exportEmail").disabled=!readProfileEmail();
+ $("configDialog").showModal();$("configHeading").focus({preventScroll:true});syncAnimation();
+}
+function readForeignPending(){
+ try{return localStorage.getItem(resetEpochKey)?.startsWith("pending:");}catch{return true;}
+}
+$("openConfig").onclick=openConfig;
+$("configClose").onclick=()=>$("configDialog").close();
+$("configDialog").addEventListener("close",()=>{configReadToken++;clearConfigPreview();$("openConfig").focus({preventScroll:true});syncAnimation();});
+$("profileSave").onclick=()=>{
+ const input=$("profileEmail"),v=input.value.trim();
+ if(v&&!validEmail(v)){configStatus(t("Enter a valid email address or leave it blank.","Digite um e-mail válido ou deixe em branco."));input.focus();return;}
+ try{
+  writeStudioValue(profileKey,v);$("exportEmail").checked=false;$("exportEmail").disabled=!v;
+  configStatus(v?t("Email saved on this device.","E-mail salvo neste dispositivo."):t("Email cleared on this device.","E-mail removido deste dispositivo."));
+ }catch{configStatus(t("This browser could not save the profile.","O navegador não conseguiu salvar o perfil."));}
+};
+$("configExport").onclick=()=>{
+ try{downloadConfig($("exportEmail").checked);configStatus(t("Configuration downloaded.","Configuração baixada."));}
+ catch{configStatus(t("Could not export settings from this browser.","Não foi possível exportar as configurações deste navegador."));}
+};
+$("configFile").onchange=async()=>{
+ const token=++configReadToken,file=$("configFile").files?.[0];clearConfigPreview();configStatus("");
+ if(!file)return;
+ try{
+  if(!/\.json$/i.test(file.name)||file.size>configLimit||file.size===0)throw Error();
+  const config=parseConfig(JSON.parse(await file.text()));
+  if(token!==configReadToken||!$("configDialog").open)return;
+  const epoch=localStorage.getItem(resetEpochKey),before=configSnapshot(),historyStamp=configHistoryStamp();
+  if(epoch!==resetEpoch||epoch?.startsWith("pending:")||storageReadFailure||blockInvalid||
+   (before[KEY2]!==null&&before[KEY2]!==JSON.stringify(plan))||before[blockKey]!==blockStored){
+   configStatus(t("Saved data changed. Reload before choosing a configuration.","Os dados salvos mudaram. Recarregue antes de escolher uma configuração."));return;
+  }
+  if(importConflict(config,historyStamp)){configStatus(t("This file conflicts with saved workout history. No changes were made.","Este arquivo entra em conflito com o histórico salvo. Nada foi alterado."));return;}
+  configPreview={data:config,epoch,before,historyStamp};renderConfigPreview(configPreview);
+  $("configPreviewHeading").focus({preventScroll:true});
+ }catch{if(token===configReadToken)configStatus(t("Invalid or unsupported Studio Motion JSON file. No changes were made.","Arquivo JSON do Studio Motion inválido ou incompatível. Nada foi alterado."));}
+};
+$("configConfirm").onchange=()=>{$("configApply").disabled=!configPreview||!$("configConfirm").checked||configBusy;};
+$("configApply").onclick=async()=>{
+ if(configBusy||!configPreview||!$("configConfirm").checked)return;
+ configBusy=true;$("configApply").disabled=true;
+ let outcome="unavailable";const staged=configPreview;
+ try{
+  outcome=await useConfigLock(()=>$("configDialog").open&&$("configConfirm").checked&&configPreview===staged?performConfigImport(staged):"cancelled");
+ }catch{}
+ finally{configBusy=false;}
+ if(outcome==="ok"){location.reload();return;}
+ if(outcome==="cancelled")return;
+ if(outcome==="interrupted")$("configDialog").close();
+ drawResetInterrupted();clearConfigPreview();
+ configStatus(outcome==="interrupted"
+  ?t("Import was interrupted. Use Recover previous configuration to restore your prior data.","A importação foi interrompida. Use Recuperar configuração anterior para restaurar os dados anteriores.")
+  :outcome==="stale"?t("Saved data changed. Reopen the file to see the current preview.","Os dados salvos mudaram. Abra o arquivo novamente para ver a prévia atual.")
+  :t("Import could not be applied safely. No configuration was replaced.","Não foi possível aplicar a importação com segurança. Nenhuma configuração foi substituída."));
+};
+$("recoverConfig").onclick=async()=>{
+ try{
+  const outcome=await useConfigLock(()=>recoverConfigJournal()?"ok":"failed");
+  if(outcome==="ok"){location.reload();return;}
+ }catch{}
+ $("recoverConfigFeedback").textContent=t("Recovery did not complete. Close other Studio Motion tabs and try again.","A recuperação não terminou. Feche outras abas do Studio Motion e tente de novo.");
+};
+
 $("resetApp").onclick=openResetDialog;
 $("finishReset").onclick=openResetDialog;
 $("resetPhrase").oninput=()=>{$("confirmReset").disabled=resetBusy||!resetMatches();$("resetFailure").hidden=true;};
@@ -2947,7 +3244,7 @@ function drawAnnouncements(){
 if(announcements[0]&&!seenUpdates.includes(announcements[0].id)){
  $("noticeTitle").textContent=t(announcements[0].title);$("launchNotice").hidden=false;$("menuUnread").hidden=false;
 }
-captureStaticLanguage();applyStaticLanguage();localizedFilters();drawAnnouncements();
+captureStaticLanguage();applyStaticLanguage();localizedFilters();restorePlannerSettings();watchPlannerSettings();drawAnnouncements();
 $("language").onchange=event=>{
  locale=event.target.value==="pt-BR"?"pt-BR":"en";
  try{writeStudioValue(languageKey,locale);}catch{languageWritable=false;}
