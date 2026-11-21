@@ -53,6 +53,9 @@
 #resetAppDialog button,#resetPhrase,#resetApp{min-block-size:44px}
 #resetAppDialog .buttons{flex-wrap:wrap}
  .train-heading-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 8px}.train-heading-meta>*{min-width:0;max-width:100%}#weekSummaryOpen,#weekSummaryClose{min-height:44px;white-space:normal;overflow-wrap:anywhere}#weekSummaryOpen{font-size:.78rem}#trainDayGroups{margin:.3rem 0 0;overflow-wrap:anywhere}#weekSummary{width:min(calc(100% - 20px),560px);max-width:calc(100% - 20px);max-height:calc(100dvh - 20px);color:var(--txt);margin:auto;overscroll-behavior:contain}#weekSummary::backdrop{background:#060a0bc9}#weekSummaryHeading,#weekSummaryGroups{overflow-wrap:anywhere}#weekSummaryList{margin:.5rem 0 0;padding:0;display:grid;gap:.3rem;list-style:none}#weekSummaryList button{display:grid;gap:2px;min-width:0;width:100%;min-height:44px;text-align:start;white-space:normal;overflow-wrap:anywhere}#weekSummaryList .summary-date{color:var(--muted);font-size:.73rem}#weekSummaryList small{color:var(--muted)}#weekSummaryList [aria-current="date"]{border-color:var(--mint)}@media print{#weekSummaryOpen,#weekSummary{display:none!important}}
+#weekSummaryList .summary-with-map{grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
+.summary-copy{display:grid;gap:2px;min-width:0}
+.summary-map{display:block;inline-size:clamp(72px,18vw,88px);max-inline-size:100%;block-size:auto;flex:none}
 </style></head>
 <body><main class="app">
 <div id="resetInterrupted" class="guide" hidden>
@@ -60,7 +63,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v21</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v22</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -125,6 +128,8 @@
 "use strict";
 
 const PT={
+ "Muscle maps in Week Summary":"Mapas musculares no resumo da semana",
+ "See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements.":"Veja os principais músculos de cada treino salvo. Os mapas funcionam offline e consideram as substituições de exercícios.",
  "Local data":"Dados locais",
  "Reset only Studio Motion data saved in this browser.":"Redefina apenas os dados do Studio Motion salvos neste navegador.",
  "Reset app":"Redefinir aplicativo",
@@ -1349,6 +1354,7 @@ function refreshDates(){
  const wasToday=day===today;
  lastLocalDate=date;today=activeDay;
  setDay(wasToday?today:day);
+ if($("weekSummary").open)renderWeekSummary();
  scheduleMidnight();
  return true;
 }
@@ -2012,24 +2018,39 @@ function refreshTrainingGroups(){
  $("trainDayGroups").textContent=dayGroup.length?t("Muscle groups")+": "+groupLabels(dayGroup):"";
 }
 function exerciseTotal(n){return n+" "+plural(n,t("exercise","exercício"),t("exercises","exercícios"));}
-function showWeekSummary(){
- refreshDates();
- const overview=$("weekSummary"),rows=plan.days.map((w,i)=>{
-  const date=dateForDay(i);
-  return {w,date,groups:workoutGroups(w,date),count:effectiveRows(w,date).length};
+function summaryRegions(exercises){
+ const selected=new Set(exercises.flatMap(ex=>forTarget(ex)[0]));
+ return Object.keys(regions).filter(region=>selected.has(region));
+}
+function summaryMap(primary){
+ if(!primary.length)return "";
+ return '<svg class="summary-map" viewBox="0 0 125 128" aria-hidden="true" focusable="false">'+anatomySVG([primary,[]])+'</svg>';
+}
+function renderWeekSummary(){
+ const list=$("weekSummaryList"),focused=document.activeElement.closest("[data-summary-day]")?.dataset.summaryDay;
+ const rows=plan.days.map((w,i)=>{
+  const date=dateForDay(i),exercises=effectiveRows(w,date).map(row=>byId(row.exercise)).filter(Boolean);
+  return {w,date,groups:workoutGroups(w,date),count:exercises.length,primary:w.rest?[]:summaryRegions(exercises)};
  });
  const total=rows.filter(x=>x.count>0).length,allGroups=new Set(rows.flatMap(x=>x.groups));
  $("weekSummaryTotals").textContent=total+t(" of 7 days with exercises"," de 7 dias com exercícios");
  const caption=$("weekSummaryGroups");
  caption.textContent=allGroups.size?t("Muscle groups")+": "+groupLabels([...groups,"Triceps"].filter(g=>allGroups.has(g))):"";
  caption.hidden=!allGroups.size;
- $("weekSummaryList").innerHTML=rows.map(({w,date,groups:dayGroups,count},i)=>{
+ list.innerHTML=rows.map(({w,date,groups:dayGroups,count,primary},i)=>{
+  const map=summaryMap(primary),mapId="summary-map-description-"+i;
   const title=displayTitle(w.title.trim())||t(w.rest?"Rest day":count?"Workout":"No workout scheduled");
   const details=[count?exerciseTotal(count):"",groupLabels(dayGroups)].filter(Boolean).join(" · ");
-  return '<li><button type="button" data-summary-day="'+i+'" '+(i===today?'aria-current="date"':'')+'>'+
-   '<span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
-   '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</button></li>';
+  return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today?'aria-current="date"':'')+'>'+
+   '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
+   '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</span>'+map+'</button>'+(map?'<span id="'+mapId+'" hidden>'+esc(t("Main areas: ","Áreas principais: ")+namesOf(primary))+'</span>':'')+'</li>';
  }).join("");
+ if(focused!==undefined)list.querySelector('[data-summary-day="'+focused+'"]')?.focus({preventScroll:true});
+}
+function showWeekSummary(){
+ refreshDates();
+ const overview=$("weekSummary");
+ renderWeekSummary();
  if(!overview.open){overview.showModal();$("weekSummaryHeading").focus({preventScroll:true});syncAnimation();}
 }
 $("weekSummaryOpen").onclick=showWeekSummary;
@@ -2041,7 +2062,9 @@ $("weekSummary").onclose=()=>{
 };
 $("weekSummaryList").onclick=event=>{
  const button=event.target.closest("[data-summary-day]");if(!button)return;
- $("weekSummary").close();setDay(+button.dataset.summaryDay);$("trainTitle").focus();
+ const index=+button.dataset.summaryDay;
+ if(button.dataset.summaryDate!==dateForDay(index)){if(!refreshDates())renderWeekSummary();return;}
+ $("weekSummary").close();setDay(index);$("trainTitle").focus();
 };
 function nav(){
  const x=current(),items=x.items;
@@ -2154,6 +2177,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"week-muscle-maps-v22",date:"2026-11-21",title:"Muscle maps in Week Summary",body:"See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements."},
  {id:"overview-reset-v21",date:"2026-11-21",title:"Weekly overview and local reset",body:"See saved workouts and muscle groups for the week. A protected reset is available under Local data in Menu."},
  {id:"triceps-and-sunday-v20",date:"2026-11-21",title:"Triceps in the planner and one recovery day",body:"Find direct triceps exercises and plan a lighter Saturday plus one recovery day. Saved workouts are unchanged."},
  {id:"form-tips-v19",date:"2026-11-21",title:"Short demos in form tips",body:"See an image or reach the verified source without opening a separate exercise guide."},
