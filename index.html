@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v14 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v15 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -16,10 +16,11 @@
 .brandmark{width:30px;height:30px}.masthead .brand{white-space:nowrap}.masthead #aboutToggle{min-height:44px;min-width:44px;font-size:1rem}.mast-actions{flex-wrap:nowrap}
 #studioAbout{margin-bottom:10px}#aboutClose,#copyUpdates,.launch-notice button{min-height:44px}#studioAbout a{color:var(--mint)}#studioAbout details summary{cursor:pointer;min-height:44px;padding:8px 0;font-size:.86rem}#updates{border-top:1px solid var(--line);margin-top:4px;padding-top:8px;scroll-margin-top:10px}#updateHistory{margin:0 0 8px;padding-left:20px;font-size:.84rem}#updateHistory time{font-size:.75rem;color:var(--muted)}.launch-notice{display:flex;align-items:center;gap:6px;margin:0 0 8px;padding:0 2px;border-bottom:1px solid var(--line);font-size:.76rem;color:var(--muted)}.launch-notice span{flex:1;line-height:1.25}.launch-notice button{font-size:.75rem}.launch-notice #noticeDismiss{min-width:44px}
 @media(max-width:395px){.masthead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px}.mast-actions{display:contents}.masthead .brand{grid-column:1;grid-row:1}.masthead #aboutToggle{grid-column:2;grid-row:1;justify-self:end}.masthead #weekGenerate{grid-column:1;grid-row:2;justify-self:end}.masthead #modeSwitch{grid-column:2;grid-row:2}.masthead #weekGenerate,.masthead #modeSwitch{min-width:113px}}
+.workout-progress{display:block;width:100%;height:.55rem;accent-color:var(--mint);margin:0 0 8px}.workout-progress[hidden],.workout-dose[hidden],.repeat-dose[hidden]{display:none}.workout-dose{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin:8px 0}.workout-dose>div{min-width:0;border-radius:8px;background:var(--inner);border:1px solid var(--line);padding:5px;text-align:center}.workout-dose dt{font-size:.67rem;color:var(--muted)}.workout-dose dd{margin:0;font-size:.84rem;font-weight:700;overflow-wrap:anywhere}.repeat-dose{display:flex;min-height:44px;align-items:center;gap:8px;color:var(--muted);font-size:.82rem}.repeat-dose input{width:21px;height:21px;accent-color:var(--mint)}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v14</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v15</small></span>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button><button type="button" id="aboutToggle" aria-label="About and updates" aria-controls="studioAbout" aria-expanded="false"><span aria-hidden="true">☰</span></button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -34,7 +35,7 @@
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
   <header class="train-heading"><p id="trainDay" class="kicker"></p><h1 id="trainTitle"></h1></header>
   <div id="trainEmpty" class="empty" hidden></div>
-  <p id="swapResult" class="swap-result" role="status" hidden></p><p class="train-progress" id="trainProgress" role="status" hidden></p>
+  <p id="swapResult" class="swap-result" role="status" hidden></p><p class="train-progress" id="trainProgress" role="status" hidden></p><progress class="workout-progress" id="trainBar" aria-label="Workout sets completed" value="0" max="1" hidden></progress>
   <ol id="trainList" class="train-list"></ol>
   <div class="buttons no-print" id="setActions" hidden><button id="clearSets" type="button">Clear all sets</button><button id="undoSets" type="button" hidden>Undo clear</button></div>
 </section>
@@ -58,10 +59,10 @@
 <details class="panel library" id="libraryPanel">
   <summary id="libheading">Exercise library</summary>
   <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench exercises</option><option value="adjustable">Incline bench exercises</option><option value="none">No bench needed</option></select></div><div id="muscleOverview" hidden></div><button type="button" class="selection-link">Selected exercise &amp; add</button><div class="choices" id="choices"></div>
-<div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><button id="add" class="primary">Add to workout</button>
+<div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><label class="repeat-dose" id="repeatDoseOption" hidden><input id="repeatDose" type="checkbox"> Reuse last exercise’s sets, reps and rest</label><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
-<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>No exact demonstration video verified for this exercise.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. The linked guide opens a separate site and needs internet.</p></dialog></main>
+<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>No exact demonstration video verified for this exercise.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. The linked guide opens a separate site and needs internet.</p></dialog></main>
 <script>
 "use strict";
 const E=[
@@ -76,7 +77,7 @@ const E=[
 {id:"calf",n:"Standing calf raise",g:"Lower body",m:"Calves",c:"Place the balls of your feet on the platform. Rise through the ankles without bouncing.",f:"calf",p:[190,144,191,78,191,50,214,100,220,78,185,178,184,220],q:[190,132,191,66,191,38,214,88,220,66,185,166,187,208],d:[184,220,187,208]},
 {id:"abduct",n:"Hip abduction",g:"Lower body",m:"Outer hips · glutes",c:"Keep your hips and back on the seat. Open against the pads and return under control.",f:"front",p:[190,167,190,106,190,74,166,131,169,153,171,193,169,223],q:[190,167,190,106,190,74,166,131,169,153,136,184,125,215],d:[171,193,136,184],mirror:true}
 ];
-const groups=["Chest","Back","Shoulders","Arms","Quads","Hamstrings","Glutes","Calves","Core"],equipments=["Machine","Cable","Dumbbell","Barbell","Bodyweight"];
+const groups=["Chest","Back","Shoulders","Arms","Quads","Hamstrings","Glutes","Calves","Core"],equipments=["Machine","Cable","Dumbbell","Barbell","Bodyweight","Specialty"];
 const byId=x=>E.find(e=>e.id===x);
 for(const [i,g] of ["Chest","Back","Back","Shoulders","Chest","Quads","Quads","Hamstrings","Calves","Glutes"].entries()){E[i].g=g;E[i].eq=i===2?"Cable":"Machine"}
 const poses={
@@ -226,18 +227,83 @@ customMove("db-shrug","Dumbbell shrug","Back","Dumbbell","shrug","Upper trapeziu
 rig("db-incline","inclinebench",byId("db-incline").p,byId("db-incline").q);
 for(const id of ["db-bench","bb-bench","db-row","bb-thrust"])byId(id).bench="flat";
 byId("db-incline").bench="adjustable";
+// Manual workout variants: keep existing automatic training selection unchanged.
+const manualVariants=[
+ ["db-incline-fly-30","30° incline dumbbell fly","Chest","Dumbbell","fly","Chest · front shoulders","Set the bench to about 30°. Keep a soft elbow bend as you open the weights in an arc, then bring them back above your chest.","inclinefly",
+ [190,158,190,105,190,74,151,119,113,119,168,179,157,220],[190,158,190,105,190,74,171,103,182,79,168,179,157,220],"adjustable",true],
+ ["db-seated-overhead-triceps","Seated overhead dumbbell triceps extension","Arms","Dumbbell","overhead extension","Triceps","Sit with feet planted. Hold one dumbbell overhead in both hands; bend your elbows to lower it behind your head, then extend without arching.","tricepsseat",
+ [176,171,176,106,177,74,186,56,154,81,215,174,217,221],[176,171,176,106,177,74,186,56,189,26,215,174,217,221],"flat"],
+ ["cable-pressdown-bar","Straight-bar cable triceps pressdown","Arms","Cable","pushdown","Triceps","Use a straight bar on a high pulley with an overhand grip. Keep elbows next to your sides as you lower the bar.","pressdown",
+ [186,154,189,93,187,61,205,127,239,113,188,189,184,222],[186,154,189,93,187,61,205,127,214,164,188,189,184,222]],
+ ["cable-pressdown-rope","Rope cable triceps pressdown","Arms","Cable","pushdown","Triceps","Use a two-ended rope on a high pulley. Keep elbows close and let the rope ends separate as you extend.","pressdown",
+ [186,154,189,93,187,61,205,127,239,113,188,189,184,222],[186,154,189,93,187,61,205,127,214,164,188,189,184,222]],
+ ["machine-hack-squat-45","45° hack squat","Quads","Machine","squat","Quads · glutes","Keep your upper back against the moving pad and under the shoulder pads. Plant both feet on the stationary platform and track knees in line with toes.","hackrail",
+ [196,138,156,91,142,65,166,113,157,92,220,172,236,210],[219,169,179,122,165,96,189,144,180,123,265,173,236,210]],
+ ["wrist-roller-cord","Wrist roller with cord and bar","Arms","Specialty","wrist roller","Forearms","Hold the bar steady in front of you. Alternate wrist turns to wind the cord and raise the hanging resistance; unwind it under control.","floor",
+ [175,150,175,91,175,60,194,107,236,105,177,186,176,221],[175,150,175,91,175,60,194,107,237,101,177,186,176,221]]
+];
+for(const [id,n,g,eq,style,m,c,frame,p,q,bench,mirror] of manualVariants){
+ customMove(id,n,g,eq,style,m,c,p,q);
+ Object.assign(byId(id),{f:frame,bench,mirror:!!mirror,manualOnly:true});
+}
 const aliases={
+ "db-incline-fly-30":"crucifixo inclinado 30 graus halteres fly inclinado",
+ "db-seated-overhead-triceps":"tríceps francês sentado halter francês sentado french press extensão acima cabeça",
+ "cable-pressdown-bar":"tríceps com barra reta na polia puxador barra straight bar pushdown",
+ "cable-pressdown-rope":"tríceps com corda na polia puxador corda rope pushdown",
+ "machine-hack-squat-45":"agachamento hack 45 máquina hack squat",
+ "wrist-roller-cord":"rosca punho na corda e bastão rolo de punho rolo antebraço enrolador corda barra punho wrist roller",
  "db-bench":"supino reto com halteres supino com halter chest press",
  "db-incline":"supino inclinado com halteres supino inclinado incline bench upper chest",
- "bb-bench":"supino reto com barra supino com barra bench press",
+ "bb-bench":"supino reto plano com barra supino com barra bench press",
+ "fly":"pec peck deck fly voador crucifixo máquina",
+ "machine-seated-calf":"elevação de gêmeos sentado panturrilha sentado",
  "db-row":"remada unilateral com halter remada com halteres banco",
  "db-shrug":"encolhimento trapézio trapezius traps shoulder shrug encolhimento com halteres",
  "machine-row":"remada trapézio costas",
  "machine-rear":"trapézio parte superior das costas reverse fly",
  "bb-thrust":"elevação pélvica banco"
 };
+// Exact, manually selected variants. Keep specialized equipment out of Auto Plan.
+const libraryVariants=[
+ ["hip-adduction","Seated hip adduction","Glutes","Machine","front","Inner thighs","Sit back with the pads against the inside of your knees. Draw your thighs together without lifting your hips.",
+  [190,167,190,106,190,74,166,131,169,153,134,193,126,221],[190,167,190,106,190,74,166,131,169,153,174,193,170,221],"cadeira adutora adução de quadril adutor parte interna coxa",true],
+ ["legpress-wide","Wide-stance leg press","Quads","Machine","sled","Quads · glutes · inner thighs","Set both feet wider than shoulder width, toes angled comfortably out. Keep your back supported and knees tracking over your toes.",
+  byId("legpress").p,byId("legpress").q,"leg press 45 aberto pés afastados base aberta"],
+ ["db-shoulder-seated","Seated dumbbell shoulder press","Shoulders","Dumbbell","shoulderbench","Shoulders · triceps","Sit on a stable upright bench with feet planted. Press the dumbbells overhead without arching your lower back.",
+  [190,170,190,106,190,73,146,114,143,86,160,177,158,222],[190,170,190,106,190,73,160,79,160,43,160,177,158,222],"desenvolvimento sentado com halteres ombros banco",true,"adjustable"],
+ ["cable-upright-row","Cable upright row","Shoulders","Cable","cablelow","Side shoulders · upper trapezius","Face a low pulley holding the bar with palms down. Lift toward your upper torso only within a comfortable range, then return slowly.",
+  [174,150,174,93,173,61,191,130,201,162,178,190,181,223],[174,150,174,93,173,61,204,83,192,117,178,190,181,223],"remada alta na polia cabo barra trapézio",false,null,[112,211]],
+ ["wall-ball-cuff","Wall-ball shoulder circles","Shoulders","Bodyweight","ballwall","Rotator cuff · shoulders","Place a small ball against the wall with one hand at a comfortable height. Keep gentle pressure and trace small, slow circles without hiking the shoulder.",
+  [157,152,158,94,158,62,207,103,256,105,160,189,162,223],[157,152,158,94,158,62,207,111,256,105,160,189,162,223],"manguito rotador bola na parede bolinha círculos estabilização wall ball rotator cuff",false,null,null,true],
+ ["cable-straightarm","Straight-arm cable pulldown (short bar)","Back","Cable","cablehigh","Lats · triceps","Face the high pulley with a small hip hinge. Keep your elbows softly bent but still, and sweep the short bar toward your thighs.",
+  [155,150,173,92,180,63,202,100,231,113,166,188,168,222],[155,150,173,92,180,63,176,129,179,165,166,188,168,222],"pullover em pé com barra curta pull down pulldown polia alta braços estendidos puxada braços retos",false,null,[249,38]],
+ ["pulldown-wide-front","Wide-grip front lat pulldown","Back","Machine","widetower","Lats · upper back · biceps","Sit beneath the bar with thighs secured and hands wider than shoulders. Pull to the front of your upper chest, not behind the neck.",
+  [190,176,190,101,190,71,153,70,122,49,163,178,158,222],[190,176,190,101,190,71,150,128,122,92,163,178,158,222],"puxada frontal frente com pulley pegada aberta barra larga",true],
+ ["concentration-curl","Dumbbell concentration curl","Arms","Dumbbell","concentration","Biceps","Sit with feet planted and brace your upper arm against the inside of your thigh. Curl without lifting the elbow off the thigh.",
+  [147,168,176,108,189,79,195,160,193,199,199,170,207,224],[147,168,176,108,189,79,195,160,182,125,199,170,207,224],"rosca concentrada unilateral halter banco bíceps",false,"flat",null,true],
+ ["bb-wrist-curl","Seated barbell wrist curl (palms up)","Arms","Barbell","wristbench","Forearm flexors","Sit and support your forearms on your thighs, palms up, with wrists beyond your knees. Curl through the wrists only, then lower under control.",
+  [143,169,153,106,155,73,172,155,243,177,208,182,206,223],[143,169,153,106,155,73,172,155,243,157,208,182,206,223],"rosca flexão punho barra palmas para cima supinada antebraço sentado",false,"flat"],
+ ["cable-reverse-curl","Standing reverse cable curl","Arms","Cable","cablelow","Forearms · elbow flexors","Hold the low-pulley bar with palms down. Keep wrists neutral and upper arms by your sides as you curl.",
+  [175,154,172,92,171,61,178,130,195,161,178,189,179,222],[175,154,172,92,171,61,178,130,197,101,178,189,179,222],"rosca inversa cabo polia baixa pegada pronada antebraço",false,null,[112,211]],
+];
+for(const [id,n,g,eq,f,m,c,p,q,alias,mirror,bench,anchor,side] of libraryVariants){
+ E.push({id,n,g,eq,f,m,c,p,q,d:id==="legpress-wide"?byId("legpress").d:[p[8],p[9],q[8],q[9]],mirror,bench,anchor,side,manualOnly:true,extra:!["front","sled","widetower"].includes(f)});
+ aliases[id]=alias;
+}
+rig("db-lateral","floor",[190,150,190,95,190,65,172,128,168,163,175,187,174,222],[190,150,190,95,190,65,151,103,111,100,175,187,174,222]);
+byId("db-lateral").mirror=true;
+Object.assign(aliases,{
+ extension:"cadeira extensora extensão de joelho",
+ curl:"cadeira flexora flexão de joelho sentado",
+ abduct:"cadeira abdutora abdução de quadril",
+ "db-lateral":"elevação lateral em pé com halteres ombros",
+ "machine-rear":aliases["machine-rear"]+" crucifixo invertido voador inverso peck deck dorsal invertido",
+ "machine-biceps":"rosca scott máquina rosca bíceps banco scott machine preacher curl",
+ "bb-curl":"rosca direta em pé barra bíceps standing barbell curl"
+});
 const normalized=x=>x.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
-const setup=e=>e.bench==="adjustable"?"Adjustable incline bench required":e.id==="bb-bench"?"Flat bench and supported rack required":e.bench==="flat"?"Flat bench required":"";
+const setup=e=>e.id==="db-shoulder-seated"?"Upright bench required":e.bench==="adjustable"?"Adjustable incline bench required":e.id==="bb-bench"?"Flat bench and supported rack required":e.bench==="flat"?"Flat bench required":"";
 const benchFits=(e,available)=>!e.bench||available==="adjustable"||e.bench==="flat"&&available==="flat";
 const mobility=[
  ["mob-ankle","Ankle rock","Calves","ankle mobility","Ankles · calves","From a staggered stance, move the front knee over the toes and keep the front heel down.",
@@ -297,6 +363,15 @@ const contactCopy={
 
 const $=x=>document.getElementById(x);
 const frames={
+ shoulderbench:'<path d="M66 228H318M154 173H226M177 175V228M205 175V228"/><path d="M177 101H203V163M154 173H226" stroke-width="11"/>',
+ ballwall:'<path d="M66 228H318M270 49V228M278 49V228"/>',
+ widetower:'<path d="M66 228H318M117 228V40H263V228M154 175H226M190 176V228"/><path d="M152 166H227M158 175H221" stroke-width="9"/>',
+ concentration:'<path d="M66 228H318M123 175H177M143 176V228"/><path d="M125 174H173" stroke-width="10"/>',
+ wristbench:'<path d="M66 228H318M112 176H174M138 177V228"/><path d="M116 176H169" stroke-width="10"/>',
+ inclinefly:'<path d="M62 228H318M160 226L176 153M220 226L204 153M172 156H208M176 150L165 91M204 150L215 91M165 91H215" stroke-width="7"/><path d="M169 163H211" stroke-width="11"/>',
+ tricepsseat:'<path d="M62 228H318M141 175H203M158 175V228M190 175V228" stroke-width="7"/>',
+ pressdown:'<path d="M62 228H318M285 228V45H246M309 228V45H285M267 216H311" stroke-width="6"/>',
+ hackrail:'<path d="M64 228H318M105 58L259 212M123 54L281 212M224 225L300 173M286 184L307 206" stroke-width="7"/>',
  flatpress:'<path d="M55 228H325M114 153H243M137 154V228M225 154V228" stroke-width="7"/>',
  inclinebench:'<path d="M55 228H325M112 111L163 158L203 151M145 145V229M200 155V229" stroke-width="7"/>',
  wall:'<path d="M63 224H308M151 224V35" stroke="#537078"/>',
@@ -353,6 +428,10 @@ const targets={};
 function target(ids,focus,assist=""){for(const id of ids.split(" "))targets[id]=[focus.split(" "),assist?assist.split(" "):[]];}
 target("press cable-chest db-bench bb-bench bw-pushup","pec","tri delt");
 target("fly cable-fly","pec","delt");
+target("db-incline-fly-30","pec","delt");
+target("db-seated-overhead-triceps cable-pressdown-bar cable-pressdown-rope","tri");
+target("machine-hack-squat-45","quad","glute");
+target("wrist-roller-cord","grip");
 target("db-incline","pec","tri delt");
 target("db-shrug","trap");
 target("shoulder db-shoulder bb-press bw-pike","delt","tri");
@@ -368,6 +447,16 @@ target("extension","quad");
 target("curl","ham");
 target("calf machine-seated-calf db-calf db-seated-calf bb-calf bw-calf","calf");
 target("abduct","hip");
+target("hip-adduction","inner");
+target("legpress-wide","quad glute","inner");
+target("db-shoulder-seated","delt","tri");
+target("cable-upright-row","delt trap");
+target("wall-ball-cuff","rear","delt");
+target("cable-straightarm","lat","tri");
+target("pulldown-wide-front","lat","bi upper");
+target("concentration-curl","bi");
+target("bb-wrist-curl","grip");
+target("cable-reverse-curl","grip","bi");
 target("machine-hip bb-thrust bw-bridge cable-kick","glute","ham");
 target("cable-pull db-rdl bb-rdl bw-hinge","ham glute","spine");
 target("machine-rotation cable-chop cable-lift cable-pallof","side","abs");
@@ -428,10 +517,13 @@ const line=(x1,y1,x2,y2,col,w=4)=>'<path d="M'+x1+' '+y1+'L'+x2+' '+y2+'" stroke
 const circle=(x,y,r,fill)=>'<circle cx="'+x+'" cy="'+y+'" r="'+r+'" fill="'+fill+'"/>';
 function draw(f,t,key){
  const p=f.p.map((v,i)=>Math.round(v+(f.q[i]-v)*t));
+ if(f.id==="wall-ball-cuff"){p[8]=255+Math.round(4*Math.cos(2*Math.PI*t));p[9]=105-Math.round(9*Math.sin(2*Math.PI*t));}
+
  const [hx,hy,sx,sy,bx,by,ex,ey,wx,wy,kx,ky,ax,ay]=p;
  const dx=f.d[0]+(f.d[2]-f.d[0])*t,dy=f.d[1]+(f.d[3]-f.d[1])*t;
  const limb=(a,b,c,d,e,g,col,w)=>line(a,b,c,d,col,w)+line(c,d,e,g,col,w-1)+circle(c,d,w/3,col);
  let mech='';
+ if(f.f==="widetower")mech=line(190,40,190,wy,"#8ad4d4",2)+line(110,wy,270,wy,"#cf98fc",6);
  if(f.f==="tower")mech=line(174,38,174,wy,"#85a4a7",2)+line(144,wy-4,211,wy-4,"#cf98fc",7);
  if(f.f==="row")mech=line(wx,wy,272,148,"#85a4a7",2)+line(wx-5,wy-5,wx+6,wy+5,"#cf98fc",7);
  if(f.f==="upright")mech=line(264,69,dx,dy,"#54737c",5)+line(dx-8,dy,dx+10,dy,"#cf98fc",7);
@@ -450,15 +542,20 @@ function draw(f,t,key){
  }
  if(f.id==="fly")mech=line(100,69,wx,wy,"#54737c",4)+line(280,69,380-wx,wy,"#54737c",4)+pad(wx,wy)+pad(380-wx,wy);
  if(f.id==="abduct")mech=pad(kx-7,ky)+pad(387-kx,ky);
+ if(f.id==="hip-adduction")mech=pad(kx+8,ky-3)+pad(372-kx,ky-3);
+ if(f.id==="legpress-wide")mech+='<rect x="278" y="151" width="64" height="65" rx="8" fill="#192b31" stroke="#54737c"/><path d="M289 199L300 174M331 199L320 174" stroke="#cf98fc" stroke-width="10"/>';
+ if(f.f==="ballwall")mech=circle(261,105-9*Math.sin(t*Math.PI*2),8,"#cf98fc")+'<path d="M253 88A18 18 0 0 1 253 122" fill="none" stroke="#f7da87" stroke-width="2" stroke-dasharray="3 3"/>';
  if(f.f==="calf")mech=line(165,sy+2,222,sy+2,"#cf98fc",7);
  if(f.extra){
    if(f.eq==="Dumbbell"||f.eq==="Barbell"){
     const width=f.eq==="Barbell"?18:9;
     const x=f.f==="calfbench"?kx-7:wx,y=f.f==="calfbench"?ky-8:wy;
-    mech=line(x-width,y,x+width,y,"#cf98fc",4)+line(x-width,y-7,x-width,y+7,"#cf98fc",5)+line(x+width,y-7,x+width,y+7,"#cf98fc",5);
+    const bell=cx=>line(cx-width,y,cx+width,y,"#cf98fc",4)+line(cx-width,y-7,cx-width,y+7,"#cf98fc",5)+line(cx+width,y-7,cx+width,y+7,"#cf98fc",5);
+    mech=bell(x)+(f.eq==="Dumbbell"&&f.mirror?bell(380-x):"");
    }else if(f.eq==="Cable"){
     const anchor=f.anchor|| (f.f==="cablehigh"?[249,38]:f.f==="cablelow"?[112,211]:f.f==="cableside"?[129,105]:[f.style==="kick"?85:292,["fly","rotation","reach"].includes(f.style)?106:f.style==="pulldown"||f.style==="pushdown"?52:218]);
     mech=cable(f.style==="kick"?ax:wx,f.style==="kick"?ay:wy,...anchor)+pad(f.style==="kick"?ax:wx,f.style==="kick"?ay:wy);
+    if(["cable-straightarm","cable-upright-row","cable-reverse-curl"].includes(f.id))mech+=line(wx-11,wy,wx+11,wy,"#cf98fc",5);
    }else if(f.eq==="Machine"){
     if(f.f==="assisted"){
      mech=line(281,ky+8,kx,ky+8,"#84a8ad",4)+line(kx-32,ky+8,kx+15,ky+8,"#cf98fc",9);
@@ -469,18 +566,40 @@ function draw(f,t,key){
     else mech=line(f.f==="chestrow"?253:257,f.f==="chestrow"?139:87,wx,wy,"#54737c",5)+pad(wx,wy);
    }
  }
+ if(f.f==="inclinefly"){
+  const bell=(x,y)=>line(x-8,y,x+8,y,"#cf98fc",4)+line(x-8,y-6,x-8,y+6,"#cf98fc",5)+line(x+8,y-6,x+8,y+6,"#cf98fc",5);
+  mech=bell(wx,wy)+bell(380-wx,wy);
+  contacts+=support(hx,hy+5);
+ }
+ if(f.f==="pressdown"){
+  if(f.id==="cable-pressdown-rope"){
+   const spread=7+10*t,joinY=wy-18;
+   mech=cable(wx,joinY,246,45)+line(wx,joinY,wx-spread,wy,"#cf98fc",4)+line(wx,joinY,wx+spread,wy,"#cf98fc",4)+pad(wx-spread,wy)+pad(wx+spread,wy);
+  }else mech=cable(wx,wy,246,45)+line(wx-16,wy,wx+16,wy,"#cf98fc",5)+pad(wx-16,wy)+pad(wx+16,wy);
+ }
+ if(f.f==="hackrail"){
+  mech=line(sx-7,sy-5,hx-9,hy+6,"#84a8ad",10)+line(sx-11,sy-1,sx+12,sy-13,"#cf98fc",10)+circle(hx-17,hy+6,10,"#cf98fc");
+  contacts+=support(ax,ay);
+ }
+ if(f.id==="wrist-roller-cord"){
+  const endY=191-47*t,angle=Math.PI*1.75*t;
+  mech=line(wx,wy+2,wx,endY,"#8ad4d4",2)+line(wx-17,wy,wx+17,wy,"#cf98fc",6)+
+   circle(wx-17,wy,5,"#cf98fc")+circle(wx+17,wy,5,"#cf98fc")+circle(wx+17+3*Math.cos(angle),wy+3*Math.sin(angle),1.7,"#c7a868")+
+   '<rect x="'+(wx-8)+'" y="'+endY+'" width="16" height="12" rx="3" fill="#cf98fc"/>';
+ }
  if(f.id==="bw-plank")contacts+=support(ex,ey)+support(ax,ay);
  if(f.f==="cableside")contacts+=line(129,105,wx,wy,"#8ad4d4",2)+pad(wx,wy);
+ if(f.f==="wristbench")contacts+=support(206,166);
  if(f.f==="sled")contacts+=support(ax,ay);
  if(["upright","lever","seatabs","turn"].includes(f.f))contacts+=support(hx,hy);
  if(f.f==="chestrow")contacts+=support(sx+10,sy+27);
- if(f.f==="preacher")contacts+=support(ex,ey);
+ if(["preacher","concentration"].includes(f.f))contacts+=support(ex,ey);
  if(["tower","row","chestrow","preacher"].includes(f.f))contacts+=support(ax,ay);
  if(["hipbench","bench","flatpress","inclinebench"].includes(f.f))contacts+=support(sx,sy+7);
  if(["calf","calfseat","calfbench"].includes(f.f))contacts+=support(f.f==="calf"?198:224,219);
  const movingPad=f.f==="lever"||f.f==="sled"||f.f==="calfseat";
  const pattern=f.style;
- const indices=f.id==="db-shrug"?[2,3]:movingPad||pattern==="kick"||f.id==="abduct"?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
+ const indices=f.id==="db-shrug"?[2,3]:movingPad||pattern==="kick"||["abduct","hip-adduction"].includes(f.id)?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
  const [mi,mj]=indices,from=[f.p[mi],f.p[mj]],to=[f.q[mi],f.q[mj]];
  const arrow=f.hold?"":Math.hypot(to[0]-from[0],to[1]-from[1])>16?
     '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#f7da87" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#'+key+'-guide-arrow)" fill="none" opacity=".88"/>':"";
@@ -494,7 +613,7 @@ function draw(f,t,key){
  const fixedLeg=planted?limb(hx-5,hy,...planted[0],...planted[1],"#497261",10):"";
  const color=skin;
  const sets=forTarget(f),poseHighlights=mapPose(f,p,sets);
- return '<title >'+f.n+' movement diagram</title><defs><marker id="'+key+'-guide-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path fill="#f7da87" d="M0 0l9 5-9 5z"/></marker><pattern id="'+key+'-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#'+key+'-grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+fixedArm+fixedLeg+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+limb(sx,sy,ex,ey,wx,wy,color,11)+(f.f==="calfseat"||f.f==="calfbench"?line(ax,ay,224,219,color,8):f.f==="calf"?line(ax,ay,198,219,color,8):line(ax,ay,ax+(f.id==="legpress"?10:13),ay+(f.id==="legpress"?11:1),color,8))+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>'+poseHighlights+contacts+arrow;
+ return '<title >'+f.n+' movement diagram</title><defs><marker id="'+key+'-guide-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path fill="#f7da87" d="M0 0l9 5-9 5z"/></marker><pattern id="'+key+'-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#213137" opacity=".65"/></pattern></defs><path fill="url(#'+key+'-grid)" d="M0 0h380v245H0z"/><g fill="none" stroke="#405c64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">'+frames[f.f]+(f.extra||f.f==="front"||f.f==="sled"?"":'<path d="M290 103V193" stroke="#344e55"/><rect x="282" y="'+(173-14*t)+'" width="17" height="22" rx="4" fill="#58717a"/>')+'</g><g stroke-linecap="round">'+mech+other+fixedArm+fixedLeg+line(hx,hy,sx,sy,color,19)+limb(hx,hy,kx,ky,ax,ay,color,13)+(f.f==="wristbench"?limb(sx,sy,ex,ey,225,165,color,11)+line(225,165,wx,wy,color,7):limb(sx,sy,ex,ey,wx,wy,color,11))+(f.f==="calfseat"||f.f==="calfbench"?line(ax,ay,224,219,color,8):f.f==="calf"?line(ax,ay,198,219,color,8):line(ax,ay,ax+(f.f==="sled"?10:13),ay+(f.f==="sled"?11:1),color,8))+line(sx,sy,bx,by+13,color,8)+circle(bx,by,13,color)+'</g>'+poseHighlights+contacts+arrow;
 }
 let artID=0,frameID=0,lastFrame=0;
 const artStates=new Map(),onscreen=new Set();
@@ -509,7 +628,7 @@ const artObserver=typeof IntersectionObserver==="function"?new IntersectionObser
 function artMarkup(e,small=false){
  const key="rig"+(++artID);
  try{
-  const caption=e.hold?"HOLD POSITION":"START";
+  const caption=e.hold?"HOLD POSITION":poseLabel(e,0);
   const image='<span class="stage rig" data-rig="'+e.id+'" data-key="'+key+'" data-small="'+Number(small)+'"><span class="stage-label" aria-hidden="true">'+caption+'</span><svg '+(small?'aria-hidden="true"':'role="img" aria-label="'+esc(e.n+" movement diagram. Focus: "+namesOf(forTarget(e)[0])+(forTarget(e)[1].length?". Supports: "+namesOf(forTarget(e)[1]):""))+'"')+' viewBox="0 0 '+(small?380:468)+' 245" '+(small?'':'data-wide')+'>'+ '<g data-live-rig>'+draw(e,e.hold?1:0,key)+'</g>'+(small?'':'<g transform="translate(374 88) scale(.71)">'+anatomySVG(forTarget(e))+'</g>')+'</svg></span>' ;
   return image+(small||e.hold?"":'<button type="button" class="motion-pose" hidden>End pose</button>');
  }catch{return '<div class="stage" role="img" aria-label="Diagram unavailable">Diagram unavailable · '+esc(e.n)+'</div>';}
@@ -528,11 +647,19 @@ function watchArt(root){
  }
  queueMotion();
 }
-function paint(node,state,t){
+const movementPhases={
+ "db-shoulder-seated":["SHOULDER HEIGHT","PRESS UP","LOWER"],
+ "db-lateral":["ARMS DOWN","RAISE OUT","LOWER"],
+ "cable-upright-row":["BAR LOW","LIFT BAR","LOWER"],
+ "db-incline-fly-30":["ARMS OPEN","BRING TOGETHER","OPEN"],
+ "machine-hack-squat-45":["TOP POSITION","LOWER SLED","STAND UP"]
+};
+function poseLabel(e,phase){const p=movementPhases[e.id];return p?p[phase]:["START","MOVE","RETURN"][phase];}
+function paint(node,state,t,phase=t>.5?1:0){
+ const label=poseLabel(state.e,phase);if(state.label.textContent!==label)state.label.textContent=label;
  if(Math.abs(state.t-t)<.012)return;
  try{
   state.svg.innerHTML=draw(state.e,t,state.key);state.t=t;
-  state.label.textContent=t<.06?"START":t>.94?"FINISH":"MOVEMENT";
   if(state.button)state.button.textContent=t>.5?"Start pose":"End pose";
  }catch{onscreen.delete(node);artObserver?.unobserve(node);artStates.delete(node);}
 }
@@ -550,7 +677,7 @@ function motion(now){
    if(!state.started)state.started=now;
    const cycle=((now-state.started)%4300)/4300;
    const t=cycle<.11?0:cycle<.48?(cycle-.11)/.37:cycle<.61?1:1-(cycle-.61)/.39;
-   paint(node,state,(1-Math.cos(t*Math.PI))/2);
+   paint(node,state,(1-Math.cos(t*Math.PI))/2,cycle<.11?0:cycle<.61?1:2);
   }
  }
  queueMotion();
@@ -709,7 +836,7 @@ function progressCount(status=setNotice){
  const rows=effectiveRows(),sets=rows.reduce((total,x)=>total+x.sets,0);
  const done=rows.reduce((total,x)=>total+marksFor(x).filter(n=>n<=x.sets).length,0);
  $("trainProgress").textContent=sets?done+" / "+sets+" sets · "+dateForDay(day)+status:"";
- $("trainProgress").hidden=!sets;
+ $("trainProgress").hidden=!sets;const bar=$("trainBar");bar.hidden=!sets;bar.max=sets||1;bar.value=done;
  $("setActions").hidden=!sets;
  $("clearSets").disabled=!rows.some(row=>marksFor(row).length);
  const undo=undoCompletion;
@@ -756,7 +883,7 @@ function renderTrainList(){
   }).join("");
   return '<li class="train-card" data-swap-row="'+i+'"><div class="row"><h2 class="exercise-label">'+esc(e.n)+'</h2><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">Alternate for '+esc(date)+'</p>':'')+
-    '<p class="train-dose">'+esc(dose(row)+(setup(e)?' · '+setup(e):''))+'</p><fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
+    '<dl class="workout-dose">'+workoutDose(row)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>Sets</legend>'+boxes+'</fieldset>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>Form tips</summary><p class="coach">'+esc(e.c)+'</p>'+
     (contactCopy[e.id]?'<p class="contact-cue">'+esc(contactCopy[e.id])+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+'</details></li>';
@@ -777,6 +904,10 @@ function save(x="Saved in this browser."){
  try{localStorage.setItem(KEY2,JSON.stringify(plan));say(x);}catch{say(x+" Browser storage unavailable. New edits stay in this tab.");}
 }
 const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
+function workoutDose(x){
+ const e=byId(x.exercise),reps=e.hold?x.seconds+" s":(x.repRange?x.repRange.join("–"):x.reps);
+ return [["Sets",x.sets],[e.hold?"Hold":e.side?"Reps / side":"Reps",reps],["Load",x.kg===null?"—":x.kg+" kg"],["Rest",x.rest+" s"]].map(([k,v])=>"<div><dt>"+k+"</dt><dd>"+esc(v)+"</dd></div>").join("");
+}
 function dose(x){const e=byId(x.exercise),unit=e.hold?x.seconds+" sec":(x.repRange?x.repRange.join("–"):x.reps)+" reps";return x.sets+" × "+unit+(e.side?" per side":"")+" · "+x.rest+" sec rest"+(x.kg===null?"":" · "+x.kg+" kg");}
 // Exact-match public YouTube demonstrations. No embed, prefetch, or external request until chosen.
 const videoGuides={
@@ -873,6 +1004,9 @@ function openGuide(id,trigger){
  const ref=guideSource(e);
  $("guideName").textContent=e.n;
  $("guideInfo").textContent=[e.eq,setup(e)].filter(Boolean).join(" · ");
+ const rowNode=trigger.closest("[data-swap-row]"),inTraining=rowNode?.closest("#trainList");
+ const row=rowNode?(inTraining?effectiveRows():current().items)[Number(rowNode.dataset.swapRow)]:null;
+ const guideDose=$("guideDose");guideDose.innerHTML=row?.exercise===id?workoutDose(row):"";guideDose.hidden=!guideDose.innerHTML;
  $("guideTargets").innerHTML=targetText(forTarget(e));
  $("guideInstructions").textContent=e.c;
  $("guideContact").textContent=contactCopy[e.id]||"";
@@ -898,6 +1032,10 @@ function replaceBtn(e){
  return '<button type="button" class="replace" aria-expanded="false" aria-label="Replace '+esc(e.n)+'">Replace</button>';
 }
 const typeOverrides={
+ "db-incline-fly-30":"chest fly","db-seated-overhead-triceps":"elbow extension","cable-pressdown-bar":"elbow extension","cable-pressdown-rope":"elbow extension","machine-hack-squat-45":"knee-dominant press",
+ "legpress-wide":"knee-dominant press","db-shoulder-seated":"vertical press","pulldown-wide-front":"vertical pull",
+ "hip-adduction":"hip adduction","cable-upright-row":"upright row","wall-ball-cuff":"shoulder stabilization",
+ "cable-straightarm":"shoulder extension","concentration-curl":"elbow flexion","bb-wrist-curl":"wrist flexion","cable-reverse-curl":"elbow flexion",
  press:"horizontal press","cable-chest":"horizontal press","db-bench":"horizontal press","bb-bench":"horizontal press","bw-pushup":"horizontal press","bw-close":"horizontal press",
  shoulder:"vertical press","db-shoulder":"vertical press","bb-press":"vertical press","bw-pike":"vertical press",
  pulldown:"vertical pull","cable-lat":"vertical pull","bw-pullup":"vertical pull","assist-pull":"vertical pull",
@@ -993,6 +1131,7 @@ const pattern={
 };
 const priorityEquipment=["Machine","Cable","Dumbbell","Bodyweight","Barbell"];
 const isolation=e=>/raise|curl|fly|kickback|crunch|pushdown|hold|abduction|extension|torso rotation|cable chop|cable lift/.test(e.n.toLowerCase())?1:0;
+const autoEquipment=equipments.filter(x=>x!=="Specialty");
 const equipmentNow=()=>[...$("trainingEquipment").querySelectorAll("input:checked")].map(x=>x.value);
 const fixtureKey=x=>x.items.map(i=>i.exercise).sort().join("|");
 const minutes=x=>Math.round((x.easy?3:8)+x.items.reduce((n,i)=>{
@@ -1003,7 +1142,7 @@ function shuffled(xs){
  xs=[...xs];for(let i=xs.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[xs[i],xs[j]]=[xs[j],xs[i]];}return xs;
 }
 function planDraft(equipment,focus,order,size,variant,offset=0,randomize=false){
- const preferred=E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired);
+ const preferred=E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&!e.manualOnly);
  const byGroup=new Map([...new Set(order)].map(g=>[g,preferred.filter(e=>e.g===g).sort((a,b)=>priorityEquipment.indexOf(a.eq)-priorityEquipment.indexOf(b.eq)||isolation(a)-isolation(b)||a.n.localeCompare(b.n))]));
  const used=new Set(),items=[],occurrence=new Map();
  for(const g of order){
@@ -1156,10 +1295,11 @@ function render(){
  $("archiveCopy").disabled=!plan.archive.length;
  $("archiveCount").textContent=plan.archive.length+" saved";
  $("add").disabled=rows.length>=70;
+ $("repeatDoseOption").hidden=!rows.length;
  renderTrainList();nav();
 }
 function setDay(index,focus=false){
- day=index;undoCompletion=null;setNotice="";tellSwap("");resetPreview();render();
+ day=index;$("repeatDose").checked=false;undoCompletion=null;setNotice="";tellSwap("");resetPreview();render();
  syncAnimation();
  if(focus)$("days").querySelector('[data-day="'+index+'"]')?.focus();
 }
@@ -1208,14 +1348,21 @@ $("add").onclick=()=>{
  if(current().items.length>=70)return;
  if(current().rest&&!confirm("Replace this rest day with a workout?"))return;
  current().rest=false;if(!current().title.trim()||current().title==="Rest day") current().title=DAYS[day]+" workout";
- current().items.push(make(selected.id));resetPreview();render();$("items").lastElementChild?.scrollIntoView({block:"nearest"});save(selected.n+" added.");
+ const next=make(selected.id),prev=current().items.at(-1);
+ if(prev&&$("repeatDose").checked){
+  next.sets=prev.sets;next.rest=prev.rest;
+  if(selected.hold&&byId(prev.exercise).hold)next.seconds=prev.seconds;
+  if(!selected.hold&&!byId(prev.exercise).hold){next.reps=prev.reps;if(prev.repRange)next.repRange=[...prev.repRange];}
+ }
+ current().items.push(next);resetPreview();render();$("items").lastElementChild?.scrollIntoView({block:"nearest"});save(selected.n+" added.");
 };
 $("print").onclick=()=>window.print();
-$("trainingEquipment").innerHTML=equipments.map(x=>'<label><input type="checkbox" value="'+x+'" '+(x==="Machine"||x==="Cable"?"checked":"")+'> '+x+"</label>").join("");
+$("trainingEquipment").innerHTML=autoEquipment.map(x=>'<label><input type="checkbox" value="'+x+'" '+(x==="Machine"||x==="Cable"?"checked":"")+'> '+x+"</label>").join("");
 $("filter").innerHTML='<option value="">All muscle groups</option>'+groups.map(x=>'<option>'+x+"</option>").join("");
 $("equipmentFilter").innerHTML='<option value="">All equipment</option>'+equipments.map(x=>'<option>'+x+"</option>").join("");
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"workout-details-v15",date:"2026-11-21",title:"Build your own workout",body:"More bench, cable and machine exercises with offline diagrams. See sets, reps, load and rest at a glance, and optionally reuse settings when adding exercises."},
  {id:"exercise-guides-v14",date:"2026-11-20",title:"Exercise guides and local progress",body:"Tap the info icon for form cues and an exact video where verified. Sets belong to a calendar date and can be cleared without deleting the workout."},
  {id:"home-screen-v9",date:"2026-11-20",title:"Studio Motion on your Home Screen",body:"Open the web app once while online, then add it to your Home Screen. The workout view works offline after it caches."}
 ];

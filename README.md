@@ -32,6 +32,11 @@ Use the same browser and address to keep using the same saved plan.
   filter flat/incline bench exercises or show movements that need no bench.
   The planner and alternatives respect **Bench available** for exercises
   that require a flat or adjustable bench.
+  Search also recognizes common Brazilian gym names for many machine and cable variants.
+  The manual planner supports nine or more exercises, independently of Auto Plan.
+  **Reuse last exercise’s sets, reps and rest** speeds up entering a similar prescription;
+  load and notes are never copied. The training list and exercise guide show the
+  current prescription, and the progress bar counts checked sets for that date.
   Tap **Done** to return to training.
 - Use **Replace** beside an exercise if the equipment is unavailable. In
   Training this swaps only the selected calendar date; in Plan/Edit it changes
