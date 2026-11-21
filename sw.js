@@ -1,7 +1,7 @@
 "use strict";
 const scope = self.registration.scope;
 const namespace = "studio-motion:" + scope + ":";
-const shellName = namespace + "v11";
+const shellName = namespace + "v11.1";
 const shellFiles = ["./", "index.html", "manifest.webmanifest", "icons/studio-motion.svg",
   "icons/studio-motion-180.png", "icons/studio-motion-192.png", "icons/studio-motion-512.png"];
 const files = new Set(shellFiles.map(path => new URL(path, scope).href));
@@ -21,17 +21,20 @@ self.addEventListener("activate", event => {
   })());
 });
 self.addEventListener("fetch", event => {
-  if (event.request.method !== "GET" || !files.has(event.request.url)) return;
+  if (event.request.method !== "GET") return;
+  const canonical = new URL(event.request.url);
+  canonical.hash = "";
+  if (!files.has(canonical.href)) return;
   event.respondWith((async () => {
     const current = await caches.open(shellName);
     try {
       const actual = await fetch(event.request);
       if (actual.ok && actual.type === "basic") {
-        try { await current.put(event.request, actual.clone()); } catch { /* Still serve the public shell. */ }
+        try { await current.put(canonical.href, actual.clone()); } catch { /* Still serve the public shell. */ }
       }
       return actual;
     } catch {
-      return (await current.match(event.request)) || Response.error();
+      return (await current.match(canonical.href)) || Response.error();
     }
   })());
 });
