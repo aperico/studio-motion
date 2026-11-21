@@ -53,7 +53,9 @@ locally, including offline. Your saved exercises, workout names, and notes are n
   timed, otherwise the new exercise uses the usual default for reps or holds.
 - Tap **ⓘ Exercise guide** on a workout row or the selected library exercise
   to see the original diagram, technique cue, equipment, and target muscles
-  offline. Optional short demo links open the verified movement directly, without
+  offline. Where rights allow, **Show form image** displays a credited reference
+  inside the guide. It loads only on tap. Otherwise, optional short demo links
+  open the verified movement directly, without
   a long introduction or search results. Other exercises use their built-in loop; no
   approximate external demo is linked. External demos load only when tapped and require internet.
 - **Auto Plan Day** previews up to three different workouts for your selected
@@ -126,7 +128,7 @@ Machine geometry and contact-point references:
 [Technogym chest press setup](https://www.technogym.com/en-RO/stories/training-with-the-chest-press-machine/),
 [ACE cable examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/resistance-bands-cables/?page=2),
 and [ACE barbell examples](https://www.acefitness.org/resources/everyone/exercise-library/equipment/barbell/).
-These are optional documentation links; the HTML loads no external assets.
+These are optional documentation links; the app does not preload external assets. The online form images are requested only when you tap to show one.
 
 Target region terminology: [ACE Exercise Library](https://www.acefitness.org/resources/everyone/exercise-library/).
 
@@ -146,3 +148,5 @@ an account, backend, or analytics.
 ## Release usability checks
 
 Run the [ten-profile usability check](docs/USABILITY.md) for user-facing changes.
+
+For a focused session, select **Chest & triceps** (Portuguese: **Peito e tríceps**) in the daily planner. It randomizes up to five matching exercises, leaves weights blank, and previews before saving.

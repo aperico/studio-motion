@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v17 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v18 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -21,10 +21,34 @@
 .language-choice{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:7px 0}.language-choice select{min-height:44px}
 #planThisDay{margin:0 0 9px;min-height:44px}.day-preview-note{margin:3px 0;color:var(--muted)}.exercise-info .label{display:none}#exerciseGuide .guide-online{font-weight:700}
 @media(max-width:395px){.masthead{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.masthead .brand{width:max-content}.masthead #weekGenerate{justify-self:stretch}.masthead #modeSwitch{width:100%}.masthead #aboutToggle{padding-inline:9px}.generator-fields .field{min-width:98px}.generator-fields .field select{max-width:100%}}
+
+/* Let Portuguese labels and enlarged text reflow instead of clipping controls. */
+.app button,.app summary,.week-card,.guide-title-row h2{overflow-wrap:anywhere;white-space:normal}
+.app select{max-width:100%;min-width:0}
+.masthead .brand{width:auto;min-width:0;white-space:normal;overflow-wrap:anywhere}
+.mast-actions{min-width:0;flex-wrap:wrap}
+.masthead #weekGenerate,.masthead #modeSwitch{min-width:0}
+.week{grid-template-columns:repeat(auto-fit,minmax(min(100%,2.35rem),1fr))}
+.launch-notice{flex-wrap:wrap}
+.launch-notice #noticeOpen{flex:0 1 auto;max-width:100%}
+.launch-notice span{min-width:min(100%,7rem);overflow-wrap:anywhere}
+.generator-fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr));align-items:start}
+.generator-fields .field{min-width:0;overflow-wrap:anywhere}
+.generator-fields select,#weekGoal{display:block;width:100%}
+@media(max-width:500px){.filters select{width:100%;font-size:.875rem}}
+.language-choice{align-items:flex-start}
+.language-choice span{overflow-wrap:anywhere}
+#studioAbout .row>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+#studioAbout a{overflow-wrap:anywhere}
+.week-card{grid-template-columns:minmax(min(6.25rem,33%),.8fr) minmax(0,2fr)}
+.week-card>*{min-width:0;overflow-wrap:anywhere}
+#weekPreview,#exerciseGuide{max-width:calc(100% - 20px)}
+@media(max-width:395px){.masthead .brand{grid-column:1/3;padding-right:min(34%,5rem);grid-row:1}.masthead #aboutToggle{z-index:1}}
+#guideMedia{margin:5px 0 9px;min-width:0}#guideMedia[hidden],#guideInlineFigure[hidden],#guideInlineStatus[hidden]{display:none}#guideInlineToggle{min-height:44px;max-width:100%;white-space:normal;overflow-wrap:anywhere;text-align:start}#guideInlineFigure{margin:8px 0 0}#guideInlineArt{min-width:0}#guideInlineArt img{display:block;max-inline-size:100%;max-block-size:min(36dvh,260px);height:auto;object-fit:contain;margin-inline:auto;border-radius:9px}#guideInlineCredit{margin-top:4px;color:var(--muted);font-size:.75rem;overflow-wrap:anywhere}#guideInlineCredit a{color:var(--mint)}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v17</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v18</small></span>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span></button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -52,7 +76,7 @@
 <p class="muted guide">Preview first. Goal guides the weekday split, not your weight, sex, or training experience. If you pick a specific day focus below, that takes priority. Use a light warm-up and keep recovery gentle.</p>
 <label class="field">Training goal<select id="trainingGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
-<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option></select></label>
+<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option><option>Chest &amp; triceps</option></select></label>
 <label class="field">Exercises<select id="trainingSize"><option value="3">3 · Short</option><option value="5">5 · Standard</option><option value="6">6 · Longer</option><option value="8" selected>8 · Extended</option></select></label>
 <label class="field">Sets<select id="trainingSets"><option value="4">4 sets</option><option value="3">3 sets</option><option value="2">2 sets</option></select></label></div>
 </details><p id="generatorStatus" class="guide muted" role="status"></p>
@@ -63,11 +87,11 @@
 </section>
 <details class="panel library" id="libraryPanel">
   <summary id="libheading">Exercise library</summary>
-  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench exercises</option><option value="adjustable">Incline bench exercises</option><option value="none">No bench needed</option></select></div><div id="muscleOverview" hidden></div><button type="button" class="selection-link">Selected exercise &amp; add</button><div class="choices" id="choices"></div>
+  <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench</option><option value="adjustable">Incline bench</option><option value="none">No bench</option></select></div><div id="muscleOverview" hidden></div><button type="button" class="selection-link">Selected exercise &amp; add</button><div class="choices" id="choices"></div>
 <div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><label class="repeat-dose" id="repeatDoseOption" hidden><input id="repeatDose" type="checkbox"> Reuse last exercise’s sets, reps and rest</label><button id="add" class="primary">Add to workout</button>
 </details></div></div>
 <footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="regenerateWeek" type="button">Generate again</button><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
-<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>The movement loop above works offline; no short external demo has been verified.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. An external demo needs internet.</p></dialog></main>
+<dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button">Close</button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><p id="guideInstructions" class="coach"></p><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden>The movement loop above works offline; no short external demo has been verified.</p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a><p class="guide muted">The diagram and cue work offline. An external demo needs internet.</p></dialog></main>
 <script>
 "use strict";
 
@@ -112,7 +136,9 @@ const PT={
  "Full body": "Corpo todo",
  "Upper": "Superiores",
  "Lower": "Inferiores",
- "Core & calves": "Abdômen e panturrilhas",
+ "Chest & triceps":"Peito e tríceps",
+ "Chest & triceps workout":"Treino de peito e tríceps",
+ "Core & calves": "Core e panturrilhas",
  "Exercises": "Exercícios",
  "3 · Short": "3 · Curto",
  "5 · Standard": "5 · Padrão",
@@ -133,10 +159,8 @@ const PT={
  "Filter by muscle group": "Filtrar por grupo muscular",
  "Filter by equipment": "Filtrar por equipamento",
  "Filter by bench required": "Filtrar por tipo de banco",
- "All setups": "Todos os tipos de banco",
- "Flat bench exercises": "Exercícios com banco reto",
- "Incline bench exercises": "Exercícios com banco inclinado",
- "No bench needed": "Sem necessidade de banco",
+ "All setups": "Qualquer banco",
+ "Incline bench": "Banco inclinado",
  "Selected exercise & add": "Ir ao exercício selecionado",
  "Reuse last exercise’s sets, reps and rest": "Reutilizar séries, repetições e descanso do último exercício",
  "Add to workout": "Adicionar ao treino",
@@ -242,8 +266,8 @@ const PT={
  "Replace exercise": "Substituir exercício",
  "Cancel": "Cancelar",
  "Equipment": "Equipamento",
- "All equipment": "Todos os equipamentos",
- "All muscle groups": "Todos os grupos musculares",
+ "All equipment": "Todo aparelho",
+ "All muscle groups": "Todos os grupos",
  "Same movement": "Mesmo movimento",
  "Same muscle group": "Mesmo grupo muscular",
  "Adjustable incline bench required": "Requer banco inclinado ajustável",
@@ -305,6 +329,15 @@ const PT={
  "This is a preview. Nothing changes until you save.":"Isso é uma prévia. Nada muda até você salvar.",
  "Open About and updates to change language.":"Abra Sobre e novidades para mudar o idioma.",
  "Guide":"Guia",
+ "Form demonstration":"Demonstração do exercício",
+ "Show form image":"Mostrar imagem da execução",
+ "Hide form image":"Ocultar imagem da execução",
+ "Loading form image…":"Carregando a imagem…",
+ "Couldn’t load the image. The drawing above still works offline.":"Não foi possível carregar a imagem. O desenho acima funciona offline.",
+ "Open the source":"Abrir a fonte",
+ "Setup for ":"Posição inicial: ",
+ "Inline form images and a roomier menu":"Imagens no guia e menu mais legível",
+ "View licensed form images inside the guide. Menus fit more comfortably on narrow screens.":"Veja imagens licenciadas no guia. Os menus ficam mais legíveis em telas estreitas.",
  "Train this day":"Treinar neste dia"
 };
 const PT_EX={
@@ -1402,6 +1435,75 @@ const shortDemos={
  "bb-wrist-curl":["gif", 3.0, "ExerciseDB", "https://static.exercisedb.dev/media/6kSxYnw.gif"],
  "cable-reverse-curl":["gif", 3.0, "ExerciseDB", "https://static.exercisedb.dev/media/eOG0r6v.gif"],
 };
+// Approved inline artwork: original Nitin Raturi illustrations, CC BY 4.0.
+const inlineFormImages={
+ "db-incline-fly-30":["https://fitness.raturi.in/_astro/incline-dumbbell-fly-bottom.BpytASxI_1Wngio.png", "https://fitness.raturi.in/exercises/incline-dumbbell-fly/"],
+ "mob-clock":["https://fitness.raturi.in/_astro/wall-slide-bottom.DUWhkOhs_zSpRy.png", "https://fitness.raturi.in/exercises/wall-slide/"],
+ "bb-bench":["https://fitness.raturi.in/_astro/barbell-bench-press-bottom.BSPHs3aB_1qbCfu.png", "https://fitness.raturi.in/exercises/barbell-bench-press/"],
+ "db-bench":["https://fitness.raturi.in/_astro/dumbbell-bench-press-bottom.vHDmlXSb_Z131mla.png", "https://fitness.raturi.in/exercises/dumbbell-bench-press/"],
+ "db-lateral":["https://fitness.raturi.in/_astro/dumbbell-lateral-raise-bottom.CxqaG09Y_6LbCy.png", "https://fitness.raturi.in/exercises/dumbbell-lateral-raise/"],
+ "legpress":["https://fitness.raturi.in/_astro/leg-press-bottom.CArZOBPz_ZOw1aI.png", "https://fitness.raturi.in/exercises/leg-press/"],
+ "extension":["https://fitness.raturi.in/_astro/leg-extension-bottom.BNvaogOF_1PjLUc.png", "https://fitness.raturi.in/exercises/leg-extension/"],
+ "curl":["https://fitness.raturi.in/_astro/seated-leg-curl-bottom.BZEEK86F_Z2j39wK.png", "https://fitness.raturi.in/exercises/seated-leg-curl/"],
+ "machine-seated-calf":["https://fitness.raturi.in/_astro/seated-calf-raise-bottom.K22A8hv4_18CeF6.png", "https://fitness.raturi.in/exercises/seated-calf-raise/"],
+ "calf":["https://fitness.raturi.in/_astro/standing-calf-raise-bottom.l7P8Nr5r_Wf2zC.png", "https://fitness.raturi.in/exercises/standing-calf-raise/"],
+ "cable-straightarm":["https://fitness.raturi.in/_astro/straight-arm-cable-pulldown-bottom.ChCRIwOo_1GOk5b.png", "https://fitness.raturi.in/exercises/straight-arm-cable-pulldown/"],
+};
+const illustrationLicense="https://creativecommons.org/licenses/by/4.0/";
+let activeGuideMedia=null,guideMediaTimeout;
+function resetGuideMedia(){
+ clearTimeout(guideMediaTimeout);activeGuideMedia=null;
+ $("guideMedia").hidden=true;$("guideInlineFigure").hidden=true;
+ $("guideInlineArt").replaceChildren();$("guideInlineCredit").replaceChildren();
+ $("guideInlineStatus").hidden=true;$("guideInlineStatus").textContent="";
+ $("guideInlineToggle").setAttribute("aria-expanded","false");
+}
+function setGuideMedia(e,ref){
+ resetGuideMedia();
+ const inline=inlineFormImages[e.id],link=$("guideLink");
+ activeGuideMedia={exercise:e,inline,ref};
+ link.hidden=!ref||!!inline;
+ $("guideLinkUnavailable").hidden=Boolean(ref||inline);
+ if(ref){
+  link.href=ref.url;link.textContent=(ref.kind==="image"?t("Open form image"):t("Open "+ref.seconds+"-sec "+(ref.kind==="gif"?"loop":"clip"),"Ver "+(ref.kind==="gif"?"animação":"vídeo")+" de "+displayNumber(ref.seconds)+" s"))+" · "+ref.source+" ↗";
+ }else{link.removeAttribute("href");link.textContent="";}
+ if(inline){
+  $("guideMedia").hidden=false;
+  $("guideInlineToggle").textContent=t("Show form image");
+ }
+}
+$("guideInlineToggle").onclick=()=>{
+ const currentMedia=activeGuideMedia;if(!currentMedia?.inline)return;
+ const figure=$("guideInlineFigure"),area=$("guideInlineArt"),status=$("guideInlineStatus"),button=$("guideInlineToggle");
+ if(!figure.hidden){
+  clearTimeout(guideMediaTimeout);figure.hidden=true;area.replaceChildren();status.hidden=true;
+  button.setAttribute("aria-expanded","false");button.textContent=t("Show form image");
+  return;
+ }
+ const [src,sourcePage]=currentMedia.inline;
+ figure.hidden=false;$("guideLink").hidden=true;button.setAttribute("aria-expanded","true");button.textContent=t("Hide form image");
+ const credit=$("guideInlineCredit");
+ credit.replaceChildren();
+ for(const [label,url] of [["Nitin Raturi",sourcePage],["CC BY 4.0",illustrationLicense]]){
+  if(credit.childNodes.length)credit.append(" · ");
+  const a=document.createElement("a");a.textContent=label;a.href=url;a.target="_blank";a.rel="noopener noreferrer";credit.append(a);
+ }
+ status.textContent=t("Loading form image…");status.hidden=false;
+ const failed=()=>{
+  clearTimeout(guideMediaTimeout);status.textContent=t("Couldn’t load the image. The drawing above still works offline.");
+  status.hidden=false;area.replaceChildren();figure.hidden=true;button.setAttribute("aria-expanded","false");
+  button.textContent=t("Show form image");
+  const fallback=$("guideLink");fallback.href=sourcePage;fallback.textContent=t("Open the source")+" ↗";fallback.hidden=false;
+ };
+ if(navigator.onLine===false){failed();return;}
+ const picture=document.createElement("img");
+ picture.alt=t("Setup for ")+nameOf(currentMedia.exercise);picture.referrerPolicy="no-referrer";picture.decoding="async";
+ const isCurrent=()=>activeGuideMedia===currentMedia&&area.contains(picture);
+ picture.onload=()=>{if(isCurrent()){clearTimeout(guideMediaTimeout);status.hidden=true;}};
+ picture.onerror=()=>{if(isCurrent())failed();};
+ area.replaceChildren(picture);picture.src=src;
+ guideMediaTimeout=setTimeout(()=>{if(isCurrent())failed();},8000);
+};
 function guideSource(e){
  const demo=shortDemos[e.id];
  if(!demo)return null;
@@ -1428,9 +1530,7 @@ function openGuide(id,trigger){
  $("guideInstructions").textContent=cueOf(e);
  $("guideContact").textContent=contactOf(e.id)||"";
  $("guideContact").hidden=!contactOf(e.id);
- const link=$("guideLink");
- link.hidden=!ref;$("guideLinkUnavailable").hidden=Boolean(ref);
- if(ref){link.href=ref.url;link.textContent=(ref.kind==="image"?t("Open form image"):t("Open "+ref.seconds+"-sec "+(ref.kind==="gif"?"loop":"clip"),"Ver "+(ref.kind==="gif"?"animação":"vídeo")+" de "+displayNumber(ref.seconds)+" s"))+" · "+ref.source+" ↗";}else{link.removeAttribute("href");link.textContent="";}
+ setGuideMedia(e,ref);
  art.innerHTML=artMarkup(e);watchArt(art);
  dialog.showModal();$("guideName").focus({preventScroll:true});syncAnimation();
 }
@@ -1441,8 +1541,9 @@ document.addEventListener("click",event=>{
 document.querySelector(".selection-link").onclick=()=>{const selected=$("selectedExercise");selected.scrollIntoView({block:"start"});selected.focus({preventScroll:true});};
 $("guideClose").onclick=()=>$("exerciseGuide").close();
 $("exerciseGuide").onclose=()=>{
+ if($("exerciseGuide").open)return;
  const art=$("guideArt");
- clearArt(art);art.replaceChildren();
+ clearArt(art);art.replaceChildren();resetGuideMedia();
  const active=document.activeElement;
  if(active===document.body||$("exerciseGuide").contains(active))guideTrigger?.focus({preventScroll:true});
  guideTrigger=null;syncAnimation();
@@ -1542,7 +1643,9 @@ const split=[
  {name:"Upper B · back & shoulders",groups:["Back","Chest","Shoulders","Arms","Back","Shoulders","Arms","Chest"],focus:"Upper"},
  {name:"Lower B · hamstrings & glutes",groups:["Hamstrings","Glutes","Quads","Calves","Hamstrings","Glutes","Quads","Calves"],focus:"Lower"}
 ];
+const pushFocus="Chest & triceps";
 const pattern={
+ [pushFocus]:["Chest","Arms","Chest","Arms","Chest","Arms","Chest","Arms"],
  "Full body":["Quads","Chest","Back","Hamstrings","Core","Shoulders","Glutes","Arms","Calves"],
  Upper:["Chest","Back","Shoulders","Arms","Back","Chest","Shoulders","Arms"],
  Lower:["Quads","Hamstrings","Glutes","Calves","Quads","Hamstrings","Glutes","Calves"],
@@ -1579,11 +1682,15 @@ const goalWeeks={
  lower:[split[1],split[0],lowerExtra,split[3],split[4]],
  upper:[split[0],split[1],upperExtra,split[4],split[3]]
 };
-function strengthPool(equipment,order){
- return E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&!e.manualOnly);
+const pushManual=new Set(["db-incline-fly-30","db-seated-overhead-triceps","cable-pressdown-bar","cable-pressdown-rope"]);
+function strengthPool(equipment,order,focus){
+ return E.filter(e=>equipment.includes(e.eq)&&order.includes(e.g)&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&
+  (!e.manualOnly||(focus===pushFocus&&pushManual.has(e.id)))&&
+  (focus!==pushFocus||(e.g==="Chest"&&forTarget(e)[0].includes("pec"))||(e.g==="Arms"&&forTarget(e)[0].includes("tri"))));
 }
 function strengthDraft(equipment,focus,order,size){
- const pool=strengthPool(equipment,order);
+ const pool=strengthPool(equipment,order,focus);
+ if(focus===pushFocus&&(!pool.some(e=>e.g==="Chest")||!pool.some(e=>e.g==="Arms")))return null;
  const groups=[...new Set(order)],byGroup=new Map(groups.map(g=>[g,shuffled(pool.filter(e=>e.g===g))]));
  const items=[],used=new Set();
  function pick(g){
@@ -1610,7 +1717,7 @@ function freshStrength(equipment,focus,order,size,avoid){
  }
  // If random draws repeat the same set, try every one-item equivalent in each occupied group.
  const occupied=new Set(draft.items.map(i=>i.exercise)),used=draft.items.map(i=>byId(i.exercise));
- const replacements=shuffled(strengthPool(equipment,order).filter(e=>!occupied.has(e.id)));
+ const replacements=shuffled(strengthPool(equipment,order,focus).filter(e=>!occupied.has(e.id)));
  for(const [i,e] of used.entries())for(const replace of replacements){
   if(e.g!==replace.g)continue;
   const alt=strengthFrom(used.map((x,j)=>j===i?replace:x),focus,size,draft.missing);
@@ -1634,11 +1741,12 @@ function setVariant(index){
  $("previewWarning").textContent=[drafted.easy?t("About ","Cerca de ")+minutes(drafted)+t(" min of gentle movement and easy transitions."," min de movimentos leves e trocas tranquilas."):t("About ","Cerca de ")+minutes(drafted)+t(" min, with warm-up, inter-set rest and changeovers."," min, incluindo aquecimento, descanso e trocas de exercício."),
   drafted.items.length<drafted.requested?t("Fewer matches than requested; no duplicates were added."):"",
   drafted.missing.length?t("No matching equipment for: ","Sem equipamento compatível para: ")+drafted.missing.map(x=>t(x)).join(", ")+".":"",
+  drafted.title===pushFocus+" workout"?t("Focused session: up to 5 exercises for chest and triceps.","Treino focado: até 5 exercícios de peito e tríceps."):"",
   drafted.easy?t("Stay in a comfortable range; skip any movement that is unclear or uncomfortable."):adjacentWarning(day,drafted),hasWorkout(current())?t("Existing workout will be kept as a saved copy if replaced."):""].filter(Boolean).join(" ");
  $("applyTraining").textContent=hasWorkout(current())?t("Replace ","Substituir ")+dayName(day)+"…":t("Save to ","Salvar em ")+dayName(day);
 }
 function showPreview(){
- const selected=$("trainingFocus").value,n=+$("trainingSize").value;
+ const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):+$("trainingSize").value;
  const daySplit=goalWeeks[trainingGoal][day],easy=selected==="Day split"&&day>=5;
  const focus=selected==="Day split"?(daySplit?.focus||"Full body"):selected;
  const order=selected==="Day split"&&daySplit?daySplit.groups:pattern[focus];
@@ -1652,7 +1760,7 @@ function showPreview(){
   if(repeated)$("generatorStatus").textContent=easy?t("This recovery option keeps the same simple movements."):t("These settings have limited alternatives; this option matches a recent or saved plan.");
   seen.add(key);avoid.add(key);variants.push(draft);
  }
- if(!variants.length){$("generatorStatus").textContent=t("Not enough matching exercises. Select more equipment or another focus.");return;}
+ if(!variants.length){$("generatorStatus").textContent=selected===pushFocus?t("Select equipment with both chest and triceps exercises, such as Machine and Cable.","Selecione equipamentos para peito e tríceps, como Máquina e Polia."):t("Not enough matching exercises. Select more equipment or another focus.");return;}
  lastDayPreviews.set(day,seen);
  proposed={day,variants,active:0};$("preview").hidden=false;
  $("dayVariant").innerHTML=variants.map((_,i)=>'<option value="'+i+'">'+t("Option ","Opção ")+(i+1)+'</option>').join("");
@@ -1838,17 +1946,19 @@ $("add").onclick=()=>{
 };
 $("print").onclick=()=>window.print();
 function localizedFilters(){
+ const compactPt={Core:"Abdômen",Hamstrings:"Posterior",Specialty:"Acessórios"};
  const checked=new Set($("trainingEquipment").querySelector("input")?equipmentNow():["Machine","Cable"]);
  $("trainingEquipment").querySelectorAll("label").forEach(x=>x.remove());
  $("trainingEquipment").insertAdjacentHTML("beforeend",autoEquipment.map(x=>'<label><input type="checkbox" value="'+esc(x)+'" '+(checked.has(x)?"checked":"")+'> '+esc(t(x))+"</label>").join(""));
  for(const [id,values,label] of [["filter",groups,"All muscle groups"],["equipmentFilter",equipments,"All equipment"]]){
   const control=$(id),old=control.value;
-  control.innerHTML='<option value="">'+t(label)+'</option>'+values.map(x=>'<option value="'+esc(x)+'">'+esc(t(x))+"</option>").join("");
+  control.innerHTML='<option value="">'+t(label)+'</option>'+values.map(x=>'<option value="'+esc(x)+'">'+esc(t(x,compactPt[x]))+"</option>").join("");
   control.value=values.includes(old)?old:"";
  }
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"inline-forms-v18",date:"2026-11-21",title:"Inline form images and a roomier menu",body:"View licensed form images inside the guide. Menus fit more comfortably on narrow screens."},
  {id:"goals-language-v17",date:"2026-11-21",title:"Goal-based planning and clearer recovery",body:"Pick a training goal, regenerate one day, and use English or Brazilian Portuguese offline. Recovery days have fewer movements; guides show the setup more clearly."},
  {id:"short-demos-v16",date:"2026-11-21",title:"Short exercise demos and visible progress",body:"Verified external demos go straight to the movement. The workout keeps progress visible and marks the first unfinished exercise without changing the list."},
  {id:"workout-details-v15",date:"2026-11-21",title:"Build your own workout",body:"More bench, cable and machine exercises with offline diagrams. See sets, reps, load and rest at a glance, and optionally reuse settings when adding exercises."},
