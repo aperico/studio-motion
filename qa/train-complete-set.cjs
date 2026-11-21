@@ -1,4 +1,4 @@
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {chromium}=require('./runtime.js');
 const a=require('node:assert/strict'),{pathToFileURL}=require('node:url'),path=require('node:path');
 const url=pathToFileURL(path.join(__dirname,'../index.html')).href;
 (async()=>{const b=await chromium.launch();try{

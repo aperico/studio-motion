@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {chromium}=require('./runtime.js');
 const {pathToFileURL}=require('node:url'),path=require('node:path');
 const BASE=process.env.STUDIO_QA_URL||pathToFileURL(path.resolve(__dirname,'../index.html')).href;
 (async()=>{const b=await chromium.launch();try{
@@ -10,7 +10,7 @@ for(const [width,locale] of [[320,'pt-BR'],[390,'en'],[412,'pt-BR']]){
  await p.evaluate(()=>{plan.days[0]=cleanSession({title:'Synthetic dose',items:[{...make('press'),sets:5,kg:12.5,repRange:[10,12]},make('machine-row'),make('bw-plank')]});save();setDay(0);});
  const l=s=>p.locator(s),row=i=>l('#trainList li').nth(i),weight=i=>row(i).locator('[data-edit-weight]'),routine=i=>row(i).locator('[data-edit-routine]');
  const units={selectOption:unit=>p.evaluate(unit=>{document.getElementById('weightUnit').value=unit;document.getElementById('weightUnit').onchange()},unit)},input=l('#weightInput'),sets=l('#doseSets'),reps=l('#doseReps'),submit=l('#weightSave'),dialog=l('#weightDialog'),cancel=l('#weightCancel');
- const saved=()=>p.evaluate(()=>localStorage.getItem(KEY2)),data=()=>p.evaluate(()=>current().items[0]);
+ const saved=()=>p.evaluate(()=>localStorage.getItem(slotsKey)),data=()=>p.evaluate(()=>current().items[0]);
  const base=await saved();
  await weight(0).click();assert.equal(await input.inputValue(),locale==='pt-BR'?'12,5':'12.5');
  assert.equal(await reps.inputValue(),'');assert.equal(await reps.getAttribute('placeholder'),'10–12');
@@ -53,15 +53,11 @@ for(const [width,locale] of [[320,'pt-BR'],[390,'en'],[412,'pt-BR']]){
  await routine(1).click();await sets.fill('4');await reps.fill('15');await submit.click();
  assert.deepEqual(await p.evaluate(()=>[current().items[1].sets,effectiveRows()[1].sets,effectiveRows()[1].reps]),[2,4,15]);
  assert(await row(1).locator('[data-set="4"]').isChecked());
- await p.evaluate(()=>{const weeks=Array.from({length:2},blankWeek);weeks[0][0]=cleanSession({title:'Synthetic dated',items:[{...make('press'),kg:12.5,sets:4}]});persistBlock({version:1,epoch:resetEpoch,start:'2026-11-23',paused:false,weeks,archive:[]});setDay(0);});
- const untouchedRecurring=await saved();
+ await p.evaluate(async()=>{await selectNumberedWeek(4);plan.days[0]=cleanSession({title:'Synthetic slot 5',items:[{...make('press'),kg:12.5,sets:4}]});await save();setDay(0);});
+ const untouchedFirst=await p.evaluate(()=>JSON.stringify(numbered.weeks[0]));
  await routine(0).click();await units.selectOption('kg');await sets.fill('5');await reps.fill('11');await submit.click();
- assert.deepEqual(await p.evaluate(()=>[block.weeks[0][0].items[0].sets,block.weeks[0][0].items[0].reps,block.weeks[0][0].items[0].kg]),[5,11,12.5]);assert.equal(await saved(),untouchedRecurring);
- await p.locator('#weekGenerate').click();assert(!await l('#weekLengthHint').isVisible());await l('#weekClose').click();
- await p.evaluate(()=>{persistBlock({...block,paused:true});setDay(0);});
- await p.goto(BASE);await p.addStyleTag({content:'html{font-size:200%}body{font-size:1rem}'});
- await p.locator('#weekGenerate').click();assert(await l('#weekLengthHint').isVisible());assert(await l('#weekPreview').evaluate(d=>d.scrollWidth<=d.clientWidth+1));
- await l('#weekLength').selectOption('2');assert(!await l('#weekLengthHint').isVisible());await l('#weekClose').click();
+ assert.deepEqual(await p.evaluate(()=>[numbered.weeks[4][0].items[0].sets,numbered.weeks[4][0].items[0].reps,numbered.weeks[4][0].items[0].kg]),[5,11,12.5]);assert.equal(await p.evaluate(()=>JSON.stringify(numbered.weeks[0])),untouchedFirst);
+ await p.locator('#weekGenerate').click();assert.equal(await l('#weekSlot option').count(),5);await l('#weekClose').click();
  assert.deepEqual(errs,[]);assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth),width);
  console.log(width,locale,'unit round trip exact, steps, blank/zero/max, range preservation, guarded marked sets, bodyweight hold, dated swap+program scoped save PASS');
  await c.close();

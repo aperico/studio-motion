@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v35 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v36 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -111,6 +111,8 @@
 #weekPreview .planner-actions{margin-block:12px}
 @media(max-width:370px){#weekPreview .block-planner{grid-template-columns:minmax(0,1fr)}}
 #studioAbout section{border-top:1px solid var(--line);padding-block:10px}#studioAbout h3{margin:4px 0;font-size:1rem}#studioAbout input,#studioAbout select{width:100%;max-width:100%;min-height:44px}#studioAbout button{min-height:44px}#studioAbout p{overflow-wrap:anywhere}#exportEmailValue{overflow-wrap:anywhere}
+#previousData pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.75rem}#previousData button{min-height:44px;max-width:100%;white-space:normal}#previousData details{margin-block:8px}
+#archivePicker{width:100%;max-width:100%}
 </style></head>
 <body><main class="app">
 <aside id="configInterrupted" class="guide" hidden><p>A configuration import was interrupted. Recover your previous configuration before editing.</p><button id="recoverConfig" type="button">Recover previous configuration</button><p id="recoverConfigFeedback" role="status"></p></aside>
@@ -119,14 +121,14 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v35</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v36</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
   <div class="row"><h2 id="aboutHeading" tabindex="-1">Menu</h2><button id="aboutClose" type="button">Close</button></div>
-  <section aria-labelledby="menuTraining"><h3 id="menuTraining">Training</h3><div class="buttons"><button type="button" id="menuPlan">Auto Plan Week</button><button type="button" id="menuSummary">Week summary</button></div></section>
+  <section aria-labelledby="menuTraining"><h3 id="menuTraining">Training</h3><label class="field"><span id="menuWeekLabel">Week</span><select id="menuWeek"></select></label><div class="buttons"><button type="button" id="menuPlan">Auto Plan Week</button><button type="button" id="menuSummary">Week summary</button></div></section>
   <section aria-labelledby="menuPreferences"><h3 id="menuPreferences">Preferences</h3><label class="field language-choice"><span>Language / Idioma</span><select id="language" aria-label="Language / Idioma"><option value="en" lang="en">English</option><option value="pt-BR" lang="pt-BR">Português (Brasil)</option></select></label><label class="field"><span id="weightUnitLabel">Units</span><select id="weightUnit"><option value="kg">Metric (kg)</option><option value="lb">Imperial (lb)</option></select></label><section aria-labelledby="profileTitle"><h3 id="profileTitle">Local profile (optional)</h3><label class="field">Email (this device only)<input id="profileEmail" type="email" maxlength="254" autocomplete="off" spellcheck="false"></label><button type="button" id="profileSave">Save email locally</button></section><p class="guide">Your optional email stays on this device. It is included in JSON only when you explicitly choose it during export.</p><p id="preferenceStatus" class="guide" role="status"></p></section>
-  <details id="localData"><summary>Local data</summary><p class="guide">Manage Studio Motion data saved in this browser.</p><button id="openConfig" type="button" aria-haspopup="dialog">Configuration backup</button><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
+  <details id="localData"><summary>Local data</summary><p class="guide">Manage Studio Motion data saved in this browser.</p><button id="openConfig" type="button" aria-haspopup="dialog">Configuration backup</button><button id="openPrevious" type="button" aria-haspopup="dialog">Previous data</button><button id="resetApp" type="button" aria-haspopup="dialog">Reset app</button><p id="resetFeedback" class="guide" role="status" tabindex="-1" hidden></p></details>
   <h3 id="menuAbout">About Studio Motion</h3><p class="guide">Studio Motion is a hobby project, not made by fitness specialists. The illustrations are simplified cues, not professional training or medical guidance. Follow your equipment’s instructions.</p>
   <p class="guide">Workouts and checkmarks stay in this browser. There is no account, tracking, or workout sync. The online app and a downloaded copy do not share saved plans.</p>
   <details id="credits"><summary>Credits &amp; source</summary><p class="guide">Created by Armando Perico. Artwork is original to Studio Motion; each external demo names its source.</p><p class="guide"><a href="https://github.com/aperico/studio-motion" target="_blank" rel="noopener noreferrer">Original source on GitHub ↗</a> · <a href="https://www.strengthlog.com/exercise-directory/" target="_blank" rel="noopener noreferrer">Exercise references ↗</a></p></details>
@@ -135,7 +137,7 @@
   <section id="updates" aria-labelledby="updatesHeading"><div class="row"><h2 id="updatesHeading" tabindex="-1">What’s new</h2><button id="copyUpdates" type="button">Copy link</button></div><p id="copyUpdateStatus" role="status" class="guide muted"></p><ol id="updateHistory"></ol><a class="guide" id="updatesLink" href="https://aperico.github.io/studio-motion/#updates">Public updates permalink ↗</a></section>
 </section>
 
-<p id="blockStatus" class="guide muted" role="status" hidden></p><button id="resumeRecurring" type="button" hidden>Resume recurring week</button>
+<p id="blockStatus" class="guide muted" role="status"></p>
 <div id="trainWeeks" class="block-planner no-print" hidden><label class="field"><span id="trainWeekLabel"></span><select id="trainWeek"></select></label><button id="returnToday" type="button"></button><p id="trainWeekNotice" class="guide muted" role="status"></p></div>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
@@ -169,24 +171,22 @@
   <div class="filters"><input id="query" type="search" placeholder="Search exercises or muscles" aria-label="Search exercises or muscles"><select id="filter" aria-label="Filter by muscle group"></select><select id="equipmentFilter" aria-label="Filter by equipment"></select><select id="benchFilter" aria-label="Filter by bench required"><option value="">All setups</option><option value="flat">Flat bench</option><option value="adjustable">Incline bench</option><option value="none">No bench</option></select></div><div id="muscleOverview" hidden></div><button type="button" class="selection-link">Selected exercise &amp; add</button><div class="choices" id="choices"></div>
 <div id="selectedExercise" tabindex="-1"></div><div id="libraryDiagram"></div><div class="info"><p class="kicker" id="group"></p><div class="guide-title-row"><h2 id="name"></h2><span id="libraryGuideButton"></span></div><p id="muscle"></p><p id="setupInfo" class="muted guide"></p><div id="selectionMap"></div><p id="cue" class="coach"></p></div><label class="repeat-dose" id="repeatDoseOption" hidden><input id="repeatDose" type="checkbox"> Reuse last exercise’s sets, reps and rest</label><button id="add" class="primary">Add to workout</button>
 </details></div></div>
-<footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field" id="weekSlotLabel">Week<select id="weekSlot" aria-describedby="blockDraftRange"></select></label><p id="blockDraftRange" class="guide muted" role="status"></p><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><div class="block-planner">
- <label class="field">Plan length<select id="weekLength"><option value="1">1 week</option><option value="2">2 weeks</option><option value="3">3 weeks</option><option value="4">4 weeks</option></select></label>
- <label class="field" id="weekStartLabel" hidden>Start Monday<select id="weekStart"></select></label>
-</div><p id="weekLengthHint" class="guide muted">Choose 2 to 4 weeks to generate a specific week or all weeks.</p><p id="blockFeedback" class="guide muted" role="status" hidden></p>
-<div class="buttons planner-actions"><button id="weekGenerateAll" type="button" hidden>Generate all weeks</button><button id="regenerateWeek" type="button">Generate again</button></div><p class="guide muted" id="weekDraftMapNote">The maps show proposed workouts. Only selected days will be saved.</p><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
+<footer id="editFooter" hidden>Movement diagrams are simplified cues, not coaching or a prescription. Use a range and load you can control, follow equipment instructions, and stop if an exercise hurts. A weekly plan can include unplanned or rest days; no load is chosen automatically.</footer><dialog class="workout-view" id="weekPreview" aria-labelledby="weekHeading"><header class="row"><h2 id="weekHeading" tabindex="-1">Monday–Sunday preview</h2><button id="weekClose" type="button">Close</button></header><label class="field" id="weekSlotLabel">Week<select id="weekSlot" aria-describedby="blockDraftRange"></select></label><p id="blockDraftRange" class="guide muted" role="status"></p><label class="field">Training goal<select id="weekGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label><p id="blockFeedback" class="guide muted" role="status" hidden></p>
+<div class="buttons planner-actions"><button id="weekGenerateAll" type="button" hidden>Generate all five weeks</button><button id="regenerateWeek" type="button">Generate again</button></div><p class="guide muted" id="weekDraftMapNote">The maps show proposed workouts. Only selected days will be saved.</p><div id="weekCards"></div><p id="weekStatus" class="guide muted" role="status"></p><div class="buttons"><button id="applyWeek" class="primary" type="button">Save selected days</button></div></dialog>
 <dialog class="workout-view" id="exerciseGuide" aria-labelledby="guideName"><header class="guide-title-row"><h2 id="guideName" tabindex="-1"></h2><button id="guideClose" type="button" aria-label="Close"><span aria-hidden="true">×</span></button></header><p id="guideInfo" class="guide"></p><div id="guideArt"></div><section id="guideMedia" aria-label="Form demonstration" hidden><button type="button" id="guideInlineToggle" aria-expanded="false" aria-controls="guideInlineFigure">Show form image</button><figure id="guideInlineFigure" hidden><div id="guideInlineArt"></div><figcaption id="guideInlineCredit"></figcaption></figure><p id="guideInlineStatus" class="guide muted" role="status" hidden></p></section><dl class="workout-dose" id="guideDose" hidden></dl><p id="guideTargets" class="targets-text"></p><h3 id="guideStepsHeading"></h3><ol id="guideInstructions"></ol><p id="guideContact" class="contact-cue"></p><p id="guideLinkUnavailable" class="guide muted" hidden></p><a id="guideLink" class="guide-online" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"></a></dialog>
 <dialog id="weekSummary" class="workout-view" aria-labelledby="weekSummaryHeading">
  <header class="guide-title-row"><h2 id="weekSummaryHeading" tabindex="-1">Week summary</h2><button type="button" id="weekSummaryClose">Close</button></header>
  <p class="guide muted" id="weekSummaryTotals"></p><p class="guide muted" id="weekSummaryGroups"></p>
  <ol id="weekSummaryList" role="list"></ol>
 </dialog>
-<dialog id="configDialog" aria-labelledby="configHeading"><header class="guide-title-row"><h2 id="configHeading" tabindex="-1">Configuration backup</h2><button type="button" id="configClose">Close</button></header><p>Transfer routines and preferences. This does not transfer checkmarks or temporary exercise replacements.</p>
+<dialog id="configDialog" aria-labelledby="configHeading"><header class="guide-title-row"><h2 id="configHeading" tabindex="-1">Configuration backup</h2><button type="button" id="configClose">Close</button></header><p>Transfer five weeks and preferences. This does not transfer checkmarks or temporary exercise replacements.</p>
 
 <section aria-labelledby="exportTitle"><h3 id="exportTitle">Export</h3><label class="config-check"><input id="exportEmail" type="checkbox"> Include my email in the downloaded file <span id="exportEmailValue"></span></label><button type="button" id="configExport">Download JSON</button></section>
 <section aria-labelledby="importTitle"><h3 id="importTitle">Import</h3><label class="field">Choose a Studio Motion JSON file<input id="configFile" type="file" accept=".json,application/json"></label>
-<div id="configPreview" hidden><h4 id="configPreviewHeading" tabindex="-1">Review before replacing</h4><p id="configExisting"></p><p id="configSummary"></p><p id="configPrefs"></p><p id="configAuthor"></p><p>Local checkmarks and temporary replacements stay stored. They may not appear with different workouts.</p>
-<label class="config-check"><input id="configConfirm" type="checkbox"> Replace my saved workouts, dated program and preferences on this device</label><button id="configApply" type="button" class="primary" disabled>Replace with this file</button></div></section>
+<div id="configPreview" hidden><h4 id="configPreviewHeading" tabindex="-1">Review before replacing</h4><p id="configExisting"></p><p id="configSummary"></p><p id="configPrefs"></p><p id="configAuthor"></p><p>Daily logs stay on this device under their original workout IDs and are not attached to imported workouts.</p>
+<label class="config-check"><input id="configConfirm" type="checkbox"> Replace my five weeks, saved workouts and preferences on this device</label><button id="configApply" type="button" class="primary" disabled>Replace with this file</button></div></section>
 <p id="configStatus" role="status" aria-live="polite"></p></dialog>
+<dialog id="previousData" class="workout-view" aria-labelledby="previousHeading"><header class="row"><h2 id="previousHeading" tabindex="-1">Previous data</h2><button id="previousClose" type="button">Close</button></header><p class="guide" id="previousExplanation"></p><button id="recoverRecurring" type="button">Copy previous recurring week to selected week</button><button id="downloadPrevious" type="button">Download original data</button><p id="previousStatus" class="guide" role="status"></p><div id="previousSummary"></div></dialog>
 <dialog id="resetAppDialog" class="workout-view" aria-labelledby="resetAppHeading" aria-describedby="resetScope">
   <form id="resetAppForm">
     <h2 id="resetAppHeading">Reset Studio Motion?</h2>
@@ -210,7 +210,13 @@ const PT={
  "Choose 2 to 4 weeks to generate a specific week or all weeks.":"Escolha de 2 a 4 semanas para gerar uma semana específica ou todas.",
  "Weight units and workout doses":"Unidades de carga e detalhes do treino",
  "Change sets, reps or weights from each exercise card, using kilograms or pounds.":"Edite séries, repetições ou cargas no próprio exercício, em quilogramas ou libras.",
+ "Transfer five weeks and preferences. This does not transfer checkmarks or temporary exercise replacements.":"Transfira cinco semanas e preferências. Séries marcadas e substituições temporárias não são transferidas.",
+ "Previous data":"Dados anteriores",
+ "Copy previous recurring week to selected week":"Copiar semana recorrente anterior para a selecionada",
+ "Download original data":"Baixar dados originais",
+ "Daily logs stay on this device under their original workout IDs and are not attached to imported workouts.":"Os registros diários ficam neste dispositivo com os IDs originais e não são associados aos treinos importados.",
  "Training":"Treino",
+ "Replace my five weeks, saved workouts and preferences on this device":"Substituir minhas cinco semanas, treinos salvos e preferências neste dispositivo",
  "Preferences":"Preferências",
  "Units":"Unidades",
  "Metric (kg)":"Métrico (kg)",
@@ -220,6 +226,7 @@ const PT={
  "Plan length":"Duração do plano",
  "1 week":"1 semana","2 weeks":"2 semanas","3 weeks":"3 semanas","4 weeks":"4 semanas",
  "Week":"Semana",
+ "Generate all five weeks":"Gerar as cinco semanas",
  "Start Monday":"Início na segunda",
  "Generate all weeks":"Gerar todas as semanas",
  "Resume recurring week":"Retomar semana recorrente",
@@ -242,7 +249,7 @@ const PT={
  "Transfer your workout configuration":"Transfira sua configuração de treino",
  "Find Configuration backup under Local data to download and restore routines and preferences on another device.":"Abra Backup de configuração em Dados locais para baixar e restaurar rotinas e preferências em outro dispositivo.",
  "Configuration backup":"Backup de configuração",
- "Transfer routines and preferences. This does not transfer checkmarks or temporary exercise replacements.":"Transfira rotinas e preferências. Séries marcadas e substituições temporárias não são transferidas.",
+ "Transfer five weeks and preferences. This does not transfer checkmarks or temporary exercise replacements.":"Transfira rotinas e preferências. Séries marcadas e substituições temporárias não são transferidas.",
  "Local profile (optional)":"Perfil local (opcional)",
  "Email (this device only)":"E-mail (apenas neste dispositivo)",
  "Save email locally":"Salvar e-mail neste dispositivo",
@@ -252,8 +259,8 @@ const PT={
  "Import":"Importar",
  "Choose a Studio Motion JSON file":"Escolha um arquivo JSON do Studio Motion",
  "Review before replacing":"Revise antes de substituir",
- "Local checkmarks and temporary replacements stay stored. They may not appear with different workouts.":"As séries marcadas e substituições temporárias continuam salvas. Elas podem não aparecer em treinos diferentes.",
- "Replace my saved workouts, dated program and preferences on this device":"Substituir os treinos salvos, o programa com datas e as preferências neste dispositivo",
+ "Daily logs stay on this device under their original workout IDs and are not attached to imported workouts.":"As séries marcadas e substituições temporárias continuam salvas. Elas podem não aparecer em treinos diferentes.",
+ "Replace my five weeks, saved workouts and preferences on this device":"Substituir os treinos salvos, o programa com datas e as preferências neste dispositivo",
  "Replace with this file":"Substituir pelo conteúdo deste arquivo",
  "A configuration import was interrupted. Recover your previous configuration before editing.":"Uma importação de configuração foi interrompida. Recupere a configuração anterior antes de editar.",
  "Recover previous configuration":"Recuperar configuração anterior",
@@ -641,6 +648,7 @@ function writeStudioValue(key,value){
   throw Error("Studio Motion reset is in progress or this view is stale.");
  }
  localStorage.setItem(key,value);
+ if(typeof committedConfigValues!=="undefined"&&committedConfigValues&&Object.hasOwn(committedConfigValues,key))committedConfigValues[key]=value;
  const after=localStorage.getItem(resetEpochKey);
  if(after!==epoch){
   if(localStorage.getItem(key)===value)localStorage.removeItem(key);
@@ -1458,7 +1466,7 @@ function cleanSession(s,legacy=false,fresh=false){
    rest:Math.round(number(x.rest,60,0,3600)),note:typeof x.note==="string"?x.note.slice(0,200):"",...(Array.isArray(x.repRange)&&x.repRange.length===2&&x.repRange[0]===10&&x.repRange[1]===12?{repRange:[10,12]}:{})};
  });
  if(s.rest===true&&items.length)throw Error("Rest days cannot contain exercises.");
- return {id:!fresh&&validId(s.id)?s.id:localId(),title:s.title.slice(0,80),items,rest:s.rest===true};
+ return {id:!fresh&&validId(s.id)?s.id:localId(),title:s.title.slice(0,20000),items,rest:s.rest===true};
 }
 function decode(data){
  if(data?.version===1&&Array.isArray(data.sessions)&&data.sessions.length<=80){
@@ -1474,17 +1482,16 @@ try{
  const old=localStorage.getItem(KEY1), current=localStorage.getItem(KEY2);
  if(current){
   plan=decode(JSON.parse(current));
-  if(JSON.stringify(plan)!==current)writeStudioValue(KEY2,JSON.stringify(plan));
+
  }
  else if(old){
   plan=decode(JSON.parse(old));
   bootMessage=t("Older sessions kept under Saved workouts. Assign a copy to any day.");
-  writeStudioValue(KEY2,JSON.stringify(plan));
+
  }
 }catch{storageReadFailure=true;bootMessage=t("Saved workouts could not load. Nothing was overwritten. New edits stay in this tab.");}
 const blockKey="studio-motion-block-v1";
 let block=null,blockStored=null,blockInvalid=false;
-const noProgramDays=Array.from({length:7},()=>blank());
 function addCalendarDays(iso,n){
  const [y,m,d]=iso.split("-").map(Number);
  const date=new Date(y,m-1,d+n,12);
@@ -1497,21 +1504,87 @@ function dayNumber(iso){
 function isMonday(iso){
  return typeof iso==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(iso)&&addCalendarDays(iso,0)===iso&&new Date(dayNumber(iso)*86400000).getUTCDay()===1;
 }
-function blockWeekIndex(date=localDateString()){
- if(!block||block.paused)return -1;
- const index=Math.floor((dayNumber(date)-dayNumber(block.start))/7);
- return index<0?-1:index<block.weeks.length?index:-2;
-}
-let trainWeekStart=null;
+const slotsKey="studio-motion-weeks-v1",numberedCheckKey="studio-motion-week-checks-v1",numberedSwapKey="studio-motion-week-swaps-v1";
+let numbered=null,numberedStored=null,numberedBusy=false,numberedBooting=true,numberedInvalid=false,numberedSessionOnly=false;
+const numberedStoredValues=new Map();
+let slotsReady=Promise.resolve(),numberedWriteTail=Promise.resolve(),numberedIdle=Promise.resolve();
 function realWeekStart(){const d=new Date();return addCalendarDays(localDateString(d),-(d.getDay()+6)%7);}
-function trainReadOnly(){return trainWeekStart!==null&&trainWeekStart!==realWeekStart();}
-function currentWeekDays(){
- if(trainWeekStart!==null&&block){const slot=(dayNumber(trainWeekStart)-dayNumber(block.start))/7;if(Number.isInteger(slot)&&block.weeks[slot])return block.weeks[slot];}
- const index=blockWeekIndex();
- return index>=0?block.weeks[index]:index===-2?noProgramDays:plan.days;
-}
+function trainReadOnly(){return numberedBusy||numberedInvalid;}
+function currentWeekDays(){return numbered?numbered.weeks[numbered.selected]:plan.days;}
 const current=()=>currentWeekDays()[day];
-const calendarArchive=()=>[...plan.archive,...(block?.archive||[]).map(entry=>entry.workout)];
+function bindNumbered(value){numbered=value;plan={version:2,days:value.weeks[value.selected],archive:value.archive};}
+function originalSources(recovery=numbered?.recovery){
+ const local={};
+ try{for(const [name,key] of [["plan",KEY2],["sessions",KEY1],["block",blockKey],["checks","studio-motion-completion-v1"],["swaps","studio-motion-date-swaps-v1"]])local[name]=localStorage.getItem(key);}catch{}
+ const sources=[local];
+ try{const checks=localStorage.getItem(numberedCheckKey),swaps=localStorage.getItem(numberedSwapKey);if(checks||swaps)sources.push({plan:null,sessions:null,block:null,checks,swaps});}catch{}
+ for(const source of recovery||[])if(!sources.some(x=>JSON.stringify(x)===JSON.stringify(source)))sources.push(source);
+ return sources;
+}
+function recoveryWorkouts(){
+ const rows=[],seen=new Set();
+ const push=(workout,label)=>{try{const w=cleanSession(workout);if(hasWorkout(w))rows.push({workout:w,label});}catch{}};
+ for(const raw of originalSources()){
+  for(const name of ["plan","sessions","block"]){
+   if(!raw[name]||seen.has(name+raw[name]))continue;seen.add(name+raw[name]);
+   if(name!=="block"){try{const p=decode(JSON.parse(raw[name]));if(name==="plan")p.days.forEach((w,i)=>push(w,t("Previous recurring · ","Recorrente anterior · ")+dayName(i)));p.archive.forEach(w=>push(w,t("Previous saved workout","Treino salvo anterior")));}catch{}}
+   else try{const b=JSON.parse(raw.block);b.weeks.forEach((week,i)=>week.forEach((w,j)=>push(w,t("Previous dated · ","Anterior com data · ")+addCalendarDays(b.start,i*7+j))));b.archive.forEach(x=>push(x.workout,t("Previous archive · ","Arquivo anterior · ")+x.date));}catch{}
+  }
+ }
+ return rows;
+}
+const calendarArchive=()=>[...plan.archive,...recoveryWorkouts().map(x=>x.workout)];
+function decodeNumbered(data){
+ if(!data||Object.keys(data).some(k=>!["version","epoch","selected","weeks","archive","recovery"].includes(k))||data.version!==1||!Number.isInteger(data.selected)||data.selected<0||data.selected>4||!Array.isArray(data.weeks)||data.weeks.length!==5||!Array.isArray(data.archive)||data.archive.length>160)throw Error("Invalid numbered weeks.");
+ const ids=new Set();
+ const session=w=>{const clean=importWorkout(w);if(clean.id!==w.id||clean.items.some((row,i)=>row.id!==w.items[i].id)||ids.has(clean.id))throw Error("Duplicate workout identity.");ids.add(clean.id);return clean;};
+ const weeks=data.weeks.map(week=>{if(!Array.isArray(week)||week.length!==7)throw Error();return week.map(session);});
+ const archive=data.archive.map(session);
+ const recovery=data.recovery??null;
+ if(recovery!==null&&(!Array.isArray(recovery)||recovery.length>40||recovery.some(source=>!source||typeof source!=="object"||Array.isArray(source)||Object.keys(source).some(k=>!["plan","sessions","block","checks","swaps"].includes(k))||Object.values(source).some(v=>v!==null&&typeof v!=="string"))))throw Error("Invalid recovery data.");
+ return {version:1,epoch:data.epoch??null,selected:data.selected,weeks,archive,recovery};
+}
+function migrateNumbered(legacyPlan,legacyBlock,recovery){
+ const weeks=Array.from({length:5},()=>Array.from({length:7},()=>blank()));
+ if(legacyBlock)legacyBlock.weeks.forEach((week,i)=>{weeks[i]=week.map(w=>cleanSession(w,false,true));});
+ else weeks[0]=legacyPlan.days.map(w=>cleanSession(w,false,true));
+ const oldIndex=legacyBlock&&!legacyBlock.paused?Math.floor((dayNumber(localDateString())-dayNumber(legacyBlock.start))/7):-1;
+ return {version:1,epoch:resetEpoch,selected:oldIndex>=0&&oldIndex<legacyBlock.weeks.length?oldIndex:0,weeks,archive:[],recovery:recovery?[recovery]:null};
+}
+function persistNumberedValue(key,value){
+ const operation=numberedWriteTail.catch(()=>{}).then(async()=>{
+  if(numberedInvalid)throw Error("Reload before saving.");
+  if(numberedSessionOnly)return false;
+  const expected=numberedStoredValues.get(key)??null;
+  if(localStorage.getItem(key)!==expected){numberedInvalid=true;reloadAfterReset();throw Error("Saved weeks changed in another tab.");}
+  if(!navigator.locks?.request)throw Error("Storage coordination is unavailable.");
+  await navigator.locks.request("studio-motion-reset-v1",{mode:"exclusive"},()=>{
+   if(localStorage.getItem(key)!==expected){numberedInvalid=true;reloadAfterReset();throw Error("Saved weeks changed in another tab.");}
+   writeStudioValue(key,value);numberedStoredValues.set(key,value);if(key===slotsKey)numberedStored=value;
+  });return true;
+ });
+ numberedWriteTail=operation;return operation;
+}
+async function waitNumberedIdle(){while(numberedBusy)await numberedIdle;}
+async function commitNumbered(candidate=numbered){
+ if(numberedBusy)throw Error("Wait for the previous save.");
+ const value=JSON.stringify(candidate);numberedBusy=true;let release;numberedIdle=new Promise(resolve=>release=resolve);
+ try{const persisted=await persistNumberedValue(slotsKey,value);bindNumbered(candidate);return persisted;}
+ catch(error){
+  try{if(numberedStored)bindNumbered(decodeNumbered(JSON.parse(numberedStored)));}catch{}
+  if(localStorage.getItem(slotsKey)!==numberedStored){numberedInvalid=true;reloadAfterReset();}
+  throw error;
+ }finally{numberedBusy=false;release();renderTrainList();nav();}
+}
+async function selectNumberedWeek(slot){
+ if(trainReadOnly()||!Number.isInteger(slot)||slot<0||slot>4)return;
+ if(slot===numbered.selected){drawTrainWeeks();return;}
+ try{
+  await commitNumbered({...numbered,selected:slot});
+  currentExercises.clear();setDay(day);
+  if(programDraft){programDraft.before=numberedStored;drawProgramControls();showProgramSlot();}
+ }catch{say(t("Week could not be saved. Reload before editing.","Não foi possível salvar a semana. Recarregue antes de editar."));render();}
+}
 function loadBlock(){
  try{
   blockStored=localStorage.getItem(blockKey);
@@ -1529,39 +1602,19 @@ function loadBlock(){
  }catch{blockInvalid=true;}
 }
 loadBlock();
-function persistBlock(candidate){
- if(blockInvalid||localStorage.getItem(blockKey)!==blockStored)throw Error("Program changed in another tab.");
- const next=JSON.stringify(candidate);
- writeStudioValue(blockKey,next);blockStored=next;block=candidate;
-}
-function dayWriteKey(){return blockWeekIndex()>=0?blockKey:KEY2;}
-function snapshotWithWorkout(index,workout){
- const slot=blockWeekIndex();
- if(slot>=0){
-  return {...block,weeks:block.weeks.map((week,i)=>i===slot?week.map((row,j)=>j===index?workout:row):week)};
- }
- return {...plan,days:plan.days.map((row,i)=>i===index?workout:row)};
-}
-function saveActiveDayData(){
- if(trainReadOnly())throw Error("Read-only week.");
- if(blockWeekIndex()===-2)throw Error("The program has ended.");
- if(dayWriteKey()===blockKey)persistBlock(block);else writeStudioValue(KEY2,JSON.stringify(plan));
-}
+const legacyPlan=plan;
+function dayWriteKey(){return slotsKey;}
+function snapshotWithWorkout(index,workout){return {...numbered,weeks:numbered.weeks.map((week,i)=>i===numbered.selected?week.map((row,j)=>j===index?workout:row):week)};}
+async function saveActiveDayData(){return commitNumbered();}
 function keepCurrentWorkout(){
  if(!hasWorkout(current()))return true;
- if(dayWriteKey()===blockKey){
-  if(block.archive.length>=160)return false;
-  block.archive.push({date:dateForDay(day),workout:current()});
- }else{
-  if(plan.archive.length>=160)return false;
-  plan.archive.push(current());
- }
- return true;
+ if(plan.archive.length>=160)return false;
+ plan.archive.push(current());return true;
 }
 window.addEventListener("storage",event=>{
- if(event.key===blockKey&&event.newValue!==blockStored&&localStorage.getItem(resetEpochKey)===resetEpoch)reloadAfterReset();
+ if(!numberedBooting&&[slotsKey,numberedCheckKey,numberedSwapKey].includes(event.key)&&event.newValue!==numberedStoredValues.get(event.key)&&localStorage.getItem(resetEpochKey)===resetEpoch)reloadAfterReset();
 });
-const checkKey="studio-motion-completion-v1";
+const legacyCheckKey="studio-motion-completion-v1",checkKey=numberedCheckKey;
 let completion={},progressWritable=true;
 try{
  const r=JSON.parse(localStorage.getItem(checkKey)||"{}");
@@ -1569,7 +1622,7 @@ try{
  for(const d of Object.keys(r).filter(k=>/^\d{4}-\d{2}-\d{2}$/.test(k)).sort().slice(-84)){
   const rows=r[d];if(!rows||Array.isArray(rows)||typeof rows!=="object")continue;
   completion[d]={};
-  for(const k of Object.keys(rows).filter(k=>/^[a-z0-9-]{8,100}\/[a-z0-9-]{8,100}$/.test(k)).slice(0,600)){
+  for(const k of Object.keys(rows).filter(k=>/^[a-z0-9-]{8,100}\/[a-z0-9-]{8,100}$/.test(k)).slice(0,20000)){
    if(Array.isArray(rows[k]))completion[d][k]=[...new Set(rows[k].filter(x=>Number.isInteger(x)&&x>=1&&x<=50))].sort((a,b)=>a-b);
   }
  }
@@ -1578,7 +1631,6 @@ function localDateString(d=new Date()){
  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 }
 function dateForDay(index){
- if(trainWeekStart!==null)return addCalendarDays(trainWeekStart,index);
  const d=new Date();d.setDate(d.getDate()+index-(d.getDay()+6)%7);
  return localDateString(d);
 }
@@ -1589,16 +1641,11 @@ function scheduleMidnight(){
  midnightJob=setTimeout(()=>{refreshDates();scheduleMidnight();},Math.max(50,next-now));
 }
 function refreshDates(){
+ if(!numbered||numberedBusy)return false;
  const now=new Date(),date=localDateString(now),activeDay=(now.getDay()+6)%7;
  if(lastLocalDate===date&&today===activeDay&&$("trainList").dataset.date===dateForDay(day))return false;
- const wasToday=trainWeekStart===null&&day===today;
- if(lastLocalDate!==date){
-  currentExercises.clear();
-  if(trainWeekStart!==null){
-   const slot=block?(dayNumber(trainWeekStart)-dayNumber(block.start))/7:-1;
-   if(trainWeekStart===realWeekStart()||!Number.isInteger(slot)||!block?.weeks[slot])trainWeekStart=null;
-  }
- }
+ const wasToday=day===today;
+ if(lastLocalDate!==date)currentExercises.clear();
  lastLocalDate=date;today=activeDay;
  setDay(wasToday?today:day);
  if($("weekSummary").open)renderWeekSummary();
@@ -1608,14 +1655,14 @@ function refreshDates(){
 window.addEventListener("focus",refreshDates);
 window.addEventListener("pageshow",refreshDates);
 setInterval(()=>{if(!document.hidden)refreshDates();},30000);
-const swapKey="studio-motion-date-swaps-v1";
+const legacySwapKey="studio-motion-date-swaps-v1",swapKey=numberedSwapKey;
 let dateSwaps={},swapsWritable=true;
 try{
  const stored=JSON.parse(localStorage.getItem(swapKey)||"{}");
  if(!stored||Array.isArray(stored)||typeof stored!=="object")throw Error("Invalid replacements");
  for(const date of Object.keys(stored).filter(k=>/^\d{4}-\d{2}-\d{2}$/.test(k)).sort().slice(-84)){
   dateSwaps[date]={};
-  for(const [key,row] of Object.entries(stored[date]||{}).slice(0,80)){
+  for(const [key,row] of Object.entries(stored[date]||{}).slice(0,20000)){
    if(!/^[a-z0-9-]{8,100}\/[a-z0-9-]{8,100}$/.test(key)||!validId(row?.id)||!byId(row.exercise))continue;
    try{dateSwaps[date][key]=cleanSession({title:"",items:[row]}).items[0];}catch{}
   }
@@ -1623,29 +1670,52 @@ try{
 }catch{swapsWritable=false;}
 const swapSlot=(w,row)=>w.id+"/"+row.id;
 const effectiveRows=(w=current(),date=dateForDay(day))=>w.items.map(row=>dateSwaps[date]?.[swapSlot(w,row)]||row);
-function saveSwap(date,w,base,row){
+async function saveSwap(date,w,base,row){
  if(trainReadOnly())return;
  (dateSwaps[date]??(dateSwaps[date]={}))[swapSlot(w,base)]=row;
  for(const old of Object.keys(dateSwaps).sort().slice(0,-84))delete dateSwaps[old];
- try{if(!swapsWritable)throw Error();writeStudioValue(swapKey,JSON.stringify(dateSwaps));return true;}catch{return false;}
+ try{if(!swapsWritable)throw Error();return await persistNumberedValue(swapKey,JSON.stringify(dateSwaps));}catch{return false;}
 }
+async function initializeNumbered(){
+ numberedSessionOnly=!navigator.locks?.request;
+ try{
+  for(const key of [slotsKey,checkKey,swapKey])numberedStoredValues.set(key,localStorage.getItem(key));
+  numberedStored=numberedStoredValues.get(slotsKey);
+  if(numberedStored){const loaded=decodeNumbered(JSON.parse(numberedStored));if(loaded.epoch!==resetEpoch)throw Error("Stale week epoch.");bindNumbered(loaded);return;}
+  const recovery={plan:localStorage.getItem(KEY2),sessions:localStorage.getItem(KEY1),block:localStorage.getItem(blockKey),checks:localStorage.getItem(legacyCheckKey),swaps:localStorage.getItem(legacySwapKey)};
+  bindNumbered(migrateNumbered(legacyPlan,block,null));
+  if(storageReadFailure||blockInvalid)throw Error("Previous data needs recovery.");
+  if(!navigator.locks?.request){numberedSessionOnly=true;bootMessage=t("Weeks are available in this tab only; this browser cannot coordinate saved data.","As semanas ficam apenas nesta aba; este navegador não pode coordenar os dados salvos.");return;}
+  await navigator.locks.request("studio-motion-reset-v1",{mode:"exclusive"},()=>{
+   const existing=localStorage.getItem(slotsKey);
+   if(existing){const loaded=decodeNumbered(JSON.parse(existing));if(loaded.epoch!==resetEpoch)throw Error();numberedStored=existing;numberedStoredValues.set(slotsKey,existing);bindNumbered(loaded);return;}
+   numberedStored=JSON.stringify(numbered);writeStudioValue(slotsKey,numberedStored);numberedStoredValues.set(slotsKey,numberedStored);
+  });
+  if(Object.values(recovery).some(Boolean))bootMessage=t("Five manual weeks are ready. Previous routines and original logs remain under Local data → Previous data. New weeks start with separate daily progress.","Cinco semanas manuais estão prontas. Rotinas e registros originais ficam em Dados locais → Dados anteriores. As novas semanas têm progresso diário separado.");
+ }catch{
+  numberedSessionOnly=true;
+  if(!numbered)bindNumbered(migrateNumbered(legacyPlan,block,null));
+  bootMessage=t("Saved data could not be opened safely. Nothing was overwritten. Changes stay in this tab; use Previous data to recover originals.","Não foi possível abrir os dados com segurança. Nada foi sobrescrito. Alterações ficam nesta aba; use Dados anteriores para recuperar os originais.");
+ }
+}
+
 function tellSwap(message){
  const status=$("swapResult");status.hidden=!message;status.textContent=message;
 }
 const marksFor=(row,w=current(),date=dateForDay(day))=>completion[date]?.[w.id+"/"+row.id]||[];
-function persistCompletion(){
+async function persistCompletion(){
  for(const old of Object.keys(completion).sort().slice(0,-84))delete completion[old];
- try{if(!progressWritable)throw Error();writeStudioValue(checkKey,JSON.stringify(completion));return true;}
+ try{if(!progressWritable)throw Error();return await persistNumberedValue(checkKey,JSON.stringify(completion));}
  catch{return false;}
 }
-function storeMark(row,set,checked,date){
+async function storeMark(row,set,checked,date){
  if(trainReadOnly())return;
- if(date!==dateForDay(day)){renderTrainList();nav();return;}
+ if(date!==dateForDay(day)||!effectiveRows().includes(row)){renderTrainList();nav();return;}
  const k=current().id+"/"+row.id,byRow=completion[date]??(completion[date]={});
  const setOf=new Set(byRow[k]||[]);
  if(checked)setOf.add(set);else setOf.delete(set);
  byRow[k]=[...setOf].sort((a,b)=>a-b);
- progressCount(persistCompletion()?"":t(" · Browser did not save the checkmarks"," · O navegador não salvou as séries"));
+ progressCount(await persistCompletion()?"":t(" · Browser did not save the checkmarks"," · O navegador não salvou as séries"));
 }
 let undoCompletion=null,setNotice="";
 function nextUnfinishedSet(row,w=current(),date=dateForDay(day)){
@@ -1683,7 +1753,7 @@ $("jumpIncomplete").onclick=()=>{
  if(!set)return;
  card.scrollIntoView({block:"start"});set.focus({preventScroll:true});
 };
-$("clearSets").onclick=()=>{
+$("clearSets").onclick=async()=>{
  if(trainReadOnly())return;
  if(refreshDates())return;
  const w=current(),date=dateForDay(day),saved=completion[date];
@@ -1695,11 +1765,11 @@ $("clearSets").onclick=()=>{
  for(const k of Object.keys(previous))delete saved[k];
  if(!Object.keys(saved).length)delete completion[date];
  undoCompletion={date,wid:w.id,previous};
- setNotice=persistCompletion()?t(" · Cleared"," · Séries desmarcadas"):t(" · Cleared in this tab only"," · Séries desmarcadas apenas nesta aba");
+ setNotice=await persistCompletion()?t(" · Cleared"," · Séries desmarcadas"):t(" · Cleared in this tab only"," · Séries desmarcadas apenas nesta aba");
  renderTrainList();
  $("undoSets").focus({preventScroll:true});
 };
-$("undoSets").onclick=()=>{
+$("undoSets").onclick=async()=>{
  if(trainReadOnly())return;
  if(refreshDates())return;
  const undo=undoCompletion;
@@ -1710,7 +1780,7 @@ $("undoSets").onclick=()=>{
   if(allowed.has(key))saved[key]=[...new Set([...(saved[key]||[]),...values])].sort((a,b)=>a-b);
  }
  undoCompletion=null;
- setNotice=persistCompletion()?t(" · Restored"," · Séries restauradas"):t(" · Restored in this tab only"," · Séries restauradas apenas nesta aba");
+ setNotice=await persistCompletion()?t(" · Restored"," · Séries restauradas"):t(" · Restored in this tab only"," · Séries restauradas apenas nesta aba");
  renderTrainList();
  $("clearSets").focus({preventScroll:true});
 };
@@ -1835,7 +1905,7 @@ function renderTrainList(){
   const e=byId(row.exercise),marks=marksFor(row,current(),date);
   const boxes=Array.from({length:row.sets},(_,j)=>{
    const set=j+1;
-   return '<label class="set-box"><input type="checkbox" data-row="'+i+'" data-set="'+set+'" aria-label="'+esc(nameOf(e)+t(" set ",", série ")+set)+'" '+(marks.includes(set)?"checked":"")+'><span>'+set+'</span></label>';
+   return '<label class="set-box"><input type="checkbox" data-row="'+i+'" data-set="'+set+'" data-row-key="'+row.id+'" aria-label="'+esc(nameOf(e)+t(" set ",", série ")+set)+'" '+(marks.includes(set)?"checked":"")+'><span>'+set+'</span></label>';
   }).join("");
   return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+trainingGuideButton(e,i)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">'+t("Alternate for")+" "+esc(displayDate(date))+'</p>':'')+
@@ -1872,14 +1942,14 @@ $("trainList").onchange=e=>{
  const x=e.target;
  if(x.type==="checkbox"&&refreshDates())return;
  const i=+x.dataset.row,set=+x.dataset.set,row=effectiveRows()[i];
- if(x.type!=="checkbox"||!row||!Number.isInteger(set)||set<1||set>row.sets)return;
+ if(x.type!=="checkbox"||!x.isConnected||!$("trainList").contains(x)||!row||x.dataset.rowKey!==row.id||!Number.isInteger(set)||set<1||set>row.sets)return;
  setNotice="";storeMark(row,set,x.checked,$("trainList").dataset.date);
 };
 
 function say(x){$("save").textContent=x;}
-function save(x=t("Saved in this browser.")){
- if(storageReadFailure){say(x+t(" Browser storage is not being written. New edits stay in this tab."," Não foi possível gravar no navegador. As alterações ficam apenas nesta aba."));return;}
- try{saveActiveDayData();say(x);}catch{say(x+t(" Browser storage unavailable. New edits stay in this tab."," Armazenamento indisponível. As alterações ficam apenas nesta aba."));}
+async function save(x=t("Saved in this browser.")){
+ if(numberedInvalid){say(x+t(" Browser storage is not being written. New edits stay in this tab."," Não foi possível gravar no navegador. As alterações ficam apenas nesta aba."));return;}
+ try{const persisted=await saveActiveDayData();say(persisted?x:t("Saved in this tab only. Browser storage coordination is unavailable.","Salvo apenas nesta aba. A coordenação do armazenamento está indisponível."));}catch{say(x+t(" Browser storage unavailable. New edits stay in this tab."," Armazenamento indisponível. As alterações ficam apenas nesta aba."));}
 }
 const make=(exercise,reps=10)=>({id:localId(),exercise,sets:2,reps,seconds:byId(exercise).hold?20:0,kg:null,rest:60,note:""});
 const unitKey="studio-motion-weight-unit-v1",kgPerPound=0.45359237,invalidWeight=Symbol("invalid weight");
@@ -1936,13 +2006,13 @@ function openWeight(button,routine=false){
  let before,relatedBefore;
  const relatedKey=dated?dayWriteKey():swapKey;
  try{
-  before=localStorage.getItem(key);relatedBefore=localStorage.getItem(relatedKey);
-  if((dated?!swapsWritable:storageReadFailure)||before!==JSON.stringify(dated?dateSwaps:key===blockKey?block:plan))throw Error();
+  before=numberedSessionOnly?null:localStorage.getItem(key);relatedBefore=numberedSessionOnly?null:localStorage.getItem(relatedKey);
+  if(!numberedSessionOnly&&((dated?!swapsWritable:numberedInvalid)||before!==numberedStoredValues.get(key)))throw Error();
  }catch{
   tellSwap(t("Weight could not be opened from this browser. Reload to use the latest saved workout.","Não foi possível carregar a carga neste navegador. Recarregue para usar o treino salvo mais recente."));
   return;
  }
- weightEdit={button,index,w,base,row,date,slot,dated,key,before,relatedKey,relatedBefore,routine,exercise:e,draftKg:row.kg,initialUnit:weightUnit};
+ weightEdit={button,index,w,base,row,date,slot,dated,key,before,relatedKey,relatedBefore,routine,selectedWeek:numbered.selected,exercise:e,draftKg:row.kg,initialUnit:weightUnit};
  $("weightHeading").textContent=(routine?(e.hold?t("Sets & hold: ","Séries e duração: "):t("Sets & reps: ","Séries e repetições: ")):t("Weight: ","Carga: "))+nameOf(e);
  $("weightScope").textContent=dated?t("Only this replacement on ","Somente esta substituição em ")+displayDate(date)+".":key===blockKey?t("Updates this exercise only in the program workout on ","Atualiza este exercício somente no treino do programa de ")+displayDate(date)+".":t("Updates this exercise in your weekly plan, including next time.","Atualiza a carga deste exercício no plano semanal, inclusive na próxima vez.");
  $("weightLoadFields").hidden=e.eq==="Bodyweight";
@@ -1998,18 +2068,19 @@ $("weightUnit").onchange=()=>{
 $("trainList").addEventListener("click",event=>{
  const button=event.target.closest("[data-edit-weight],[data-edit-routine]");if(button)openWeight(button,button.hasAttribute("data-edit-routine"));
 });
-$("weightCancel").onclick=()=>$("weightDialog").close();
-$("weightDialog").addEventListener("close",()=>{
+function finishWeightEdit(){
  const edit=weightEdit;weightEdit=null;
- if(edit&&(edit.refresh||edit.initialUnit!==weightUnit)){
-  render();
+ if(edit){
+  if(edit.refresh||edit.initialUnit!==weightUnit)render();
   $("trainList").querySelector('[data-swap-row="'+edit.index+'"] '+(edit.routine?"[data-edit-routine]":"[data-edit-weight]"))?.focus({preventScroll:true});
- }else if(edit?.button.isConnected)edit.button.focus({preventScroll:true});
+ }
  syncAnimation();
-});
+}
+$("weightCancel").onclick=()=>{$("weightDialog").close();finishWeightEdit();};
+$("weightDialog").addEventListener("close",finishWeightEdit);
 for(const id of ["weightInput","doseSets","doseReps"])$(id).addEventListener("input",()=>weightMessage(""));
 function highestLoggedSet(edit){
- const raw=localStorage.getItem(checkKey),data=raw?JSON.parse(raw):{};
+ const raw=numberedSessionOnly?null:localStorage.getItem(checkKey),data=raw?JSON.parse(raw):{};
  if(!data||typeof data!=="object"||Array.isArray(data))throw Error("Invalid completion.");
  const saved=data[edit.date]?.[edit.w.id+"/"+edit.row.id]||[];
  if(!Array.isArray(saved)||saved.some(x=>!Number.isInteger(x)))throw Error("Invalid sets.");
@@ -2019,7 +2090,7 @@ function integerDose(id,max){
  const value=$(id).value.trim();
  return /^\d+$/.test(value)&&Number(value)>=1&&Number(value)<=max?Number(value):null;
 }
-$("weightForm").onsubmit=event=>{
+$("weightForm").onsubmit=async event=>{
  event.preventDefault();
  const edit=weightEdit;if(trainReadOnly()||!edit||!$("weightDialog").open)return;
  const next=draftLoad(edit),sets=integerDose("doseSets",50),repRaw=$("doseReps").value.trim(),keepRange=!!edit.row.repRange&&!repRaw;
@@ -2028,12 +2099,12 @@ $("weightForm").onsubmit=event=>{
  if(next===invalidWeight){loadError();return;}
  if(sets===null){weightMessage(t("Enter 1 to 50 sets.","Digite de 1 a 50 séries."),"doseSets");$("doseSets").focus();return;}
  if(reps===null){weightMessage(t("Enter a whole number from 1 to 300.","Digite um número inteiro de 1 a 300."),"doseReps");$("doseReps").focus();return;}
- if(refreshDates()||edit.date!==dateForDay(day)||edit.w!==current()||edit.w.items[edit.index]!==edit.base||
+ if(refreshDates()||edit.selectedWeek!==numbered.selected||edit.date!==dateForDay(day)||edit.w!==current()||edit.w.items[edit.index]!==edit.base||
     effectiveRows(edit.w,edit.date)[edit.index]!==edit.row||!edit.button.isConnected){
   weightMessage(t("The workout changed. Cancel and open the weight again.","O treino mudou. Cancele e abra a carga novamente."));return;
  }
  try{
-  if(localStorage.getItem(edit.key)!==edit.before||localStorage.getItem(edit.relatedKey)!==edit.relatedBefore){
+  if(!numberedSessionOnly&&(localStorage.getItem(edit.key)!==edit.before||localStorage.getItem(edit.relatedKey)!==edit.relatedBefore)){
    weightMessage(t("Saved data changed in another tab. Cancel and reload before editing.","Os dados salvos mudaram em outra aba. Cancele e recarregue antes de editar."));return;
   }
   if(sets<edit.row.sets&&sets<highestLoggedSet(edit)){
@@ -2045,10 +2116,10 @@ $("weightForm").onsubmit=event=>{
    if(!keepRange)delete updated.repRange;
    if(edit.dated){
     const replacement={...dateSwaps,[edit.date]:{...dateSwaps[edit.date],[edit.slot]:updated}};
-    writeStudioValue(edit.key,JSON.stringify(replacement));dateSwaps=replacement;
+    await persistNumberedValue(edit.key,JSON.stringify(replacement));dateSwaps=replacement;
    }else{
     const replacement=snapshotWithWorkout(day,{...edit.w,items:edit.w.items.map((row,j)=>j===edit.index?updated:row)});
-    if(edit.key===blockKey)persistBlock(replacement);else{writeStudioValue(edit.key,JSON.stringify(replacement));plan=replacement;}
+    await commitNumbered(replacement);
    }
    const loadButton=edit.button.closest("[data-swap-row]")?.querySelector("[data-edit-weight]");
    if(loadButton){
@@ -2060,7 +2131,7 @@ $("weightForm").onsubmit=event=>{
  }catch{
   weightMessage(t("This browser could not save the weight. No change was applied.","O navegador não conseguiu salvar a carga. Nenhuma alteração foi aplicada."));return;
  }
- $("weightDialog").close();
+ $("weightDialog").close();finishWeightEdit();
 };
 function dose(x){const e=byId(x.exercise),unit=e.hold?x.seconds+t(" sec"," s"):(x.repRange?x.repRange.join("–"):x.reps)+t(" reps"," reps.");return x.sets+" × "+unit+(e.side?t(" per side"," por lado"):"")+" · "+x.rest+t(" sec rest"," s de descanso")+(x.kg===null?"":" · "+weightCaption(x.kg));}
 // Visually checked standalone media. Link only: no embedding, prefetch, redistribution or auto-loading.
@@ -2366,7 +2437,7 @@ function openSwap(root,card,mode){
   result.innerHTML=section(t("Same movement"),same)+section(t("Same muscle group"),muscle)||'<p class="guide">'+t("No other matches with this equipment. Try a different filter.")+'</p>';
  }
  gear.onchange=bench.onchange=choices;choices();
- panel.onclick=event=>{
+ panel.onclick=async event=>{
   if(event.target.closest("[data-swap-cancel]")){closeSwap(card);return;}
   const pick=event.target.closest("[data-swap-ex]");
   if(trainReadOnly()||!pick||w!==current()||date!==dateForDay(day))return;
@@ -2377,11 +2448,11 @@ function openSwap(root,card,mode){
   if(next.hold&&exercise.hold)swap.seconds=row.seconds;
   if(!next.hold&&!exercise.hold){swap.reps=row.reps;if(row.repRange)swap.repRange=[...row.repRange];}
   if(mode==="date"){
-   const persisted=saveSwap(date,w,w.items[i],swap);
+   const persisted=await saveSwap(date,w,w.items[i],swap);
    renderTrainList();tellSwap(nameOf(next)+(persisted?t(" replaces "," substitui ")+nameOf(exercise)+t(" for "," em ")+date+".":t(" replaced the exercise in this tab only; browser storage unavailable."," foi substituído apenas nesta aba; armazenamento indisponível.")));
   }else{
    const dated=dateSwaps[date]?.[swapSlot(w,row)]||(marksFor(row,w,date).length?row:null);
-   const preserved=!dated||saveSwap(date,w,swap,dated);
+   const preserved=!dated||await saveSwap(date,w,swap,dated);
    w.items[i]=swap;render();save(nameOf(next)+t(" replaces "," substitui ")+nameOf(exercise)+t(" in the weekly plan."," no plano semanal.")+
     (dated?(preserved?" The "+date+" exercise and its completed sets stay separate.":t(" The date’s separate exercise could not be saved and remains in this tab only."," Não foi possível salvar a substituição para esta data. Ela fica apenas nesta aba.")):""));
   }
@@ -2563,59 +2634,16 @@ function easyDay(avoid){
  return {draft,repeated:!fresh};
 }
 let programDraft=null;
-const programRunning=()=>!!block&&!block.paused&&blockWeekIndex()!==-2;
-const recurringWeek=()=>plan.days;
-function proposedStart(){
- const monday=dateForDay(0);
- return today===0&&!recurringWeek().some(hasWorkout)?monday:addCalendarDays(monday,7);
-}
-function formatRange(start,days=7){return displayDate(start)+" – "+displayDate(addCalendarDays(start,days-1));}
 function programStatus(){
- const index=blockWeekIndex(),status=$("blockStatus");
- status.hidden=!block||block.paused;
- const suffix=block?formatRange(block.start,block.weeks.length*7):"";
- status.textContent=!block||block.paused?"":
-  index===-2?t("Program complete · ","Programa concluído · ")+suffix:
-  index<0?t("Program scheduled · ","Programa agendado · ")+suffix:
-  t("Program · Week ","Programa · Semana ")+(index+1)+" / "+block.weeks.length+" · "+formatRange(realWeekStart());
- $("resumeRecurring").hidden=index!==-2;
+ $("blockStatus").textContent=t("Week ","Semana ")+(numbered.selected+1)+t(" · Selected manually · no automatic change"," · Seleção manual · sem troca automática");
 }
-$("resumeRecurring").onclick=()=>{
- if(trainReadOnly())return;
- if(blockWeekIndex()!==-2||!confirm(t("Resume your recurring week? The finished program and saved history are kept.","Retomar sua semana recorrente? O programa concluído e o histórico ficam salvos.")))return;
- try{persistBlock({...block,paused:true});setDay(today);}catch{say(t("Could not save program settings.","Não foi possível salvar o programa."));}
-};
 function blankWeek(){return Array.from({length:7},()=>blank());}
-function protectedProgramDay(workout,date){
- return date<localDateString()||Object.keys(completion[date]||{}).some(key=>key.startsWith(workout.id+"/")&&completion[date][key].length);
-}
-function startProgramDraft(length){
- const existing=programRunning()?block:null;
- programDraft={length:existing?.weeks.length||length,start:existing?.start||proposedStart(),existing,
-  slot:existing?Math.max(0,blockWeekIndex()):0,entries:new Map()};
- drawProgramControls();
-}
+function startProgramDraft(){programDraft={length:5,slot:numbered.selected,entries:new Map(),before:numberedStored};drawProgramControls();}
 function drawProgramControls(){
- const enabled=Boolean(programDraft);
- $("weekLengthHint").hidden=enabled;
- $("weekSlotLabel").hidden=$("weekStartLabel").hidden=$("weekGenerateAll").hidden=!enabled;
- $("weekLength").disabled=programRunning();
- $("weekLength").options[0].disabled=trainReadOnly()||blockWeekIndex()===-2;
- $("weekLength").value=String(programDraft?.length||1);
- $("regenerateWeek").textContent=enabled?t("Generate this week","Gerar esta semana"):t("Generate again");
- if(!enabled){
-  $("weekSlot").innerHTML='<option value="0">'+t("Week ","Semana ")+'1</option>';
-  $("blockDraftRange").textContent=t("Recurring week","Semana recorrente")+" · "+formatRange(realWeekStart());
-  return;
- }
- const draft=programDraft;
- const choices=draft.existing?[draft.start]:[...new Set([proposedStart(),...(today===0||!recurringWeek().some(hasWorkout)?[dateForDay(0)]:[]),addCalendarDays(dateForDay(0),7)])];
- $("weekStart").innerHTML=choices.map(date=>'<option value="'+date+'">'+esc(displayDate(date))+'</option>').join("");
- $("weekStart").value=draft.start;$("weekStart").disabled=!!draft.existing;
- $("weekSlot").innerHTML=Array.from({length:draft.length},(_,i)=>'<option value="'+i+'">'+t("Week ","Semana ")+(i+1)+'</option>').join("");
- $("weekSlot").value=String(draft.slot);
- const start=addCalendarDays(draft.start,draft.slot*7);
- $("blockDraftRange").textContent=t("Previewing week ","Prévia da semana ")+(draft.slot+1)+" / "+draft.length+" · "+formatRange(start);
+ $("weekSlotLabel").hidden=false;$("weekGenerateAll").hidden=false;
+ $("weekSlot").innerHTML=weekOptions();$("weekSlot").value=String(programDraft?.slot??numbered.selected);
+ $("regenerateWeek").textContent=t("Generate this week","Gerar esta semana");
+ $("blockDraftRange").textContent=t("Week ","Semana ")+((programDraft?.slot??numbered.selected)+1)+t(" · Manual slot · not linked to calendar dates"," · Semana manual · sem vínculo com datas");
 }
 function openWeekDialog(){
  const dialog=$("weekPreview");
@@ -2637,26 +2665,17 @@ function buildDraftWeek(source,dateKey){
 }
 function generateProgramSlot(slot){
  programDraft.slot=slot;
- const source=programDraft.existing?.weeks[slot]||blankWeek(),start=addCalendarDays(programDraft.start,slot*7);
- const built=buildDraftWeek(source,start);
+ const source=numbered.weeks[slot];
+ const built=buildDraftWeek(source,"slot-"+slot);
  const previous=programDraft.entries.get(slot);
- const selected=new Set(built.drafts.flatMap((draft,i)=>draft&&!protectedProgramDay(source[i],addCalendarDays(start,i))&&
+ const selected=new Set(built.drafts.flatMap((draft,i)=>draft&&
    (previous?.selectionChanged?previous.selected.has(i):!hasWorkout(source[i]))?[i]:[]));
  programDraft.entries.set(slot,{...built,selected,selectionChanged:!!previous?.selectionChanged});
 }
 function showWeek(){
  if(trainReadOnly())return;
- if(!$("weekPreview").open){
-  programDraft=null;$("blockFeedback").hidden=true;
-  if(programRunning())startProgramDraft(block.weeks.length);else if(blockWeekIndex()===-2)startProgramDraft(2);else drawProgramControls();
-  openWeekDialog();
- }
- if(programDraft){
-  generateProgramSlot(programDraft.slot);drawProgramControls();showProgramSlot();
- }else{
-  const source=recurringWeek();const {drafts,limit}=buildDraftWeek(source,null);
-  renderWeekDrafts(drafts,source,limit);
- }
+ if(!$("weekPreview").open){startProgramDraft();$("blockFeedback").hidden=true;openWeekDialog();}
+ generateProgramSlot(programDraft.slot);drawProgramControls();showProgramSlot();
 }
 function showProgramSlot(){
  const slot=programDraft.slot,entry=programDraft.entries.get(slot);
@@ -2665,12 +2684,12 @@ function showProgramSlot(){
   $("weekCards").innerHTML='<p class="guide">'+t("Generate this week or all weeks to see proposals.","Gere esta semana ou todas as semanas para ver propostas.")+'</p>';
   $("weekStatus").textContent="";updateWeekChoice();return;
  }
- renderWeekDrafts(entry.drafts,programDraft.existing?.weeks[slot]||blankWeek(),entry.limit,entry,slot);
+ renderWeekDrafts(entry.drafts,numbered.weeks[slot],entry.limit,entry,slot);
 }
 function renderWeekDrafts(drafts,source,limit,entry=null,slot=0){
  proposedWeek={drafts};const size=8;
  $("weekCards").innerHTML=drafts.map((w,i)=>{
-  const occupied=hasWorkout(source[i]),protectedDay=!!entry&&protectedProgramDay(source[i],addCalendarDays(programDraft.start,slot*7+i));
+  const occupied=hasWorkout(source[i]),protectedDay=false;
   const warning=[protectedDay?t("Past or logged day cannot be replaced.","Dias passados ou registrados não podem ser substituídos."):occupied?t("Existing workout protected by default."):"",w&&i<6&&w.items.length<size?t("Fewer than 8 valid options with this equipment."):"",limit.has(i)&&i<6?t("Limited variety with these settings."):""].filter(Boolean).join(" ");
   const overview=w?workoutOverview(w.items):null;
   const names=overview?groupLabels(overview.groups):"",map=w&&!w.rest?summaryMap(overview.primary,true):"";
@@ -2697,84 +2716,44 @@ $("weekCards").addEventListener("toggle",event=>{
  details.dataset.thumbReady="true";
 },true);
 function updateWeekChoice(){
- const n=programDraft?[...programDraft.entries.values()].reduce((count,entry)=>count+entry.selected.size,0):$("weekCards").querySelectorAll("input:checked").length;
- if(programDraft){
-  $("applyWeek").disabled=!n;
-  $("applyWeek").textContent=n?(programDraft.existing?t("Save ","Salvar "):t("Review & start · ","Revisar e iniciar · "))+n+" "+plural(n,t("day","dia"),t("days","dias")):t("Select days to save");
-  return;
- }
- $("applyWeek").disabled=!n;$("applyWeek").textContent=n?t("Save ","Salvar ")+n+" "+plural(n,t("day","dia"),t("days","dias")):t("Select days to save");
+ const n=programDraft?[...programDraft.entries.values()].reduce((count,entry)=>count+entry.selected.size,0):0;
+ $("applyWeek").disabled=!n||trainReadOnly();$("applyWeek").textContent=n?t("Save ","Salvar ")+n+" "+plural(n,t("day","dia"),t("days","dias")):t("Select days to save");
 }
-function commitProgram(){
- if(trainReadOnly())return;
- const draft=programDraft;if(!draft)return;
- const existing=draft.existing;
- const weeks=(existing?.weeks||Array.from({length:draft.length},blankWeek)).map(slot=>[...slot]);
- const archive=[...(block?.archive||[])];
- if(!existing&&block){
-  for(const [slot,rows] of block.weeks.entries()) for(const [i,workout] of rows.entries()){
-   if(hasWorkout(workout))archive.push({date:addCalendarDays(block.start,slot*7+i),workout});
-  }
- }
- let changes=0,replace=0;
+async function commitWeek(){
+ if(trainReadOnly()||!programDraft)return;
+ const draft=programDraft;
+ if(draft.before!==numberedStored){$("blockFeedback").hidden=false;$("blockFeedback").textContent=t("Workouts changed. Close and reopen the planner.","Os treinos mudaram. Feche e reabra o planejador.");return;}
+ const weeks=numbered.weeks.map(week=>[...week]),archive=[...numbered.archive];let count=0,replaced=0;
  for(const [slot,entry] of draft.entries)for(const i of entry.selected){
-  const date=addCalendarDays(draft.start,slot*7+i),current=weeks[slot][i],proposal=entry.drafts[i];
-  if(!proposal||protectedProgramDay(current,date))continue;
-  if(hasWorkout(current)){archive.push({date,workout:current});replace++;}
-  weeks[slot][i]=cleanSession(proposal,false,true);changes++;
+  const proposal=entry.drafts[i];if(!proposal)continue;
+  if(hasWorkout(weeks[slot][i])){archive.push(weeks[slot][i]);replaced++;}
+  weeks[slot][i]=cleanSession(proposal,false,true);count++;
  }
- const feedback=$("blockFeedback");
- if(!changes||archive.length>160){
-  feedback.hidden=false;feedback.textContent=archive.length>160?t("Saved workouts limit reached. Nothing was replaced."):t("Selected days are no longer editable. Nothing was saved.","Os dias selecionados não podem mais ser editados. Nada foi salvo.");return;
- }
- const prompt=existing?(replace?t("Replace selected future workouts? Previous workouts will be archived.","Substituir treinos futuros selecionados? Os treinos anteriores serão arquivados."):""):
-  t("Save and start this program on ","Salvar e iniciar este programa em ")+displayDate(draft.start)+t("? Your recurring week is kept separately.","? Sua semana recorrente fica guardada separadamente.");
- if(prompt&&!confirm(prompt))return;
- try{persistBlock({version:1,epoch:resetEpoch,start:draft.start,paused:false,weeks,archive});}
- catch{feedback.hidden=false;feedback.textContent=t("Saved data changed or is unavailable. Nothing was saved; reload and try again.","Os dados mudaram ou estão indisponíveis. Nada foi salvo; recarregue e tente novamente.");return;}
- $("weekPreview").close();setDay(day);saveProgramNotice(changes);
+ if(!count)return;
+ if(archive.length>160){$("blockFeedback").hidden=false;$("blockFeedback").textContent=t("Saved workouts limit reached. Nothing was replaced.");return;}
+ if(replaced&&!confirm(t("Replace selected workouts? Previous workouts stay in Saved workouts.","Substituir os treinos selecionados? Os anteriores ficam em Treinos salvos.")))return;
+ try{await commitNumbered({...numbered,weeks,archive});}
+ catch{$("blockFeedback").hidden=false;$("blockFeedback").textContent=t("Saved data changed or is unavailable. Nothing was saved; reload and try again.","Os dados mudaram ou estão indisponíveis. Nada foi salvo; recarregue e tente novamente.");return;}
+ $("weekPreview").close();setDay(day);say(t("Saved ","Salvo: ")+count+t(" days."," dias."));
 }
-function saveProgramNotice(n){
- $("blockStatus").textContent+=" · "+t("Saved ","Salvo: ")+n+" "+plural(n,t("day","dia"),t("days","dias"));
-}
-function commitWeek(){
- if(trainReadOnly())return;
- if(programDraft){commitProgram();return;}
- if(!proposedWeek)return;
- const days=[...$("weekCards").querySelectorAll("input:checked")].map(x=>+x.dataset.weekDay).filter(i=>proposedWeek.drafts[i]);
- const replacing=days.filter(i=>hasWorkout(plan.days[i]));
- if(!days.length)return;
- if(plan.archive.length+replacing.length>160){say(t("Saved workouts limit reached. Nothing was replaced."));return;}
- if(replacing.length&&!confirm(t("Replace ","Substituir ")+replacing.map(dayName).join(", ")+t("? Existing workouts will be kept as saved copies.","? Os treinos existentes serão guardados como cópias.")))return;
- for(const i of days){
-  if(hasWorkout(plan.days[i]))plan.archive.push(plan.days[i]);
-  plan.days[i]=cleanSession(proposedWeek.drafts[i]);
- }
- $("weekPreview").close();setDay(day);save(t("Saved ","Salvo: ")+days.length+t(" days."," dias."));
-}
-
+function weekOptions(){return Array.from({length:5},(_,i)=>'<option value="'+i+'">'+t("Week ","Semana ")+(i+1)+'</option>').join("");}
 function drawTrainWeeks(){
- const box=$("trainWeeks"),select=$("trainWeek");box.hidden=!block||editing;
- if(!block)return;
- $("trainWeekLabel").textContent=t("Saved weeks","Semanas salvas");
- $("returnToday").textContent=t("Return to today","Voltar para hoje");
- const real=realWeekStart(),starts=block.weeks.map((_,i)=>addCalendarDays(block.start,i*7));
- const selected=trainWeekStart||real;
- const options=[...new Set([real,...starts])].sort();
- select.innerHTML=options.map(start=>'<option value="'+start+'">'+esc((start===real?t("Current week","Semana atual"):t("Week ","Semana ")+(starts.indexOf(start)+1))+" · "+displayDate(start)+" – "+displayDate(addCalendarDays(start,6)))+'</option>').join("");
- select.value=selected;
- $("returnToday").hidden=!trainReadOnly()&&day===today;
- $("trainWeekNotice").textContent=trainReadOnly()?t("Read-only saved week","Semana salva · somente leitura"):"";
+ $("trainWeeks").hidden=editing;$("trainWeekLabel").textContent=t("Week","Semana");
+ for(const id of ["trainWeek","menuWeek"]){$(id).innerHTML=weekOptions();$(id).value=String(numbered.selected);$(id).disabled=trainReadOnly();}
+ $("menuWeekLabel").textContent=t("Week","Semana");
+ $("returnToday").textContent=t("Return to today","Voltar para hoje");$("returnToday").hidden=day===today;
+ $("trainWeekNotice").textContent=numberedSessionOnly?t("Changes stay in this tab only.","As alterações ficam apenas nesta aba."):"";
 }
-$("trainWeek").onchange=()=>{trainWeekStart=$("trainWeek").value===realWeekStart()?null:$("trainWeek").value;setDay(day);};
-$("returnToday").onclick=()=>{trainWeekStart=null;setDay(today,true);};
+$("trainWeek").onchange=()=>selectNumberedWeek(+$("trainWeek").value);
+$("menuWeek").onchange=()=>selectNumberedWeek(+$("menuWeek").value);
+$("returnToday").onclick=()=>setDay(today,true);
 function week(){
  drawTrainWeeks();
  const short=isPt()?["Seg","Ter","Qua","Qui","Sex","Sáb","Dom"]:["Mo","Tu","We","Th","Fr","Sa","Su"];
  $("days").innerHTML=DAYS.map((name,i)=>{
   const w=currentWeekDays()[i],state=w.rest?t("Rest"):w.items.length?t("Plan"):"—";
-  return '<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" '+(i===today&&!trainReadOnly()?'aria-current="date" ':'')+
-   'aria-label="'+dayName(i)+(i===today&&!trainReadOnly()?", "+t("today"):"")+", "+esc(w.rest?t("rest"):displayTitle(w.title)||t("unplanned"))+'">'+short[i]+'<small>'+state+'</small></button>';
+  return '<button type="button" data-day="'+i+'" aria-pressed="'+(i===day)+'" '+(i===today?'aria-current="date" ':'')+
+   'aria-label="'+dayName(i)+(i===today?", "+t("today"):"")+", "+esc(w.rest?t("rest"):displayTitle(w.title)||t("unplanned"))+'">'+short[i]+'<small>'+state+'</small></button>';
  }).join("");
 }
 function stats(){
@@ -2826,8 +2805,8 @@ function renderWeekSummary(){
   const map=summaryMap(primary),mapId="summary-map-description-"+i;
   const title=displayTitle(w.title.trim())||t(w.rest?"Rest day":count?"Workout":"No workout scheduled");
   const details=[count?exerciseTotal(count):"",groupLabels(dayGroups)].filter(Boolean).join(" · ");
-  return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today&&!trainReadOnly()?'aria-current="date"':'')+'>'+
-   '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today&&!trainReadOnly()?" · "+t("Today"):""))+'</span>'+
+  return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today?'aria-current="date"':'')+'>'+
+   '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
    '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</span>'+map+'</button>'+(map?'<span id="'+mapId+'" hidden>'+esc(primaryMapName(primary))+'</span>':'')+'</li>';
  }).join("");
  if(focused!==undefined)list.querySelector('[data-summary-day="'+focused+'"]')?.focus({preventScroll:true});
@@ -2852,18 +2831,18 @@ $("weekSummaryList").onclick=event=>{
  $("weekSummary").close();setDay(index);$("trainTitle").focus();
 };
 function nav(){
- for(const id of ["trainingGenerate","weekGenerate","menuPlan","resumeRecurring"])$(id).disabled=trainReadOnly();
+ for(const id of ["trainingGenerate","weekGenerate","menuPlan"])$(id).disabled=trainReadOnly();
  const x=current(),items=x.items;
  drawTrainWeeks();
- programStatus();$("modeSwitch").disabled=trainReadOnly()||blockWeekIndex()===-2;
- $("planThisDay").disabled=trainReadOnly()||blockWeekIndex()===-2;
- if(blockWeekIndex()===-2&&editing){editing=false;$("editView").hidden=true;$("trainView").hidden=false;}
+ programStatus();$("modeSwitch").disabled=trainReadOnly();
+ $("planThisDay").disabled=trainReadOnly();
+
  $("modeSwitch").textContent=t(editing?"Done":hasWorkout(x)?"Edit plan":"Plan workout");
  $("modeSwitch").setAttribute("aria-expanded",String(editing));
- $("trainDay").textContent=(day===today&&!trainReadOnly()?t("Today")+" · ":"")+dayName(day)+" · "+displayDate(dateForDay(day));
+ $("trainDay").textContent=(day===today?t("Today")+" · ":"")+dayName(day)+" · "+displayDate(dateForDay(day));
  $("trainTitle").textContent=displayTitle(x.title.trim())||t(x.rest?"Rest day":items.length?"Workout":"No workout planned");
- $("trainEmpty").hidden=!!items.length;$("planThisDay").hidden=!!items.length||x.rest||blockWeekIndex()===-2;
- $("trainEmpty").textContent=trainReadOnly()?(x.rest?t("Take a recovery day."):t("No workout saved for this date.","Nenhum treino salvo para esta data.")):blockWeekIndex()===-2?t("Start a new program or resume your recurring week.","Inicie um novo programa ou retome sua semana recorrente."):t(x.rest?"Take a recovery day.":"Choose exercises yourself or generate a workout for this day.");
+ $("trainEmpty").hidden=!!items.length;$("planThisDay").hidden=!!items.length||x.rest;
+ $("trainEmpty").textContent=t(x.rest?"Take a recovery day.":"Choose exercises yourself or generate a workout for this day.");
  progressCount();
 }
 function setMode(value,focus=false){
@@ -2882,9 +2861,10 @@ function render(){
  return '<article class="item" data-i="'+i+'" data-swap-row="'+i+'"><div class="row"><button class="view" data-a="view">'+(i+1)+'. '+n+'</button><div class="buttons">'+infoButton(e)+replaceBtn(e)+'<button data-a="up" aria-label="'+t("Move ","Mover ")+n+t(" up"," para cima")+'" '+(i===0?"disabled":"")+'>↑</button><button data-a="down" aria-label="'+t("Move ","Mover ")+n+t(" down"," para baixo")+'" '+(i===rows.length-1?"disabled":"")+'>↓</button><button data-a="delete" aria-label="'+t("Remove ","Remover ")+n+'">×</button></div></div><div class="swap" hidden></div><div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><div class="prescription">'+f("sets","Sets",1,50,1)+(e.hold?f("seconds","Hold sec"+(e.side?" / side":""),1,300,1):f("reps","Reps"+(x.repRange?" (10–12)":"")+(e.side?" / side":""),1,300,1))+(e.eq==="Bodyweight"?"":f("kg","Load kg",0,1000,.01))+f("rest","Rest sec",0,3600,1)+'</div><label class="field note">'+t("Note")+'<input data-k="note" maxlength="200" value="'+esc(x.note)+'" placeholder="'+t("Position, tempo, or reminder")+'"></label></article>';
  }).join("")||'<div class="empty">'+(current().rest?t("Recovery day. Add an exercise to change it to a training day."):t("Nothing planned. Add an exercise or preview an automatic workout."))+'</div>';
  watchArt($("items"));
- $("archivePicker").innerHTML=calendarArchive().map((s,i)=>'<option value="'+i+'">'+esc(displayTitle(s.title)||t("Untitled workout"))+"</option>").join("");
- $("archiveCopy").disabled=!plan.archive.length;
- $("archiveCount").textContent=calendarArchive().length+t(" saved"," salvos");
+ const recovered=recoveryWorkouts(),archived=[...plan.archive,...recovered.map(x=>x.workout)];
+ $("archivePicker").innerHTML=archived.map((s,i)=>'<option value="'+i+'">'+esc((i>=plan.archive.length?recovered[i-plan.archive.length]?.label+" · ":"")+(displayTitle(s.title)||t("Untitled workout")))+"</option>").join("");
+ $("archiveCopy").disabled=!archived.length;
+ $("archiveCount").textContent=archived.length+t(" saved"," salvos");
  $("add").disabled=rows.length>=70;
  $("repeatDoseOption").hidden=!rows.length;
  renderTrainList();nav();
@@ -2906,14 +2886,9 @@ $("trainingGoal").onchange=e=>{selectGoal(e.target.value);resetPreview();};
 $("weekGoal").onchange=e=>{selectGoal(e.target.value);resetPreview();if(programDraft)programDraft.entries.clear();showWeek();};
 $("weekClose").onclick=()=>$("weekPreview").close();
 $("weekPreview").onclose=()=>{proposedWeek=null;programDraft=null;syncAnimation();$("weekGenerate").focus({preventScroll:true});};
-$("weekLength").onchange=()=>{
- const length=+$("weekLength").value;if(length===1){programDraft=null;drawProgramControls();showWeek();return;}
- startProgramDraft(length);showProgramSlot();
-};
-$("weekSlot").onchange=()=>{if(!programDraft)return;programDraft.slot=+$("weekSlot").value;drawProgramControls();showProgramSlot();};
-$("weekStart").onchange=()=>{if(!programDraft||programDraft.existing)return;programDraft.start=$("weekStart").value;programDraft.entries.clear();drawProgramControls();showProgramSlot();};
+$("weekSlot").onchange=()=>{if(trainReadOnly()||!programDraft)return;programDraft.slot=+$("weekSlot").value;drawProgramControls();showProgramSlot();};
 $("weekGenerateAll").onclick=()=>{
- if(!programDraft)return;const selected=programDraft.slot;
+ if(trainReadOnly()||!programDraft)return;const selected=programDraft.slot;
  for(let i=0;i<programDraft.length;i++)generateProgramSlot(i);
  programDraft.slot=selected;drawProgramControls();showProgramSlot();
 };
@@ -2931,7 +2906,7 @@ for(const target of ["trainingFocus","trainingSize","trainingEquipment","trainin
 $("applyTraining").onclick=()=>{
  if(trainReadOnly())return;
  if(!proposed||proposed.day!==day)return;
- if(dayWriteKey()===blockKey&&protectedProgramDay(current(),dateForDay(day))){say(t("Past or logged day cannot be replaced.","Dias passados ou registrados não podem ser substituídos."));return;}
+
  if(hasWorkout(current())&&!confirm(t("Replace the workout for ","Substituir o treino de ")+dayName(day)+t("? The current workout will be kept under Saved workouts.","? O treino atual ficará em Treinos salvos.")))return;
  if(!keepCurrentWorkout()){say(t("Saved workouts limit reached. Nothing was replaced."));return;}
  currentWeekDays()[day]=cleanSession(proposed.variants[proposed.active]);setDay(day);save(dayName(day)+t(" workout saved.",": treino salvo."));
@@ -2939,7 +2914,7 @@ $("applyTraining").onclick=()=>{
 $("archiveCopy").onclick=()=>{
  if(trainReadOnly())return;
  const original=calendarArchive()[+$("archivePicker").value];if(!original)return;
- if(dayWriteKey()===blockKey&&protectedProgramDay(current(),dateForDay(day))){say(t("Past or logged day cannot be replaced.","Dias passados ou registrados não podem ser substituídos."));return;}
+
  if(hasWorkout(current())&&!confirm(t("Replace the workout for ","Substituir o treino de ")+dayName(day)+t(" with a copy? The current workout stays under Saved workouts."," por uma cópia? O treino atual ficará em Treinos salvos.")))return;
  if(!keepCurrentWorkout()){say(t("Saved workouts limit reached. Nothing was replaced."));return;}
  currentWeekDays()[day]=cleanSession(original,false,true);setDay(day);save(t("Copied to ","Copiado para ")+dayName(day)+".");
@@ -2953,8 +2928,10 @@ $("items").onclick=e=>{
  else{const j=i+(a==="up"?-1:1);if(j<0||j>=items.length)return;[items[j],items[i]]=[items[i],items[j]];}
  render();save();
 };
-$("items").oninput=e=>{
- if(trainReadOnly())return;
+$("items").oninput=async e=>{
+ const target=e.target,slot=numbered.selected,index=day,value=target.value;
+ await waitNumberedIdle();if(numberedInvalid||slot!==numbered.selected||index!==day||!target.isConnected)return;
+ target.value=value;
  const k=e.target.dataset.k;if(!k)return;
  const x=current().items[+e.target.closest("[data-i]").dataset.i];
  if(k==="note")x.note=e.target.value;else if(k==="kg"){
@@ -2964,7 +2941,7 @@ $("items").oninput=e=>{
  stats();nav();save();
 };
 $("items").onchange=e=>{if(trainReadOnly())return;const k=e.target.dataset.k;if(k&&k!=="note"){const x=current().items[+e.target.closest("[data-i]").dataset.i];e.target.value=k==="kg"&&x[k]!==null?loadNumber(x[k]):x[k]??"";}};
-$("title").oninput=e=>{if(trainReadOnly())return;current().title=e.target.value;week();save();};
+$("title").oninput=async e=>{const value=e.target.value,slot=numbered.selected,index=day;await waitNumberedIdle();if(numberedInvalid||slot!==numbered.selected||index!==day)return;current().title=value;week();await save();};
 $("add").onclick=()=>{
  if(trainReadOnly())return;
  if(current().items.length>=70)return;
@@ -2992,6 +2969,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"five-manual-weeks-v36",date:"2026-11-21",title:"Five weeks, selected by you",body:"Choose the active Week 1–5 in Menu or Train; it stays active until you change it, with no start date or expiry. Planner chooses which slot to edit. Previous routines and logs remain under Local data → Previous data.",titlePt:"Cinco semanas, escolhidas por você",bodyPt:"Escolha a Semana 1–5 ativa no Menu ou Treino; ela continua ativa até você trocá-la, sem início ou validade. No Planejador, escolha a semana para editar. Rotinas e registros anteriores ficam em Dados locais → Dados anteriores."},
  {id:"planner-week-first-v35",date:"2026-11-21",title:"Week-first planning and menu preferences",body:"Choose the planner week above the goal. Menu groups training, preferences, local data and about; set language, Metric/Imperial units and an optional local email in Preferences.",titlePt:"Semana primeiro e preferências no menu",bodyPt:"Escolha a semana acima do objetivo. O menu reúne treino, preferências, dados locais e informações; configure idioma, unidades e e-mail local em Preferências."},
  {id:"train-weeks-v34",date:"2026-11-21",title:"Browse saved weeks in Train",body:"Choose a saved week above the weekdays. Other weeks are read-only; Return to today restores today’s workout.",titlePt:"Veja semanas salvas em Treinar",bodyPt:"Escolha uma semana salva acima dos dias. Outras semanas são somente leitura; Voltar para hoje abre o treino de hoje."},
  {id:"media-references-v33",date:"2026-11-21",title:"More exercise form references",body:"Optional online form references now cover 94 of 95 exercises. Every exercise still works offline with original illustrations."},
@@ -3025,7 +3003,7 @@ try{
 }catch{}
 // Keep this exact allowlist in step with Studio Motion's persisted data. The reset
 // epoch is not a preference or workout: it prevents a stale tab from restoring data.
-const resetDataKeys=[KEY1,KEY2,blockKey,checkKey,swapKey,languageKey,goalKey,unitKey,seenUpdatesKey,"studio-motion-profile-v1","studio-motion-planner-settings-v1","studio-motion-config-transaction-v1"];
+const resetDataKeys=[KEY1,KEY2,blockKey,slotsKey,legacyCheckKey,legacySwapKey,checkKey,swapKey,languageKey,goalKey,unitKey,seenUpdatesKey,"studio-motion-profile-v1","studio-motion-planner-settings-v1","studio-motion-config-transaction-v1"];
 function eraseStudioData(){
  let saved,oldEpoch,pendingEpoch;
  try{
@@ -3074,7 +3052,7 @@ const exportUnits=()=>{
  try{if(!unitConfigKeys().length)return "kg";const saved=JSON.parse(localStorage.getItem(unitKey));return saved?.epoch===resetEpoch&&saved.unit==="lb"?"lb":"kg";}catch{return "kg";}
 };
 const importUnitValues=(unit,epoch)=>unitConfigKeys().length?{[unitKey]:JSON.stringify({unit,epoch})}:{};
-const configFormat="studio-motion-backup",configVersion=1,configLimit=2*1024*1024;
+const configFormat="studio-motion-backup",configVersion=2,configLimit=2*1024*1024;
 const profileKey="studio-motion-profile-v1",plannerSettingsKey="studio-motion-planner-settings-v1",configJournalKey="studio-motion-config-transaction-v1";
 const configLock="studio-motion-reset-v1";
 const benchOptions=["none","flat","adjustable"],focusOptions=["Day split","Full body","Upper","Lower","Core & calves","Chest & triceps","Triceps","Forearms","Trapezius"];
@@ -3117,12 +3095,12 @@ function importWorkout(w){
  return cleanSession(w);
 }
 function configWeek(items){
- if(!Array.isArray(items)||items.length!==7||new Set(items.map(w=>w?.id)).size!==7)throw Error();
+ if(!Array.isArray(items)||items.length!==7)throw Error();
  return items.map(importWorkout);
 }
-function parseConfig(data){
+function parseLegacyConfig(data){
  if(!own(data,["format","version","createdAt","plan","block","preferences","authorEmail"])||
-  data.format!==configFormat||data.version!==configVersion||typeof data.createdAt!=="string"||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(data.createdAt)||
+  data.format!==configFormat||data.version!==1||typeof data.createdAt!=="string"||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(data.createdAt)||
   !okDate(data.createdAt.slice(0,10))||!Number.isFinite(Date.parse(data.createdAt))||
   (data.authorEmail!==undefined&&!validEmail(data.authorEmail)))throw Error();
  const p=data.plan,b=data.block,pr=data.preferences;
@@ -3141,23 +3119,53 @@ function parseConfig(data){
  }
  return {plan,block,preferences:{language:pr.language,goal:pr.goal,units:pr.units,planner:parsePlannerSettings(pr.planner)},authorEmail:data.authorEmail||""};
 }
+function portableNumbered(value=numbered){
+ const {epoch,...portable}=value;
+ const recovery=originalSources(value.recovery).filter(source=>source.plan||source.sessions||source.block).map(source=>({...source,checks:null,swaps:null}));
+ return {...portable,recovery:recovery.length?recovery:null};
+}
+function parseConfig(data){
+ if(data?.version===1){
+  const old=parseLegacyConfig(data);
+  const recovery={plan:JSON.stringify(old.plan),block:old.block?JSON.stringify(old.block):null,sessions:null,checks:null,swaps:null};
+  return {numbered:migrateNumbered(old.plan,old.block,recovery),preferences:old.preferences,authorEmail:old.authorEmail};
+ }
+ if(!own(data,["format","version","createdAt","numbered","preferences","authorEmail"])||data.format!==configFormat||data.version!==2||
+  typeof data.createdAt!=="string"||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(data.createdAt)||!okDate(data.createdAt.slice(0,10))||!Number.isFinite(Date.parse(data.createdAt))||
+  data.authorEmail!==undefined&&!validEmail(data.authorEmail))throw Error();
+ const n=data.numbered,pr=data.preferences;
+ if(!own(n,["version","selected","weeks","archive","recovery"])||!own(pr,["language","goal","units","planner"])||!["en","pt-BR"].includes(pr.language)||!Object.hasOwn(goalLabels,pr.goal)||!["kg","lb"].includes(pr.units))throw Error();
+ if(!Array.isArray(n.weeks)||n.weeks.length!==5||!Array.isArray(n.archive))throw Error();
+ for(const week of n.weeks)configWeek(week);n.archive.forEach(importWorkout);
+ const parsed=decodeNumbered(n);
+ if(parsed.recovery&&parsed.recovery.some(source=>source.checks!==null||source.swaps!==null))throw Error("Daily history is not portable.");
+ return {numbered:parsed,preferences:{language:pr.language,goal:pr.goal,units:pr.units,planner:parsePlannerSettings(pr.planner)},authorEmail:data.authorEmail||""};
+}
+function freshImportedNumbered(value,epoch){return {...value,epoch,weeks:value.weeks.map(week=>week.map(w=>cleanSession(w,false,true))),archive:value.archive.map(w=>cleanSession(w,false,true))};}
+let committedConfigValues=null;
+function rememberCommittedConfig(){try{committedConfigValues=configSnapshot();}catch{committedConfigValues=null;}}
+function assertCommittedConfig(){
+ if(localStorage.getItem(resetEpochKey)!==resetEpoch||resetEpoch?.startsWith("pending:")||numberedBusy||numberedSessionOnly||!committedConfigValues||JSON.stringify(configSnapshot())!==JSON.stringify(committedConfigValues)||(localStorage.getItem(slotsKey)!==null&&JSON.stringify(numbered)!==localStorage.getItem(slotsKey)))throw Error("Reload before exporting.");
+}
 function readProfileEmail(){
  try{const email=localStorage.getItem(profileKey);return validEmail(email)?email:"";}catch{return "";}
 }
-function downloadConfig(authorEmail=""){
- const {epoch,...portable}=block||{};
- const data={format:configFormat,version:configVersion,createdAt:new Date().toISOString(),plan,block:block?portable:null,
-             preferences:{language:locale,goal:trainingGoal,units:exportUnits(),planner:readPlannerSettings()}};
- if(authorEmail)data.authorEmail=authorEmail;
- // Validate what will be sent to this browser's own download manager; never fetch or upload.
- parseConfig(data);
- const json=JSON.stringify(data,null,2);
- const file=new Blob([json],{type:"application/json"});
- if(file.size>configLimit)throw Error();
- const url=URL.createObjectURL(file),a=document.createElement("a");
- a.download="studio-motion-config-"+localDateString()+".json";a.href=url;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+async function downloadConfig(authorEmail=""){
+ if(!navigator.locks?.request)throw Error("Storage coordination is unavailable.");
+ return navigator.locks.request(configLock,{mode:"exclusive"},()=>{
+  assertCommittedConfig();
+  if(authorEmail&&readProfileEmail()!==authorEmail)throw Error("Email changed while export waited.");
+  const before=configSnapshot();
+  const saved=before[slotsKey]?decodeNumbered(JSON.parse(before[slotsKey])):numbered;
+  const data={format:configFormat,version:2,createdAt:new Date().toISOString(),numbered:portableNumbered(saved),
+   preferences:{language:before[languageKey]||locale,goal:before[goalKey]||trainingGoal,units:exportUnits(),planner:before[plannerSettingsKey]?parsePlannerSettings(JSON.parse(before[plannerSettingsKey])):readPlannerSettings()}};
+  if(authorEmail)data.authorEmail=authorEmail;
+  parseConfig(data);const json=JSON.stringify(data,null,2),file=new Blob([json],{type:"application/json"});
+  if(file.size>configLimit||JSON.stringify(configSnapshot())!==JSON.stringify(before))throw Error("Reload before exporting.");
+  const url=URL.createObjectURL(file),a=document.createElement("a");a.download="studio-motion-config-"+localDateString()+".json";a.href=url;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ });
 }
-function configDataKeys(){return [KEY2,blockKey,languageKey,goalKey,plannerSettingsKey,...unitConfigKeys()];}
+function configDataKeys(){return [slotsKey,languageKey,goalKey,plannerSettingsKey,...unitConfigKeys()];}
 const configSnapshot=()=>Object.fromEntries(configDataKeys().map(key=>[key,localStorage.getItem(key)]));
 const configHistoryStamp=()=>JSON.stringify([localStorage.getItem(checkKey),localStorage.getItem(swapKey)]);
 let configPreview=null,configBusy=false,configReadToken=0;
@@ -3166,7 +3174,7 @@ function recoverConfigJournal(){
  const raw=localStorage.getItem(configJournalKey),pending=localStorage.getItem(resetEpochKey);
  if(!importPending(pending)||!raw)return false;
  try{
-  const record=JSON.parse(raw),keys=configDataKeys();
+  const record=JSON.parse(raw),oldKeys=[KEY2,blockKey,languageKey,goalKey,plannerSettingsKey,...unitConfigKeys()],keys=Object.keys(record.before||{}).includes(slotsKey)?configDataKeys():oldKeys;
   if(record.pending!==pending||!own(record.before,keys)||Object.keys(record.before).length!==keys.length||
      !keys.every(k=>record.before[k]===null||typeof record.before[k]==="string")||
      !(record.epoch===null||(typeof record.epoch==="string"&&record.epoch.startsWith("done:"))))return false;
@@ -3191,7 +3199,7 @@ function performConfigImport(staged){
  if(!staged||localStorage.getItem(resetEpochKey)!==staged.epoch||JSON.stringify(configSnapshot())!==JSON.stringify(staged.before)||
   staged.epoch?.startsWith("pending:")||latestHistory!==staged.historyStamp||importConflict(staged.data,latestHistory))return "stale";
  const data=staged.data,p=data.preferences,id=localId(),pending="pending:import:"+id,done="done:"+id;
- const next={...staged.before,[KEY2]:JSON.stringify(data.plan),[blockKey]:data.block?JSON.stringify({...data.block,epoch:done}):null,
+ const next={...staged.before,[slotsKey]:JSON.stringify(freshImportedNumbered(data.numbered,done)),
   [languageKey]:p.language,[goalKey]:p.goal,[plannerSettingsKey]:JSON.stringify(p.planner),...importUnitValues(p.units,done)};
  try{
   localStorage.setItem(configJournalKey,JSON.stringify({pending,epoch:staged.epoch,before:staged.before}));
@@ -3213,45 +3221,20 @@ function performConfigImport(staged){
   return "unavailable";
  }
 }
-function importConflict(data,historyStamp){
- const storedHistory=JSON.parse(historyStamp).map(raw=>{
-  const parsed=JSON.parse(raw??"{}");
-  if(!parsed||Array.isArray(parsed)||typeof parsed!=="object")throw Error();
-  return parsed;
- });
- const known=new Map(),incoming=new Map(),minimumSets=new Map();
- const gather=(target,plan,block)=>{
-  for(const w of [...plan.days,...plan.archive,...(block?.weeks||[]).flat(),...(block?.archive||[]).map(x=>x.workout)])
-   for(const row of w.items){
-    const id=w.id+"/"+row.id;
-    target.set(id,target.has(id)&&target.get(id)!==row.exercise?null:row.exercise);
-    if(target===incoming)minimumSets.set(id,Math.min(minimumSets.get(id)??row.sets,row.sets));
-   }
- };
- gather(known,plan,block);gather(incoming,data.plan,data.block);
- if([...incoming.values()].some(x=>x===null))return true;
- for(const [kind,dates] of storedHistory.entries())for(const rows of Object.values(dates))for(const [key,value] of Object.entries(rows||{})){
-  if(!incoming.has(key))continue;
-  if(known.get(key)!==incoming.get(key))return true;
-  if(kind===0&&Array.isArray(value)&&value.some(set=>Number.isInteger(set)&&set>minimumSets.get(key)))return true;
- }
- return false;
-}
+// Imported workouts always receive fresh live identities. Existing daily records stay
+// stored under their original identities and cannot attach to imported prescriptions.
+function importConflict(){return false;}
 function configStatus(message){$("configStatus").textContent=message;}
 function clearConfigPreview(){
  configPreview=null;$("configPreview").hidden=true;$("configConfirm").checked=false;$("configApply").disabled=true;
 }
 function renderConfigPreview(staged){
- const currentPreview=t("On this device: ","Neste dispositivo: ")+plan.days.filter(hasWorkout).length+
-  t(" recurring day(s), "," dia(s) recorrente(s), ")+(plan.archive.length+(block?.archive.length||0))+
-  t(" saved workout(s), "," treino(s) no arquivo, ")+(block?block.weeks.length+t(" program weeks."," semanas no programa."):t("no dated program.","sem programa com datas."));
- $("configExisting").textContent=currentPreview;
- const {plan:incomingPlan,block:incomingBlock,preferences:p,authorEmail}=staged.data;
- const occupied=incomingPlan.days.filter(hasWorkout).length,archived=incomingPlan.archive.length+(incomingBlock?.archive.length||0);
- const count=occupied+t(" recurring day(s) and "," dia(s) recorrente(s) e ")+archived+t(" saved workout(s)."," treino(s) no arquivo.");
- const dated=incomingBlock?t("Dated program: ","Programa com datas: ")+incomingBlock.weeks.length+t(" weeks from "," semanas a partir de ")+displayDate(incomingBlock.start)+".":t("No dated program in this file.","Este arquivo não contém um programa com datas.");
+ const {numbered:incoming,preferences:p,authorEmail}=staged.data;
+ $("configExisting").textContent=t("On this device: five manual weeks. Selected week ","Neste dispositivo: cinco semanas manuais. Semana selecionada ")+(numbered.selected+1)+".";
+ const occupied=incoming.weeks.flat().filter(hasWorkout).length;
+ const count=t("Five manual weeks · ","Cinco semanas manuais · ")+occupied+t(" saved days. Selected week "," dias salvos. Semana selecionada ")+(incoming.selected+1)+".";
  const prefs=[p.language==="pt-BR"?"Português (Brasil)":"English",t(goalLabels[p.goal]),p.units==="lb"?"lb":"kg",p.planner.equipment.map(x=>t(x)).join(", ")||t("No equipment","Sem equipamento"),t({"none":"No bench",flat:"Flat bench",adjustable:"Adjustable bench"}[p.planner.bench]),t(p.planner.focus),p.planner.size+t(" exercises"," exercícios"),p.planner.sets+t(" sets"," séries")].join(" · ");
- $("configSummary").textContent=count+" "+dated;
+ $("configSummary").textContent=count;
  $("configPrefs").textContent=prefs;
  $("configAuthor").textContent=authorEmail?t("Author email (not imported): ","E-mail do autor (não será importado): ")+authorEmail:"";
  $("configPreview").hidden=false;
@@ -3264,6 +3247,34 @@ function syncExportEmail(){
 }
 window.addEventListener("storage",event=>{if(event.key===profileKey)syncExportEmail();});
 function preferenceStatus(message){$("preferenceStatus").textContent=message;}
+function previousRecurring(){
+ for(const raw of originalSources())try{const p=decode(JSON.parse(raw.plan));if(p.days.some(hasWorkout))return p.days;}catch{}
+ return null;
+}
+function drawPreviousData(){
+ $("previousExplanation").textContent=t("Original routines remain available in Saved workouts. Original logs below keep their actual dates and original IDs; they are never assigned to a new week. Download preserves the raw source strings.","As rotinas originais continuam em Treinos salvos. Os registros abaixo mantêm as datas reais e os IDs originais; nunca são atribuídos a uma nova semana. O download preserva os textos originais.");
+ $("recoverRecurring").disabled=!previousRecurring()||trainReadOnly();
+ const sources=originalSources();
+ $("previousSummary").innerHTML=sources.map((source,i)=>'<h3>'+t("Original source ","Fonte original ")+(i+1)+'</h3>'+["checks","swaps"].map(kind=>{
+  let dates=[];try{dates=Object.entries(JSON.parse(source[kind]||"{}")).sort(([a],[b])=>a.localeCompare(b));}catch{}
+  return '<details><summary>'+t(kind==="checks"?"Original daily checkmarks":"Original date replacements",kind==="checks"?"Séries diárias originais":"Substituições originais por data")+' ('+dates.length+')</summary>'+dates.map(([date,rows])=>'<details><summary>'+esc(date)+'</summary><pre>'+esc(JSON.stringify(rows,null,2))+'</pre></details>').join("")+'</details>';
+ }).join("")).join("");
+}
+$("openPrevious").onclick=()=>{drawPreviousData();$("previousStatus").textContent="";$("previousData").showModal();$("previousHeading").focus();};
+$("previousClose").onclick=()=>$("previousData").close();
+$("previousData").onclose=()=>$("openPrevious").focus({preventScroll:true});
+$("downloadPrevious").onclick=()=>{
+ const file=new Blob([JSON.stringify({format:"studio-motion-original-data",version:1,manualWeeks:localStorage.getItem(slotsKey),sources:originalSources()},null,2)],{type:"application/json"});
+ const url=URL.createObjectURL(file),a=document.createElement("a");a.href=url;a.download="studio-motion-original-data.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+$("recoverRecurring").onclick=async()=>{
+ if(trainReadOnly())return;const rows=previousRecurring();if(!rows)return;
+ const occupied=currentWeekDays().filter(hasWorkout);
+ if(numbered.archive.length+occupied.length>160){$("previousStatus").textContent=t("Saved workouts limit reached. Nothing was replaced.");return;}
+ if(!confirm(t("Copy the previous recurring schedule into the selected week? Current workouts will be kept in Saved workouts. Old daily marks stay separate.","Copiar a rotina recorrente anterior para a semana selecionada? Os treinos atuais ficam em Treinos salvos. As séries antigas continuam separadas.")))return;
+ try{await commitNumbered({...numbered,weeks:numbered.weeks.map((week,i)=>i===numbered.selected?rows.map(w=>cleanSession(w,false,true)):week),archive:[...numbered.archive,...occupied]});render();$("previousStatus").textContent=t("Previous routine copied. Daily logs were not reassigned.","Rotina anterior copiada. Os registros diários não foram reatribuídos.");}catch{$("previousStatus").textContent=t("Could not save. Reload before editing.","Não foi possível salvar. Recarregue antes de editar.");}
+};
+
 function openConfig(){
  if(readForeignPending())return;
  clearConfigPreview();configStatus("");$("configFile").value="";
@@ -3284,10 +3295,10 @@ $("profileSave").onclick=()=>{
   preferenceStatus(v?t("Email saved on this device.","E-mail salvo neste dispositivo."):t("Email cleared on this device.","E-mail removido deste dispositivo."));
  }catch{preferenceStatus(t("This browser could not save the profile.","O navegador não conseguiu salvar o perfil."));}
 };
-$("configExport").onclick=()=>{
+$("configExport").onclick=async()=>{
  if($("exportEmail").checked&&(!consentEmail||readProfileEmail()!==consentEmail)){syncExportEmail();configStatus(t("Email changed. Review it and choose again.","O e-mail mudou. Confira e escolha novamente."));return;}
- try{downloadConfig($("exportEmail").checked?consentEmail:"");configStatus(t("Configuration downloaded.","Configuração baixada."));}
- catch{configStatus(t("Could not export settings from this browser.","Não foi possível exportar as configurações deste navegador."));}
+ try{await downloadConfig($("exportEmail").checked?consentEmail:"");configStatus(t("Configuration downloaded.","Configuração baixada."));}
+ catch{configStatus(t("Saved data changed or could not be read consistently. Reload before exporting.","Os dados mudaram ou não puderam ser lidos de forma consistente. Recarregue antes de exportar."));}
 };
 $("configFile").onchange=async()=>{
  const token=++configReadToken,file=$("configFile").files?.[0];clearConfigPreview();configStatus("");
@@ -3297,8 +3308,8 @@ $("configFile").onchange=async()=>{
   const config=parseConfig(JSON.parse(await file.text()));
   if(token!==configReadToken||!$("configDialog").open)return;
   const epoch=localStorage.getItem(resetEpochKey),before=configSnapshot(),historyStamp=configHistoryStamp();
-  if(epoch!==resetEpoch||epoch?.startsWith("pending:")||storageReadFailure||blockInvalid||
-   (before[KEY2]!==null&&before[KEY2]!==JSON.stringify(plan))||before[blockKey]!==blockStored){
+  if(epoch!==resetEpoch||epoch?.startsWith("pending:")||numberedInvalid||numberedSessionOnly||
+   before[slotsKey]!==numberedStored||numberedBusy){
    configStatus(t("Saved data changed. Reload before choosing a configuration.","Os dados salvos mudaram. Recarregue antes de escolher uma configuração."));return;
   }
   if(importConflict(config,historyStamp)){configStatus(t("This file conflicts with saved workout history. No changes were made.","Este arquivo entra em conflito com o histórico salvo. Nada foi alterado."));return;}
@@ -3372,7 +3383,10 @@ $("resetAppForm").onsubmit=async event=>{
   $("resetFailure").hidden=false;
   return;
  }
- plan=emptyPlan();block=null;blockStored=null;blockInvalid=false;completion={};dateSwaps={};seenUpdates=[];currentExercises.clear();
+ numberedStored=null;numberedInvalid=false;numberedSessionOnly=!navigator.locks?.request;numberedBusy=false;
+ for(const key of [slotsKey,checkKey,swapKey])numberedStoredValues.set(key,null);
+ bindNumbered({version:1,epoch:resetEpoch,selected:0,weeks:Array.from({length:5},blankWeek),archive:[],recovery:null});
+ block=null;blockStored=null;blockInvalid=false;completion={};dateSwaps={};seenUpdates=[];currentExercises.clear();rememberCommittedConfig();
  storageReadFailure=false;progressWritable=true;swapsWritable=true;languageWritable=true;
  locale=deviceLocale();weightUnit="kg";selectGoal("balanced",false);
  lastDayPreviews.clear();lastWeekPreviews.clear();lastShownDayPreview.clear();
@@ -3436,7 +3450,10 @@ $("language").onchange=event=>{
  else $("save").textContent="";
 };
 $("planThisDay").onclick=()=>{setMode(true);showPreview();const target=$("preview").hidden?$("trainingGenerate"):$("previewHeading");target.scrollIntoView({block:"start"});target.focus({preventScroll:true});};
-choose(E[0].id);setDay(today);setMode(false);scheduleMidnight();if(bootMessage)say(bootMessage);openUpdatesHash();
+numberedBusy=true;
+slotsReady=initializeNumbered().then(()=>{numberedBusy=false;numberedBooting=false;
+ if(!numberedSessionOnly)try{if([slotsKey,checkKey,swapKey].some(key=>localStorage.getItem(key)!==numberedStoredValues.get(key)))reloadAfterReset();}catch{}
+ rememberCommittedConfig();choose(E[0].id);setDay(today);setMode(false);scheduleMidnight();if(bootMessage)say(bootMessage);openUpdatesHash();});
 // The standalone HTML remains self-contained on file://. Only the hosted shell registers.
 const hosted=location.protocol==="https:"||(location.protocol==="http:"&&["127.0.0.1","localhost"].includes(location.hostname));
 if(hosted){

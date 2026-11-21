@@ -1,4 +1,4 @@
-const A=require('node:assert/strict'),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const A=require('node:assert/strict'),{chromium}=require('./runtime.js');
 (async()=>{const browser=await chromium.launch();try{
 for(const [width,locale] of [[320,'pt-BR'],[390,'en-US'],[412,'pt-BR']]){
 const c=await browser.newContext({isMobile:true,hasTouch:true,viewport:{width,height:720},locale,offline:true,timezoneId:'America/Sao_Paulo'}),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));

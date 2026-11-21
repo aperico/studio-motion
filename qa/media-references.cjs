@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {chromium}=require('./runtime.js');
 const {pathToFileURL}=require('node:url'),path=require('node:path');
 const base=process.env.STUDIO_QA_URL||pathToFileURL(path.resolve(__dirname,'../index.html')).href;
 (async()=>{const b=await chromium.launch();try{

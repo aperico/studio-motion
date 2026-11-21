@@ -1,5 +1,5 @@
 const assert=require('node:assert/strict');
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const {chromium}=require('./runtime.js');
 const {pathToFileURL}=require('node:url');
 const path=require('node:path');
 const BASE=process.env.STUDIO_QA_URL || pathToFileURL(path.resolve(__dirname,'../index.html')).href;
@@ -30,7 +30,7 @@ for(const [width,lang] of [[320,'pt-BR'],[390,'en'],[412,'pt-BR']]){
  await p.locator('#trainingGenerate').click();assert(!(await p.locator('#preview').isVisible()));assert.match(await p.locator('#generatorStatus').innerText(),lang==='pt-BR'?/Halteres ou Barra/:/dumbbells or barbell/);
  assert.equal(await state(),original);
  await p.locator('#modeSwitch').click();
- await p.evaluate(()=>{plan.days[0]=cleanSession({title:'Synthetic day',items:[{...make('db-wrist-flexion',10),sets:4},{...make('bb-shrug',10),sets:3}]});plan.days[1]=cleanSession({title:'',rest:true,items:[]});save();saveSwap(dateForDay(0),plan.days[0],plan.days[0].items[0],{...make('db-wrist-extension',10),sets:2});setDay(0);});
+ await p.evaluate(async()=>{plan.days[0]=cleanSession({title:'Synthetic day',items:[{...make('db-wrist-flexion',10),sets:4},{...make('bb-shrug',10),sets:3}]});plan.days[1]=cleanSession({title:'',rest:true,items:[]});await save();await saveSwap(dateForDay(0),plan.days[0],plan.days[0].items[0],{...make('db-wrist-extension',10),sets:2});setDay(0);});
  const card=p.locator('#trainOverview');
  assert(await card.isVisible());assert.match(await p.locator('#trainOverviewCount').innerText(),lang==='pt-BR'?/2 exercícios · 5 séries/:/2 exercises · 5 sets/);
  assert.match(await p.locator('#trainDayGroups').innerText(),lang==='pt-BR'?/Antebraços · Trapézio/:/Forearms · Trapezius/);

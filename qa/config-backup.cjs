@@ -1,88 +1,17 @@
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
-const a=require('node:assert/strict'),fs=require('node:fs/promises'),{pathToFileURL}=require('node:url'),path=require('node:path');
-const url=pathToFileURL(path.join(__dirname,'../index.html')).href;
-(async()=>{const b=await chromium.launch();try{
- const c=await b.newContext({acceptDownloads:true,isMobile:true,hasTouch:true,viewport:{width:320,height:715},locale:'pt-BR',offline:true,timezoneId:'America/Sao_Paulo'}),p=await c.newPage(),l=s=>p.locator(s),errors=[],net=[];
- p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>{if(/^https?:/.test(r.url()))net.push(r.url())});
- await p.clock.install({time:new Date('2026-11-23T12:00:00-03:00')});p.setDefaultTimeout(3500);await p.goto(url);
- await p.evaluate(()=>{plan.days[0]=cleanSession({title:"Old regular",items:[{...make("press"),kg:12.5}]});save();setDay(0)});
- await p.evaluate(()=>localStorage.setItem(KEY1,JSON.stringify({version:1,sessions:[]})));
- const initial=await p.evaluate(()=>JSON.parse(localStorage.getItem(KEY2)));
- await l('#trainList input').first().check();
- const checkJSON=await p.evaluate(()=>localStorage.getItem(checkKey));
- const sw=await p.evaluate(()=>{const w=plan.days[0];const day=dateForDay(0);saveSwap(day,w,w.items[0],{...make("cable-chest"),kg:4});return localStorage.getItem(swapKey)});
- const fixture=async()=>{await l('#aboutToggle').tap();await l('#localData summary').tap();await l('#openConfig').tap();};
- await fixture();
- a.match(await l('#configHeading').innerText(),/Backup de configuração/);
- a(await l('#configDialog').evaluate(x=>x.scrollWidth<=x.clientWidth));
- await l('#configClose').tap();await l('#profileEmail').fill('recipient@example.invalid');await l('#profileSave').tap();await l('#openConfig').tap();
- a(await l('#exportEmail').isEnabled());a.equal(await l('#exportEmail').isChecked(),false);
- const download=async()=>{const d=p.waitForEvent('download');await l('#configExport').tap();const obj=await d;return JSON.parse(await fs.readFile(await obj.path(),'utf-8'));};
- let build=await download();a.equal(build.format,'studio-motion-backup');a.equal(build.authorEmail,undefined);a.equal(build.history,undefined);a.equal(build.plan.days[0].items[0].kg,12.5);
- await l('#exportEmail').check();const withEmail=await download();a.equal(withEmail.authorEmail,'recipient@example.invalid');
- const importJSON=(x,n="fixture.json")=>l('#configFile').setInputFiles({name:n,mimeType:"application/json",buffer:Buffer.from(typeof x==='string'?x:JSON.stringify(x))});
- for(const bad of ["<html><script>alert(1)</script></html>",{...build,version:2},{...build,plan:{...build.plan,days:build.plan.days.map((w,i)=>i===0?{...w,items:[{...w.items[0],exercise:"unknown"}]}:w)}}]){
-  await importJSON(bad);await p.waitForFunction(()=>document.getElementById('configStatus').textContent.length>1);
-  a.match(await l('#configStatus').textContent(),/inválido ou incompatível/);a.equal(await l('#configPreview').isVisible(),false);
- }
- const dayClone=await p.evaluate(()=>JSON.parse(JSON.stringify(plan.days.map(w=>cleanSession(w,false,true)))));
- a.equal(build.preferences.units,"kg");
- const source={...build,authorEmail:"someone@example.invalid",plan:{...build.plan,days:dayClone.map((w,i)=>({...w,title:i===0?"Imported regular":w.title}))},preferences:{...build.preferences,language:"en",goal:"upper",units:"lb",planner:{equipment:["Dumbbell"],bench:"flat",focus:"Upper",size:5,sets:3}}};
- const blockWeeks=await p.evaluate(()=>Array.from({length:2},()=>plan.days.map(w=>cleanSession(w,false,true))));
- source.block={version:1,start:"2026-11-23",paused:true,weeks:blockWeeks,archive:[]};
- await importJSON(source);await l('#configPreview').waitFor({state:'visible'});a.match(await l('#configAuthor').textContent(),/não será importado/);a.match(await l('#configPrefs').textContent(),/lb · Halteres · Banco reto/);a.match(await l('#configSummary').textContent(),/2 semanas/);a(await l('#configApply').isDisabled());
- await l('#configClose').tap();
- a.deepEqual(await p.evaluate(()=>JSON.parse(localStorage.getItem(KEY2))),initial);
- await l('#openConfig').tap();await importJSON(source);await l('#configPreview').waitFor({state:'visible'});
- await l('#configConfirm').check();
- await p.evaluate(()=>{const f=Storage.prototype.setItem;let failed=false;Storage.prototype.setItem=function(k,v){if(k===plannerSettingsKey&&!failed){failed=true;throw Error("fixture quota")}f.call(this,k,v)}});
- await l('#configApply').tap();await p.waitForFunction(()=>document.getElementById('configStatus').textContent.length>0);
- a.match(await l('#configStatus').textContent(),/Nenhuma configuração foi substituída/);
- a.deepEqual(await p.evaluate(()=>JSON.parse(localStorage.getItem(KEY2))),initial);
- a.equal(await p.evaluate(()=>localStorage.getItem(configJournalKey)),null);
- await importJSON(source);await l('#configPreview').waitFor({state:'visible'});await l('#configConfirm').check();
- await Promise.all([p.waitForEvent('load'),l('#configApply').tap()]);
- a.equal(await l('html').getAttribute('lang'),'en');
- const actual=await p.evaluate(()=>({name:plan.days[0].title,goal:trainingGoal,settings:readPlannerSettings(),block:block?.start,check:localStorage.getItem(checkKey),swap:localStorage.getItem(swapKey),email:readProfileEmail(),legacy:localStorage.getItem(KEY1),units:JSON.parse(localStorage.getItem(unitKey)),epoch:resetEpoch,recognized:weightUnit,pending:localStorage.getItem(configJournalKey)}));
- a.equal(actual.name,'Imported regular');a.equal(actual.goal,'upper');a.deepEqual(actual.settings,source.preferences.planner);a.equal(actual.block,'2026-11-23');
- a.equal(actual.check,checkJSON);a.equal(actual.swap,sw);a.equal(actual.email,'recipient@example.invalid');a.equal(actual.pending,null);a.equal(actual.legacy,JSON.stringify({version:1,sessions:[]}));a.deepEqual(actual.units,{unit:'lb',epoch:actual.epoch});a.equal(actual.recognized,'lb');
- // Simulate a process interrupted between individual writes, then recover through the normal UI.
- const beforeInterrupted=await p.evaluate(()=>{
-  const before=configSnapshot(),epoch=localStorage.getItem(resetEpochKey),pending="pending:import:synthetic-recovery";
-  localStorage.setItem(configJournalKey,JSON.stringify({pending,epoch,before}));
-  localStorage.setItem(resetEpochKey,pending);localStorage.removeItem(KEY2);
-  return before;
- });
- await p.reload();
- a(await l('#configInterrupted').isVisible());a(await l('#days').evaluate(x=>x.inert));a.equal(await l('#resetInterrupted').isVisible(),false);
- await Promise.all([p.waitForEvent('load'),l('#recoverConfig').tap()]);
- a.deepEqual(await p.evaluate(()=>configSnapshot()),beforeInterrupted);
- a.equal(await l('#configInterrupted').isVisible(),false);a.equal(await p.evaluate(()=>localStorage.getItem(configJournalKey)),null);
- a.equal(await p.evaluate(()=>localStorage.getItem(checkKey)),checkJSON);
- await fixture();
- // One tab still has its old in-memory history, but a different tab's new completion used the incoming row ID pair.
- const sameIDs=await p.evaluate(()=>structuredClone(plan));
- const reused=structuredClone(source);reused.plan=sameIDs;
- const originalID=reused.plan.days[0].id+"/"+reused.plan.days[0].items[0].id;
- reused.plan.days[0].items[0].exercise="fly";
- await p.evaluate(id=>{const stored=JSON.parse(localStorage.getItem(checkKey));stored["2026-11-23"][id]=[1];localStorage.setItem(checkKey,JSON.stringify(stored));if(completion["2026-11-23"]?.[id])throw Error("fixture requires stale history");},originalID);
- await importJSON(reused);
- await p.waitForFunction(()=>document.getElementById('configStatus').textContent.includes('conflicts with saved workout history'));
- a.equal(await l('#configPreview').isVisible(),false);
- const fewer=structuredClone(source);fewer.plan=await p.evaluate(()=>structuredClone(plan));fewer.plan.days[0].items[0].sets=1;
- await p.evaluate(id=>{const stored=JSON.parse(localStorage.getItem(checkKey));stored["2026-11-23"][id]=[2];localStorage.setItem(checkKey,JSON.stringify(stored));},originalID);
- await importJSON(fewer);await p.waitForFunction(()=>document.getElementById('configStatus').textContent.includes('conflicts with saved workout history'));
- a.equal(await l('#configPreview').isVisible(),false);
- await importJSON(source);await l('#configPreview').waitFor({state:'visible'});await l('#configConfirm').check();
- await p.evaluate(()=>{const check=JSON.parse(localStorage.getItem(checkKey));check["2026-11-24"]={};localStorage.setItem(checkKey,JSON.stringify(check))});
- await l('#configApply').tap();await p.waitForFunction(()=>document.getElementById('configStatus').textContent.length>0);
- a.match(await l('#configStatus').textContent(),/Saved data changed/);
- a.deepEqual(await p.evaluate(()=>configSnapshot()),beforeInterrupted);
- await importJSON(source);await l('#configPreview').waitFor({state:'visible'});await l('#configConfirm').check();
- await p.evaluate(()=>Object.defineProperty(navigator,'locks',{configurable:true,value:undefined}));
- await l('#configApply').tap();await p.waitForFunction(()=>document.getElementById('configStatus').textContent.length>0);
- a.match(await l('#configStatus').textContent(),/No configuration was replaced/);
- a.deepEqual(await p.evaluate(()=>configSnapshot()),beforeInterrupted);
- a.deepEqual(net,[]);a.deepEqual(errors,[]);
- console.log('PASS offline 320 PT, explicit email, real JSON downloads, malformed/file/version/unknown exercise rejected, cancel, rollback and restore, EN/goal/program/planner preferences, local history/email preserved, zero networking');
-}finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});
+const {chromium}=require('./runtime.js');const a=require('node:assert/strict'),fs=require('node:fs/promises'),{pathToFileURL}=require('node:url'),path=require('node:path');
+(async()=>{const b=await chromium.launch();try{const c=await b.newContext({acceptDownloads:true,viewport:{width:320,height:760},locale:'pt-BR',offline:true}),p=await c.newPage(),l=s=>p.locator(s),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);await p.evaluate(async()=>{await commitNumbered({...numbered,selected:4,weeks:Array.from({length:5},(_,i)=>Array.from({length:7},(_,j)=>cleanSession({title:'Slot '+i+' day '+j,items:[{...make('press'),kg:i+10}]})))});setDay(0);await storeMark(current().items[0],1,true,dateForDay(day));await saveSwap(dateForDay(1),currentWeekDays()[1],currentWeekDays()[1].items[0],make('cable-chest'));});
+ const deviceLegacy=await p.evaluate(()=>{const old={version:2,days:Array.from({length:7},()=>cleanSession({title:'Device legacy routine',items:[make('row')]})),archive:[]};const raw={[KEY2]:JSON.stringify(old),[legacyCheckKey]:'{"2001-01-01":{"legacy-original-id/legacy-row-id":[1]}}',[legacySwapKey]:'{}'};for(const [key,value] of Object.entries(raw))localStorage.setItem(key,value);return raw});
+ const history=await p.evaluate(()=>[localStorage.getItem(checkKey),localStorage.getItem(swapKey)]);await l('#aboutToggle').click();await l('#profileEmail').fill('local@example.invalid');await l('#profileSave').click();await l('#localData summary').click();await l('#openConfig').click();const download=async()=>{const wait=p.waitForEvent('download');await l('#configExport').click();const d=await wait;return JSON.parse(await fs.readFile(await d.path(),'utf8'))};const exported=await download();a.equal(exported.version,2);a.equal(exported.numbered.weeks.length,5);a.equal(exported.numbered.selected,4);a.equal(exported.authorEmail,undefined);a.equal(exported.history,undefined);a(exported.numbered.recovery.some(source=>source.plan===deviceLegacy['studio-motion-plan-v2']));a(exported.numbered.recovery.every(source=>source.checks===null&&source.swaps===null));a(!JSON.stringify(exported).includes('week-checks'));await l('#exportEmail').check();a.equal((await download()).authorEmail,'local@example.invalid');
+ const importJSON=x=>l('#configFile').setInputFiles({name:'fixture.json',mimeType:'application/json',buffer:Buffer.from(typeof x==='string'?x:JSON.stringify(x))});
+ for(const bad of ['<html>',{...exported,version:3},{...exported,numbered:{...exported.numbered,weeks:[]}},(()=>{const x=structuredClone(exported);x.numbered.weeks[0][0].items[0].exercise='unknown';return x})()]){await importJSON(bad);a(await l('#configPreview').isHidden());a(await l('#configStatus').innerText());}
+ const changed=structuredClone(exported);changed.numbered.weeks[4][0].title='Restored five';changed.preferences.language='en';changed.preferences.units='lb';const before=await p.evaluate(()=>localStorage.getItem(slotsKey));await importJSON(changed);a(await l('#configPreview').isVisible());await l('#configClose').click();a.equal(await p.evaluate(()=>localStorage.getItem(slotsKey)),before);await l('#openConfig').click();await importJSON(changed);await l('#configConfirm').check();await l('#configApply').click();await p.waitForFunction(()=>!document.getElementById('configDialog').open);a.equal(await p.evaluate(()=>currentWeekDays()[0].title),'Restored five');a.equal(await p.evaluate(()=>numbered.selected),4);a.equal(await p.evaluate(()=>weightUnit),'lb');a.equal(await p.evaluate(()=>readProfileEmail()),'local@example.invalid');a.deepEqual(await p.evaluate(()=>[localStorage.getItem(checkKey),localStorage.getItem(swapKey)]),history);a.equal(await p.locator('#trainList input:checked').count(),0);
+ // Read a v1 JSON with duplicated legacy IDs. It becomes fresh manual slots; physical originals remain recoverable.
+ const old=await p.evaluate(()=>{const same=cleanSession({title:'Legacy imported recurring',items:[make('press')]});const plan={version:2,days:Array.from({length:7},()=>structuredClone(same)),archive:[cleanSession(same,false,true)]};return {format:configFormat,version:1,createdAt:new Date().toISOString(),plan,block:{version:1,start:'2026-01-05',paused:true,weeks:Array.from({length:2},()=>plan.days),archive:[]},preferences:{language:'pt-BR',goal:'upper',units:'kg',planner:readPlannerSettings()}}});
+ await l('#aboutToggle').click();if(!await l('#localData').evaluate(x=>x.open))await l('#localData summary').click();await l('#openConfig').click();await importJSON(old);await l('#configConfirm').check();await l('#configApply').click();await p.waitForFunction(()=>numbered?.recovery?.some(source=>source.plan?.includes('Legacy imported recurring')));a.equal(await p.evaluate(()=>numbered.weeks.length),5);a.equal(await p.evaluate(()=>new Set(numbered.weeks.flat().map(w=>w.id)).size),35);a(await p.evaluate(()=>recoveryWorkouts().some(x=>x.workout.title==='Legacy imported recurring')));a.deepEqual(await p.evaluate(()=>[localStorage.getItem(checkKey),localStorage.getItem(swapKey)]),history);
+ a(await p.evaluate(()=>recoveryWorkouts().some(x=>x.workout.title==='Device legacy routine')));a.deepEqual(await p.evaluate(keys=>Object.fromEntries(keys.map(key=>[key,localStorage.getItem(key)])),Object.keys(deviceLegacy)),deviceLegacy);
+ // A failed transaction restores every affected value and its old epoch.
+ const snapshot=await p.evaluate(()=>({values:configSnapshot(),epoch:resetEpoch}));const rollback=await p.evaluate(()=>{const before=configSnapshot(),epoch=localStorage.getItem(resetEpochKey),data={numbered:structuredClone(numbered),preferences:{language:'en',goal:'balanced',units:'kg',planner:readPlannerSettings()}};const original=Storage.prototype.setItem;let fail=true;Storage.prototype.setItem=function(k,v){if(k===slotsKey&&fail){fail=false;throw Error('fixture quota')}return original.call(this,k,v)};try{return performConfigImport({data,epoch,before,historyStamp:configHistoryStamp()})}finally{Storage.prototype.setItem=original}});a.equal(rollback,'rolled-back');a.deepEqual(await p.evaluate(()=>configSnapshot()),snapshot.values);a.equal(await p.evaluate(()=>localStorage.getItem(resetEpochKey)),snapshot.epoch);
+ const resetBefore=await p.evaluate(()=>({values:Object.fromEntries(resetDataKeys.map(k=>[k,localStorage.getItem(k)])),epoch:localStorage.getItem(resetEpochKey)}));const resetFailure=await p.evaluate(()=>{const original=Storage.prototype.removeItem;let fail=true;Storage.prototype.removeItem=function(k){if(k===slotsKey&&fail){fail=false;throw Error('fixture removal failure')}return original.call(this,k)};try{return eraseStudioData()}finally{Storage.prototype.removeItem=original}});a.equal(resetFailure,false);a.deepEqual(await p.evaluate(()=>Object.fromEntries(resetDataKeys.map(k=>[k,localStorage.getItem(k)]))),resetBefore.values);a.equal(await p.evaluate(()=>localStorage.getItem(resetEpochKey)),resetBefore.epoch);
+ const oldRecovery=await p.evaluate(()=>{const keys=[KEY2,blockKey,languageKey,goalKey,plannerSettingsKey,unitKey],before=Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)])),pending='pending:import:legacy-recovery';localStorage.setItem(configJournalKey,JSON.stringify({pending,epoch:resetEpoch,before}));localStorage.setItem(resetEpochKey,pending);localStorage.removeItem(KEY2);return {ok:recoverConfigJournal(),before}});a(oldRecovery.ok);a.deepEqual(await p.evaluate(keys=>Object.fromEntries(keys.map(k=>[k,localStorage.getItem(k)])),Object.keys(oldRecovery.before)),oldRecovery.before);
+ // Reset's transaction must include both new daily keys and old raw recovery keys.
+ await p.evaluate(()=>{localStorage.setItem(KEY2,JSON.stringify(emptyPlan()));localStorage.setItem(legacyCheckKey,'{"original":true}')});await l('#aboutToggle').click();if(!await l('#localData').evaluate(x=>x.open))await l('#localData summary').click();await l('#resetApp').click();await l('#resetPhrase').fill('REDEFINIR');await l('#confirmReset').click();a.deepEqual(await p.evaluate(()=>resetDataKeys.filter(k=>localStorage.getItem(k)!==null)),[]);a.equal(await p.evaluate(()=>numbered.weeks.flat().filter(hasWorkout).length),0);a.deepEqual(errors,[]);console.log('PASS v2 five-slot backup/restore, default/pinned email, v1 duplicate import, exclusions, history preservation, rollback and complete reset');}finally{await b.close()}})().catch(e=>{console.error(e);process.exitCode=1});

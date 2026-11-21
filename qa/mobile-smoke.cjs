@@ -1,4 +1,4 @@
-const { chromium } = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const { chromium } = require('./runtime.js');
 const { pathToFileURL } = require('node:url');
 const path = require('node:path');
 const assert=require('node:assert/strict');

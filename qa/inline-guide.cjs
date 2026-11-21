@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict'),{chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright'),path=require('node:path'),{pathToFileURL}=require('node:url');
+const assert=require('node:assert/strict'),{chromium}=require('./runtime.js'),path=require('node:path'),{pathToFileURL}=require('node:url');
 const url=pathToFileURL(path.resolve(__dirname,'../index.html')).href;
 (async()=>{const b=await chromium.launch();try{
 for(const [width,locale] of [[320,'pt-BR'],[320,'en'],[390,'pt-BR'],[390,'en'],[412,'pt-BR'],[412,'en']]){

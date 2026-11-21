@@ -1,4 +1,4 @@
-const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const {chromium}=require('./runtime.js');
 const assert=require('node:assert/strict'),{pathToFileURL}=require('node:url'),path=require('node:path');
 const url=pathToFileURL(path.join(__dirname,'../index.html')).href;
 (async()=>{const b=await chromium.launch();try{
@@ -36,9 +36,9 @@ const url=pathToFileURL(path.join(__dirname,'../index.html')).href;
  const swap=l('#trainList [data-edit-weight]').nth(1);
  await swap.tap();assert.match(await l('#weightScope').textContent(),/Somente esta substituição/);await input.fill('8,25');await save.tap();assert.equal(await swap.textContent(),'8,25 kg');assert.equal(await p.evaluate(()=>plan.days[0].items[1].kg),null);
  await p.reload();assert.equal(await swap.textContent(),'8,25 kg');await swap.tap();assert(await dialog.isVisible());await input.fill('8,5');await save.tap();assert.equal(await swap.textContent(),'8,5 kg');
- await button().tap();await input.fill('30');await p.evaluate(()=>{const draft=JSON.parse(localStorage.getItem(KEY2));draft.days[0].items[0].kg=44;localStorage.setItem(KEY2,JSON.stringify(draft));});await save.tap();
- assert.match(await l('#weightError').textContent(),/outra aba/);assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem(KEY2)).days[0].items[0].kg),44);
- await l('#weightCancel').tap();await p.reload();await button().tap();await input.fill('30');await p.evaluate(()=>{const write=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k===KEY2)throw Error('fixture write fail');write.call(this,k,v);};});await save.tap();assert.match(await l('#weightError').textContent(),/Nenhuma alteração/);assert.equal(await button().textContent(),'44 kg');
+ await button().tap();await input.fill('30');await p.evaluate(()=>{const draft=JSON.parse(localStorage.getItem(slotsKey));draft.weeks[draft.selected][0].items[0].kg=44;localStorage.setItem(slotsKey,JSON.stringify(draft));});await save.tap();
+ assert.match(await l('#weightError').textContent(),/outra aba/);assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem(slotsKey)).weeks[0][0].items[0].kg),44);
+ await l('#weightCancel').tap();await p.reload();await button().tap();await input.fill('30');await p.evaluate(()=>{const write=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k===slotsKey)throw Error('fixture write fail');write.call(this,k,v);};});await save.tap();assert.match(await l('#weightError').textContent(),/Nenhuma alteração/);assert.equal(await button().textContent(),'44 kg');
  await l('#weightCancel').tap();await button().tap();await input.fill('18');await p.clock.fastForward(180100);await save.tap();assert.match(await l('#weightError').textContent(),/treino mudou/);assert.equal(await p.evaluate(()=>plan.days[1].items[0].kg),42);assert.deepEqual(errors,[]);
  console.log('PASS 320px weight control, PT decimal, explicit zero/clear/cancel, saved ordinary/dated scope, persistent checks, keyboard focus, stale/storage guard, local midnight, no errors');
 }finally{await b.close()}})().catch(e=>{console.error(e);process.exit(1)});

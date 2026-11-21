@@ -1,6 +1,6 @@
 # Studio Motion
 
-One offline HTML file for planning a repeating training week. Download `index.html`
+One offline HTML file for five manually selected training weeks. Download `index.html`
 and open it in a browser. No install, sign-in, trackers, or external services needed. The
 single HTML works offline as-is; the public web app can also be added to your Home Screen.
 
@@ -15,11 +15,11 @@ Use the same browser and address to keep using the same saved plan.
 
 ## Use it
 
-**Week summary** shows the saved sessions and main muscle groups for the current week.
+**Week summary** shows the saved sessions and main muscle groups for the selected numbered week.
 Tap a day in the summary to open it. Opening the summary does not generate or save a plan.
 
 In **Menu**, choose **English** or **Português (Brasil)**. The app remembers your choice
-locally, including offline. Your saved exercises, workout names, and notes are not migrated.
+locally, including offline. Your saved exercise names, workout names, and notes are not translated.
 
 
 - It opens on **today** in your device's local time. This is a single
@@ -110,7 +110,7 @@ without deleting the old storage. Existing v2 plans, archived workouts and
 previously marked rest days are kept. Copy a saved workout to any weekday.
 Keep using the same file path and browser profile; moving the file or device,
 opening in private mode or clearing browser storage can make prior data
-unavailable. This version has no in-app backup, restore, or sync controls.
+unavailable. Local JSON backup and restore are available under Menu → Local data. There is no automatic sync.
 Nothing is uploaded from the app.
 
 The exercise sketches and text are original and simplified. The generator is a
@@ -163,7 +163,7 @@ For a focused session, select **Chest & triceps** (Portuguese: **Peito e trícep
 
 ### Weight on workout cards
 
-Tap **Set weight** or the current kg value while training. Enter up to two decimal places (comma or point), enter zero for zero added load, or leave it blank to clear the value. **Save weight** applies it to this row of the recurring plan; a dated replacement keeps its own weight for that date only. This never changes checked sets or other days.
+Tap **Set weight** or the current kg value while training. Enter up to two decimal places (comma or point), enter zero for zero added load, or leave it blank to clear the value. **Save weight** applies it to this row of the selected numbered week; a temporary replacement keeps its own weight for that actual date and workout only. This never changes checked sets or other days.
 
 ### Mark a set during a workout
 
@@ -177,19 +177,67 @@ In Train, **Mark as current** highlights one exercise for the selected workout, 
 
 ### Transfer routines and preferences between devices
 
-Open **Menu → Local data → Configuration backup**. **Download JSON** saves a local file with the recurring week, archived workouts, dated program and planner preferences, including language, units and goal. Checkmarks, temporary dated substitutions and your profile email are excluded by default. Add your saved local email as author metadata only by checking the optional box; importing someone else’s file won’t update your local profile. Keep the file private unless you intend to share it.
+Open **Menu → Local data → Configuration backup**. **Download JSON** saves a local file with all five numbered weeks, the selected week, archived workouts, recoverable older routines and planner preferences, including language, units and goal. Checkmarks, temporary dated substitutions and your profile email are excluded by default. Add your saved local email as author metadata only by checking the optional box; importing someone else’s file won’t update your local profile. Keep the file private unless you intend to share it.
 
 On the other device choose that file, review what it replaces and explicitly confirm. Existing checkmarks and temporary substitutions are left untouched but will not match different workouts. Nothing is uploaded. For a safe restore or interruption recovery, the browser must support Web Locks and allow local storage.
 
 In Train, tap **ⓘ** to open one exercise guide inline. It keeps offline form diagrams and instructions together; optional linked or inline source media is not automatically downloaded. The library guide still opens in its own dialog.
 
-### Browse saved weeks in Train
+### Five manual weeks
 
-Use **Saved weeks** above the weekdays to inspect each saved dated week without opening Plan. Dates and date-specific logs follow the displayed week. Other weeks are read-only. Switching weeks keeps your weekday; **Return to today** restores today. Browsing does not save or activate a program, and refresh opens the real current week. Paused programs keep the recurring week active; ended programs keep their existing empty fallback until explicitly resumed.
+Choose the active **Week 1–5** in **Menu → Training** or above the Train weekdays.
+These two controls stay synchronized and remember the active, editable week on reload.
+The Planner picker chooses which slot to preview/edit and does not change the active week. Weeks have no calendar start, end, expiration, or automatic advance.
+Changing a week preserves the weekday and does not generate or replace workouts.
+**Return to today** changes only the weekday/date context; it never changes your slot.
+Daily checkmarks and temporary replacements still use the actual local calendar date,
+with separate workout identities in every slot. Midnight refreshes the date, not the week.
 
-### Choose the planner week first
+The Planner starts with Week, then goal and generation actions. **Generate this week**
+previews only the selected slot; **Generate all five weeks** previews every slot.
+Choosing a week preserves its draft without generating or saving workout changes.
+Existing workouts are unchecked by default; replacing selected workouts requires a
+confirmation and keeps the originals in Saved workouts.
 
-In a multiweek **Auto Plan Week** preview, choose **Week** at the top, before the training goal. A single recurring week has no extra week selector. The date range identifies the preview. Below the goal, **Plan length** changes a recurring single week into a dated 2–4 week program; **Start Monday** sets its start. Generate the selected week or all weeks, then review the days before saving. Changing the selected week does not save or generate workouts.
+### Existing data and recovery
+
+The first v36 load creates the five-slot schema once in a separate storage key.
+A legacy dated block fills the corresponding first 2–4 slots; otherwise the old
+recurring routine fills Week 1. An active dated block's current index is used once
+as the initial selection; otherwise Week 1 is selected. Further calendar changes
+never change that choice. Unused slots are blank.
+
+All live slots receive fresh workout/row identities, even if legacy IDs were duplicated.
+Old marks and substitutions are never assigned to a new slot or another actual date.
+The original recurring, dated, archived, completion and substitution keys remain
+byte-for-byte unchanged. Both full 160-entry archives remain accessible separately,
+without truncating their combined contents. **Saved workouts** labels previous
+recurring weekdays and dated workouts by their original source. **Menu → Local data
+→ Previous data** can copy the entire previous recurring routine into the selected
+week (after confirmation), show original daily records with their actual dates/IDs,
+and download the raw original strings for recovery. The raw recovery download can
+include local history; it is separate from portable configuration import.
+
+### Backup format and storage coordination
+
+New configuration downloads use `studio-motion-backup` **version 2**: five manual
+weeks, selected slot, saved workouts, recovery routines and preferences. They exclude
+all daily checkmarks and temporary replacements, including old raw history. Email
+is omitted unless the exact displayed address is explicitly selected. Import still
+reads version 1 JSON (recurring and dated programs), converts it to manual slots,
+and gives imported workouts fresh identities. Existing daily logs remain stored
+under their original identities and are not attached to imported prescriptions.
+Physical local legacy routines stay accessible after importing another person's file.
+
+Numbered weeks and daily records use separate new keys and a shared Web Lock with
+import/reset. Saves compare the last committed value while holding the lock. A
+conflicting tab must reload rather than overwrite a newer commit. Export refuses
+stale/mixed plan or preference snapshots and asks for reload. Saves in one tab are
+serialized; wait for the saved state before closing the app. Without Web Locks or
+working storage, changes stay in that tab and safe import/export is unavailable.
+Invalid data is kept intact for recovery rather than overwritten. Reset's confirmed
+transaction clears both new and legacy keys; an interrupted import can recover its
+previous configuration before further editing.
 
 ### Menu preferences
 
