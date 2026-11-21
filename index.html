@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v11.1 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v12 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -12,10 +12,11 @@
 .body-maps{margin:6px 0;font-size:.82rem;color:var(--muted)}.body-maps svg{width:min(155px,100%);height:112px;display:block}.body-maps .map-text,.targets-text{margin:3px 0;font-size:.77rem;color:var(--muted)}.targets-text strong,.map-text strong{color:var(--txt)}.target-primary,.target-assist{display:inline-block;width:.7em;height:.7em;margin-right:.3em;border-radius:50%}.target-primary{background:#ff914d}.target-assist{background:#ee83bc}.rig svg[data-wide]{aspect-ratio:468 / 245}#muscleOverview{border-left:2px solid var(--line);padding-left:7px}
 .masthead .brand{display:inline-flex;align-items:center;gap:4px}.brandmark{width:22px;height:22px;flex:none}
 #items .exercise-info,.exercise-info{display:inline-grid;place-items:center;min-width:44px;min-height:44px;font-size:1rem;padding:4px;border-radius:12px}.guide-title-row{display:flex;justify-content:space-between;align-items:center;gap:8px}.guide-online{display:inline-flex;align-items:center;min-height:44px;color:var(--mint);font-size:.84rem}#exerciseGuide{width:min(calc(100vw - 20px),560px);max-height:calc(100dvh - 20px);border:1px solid var(--line);padding:12px;margin:auto;color:var(--txt);overscroll-behavior:contain}#exerciseGuide::backdrop{background:#060a0bc9}#guideClose{min-height:44px}#guideInfo{margin:4px 0;color:var(--muted)}@media print{#exerciseGuide{display:none!important}}
+#setActions button{min-height:44px;font-size:.84rem}#setActions{margin-top:10px}
 </style></head>
 <body><main class="app">
 <header class="masthead">
-  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v11.1</small></span>
+  <span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg>STUDIO MOTION <small class="build">v12</small></span>
   <div class="buttons no-print"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
@@ -24,6 +25,7 @@
   <div id="trainEmpty" class="empty" hidden></div>
   <p id="swapResult" class="swap-result" role="status" hidden></p><p class="train-progress" id="trainProgress" role="status" hidden></p>
   <ol id="trainList" class="train-list"></ol>
+  <div class="buttons no-print" id="setActions" hidden><button id="clearSets" type="button">Clear all sets</button><button id="undoSets" type="button" hidden>Undo clear</button></div>
 </section>
 <div id="editView" hidden><div class="columns"><section class="panel" aria-labelledby="planheading"><p class="kicker">WEEKLY PLAN</p><h2 id="planheading" tabindex="-1"><span id="weekday"></span></h2>
 <div class="buttons auto-actions no-print"><button id="trainingGenerate">Auto Plan Day</button></div>
@@ -553,12 +555,7 @@ function syncAnimation(){
  queueMotion();
 }
 document.addEventListener("visibilitychange",()=>{
- if(!document.hidden){
-  const now=(new Date().getDay()+6)%7;
-  if(now!==today||$("trainList").dataset.date!==dateForDay(day)){
-   const wasToday=day===today;today=now;setDay(wasToday&&!editing?today:day);
-  }
- }
+ if(!document.hidden)refreshDates();
  syncAnimation();
 });
 reducedMotion.addEventListener("change",syncAnimation);
@@ -634,10 +631,31 @@ try{
   }
  }
 }catch{progressWritable=false;}
-function dateForDay(index){
- const d=new Date();d.setDate(d.getDate()+index-(d.getDay()+6)%7);
+function localDateString(d=new Date()){
  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
 }
+function dateForDay(index){
+ const d=new Date();d.setDate(d.getDate()+index-(d.getDay()+6)%7);
+ return localDateString(d);
+}
+let lastLocalDate=localDateString(),midnightJob=0;
+function scheduleMidnight(){
+ clearTimeout(midnightJob);
+ const now=new Date(),next=new Date(now);next.setHours(24,0,0,30);
+ midnightJob=setTimeout(()=>{refreshDates();scheduleMidnight();},Math.max(50,next-now));
+}
+function refreshDates(){
+ const now=new Date(),date=localDateString(now),activeDay=(now.getDay()+6)%7;
+ if(lastLocalDate===date&&today===activeDay&&$("trainList").dataset.date===dateForDay(day))return false;
+ const wasToday=day===today;
+ lastLocalDate=date;today=activeDay;
+ setDay(wasToday?today:day);
+ scheduleMidnight();
+ return true;
+}
+window.addEventListener("focus",refreshDates);
+window.addEventListener("pageshow",refreshDates);
+setInterval(()=>{if(!document.hidden)refreshDates();},30000);
 const swapKey="studio-motion-date-swaps-v1";
 let dateSwaps={},swapsWritable=true;
 try{
@@ -662,24 +680,59 @@ function tellSwap(message){
  const status=$("swapResult");status.hidden=!message;status.textContent=message;
 }
 const marksFor=(row,w=current(),date=dateForDay(day))=>completion[date]?.[w.id+"/"+row.id]||[];
+function persistCompletion(){
+ for(const old of Object.keys(completion).sort().slice(0,-84))delete completion[old];
+ try{if(!progressWritable)throw Error();localStorage.setItem(checkKey,JSON.stringify(completion));return true;}
+ catch{return false;}
+}
 function storeMark(row,set,checked,date){
  if(date!==dateForDay(day)){renderTrainList();nav();return;}
  const k=current().id+"/"+row.id,byRow=completion[date]??(completion[date]={});
  const setOf=new Set(byRow[k]||[]);
  if(checked)setOf.add(set);else setOf.delete(set);
  byRow[k]=[...setOf].sort((a,b)=>a-b);
- for(const old of Object.keys(completion).sort().slice(0,-84))delete completion[old];
- let status="";
- try{if(!progressWritable)throw Error();localStorage.setItem(checkKey,JSON.stringify(completion));}
- catch{status=" · Browser did not save the checkmarks";}
- progressCount(status);
+ progressCount(persistCompletion()?"":" · Browser did not save the checkmarks");
 }
-function progressCount(status=""){
+let undoCompletion=null,setNotice="";
+function progressCount(status=setNotice){
  const rows=effectiveRows(),sets=rows.reduce((total,x)=>total+x.sets,0);
  const done=rows.reduce((total,x)=>total+marksFor(x).filter(n=>n<=x.sets).length,0);
  $("trainProgress").textContent=sets?done+" / "+sets+" sets · "+dateForDay(day)+status:"";
  $("trainProgress").hidden=!sets;
+ $("setActions").hidden=!sets;
+ $("clearSets").disabled=!rows.some(row=>marksFor(row).length);
+ const undo=undoCompletion;
+ $("undoSets").hidden=!undo||undo.date!==dateForDay(day)||undo.wid!==current().id;
 }
+$("clearSets").onclick=()=>{
+ if(refreshDates())return;
+ const w=current(),date=dateForDay(day),saved=completion[date];
+ if(!saved)return;
+ const keys=effectiveRows(w,date).map(row=>swapSlot(w,row));
+ const previous=Object.fromEntries(keys.filter(k=>saved[k]?.length).map(k=>[k,[...saved[k]]]));
+ if(!Object.keys(previous).length||!confirm("Clear all checked sets for "+DAYS[day]+" "+date+"? The workout stays unchanged."))return;
+ if(refreshDates()||date!==dateForDay(day)||w!==current())return;
+ for(const k of Object.keys(previous))delete saved[k];
+ if(!Object.keys(saved).length)delete completion[date];
+ undoCompletion={date,wid:w.id,previous};
+ setNotice=persistCompletion()?" · Cleared":" · Cleared in this tab only";
+ renderTrainList();
+ $("undoSets").focus({preventScroll:true});
+};
+$("undoSets").onclick=()=>{
+ if(refreshDates())return;
+ const undo=undoCompletion;
+ if(!undo||undo.date!==dateForDay(day)||undo.wid!==current().id)return;
+ const saved=completion[undo.date]??(completion[undo.date]={});
+ const allowed=new Set(effectiveRows().map(row=>swapSlot(current(),row)));
+ for(const [key,values] of Object.entries(undo.previous)){
+  if(allowed.has(key))saved[key]=[...new Set([...(saved[key]||[]),...values])].sort((a,b)=>a-b);
+ }
+ undoCompletion=null;
+ setNotice=persistCompletion()?" · Restored":" · Restored in this tab only";
+ renderTrainList();
+ $("clearSets").focus({preventScroll:true});
+};
 function renderTrainList(){
  const root=$("trainList");clearArt(root);
  const date=dateForDay(day);
@@ -700,9 +753,11 @@ function renderTrainList(){
  watchArt(root);progressCount();
 }
 $("trainList").onchange=e=>{
- const x=e.target,i=+x.dataset.row,set=+x.dataset.set,row=effectiveRows()[i];
+ const x=e.target;
+ if(x.type==="checkbox"&&refreshDates())return;
+ const i=+x.dataset.row,set=+x.dataset.set,row=effectiveRows()[i];
  if(x.type!=="checkbox"||!row||!Number.isInteger(set)||set<1||set>row.sets)return;
- storeMark(row,set,x.checked,$("trainList").dataset.date);
+ setNotice="";storeMark(row,set,x.checked,$("trainList").dataset.date);
 };
 
 function say(x){$("save").textContent=x;}
@@ -1050,7 +1105,7 @@ function render(){
  renderTrainList();nav();
 }
 function setDay(index,focus=false){
- day=index;tellSwap("");resetPreview();render();
+ day=index;undoCompletion=null;setNotice="";tellSwap("");resetPreview();render();
  syncAnimation();
  if(focus)$("days").querySelector('[data-day="'+index+'"]')?.focus();
 }
@@ -1105,7 +1160,7 @@ $("print").onclick=()=>window.print();
 $("trainingEquipment").innerHTML=equipments.map(x=>'<label><input type="checkbox" value="'+x+'" '+(x==="Machine"||x==="Cable"?"checked":"")+'> '+x+"</label>").join("");
 $("filter").innerHTML='<option value="">All muscle groups</option>'+groups.map(x=>'<option>'+x+"</option>").join("");
 $("equipmentFilter").innerHTML='<option value="">All equipment</option>'+equipments.map(x=>'<option>'+x+"</option>").join("");
-choose(E[0].id);setDay(today);setMode(false);if(bootMessage)say(bootMessage);
+choose(E[0].id);setDay(today);setMode(false);scheduleMidnight();if(bootMessage)say(bootMessage);
 // The standalone HTML remains self-contained on file://. Only the hosted shell registers.
 const hosted=location.protocol==="https:"||(location.protocol==="http:"&&["127.0.0.1","localhost"].includes(location.hostname));
 if(hosted){

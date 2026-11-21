@@ -74,7 +74,11 @@ when local storage is available. Checkmarks are separate by local calendar date,
 workout and exercise row (including repeated exercises). They are retained for
 the latest 84 logged dates. Date-specific substitutes stay on the device
 for the latest 84 dates with substitutes and do not alter the weekly plan. A recurring weekday starts with unchecked sets the
-next week. Changing the number of sets only changes the controls that are shown.
+next week. The open app refreshes for local midnight and when you return.
+**Clear all sets** below the exercise list clears only the selected date’s
+displayed workout (including its substitutions), not other dates, exercise
+plans or notes. **Undo clear** restores those marks while you remain on that
+date. Changing the number of sets only changes the controls that are shown.
 
 Existing v1 sessions at the same browser file location go to **Saved workouts**
 without deleting the old storage. Existing v2 plans, archived workouts and
