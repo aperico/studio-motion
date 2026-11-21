@@ -7,29 +7,35 @@ and open it in a browser. No server, install, sign-in, trackers, or external ass
 
 - It opens on **today** in your device's local time. This is a single
   phone-first screen at all widths. See the exercises in workout order and check
-  off each set as you finish. Tap an exercise name to show the movement cue;
-  only its visible diagram animates. Tap a weekday to see that workout.
+  off each set as you finish. Each exercise has its own diagram, rendered immediately.
+  Only on-screen diagrams animate. Form tips are optional. Tap a day to see its workout.
 - Use **Plan workout** or **Edit plan** to name and edit the day's workout.
   Leave a day unplanned. Existing rest days are retained. The expandable exercise library
   offers simplified start/end poses and filters by muscle group or machine,
   cable, dumbbell (halteres), barbell, and bodyweight. Use the diagrams as cues,
-  not as a substitute for instruction. The selected movement loops while visible;
+  not as a substitute for instruction. Diagrams also appear next to sets and reps
+  while editing, and a larger library preview appears when you select a movement.
+  Visible movements loop automatically;
   if your device has reduced motion enabled, you can switch between static poses.
   Tap **Done** to return to training.
 - **Auto Plan Day** previews up to three different workouts for your selected
   day and focus. Select the option you want and save it; only the chosen workout
   becomes active.
-- **Auto Plan Week** previews a Monday–Friday rotation: upper A, lower A,
-  core/calves, upper B, lower B. Machine and cable equipment are selected
-  initially; change those filters to match your gym. Empty weekdays are checked
-  for saving by default, not existing workouts or weekends. Explicitly check and
-  confirm a replacement to keep the prior workout under **Saved workouts**.
-- This five-day preset uses up to six exercises per day and **4 sets of 10–12
+- **Auto Plan Week** is in the top bar on every day. Each preview randomizes
+  exercise selection within a repeatable Monday–Sunday plan: upper A, lower A,
+  core/calves, upper B, lower B, and two short no-equipment recovery sessions.
+  Machine and cable equipment are selected initially for the strength days.
+  Change equipment in Plan/Edit. Empty days are checked for saving by default.
+  Explicitly select and confirm a replacement to keep the previous workout
+  under **Saved workouts**. Close the preview to leave the plan unchanged.
+- The weekday strength preset uses up to six exercises with **4 sets of 10–12
   reps** by default, with timed holds where appropriate and no suggested weight.
-  Reduce to 2 or 3 sets if you want less volume. The time estimate includes
-  8 minutes to warm up, roughly 40 seconds per rep-based set (per side when
-  needed), scheduled between-set rest, and 1.5 minutes per changeover. It is not
-  a guarantee or a recommendation to lift five days or train to failure.
+  Reduce to 2 or 3 sets if you want less volume. The estimate includes 8 minutes
+  to warm up, roughly 40 seconds per rep-based set (per side when needed),
+  scheduled between-set rest, and 1.5 minutes per changeover. The weekend uses
+  one easy set per movement. Random options provide choice, not evidence that
+  continually changing a saved routine is better or that you should lift hard
+  on seven days or train to failure.
 - Use **Print / save PDF** for a printable copy of the selected day.
 
 ## Private on-device storage
