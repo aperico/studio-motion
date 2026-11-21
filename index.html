@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v21 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v23 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -56,6 +56,9 @@
 #weekSummaryList .summary-with-map{grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:center}
 .summary-copy{display:grid;gap:2px;min-width:0}
 .summary-map{display:block;inline-size:clamp(72px,18vw,88px);max-inline-size:100%;block-size:auto;flex:none}
+#trainOverview{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:8px;margin:6px 0 10px;padding:7px 9px;background:var(--inner);border:1px solid var(--line);border-radius:10px}
+#trainOverviewCopy{min-width:0;overflow-wrap:anywhere}#trainOverviewCount{margin:0;font-weight:700}
+#trainOverview #trainDayGroups{margin:2px 0 0}#trainOverviewMap:not(:has(svg)){display:none}
 </style></head>
 <body><main class="app">
 <div id="resetInterrupted" class="guide" hidden>
@@ -63,7 +66,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v22</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v23</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -78,7 +81,8 @@
 
 <nav id="days" class="week no-print" aria-label="Training week"></nav>
 <section id="trainView" aria-labelledby="trainTitle" class="train-view">
-  <header class="train-heading"><div class="train-heading-meta"><p id="trainDay" class="kicker"></p><button id="weekSummaryOpen" class="no-print" type="button" aria-haspopup="dialog">Week summary</button></div><h1 id="trainTitle" tabindex="-1"></h1><p class="guide muted" id="trainDayGroups" hidden></p></header>
+  <header class="train-heading"><div class="train-heading-meta"><p id="trainDay" class="kicker"></p><button id="weekSummaryOpen" class="no-print" type="button" aria-haspopup="dialog">Week summary</button></div><h1 id="trainTitle" tabindex="-1"></h1></header>
+  <section id="trainOverview" aria-label="Workout overview" hidden><div id="trainOverviewCopy"><p class="guide" id="trainOverviewCount"></p><p class="guide muted" id="trainDayGroups"></p></div><div id="trainOverviewMap"></div></section>
   <div id="trainEmpty" class="empty" hidden></div><button type="button" class="primary no-print" id="planThisDay" hidden>Plan this day</button>
   <p id="swapResult" class="swap-result" role="status" hidden></p><div class="training-progress" id="trainingProgress" hidden><div class="progress-row"><p class="train-progress" id="trainProgress" role="status" hidden></p><button type="button" id="jumpIncomplete" hidden>First unfinished</button></div><progress class="workout-progress" id="trainBar" aria-label="Workout sets completed" value="0" max="1" hidden></progress></div>
   <ol id="trainList" class="train-list" role="list"></ol>
@@ -93,7 +97,7 @@
 <p class="muted guide">Preview first. Goal guides the weekday split, not your weight, sex, or training experience. If you pick a specific day focus below, that takes priority. Use a light warm-up and keep recovery gentle.</p>
 <label class="field">Training goal<select id="trainingGoal"><option value="balanced">Balanced</option><option value="lower">Glutes &amp; legs</option><option value="upper">Upper body</option></select></label>
 <fieldset id="trainingEquipment"><legend>Available equipment</legend></fieldset>
-<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option><option>Chest &amp; triceps</option><option>Triceps</option></select></label>
+<div class="row generator-fields"><label class="field">Bench available<select id="trainingBench"><option value="none">No bench</option><option value="flat">Flat bench</option><option value="adjustable">Adjustable bench</option></select></label><label class="field">Focus<select id="trainingFocus"><option>Day split</option><option>Full body</option><option>Upper</option><option>Lower</option><option>Core &amp; calves</option><option>Chest &amp; triceps</option><option>Triceps</option><option>Forearms</option><option>Trapezius</option></select></label>
 <label class="field">Exercises<select id="trainingSize"><option value="3">3 · Short</option><option value="5">5 · Standard</option><option value="6">6 · Longer</option><option value="8" selected>8 · Extended</option></select></label>
 <label class="field">Sets<select id="trainingSets"><option value="4">4 sets</option><option value="3">3 sets</option><option value="2">2 sets</option></select></label></div>
 </details><p id="generatorStatus" class="guide muted" role="status"></p>
@@ -128,6 +132,14 @@
 "use strict";
 
 const PT={
+ "Workout overview":"Resumo do treino",
+ "Forearms workout":"Treino de antebraços",
+ "Forearm flexors":"Flexores do antebraço",
+ "Forearm extensors":"Extensores do antebraço",
+ "Trapezius":"Trapézio",
+ "Trapezius workout":"Treino de trapézio",
+ "Forearm and trapezius exercises":"Exercícios de antebraço e trapézio",
+ "Find targeted movements using the new Forearms and Trapezius filters and daily focuses.":"Encontre movimentos específicos com os novos filtros e focos de Antebraços e Trapézio.",
  "Muscle maps in Week Summary":"Mapas musculares no resumo da semana",
  "See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements.":"Veja os principais músculos de cada treino salvo. Os mapas funcionam offline e consideram as substituições de exercícios.",
  "Local data":"Dados locais",
@@ -472,6 +484,9 @@ const PT_EX={
  "cable-straightarm":["Pulôver na polia com barra curta", "Dorsal · tríceps", "De frente para a polia alta, incline levemente o tronco a partir do quadril. Mantenha os cotovelos levemente flexionados e imóveis, e traga a barra curta em arco até as coxas."],
  "pulldown-wide-front":["Puxada frontal com pegada aberta", "Dorsal · parte superior das costas · bíceps", "Sente-se sob a barra com as coxas presas no apoio e as mãos além da largura dos ombros. Puxe a barra até a parte superior do peito, não atrás da nuca."],
  "concentration-curl":["Rosca concentrada com halter", "Bíceps", "Sente-se com os pés firmes no chão e apoie o braço na parte interna da coxa. Faça a rosca sem tirar o cotovelo do apoio."],
+ "db-wrist-flexion":["Flexão de punho apoiada com halter", "Flexores do antebraço", "Apoie um antebraço na coxa, palma para cima e punho além do joelho. Mova só o punho e abaixe o halter com controle."],
+ "db-wrist-extension":["Extensão de punho apoiada com halter", "Extensores do antebraço", "Apoie um antebraço na coxa, palma para baixo e punho além do joelho. Eleve o dorso da mão, sem levantar o antebraço, e desça com controle."],
+ "bb-shrug":["Encolhimento com barra", "Trapézio superior", "Fique ereto com a barra à frente das coxas. Mantenha os braços estendidos, eleve os ombros em linha reta e desça sem girá-los."],
  "bb-wrist-curl":["Rosca de punho sentada com barra (palmas para cima)", "Flexores do antebraço", "Sente-se e apoie os antebraços nas coxas, com as palmas para cima e os punhos além dos joelhos. Flexione só os punhos e desça com controle."],
  "cable-reverse-curl":["Rosca inversa em pé na polia", "Antebraços · flexores do cotovelo", "Segure a barra da polia baixa com as palmas para baixo. Mantenha os punhos neutros e os braços junto ao tronco ao flexionar os cotovelos."],
  "mob-ankle":["Mobilidade de tornozelo com avanço do joelho", "Tornozelos · panturrilhas", "Coloque um pé à frente e leve o joelho da frente sobre os dedos do pé, sem erguer o calcanhar."],
@@ -778,6 +793,12 @@ const libraryVariants=[
   [190,176,190,101,190,71,153,70,122,49,163,178,158,222],[190,176,190,101,190,71,150,128,122,92,163,178,158,222],"puxada frontal frente com pulley pegada aberta barra larga",true],
  ["concentration-curl","Dumbbell concentration curl","Arms","Dumbbell","concentration","Biceps","Sit with feet planted and brace your upper arm against the inside of your thigh. Curl without lifting the elbow off the thigh.",
   [147,168,176,108,189,79,195,160,193,199,199,170,207,224],[147,168,176,108,189,79,195,160,182,125,199,170,207,224],"rosca concentrada unilateral halter banco bíceps",false,"flat",null,true],
+ ["db-wrist-flexion","Supported dumbbell wrist curl (palm up)","Arms","Dumbbell","wristbench","Forearm flexors","Rest one forearm on your thigh, palm up, wrist beyond the knee. Move only your wrist to lift and lower the dumbbell with control.",
+  [143,171,151,107,154,72,163,161,243,181,211,178,207,222],[143,171,151,107,154,72,163,161,243,150,211,178,207,222],"flexão rosca punho antebraço halter sentado flexor palm up wrist flexion supinada",false,"flat",null,true],
+ ["db-wrist-extension","Supported dumbbell wrist extension (palm down)","Arms","Dumbbell","wristbench","Forearm extensors","Rest one forearm on your thigh, palm down, wrist beyond the knee. Raise the back of your hand without lifting your forearm; lower with control.",
+  [143,171,151,107,154,72,163,161,243,176,211,178,207,222],[143,171,151,107,154,72,163,161,243,144,211,178,207,222],"extensão rosca punho inversa antebraço halter extensor sentado palm down wrist extension pronada",false,"flat",null,true],
+ ["bb-shrug","Standing barbell shrug","Back","Barbell","floor","Upper trapezius","Stand tall with the bar in front of your thighs. Keep your arms straight. Lift your shoulders vertically and lower without rolling them.",
+  [184,151,184,91,184,62,190,125,204,158,188,185,190,221],[184,151,184,79,184,62,190,113,204,146,188,185,190,221],"encolhimento em pé com barra trapézio superior barbell shoulder shrug"],
  ["bb-wrist-curl","Seated barbell wrist curl (palms up)","Arms","Barbell","wristbench","Forearm flexors","Sit and support your forearms on your thighs, palms up, with wrists beyond your knees. Curl through the wrists only, then lower under control.",
   [143,169,153,106,155,73,172,155,243,177,208,182,206,223],[143,169,153,106,155,73,172,155,243,157,208,182,206,223],"rosca flexão punho barra palmas para cima supinada antebraço sentado",false,"flat"],
  ["cable-reverse-curl","Standing reverse cable curl","Arms","Cable","cablelow","Forearms · elbow flexors","Hold the low-pulley bar with palms down. Keep wrists neutral and upper arms by your sides as you curl.",
@@ -945,6 +966,8 @@ const regions={
  bi:["Biceps","F","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
  tri:["Triceps","B","M14 36L18 37 14 48 10 49 10 45ZM46 36L42 37 46 48 50 49 50 45Z"],
  trap:["Upper trapezius","B","M21 27L28 23H32L39 27 36 32 33 29 30 34 27 29 24 32Z"],
+ wristflex:["Forearm flexors","F","M9 48L13 49 9 60 5 60ZM51 48L47 49 51 60 55 60Z"],
+ wristext:["Forearm extensors","B","M9 48L13 49 9 60 5 60ZM51 48L47 49 51 60 55 60Z"],
  grip:["Forearms","F","M9 48L13 49 9 60 5 60ZM51 48L47 49 51 60 55 60Z"],
  lat:["Lats","B","M20 33L26 38 28 49 23 47 18 36ZM40 33L34 38 32 49 37 47 42 36Z"],
  upper:["Upper back","B","M22 25L30 23 38 25 37 33 32 39 28 39 23 33Z"],
@@ -960,7 +983,7 @@ const regions={
  calf:["Calves","B","M18 84L23 85 23 94 19 101 16 101 16 93ZM42 84L37 85 37 94 41 101 44 101 44 93Z"],
  shin:["Shins / ankles","F","M18 84L23 85 22 93 19 101 16 101 17 92ZM42 84L37 85 38 93 41 101 44 101 43 92Z"]
 };
-const groupRegions={Triceps:["tri"],Chest:["pec"],Back:["lat","upper","trap","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
+const groupRegions={Forearms:["wristflex","wristext"],Trapezius:["trap"],Triceps:["tri"],Chest:["pec"],Back:["lat","upper","trap","spine"],Shoulders:["delt","rear"],Arms:["bi","tri","grip"],Quads:["quad"],Hamstrings:["ham"],Glutes:["glute","hip"],Calves:["calf","shin"],Core:["abs","side"]};
 const targets={};
 function target(ids,focus,assist=""){for(const id of ids.split(" "))targets[id]=[focus.split(" "),assist?assist.split(" "):[]];}
 target("press cable-chest db-bench bb-bench bw-pushup","pec","tri delt");
@@ -970,7 +993,7 @@ target("db-seated-overhead-triceps cable-pressdown-bar cable-pressdown-rope","tr
 target("machine-hack-squat-45","quad","glute");
 target("wrist-roller-cord","grip");
 target("db-incline","pec","tri delt");
-target("db-shrug","trap");
+target("db-shrug bb-shrug","trap");
 target("shoulder db-shoulder bb-press bw-pike","delt","tri");
 target("pulldown assist-pull cable-lat bw-pullup","lat","bi upper");
 target("row machine-row db-row bb-row","upper lat","bi rear");
@@ -992,7 +1015,8 @@ target("wall-ball-cuff","rear","delt");
 target("cable-straightarm","lat","tri");
 target("pulldown-wide-front","lat","bi upper");
 target("concentration-curl","bi");
-target("bb-wrist-curl","grip");
+target("bb-wrist-curl db-wrist-flexion","wristflex");
+target("db-wrist-extension","wristext");
 target("cable-reverse-curl","grip","bi");
 target("machine-hip bb-thrust bw-bridge cable-kick","glute","ham");
 target("cable-pull db-rdl bb-rdl bw-hinge","ham glute","spine");
@@ -1032,7 +1056,7 @@ function mapPose(f,coords,sets){
  const torsoSide=48<Math.abs(sx-hx)&&!f.mirror;
  const spots={
   trap:[sx-.8,sy-3,6,3],delt:[sx,sy,5,4],rear:[sx-3,sy-2,5,4],bi:[(sx+ex)/2,(sy+ey)/2,4.5,4],tri:[(sx+ex)/2,(sy+ey)/2,4.5,4],
-  grip:[(ex+wx)/2,(ey+wy)/2,4,3],quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
+  grip:[(ex+wx)/2,(ey+wy)/2,4,3],wristflex:[(ex+225)/2,161,5,3],wristext:[(ex+225)/2,157,5,3],quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
   calf:[kx+.48*(ax-kx),ky+.48*(ay-ky),4,4],shin:[kx+.61*(ax-kx),ky+.61*(ay-ky),4,3],
   pec:f.mirror||torsoSide?[sx+.19*(hx-sx),sy+.19*(hy-sy),5,5]:null,
   abs:f.mirror||torsoSide?[sx+.57*(hx-sx),sy+.57*(hy-sy),5,4]:null,
@@ -1135,6 +1159,10 @@ function draw(f,t,key){
  if(f.id==="bw-plank")contacts+=support(ex,ey)+support(ax,ay);
  if(f.f==="cableside")contacts+=line(129,105,wx,wy,"#8ad4d4",2)+pad(wx,wy);
  if(f.f==="wristbench")contacts+=support(206,166);
+ if(f.id==="db-wrist-flexion"||f.id==="db-wrist-extension"){
+  const palmY=wy+(f.id==="db-wrist-extension"?-6:6);
+  contacts+=circle(225,165,3,"#f7da87")+line(wx-5,palmY,wx+5,palmY,"#f7da87",2);
+ }
  if(f.f==="sled")contacts+=support(ax,ay);
  if(["upright","lever","seatabs","turn"].includes(f.f))contacts+=support(hx,hy);
  if(f.f==="chestrow")contacts+=support(sx+10,sy+27);
@@ -1150,7 +1178,7 @@ function draw(f,t,key){
  if(f.id==="bw-hinge")contacts+=support(196,225);
  const movingPad=f.f==="lever"||f.f==="sled"||f.f==="calfseat";
  const pattern=f.style;
- const indices=["db-shrug","bw-hinge"].includes(f.id)?[2,3]:movingPad||pattern==="kick"||["abduct","hip-adduction"].includes(f.id)?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
+ const indices=["db-shrug","bb-shrug","bw-hinge"].includes(f.id)?[2,3]:movingPad||pattern==="kick"||["abduct","hip-adduction"].includes(f.id)?[12,13]:f.f==="assisted"?[0,1]:["squat","split","hinge","bridge","pike"].includes(pattern)||f.f==="hipbench"?[0,1]:[8,9];
  const [mi,mj]=indices,from=[f.p[mi],f.p[mj]],to=[f.q[mi],f.q[mj]];
  const arrow=f.hold?"":Math.hypot(to[0]-from[0],to[1]-from[1])>16?
     '<path d="M'+(from[0]+10)+' '+(from[1]-9)+' L'+(to[0]+10)+' '+(to[1]-9)+'" stroke="#f7da87" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#'+key+'-guide-arrow)" fill="none" opacity=".88"/>':"";
@@ -1264,7 +1292,9 @@ reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(t(selected.g)+" · "+t(selected.eq)).toUpperCase();$("name").textContent=nameOf(selected);$("libraryGuideButton").innerHTML=infoButton(selected);$("muscle").textContent=musclesOf(selected);$("setupInfo").textContent=setup(selected);$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=cueOf(selected);list()}
 const directTriceps=e=>e.g==="Arms"&&forTarget(e)[0].includes("tri");
-const matchesGroup=(e,g)=>g==="Triceps"?directTriceps(e):e.g===g;
+const directForearms=e=>e.g==="Arms"&&forTarget(e)[0].some(x=>["grip","wristflex","wristext"].includes(x));
+const directTraps=e=>e.g==="Back"&&forTarget(e)[0].length===1&&forTarget(e)[0].includes("trap");
+const matchesGroup=(e,g)=>g==="Triceps"?directTriceps(e):g==="Forearms"?directForearms(e):g==="Trapezius"?directTraps(e):e.g===g;
 function list(){
  const term=normalized($("query").value.trim()).split(/\s+/).filter(Boolean),
   g=$("filter").value,eq=$("equipmentFilter").value,bench=$("benchFilter").value;
@@ -1796,10 +1826,12 @@ const split=[
  {name:"Upper B · back & shoulders",groups:["Back","Chest","Triceps","Shoulders","Back","Shoulders","Arms","Chest"],focus:"Upper"},
  {name:"Lower B · hamstrings & glutes",groups:["Hamstrings","Glutes","Quads","Calves","Hamstrings","Glutes","Quads","Calves"],focus:"Lower"}
 ];
-const pushFocus="Chest & triceps",triFocus="Triceps";
+const pushFocus="Chest & triceps",triFocus="Triceps",forearmFocus="Forearms",trapFocus="Trapezius";
 const pattern={
  [pushFocus]:["Chest",triFocus,"Chest",triFocus,"Chest",triFocus,"Chest",triFocus],
  [triFocus]:[triFocus,triFocus],
+ [forearmFocus]:[forearmFocus,forearmFocus],
+ [trapFocus]:[trapFocus],
  "Full body":["Quads","Chest","Back","Triceps","Hamstrings","Core","Shoulders","Glutes","Calves"],
  Upper:["Chest","Back","Triceps","Shoulders","Back","Chest","Shoulders","Arms"],
  Lower:["Quads","Hamstrings","Glutes","Calves","Quads","Hamstrings","Glutes","Calves"],
@@ -1844,7 +1876,7 @@ function lighterDraft(draft){
 const pushManual=new Set(["db-incline-fly-30","db-seated-overhead-triceps","cable-pressdown-bar","cable-pressdown-rope"]);
 function strengthPool(equipment,order,focus){
  return E.filter(e=>equipment.includes(e.eq)&&order.some(g=>matchesGroup(e,g))&&benchFits(e,$("trainingBench").value)&&!e.id.startsWith("mob-")&&!e.equipmentRequired&&
-  (!e.manualOnly||(pushManual.has(e.id)&&(focus===pushFocus||(order.includes(triFocus)&&directTriceps(e)))))&&
+  (!e.manualOnly||(focus===forearmFocus&&directForearms(e))||(focus===trapFocus&&directTraps(e))||(pushManual.has(e.id)&&(focus===pushFocus||(order.includes(triFocus)&&directTriceps(e)))))&&
   (focus!==pushFocus||(e.g==="Chest"&&forTarget(e)[0].includes("pec"))||directTriceps(e)));
 }
 function strengthDraft(equipment,focus,order,size){
@@ -1861,7 +1893,7 @@ function strengthDraft(equipment,focus,order,size){
  while(items.length<size&&items.length<pool.length)for(const g of shuffled(groups)){
   if(items.length>=size)break;pick(g);
  }
- if(items.length<(focus===triFocus?1:Math.min(3,size)))return null;
+ if(items.length<([triFocus,forearmFocus,trapFocus].includes(focus)?1:Math.min(3,size)))return null;
  return strengthFrom(items,focus,size,groups.filter(g=>!byGroup.get(g).length));
 }
 function strengthFrom(items,focus,size,missing){
@@ -1902,13 +1934,14 @@ function setVariant(index){
   drafted.items.length<drafted.requested?t("Fewer matches than requested; no duplicates were added."):"",
   drafted.missing.length?t("No matching equipment for: ","Sem equipamento compatível para: ")+drafted.missing.map(x=>t(x)).join(", ")+".":"",
   drafted.lighter?t("This draft uses at most two sets per exercise for a lighter strength day.","Esta prévia usa até duas séries por exercício para um treino mais leve."):"",
-  drafted.title===triFocus+" workout"?t("Focused session: up to 2 direct triceps exercises.","Treino focado: até 2 exercícios diretos de tríceps."):"",
+  drafted.title===forearmFocus+" workout"?t("Accessory session: up to 2 forearm exercises.","Sessão complementar: até 2 exercícios de antebraço."):"",
+ drafted.title===triFocus+" workout"?t("Focused session: up to 2 direct triceps exercises.","Treino focado: até 2 exercícios diretos de tríceps."):"",
   drafted.title===pushFocus+" workout"?t("Focused session: up to 5 exercises for chest and triceps.","Treino focado: até 5 exercícios de peito e tríceps."):"",
   drafted.easy?t("Stay in a comfortable range; skip any movement that is unclear or uncomfortable."):adjacentWarning(day,drafted),hasWorkout(current())?t("Existing workout will be kept as a saved copy if replaced."):""].filter(Boolean).join(" ");
  $("applyTraining").textContent=hasWorkout(current())?t("Replace ","Substituir ")+dayName(day)+"…":t("Save to ","Salvar em ")+dayName(day);
 }
 function showPreview(){
- const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):selected===triFocus?Math.min(2,+$("trainingSize").value):+$("trainingSize").value;
+ const selected=$("trainingFocus").value,n=selected===pushFocus?Math.min(5,+$("trainingSize").value):selected===trapFocus?1:[triFocus,forearmFocus].includes(selected)?Math.min(2,+$("trainingSize").value):+$("trainingSize").value;
  const daySplit=goalWeeks[trainingGoal][day],easy=selected==="Day split"&&day===6;
  const focus=selected==="Day split"?(daySplit?.focus||"Full body"):selected;
  const order=selected==="Day split"&&daySplit?daySplit.groups:pattern[focus];
@@ -1927,7 +1960,7 @@ function showPreview(){
   if(repeated)$("generatorStatus").textContent=easy?t("This recovery option keeps the same simple movements."):t("These settings have limited alternatives; this option matches a recent or saved plan.");
   seen.add(key);avoid.add(key);variants.push(draft);
  }
- if(!variants.length){$("generatorStatus").textContent=selected===pushFocus?t("Select equipment with both chest and triceps exercises, such as Machine and Cable.","Selecione equipamentos para peito e tríceps, como Máquina e Polia."):selected===triFocus?t("Select cable or dumbbells for direct triceps exercises.","Selecione polia ou halteres para exercícios específicos de tríceps."):t("Not enough matching exercises. Select more equipment or another focus.");return;}
+ if(!variants.length){$("generatorStatus").textContent=selected===pushFocus?t("Select equipment with both chest and triceps exercises, such as Machine and Cable.","Selecione equipamentos para peito e tríceps, como Máquina e Polia."):selected===forearmFocus?t("Select Cable for reverse curls, or add weights and a bench for wrist exercises.","Selecione Polia para rosca inversa, ou pesos e um banco para exercícios de punho."):selected===trapFocus?t("Select dumbbells or barbell for shrugs.","Selecione Halteres ou Barra para encolhimentos."):selected===triFocus?t("Select cable or dumbbells for direct triceps exercises.","Selecione polia ou halteres para exercícios específicos de tríceps."):t("Not enough matching exercises. Select more equipment or another focus.");return;}
  lastDayPreviews.set(day,seen);
  proposed={day,variants,active:0};$("preview").hidden=false;
  $("dayVariant").innerHTML=variants.map((_,i)=>'<option value="'+i+'">'+t("Option ","Opção ")+(i+1)+'</option>').join("");
@@ -1968,7 +2001,7 @@ function showWeek(){
  $("weekCards").innerHTML=drafts.map((w,i)=>{
   const occupied=hasWorkout(plan.days[i]);
   const warning=[occupied?t("Existing workout protected by default."):"",w&&i<6&&w.items.length<size?t("Fewer than 8 valid options with this equipment."):"",limit.has(i)&&i<6?t("Limited variety with these settings."):""].filter(Boolean).join(" ");
-  const names=w?[...new Set(w.items.map(x=>t(byId(x.exercise).g)))].join(" · "):"";
+  const names=w?groupLabels(workoutGroups(w)):"";
   return '<div class="week-card"><label><input type="checkbox" data-week-day="'+i+'" '+(!w?"disabled":occupied?"":"checked")+'><strong>'+dayName(i)+'</strong></label><div>'+
    (w?esc(displayTitle(w.title))+' <span class="muted">· ~'+minutes(w)+' min</span><small>'+esc(names)+'</small><details><summary>'+t("Exercises")+' ('+w.items.length+')</summary><ol>'+
     w.items.map(x=>'<li>'+esc(nameOf(byId(x.exercise)))+' · '+dose(x)+'</li>').join("")+'</ol></details>':t("Not enough matches for this day. Adjust equipment in Plan/Edit."))+
@@ -2008,34 +2041,45 @@ function stats(){
  $("stats").textContent=x.rest?t("Rest day"):x.items.length?x.items.length+" "+plural(x.items.length,t("exercise","exercício"),t("exercises","exercícios"))+" · "+count+" "+plural(count,t("set","série"),t("sets","séries")):t("No exercises");
 }
 function workoutGroups(w,date){
- const chosen=new Set(effectiveRows(w,date).map(row=>byId(row.exercise)).filter(Boolean).map(ex=>directTriceps(ex)?"Triceps":ex.g));
- return [...groups,"Triceps"].filter(g=>chosen.has(g));
+ return workoutOverview(date?effectiveRows(w,date):w.items).groups;
+}
+function workoutOverview(rows){
+ const exercises=rows.map(row=>byId(row.exercise)).filter(Boolean);
+ const chosen=new Set(exercises.map(ex=>directTriceps(ex)?"Triceps":directForearms(ex)?"Forearms":directTraps(ex)?"Trapezius":ex.g));
+ const selected=new Set(exercises.flatMap(ex=>forTarget(ex)[0]));
+ return {
+  groups:[...groups,"Triceps","Forearms","Trapezius"].filter(g=>chosen.has(g)),
+  totalSets:rows.reduce((total,row)=>total+row.sets,0),
+  count:exercises.length,
+  primary:Object.keys(regions).filter(region=>selected.has(region))
+ };
 }
 function groupLabels(keys){return keys.map(g=>t(g)).join(" · ");}
 function refreshTrainingGroups(){
- const dayGroup=workoutGroups(current(),dateForDay(day));
- $("trainDayGroups").hidden=!dayGroup.length;
- $("trainDayGroups").textContent=dayGroup.length?t("Muscle groups")+": "+groupLabels(dayGroup):"";
+ const workout=current(),card=$("trainOverview"),date=dateForDay(day),overview=workoutOverview(effectiveRows(workout,date));
+ card.hidden=workout.rest||!overview.count;
+ card.setAttribute("aria-label",t("Workout overview"));
+ $("trainDayGroups").textContent=overview.groups.length?t("Muscle groups")+": "+groupLabels(overview.groups):"";
+ $("trainOverviewCount").textContent=exerciseTotal(overview.count)+" · "+overview.totalSets+" "+plural(overview.totalSets,t("set","série"),t("sets","séries"));
+ $("trainOverviewMap").innerHTML=card.hidden?"":summaryMap(overview.primary,true);
 }
 function exerciseTotal(n){return n+" "+plural(n,t("exercise","exercício"),t("exercises","exercícios"));}
-function summaryRegions(exercises){
- const selected=new Set(exercises.flatMap(ex=>forTarget(ex)[0]));
- return Object.keys(regions).filter(region=>selected.has(region));
-}
-function summaryMap(primary){
+function primaryMapName(primary){return t("Main areas: ","Áreas principais: ")+namesOf(primary);}
+function summaryMap(primary,standalone=false){
  if(!primary.length)return "";
- return '<svg class="summary-map" viewBox="0 0 125 128" aria-hidden="true" focusable="false">'+anatomySVG([primary,[]])+'</svg>';
+ const accessibility=standalone?'role="img" aria-label="'+esc(primaryMapName(primary))+'"':'aria-hidden="true"';
+ return '<svg class="summary-map" viewBox="0 0 125 128" '+accessibility+' focusable="false">'+anatomySVG([primary,[]])+'</svg>';
 }
 function renderWeekSummary(){
  const list=$("weekSummaryList"),focused=document.activeElement.closest("[data-summary-day]")?.dataset.summaryDay;
  const rows=plan.days.map((w,i)=>{
-  const date=dateForDay(i),exercises=effectiveRows(w,date).map(row=>byId(row.exercise)).filter(Boolean);
-  return {w,date,groups:workoutGroups(w,date),count:exercises.length,primary:w.rest?[]:summaryRegions(exercises)};
+  const date=dateForDay(i),overview=workoutOverview(effectiveRows(w,date));
+  return {w,date,...overview,primary:w.rest?[]:overview.primary};
  });
  const total=rows.filter(x=>x.count>0).length,allGroups=new Set(rows.flatMap(x=>x.groups));
  $("weekSummaryTotals").textContent=total+t(" of 7 days with exercises"," de 7 dias com exercícios");
  const caption=$("weekSummaryGroups");
- caption.textContent=allGroups.size?t("Muscle groups")+": "+groupLabels([...groups,"Triceps"].filter(g=>allGroups.has(g))):"";
+ caption.textContent=allGroups.size?t("Muscle groups")+": "+groupLabels([...groups,"Triceps","Forearms","Trapezius"].filter(g=>allGroups.has(g))):"";
  caption.hidden=!allGroups.size;
  list.innerHTML=rows.map(({w,date,groups:dayGroups,count,primary},i)=>{
   const map=summaryMap(primary),mapId="summary-map-description-"+i;
@@ -2043,7 +2087,7 @@ function renderWeekSummary(){
   const details=[count?exerciseTotal(count):"",groupLabels(dayGroups)].filter(Boolean).join(" · ");
   return '<li><button type="button" data-summary-day="'+i+'" data-summary-date="'+date+'" '+(map?'class="summary-with-map" aria-describedby="'+mapId+'" ':'')+(i===today?'aria-current="date"':'')+'>'+
    '<span class="summary-copy"><span class="summary-date">'+esc(dayName(i)+" · "+displayDate(date)+(i===today?" · "+t("Today"):""))+'</span>'+
-   '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</span>'+map+'</button>'+(map?'<span id="'+mapId+'" hidden>'+esc(t("Main areas: ","Áreas principais: ")+namesOf(primary))+'</span>':'')+'</li>';
+   '<strong>'+esc(title)+'</strong>'+(details?'<small>'+esc(details)+'</small>':'')+'</span>'+map+'</button>'+(map?'<span id="'+mapId+'" hidden>'+esc(primaryMapName(primary))+'</span>':'')+'</li>';
  }).join("");
  if(focused!==undefined)list.querySelector('[data-summary-day="'+focused+'"]')?.focus({preventScroll:true});
 }
@@ -2169,7 +2213,7 @@ function localizedFilters(){
  const checked=new Set($("trainingEquipment").querySelector("input")?equipmentNow():["Machine","Cable"]);
  $("trainingEquipment").querySelectorAll("label").forEach(x=>x.remove());
  $("trainingEquipment").insertAdjacentHTML("beforeend",autoEquipment.map(x=>'<label><input type="checkbox" value="'+esc(x)+'" '+(checked.has(x)?"checked":"")+'> '+esc(t(x))+"</label>").join(""));
- for(const [id,values,label] of [["filter",[...groups,"Triceps"],"All muscle groups"],["equipmentFilter",equipments,"All equipment"]]){
+ for(const [id,values,label] of [["filter",[...groups,"Triceps","Forearms","Trapezius"],"All muscle groups"],["equipmentFilter",equipments,"All equipment"]]){
   const control=$(id),old=control.value;
   control.innerHTML='<option value="">'+t(label)+'</option>'+values.map(x=>'<option value="'+esc(x)+'">'+esc(t(x,compactPt[x]))+"</option>").join("");
   control.value=values.includes(old)?old:"";
@@ -2177,6 +2221,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"forearms-traps-v23",date:"2026-11-21",title:"Forearm and trapezius exercises",body:"Find targeted movements using the new Forearms and Trapezius filters and daily focuses."},
  {id:"week-muscle-maps-v22",date:"2026-11-21",title:"Muscle maps in Week Summary",body:"See the main areas each saved workout trains at a glance. The maps work offline and account for exercise replacements."},
  {id:"overview-reset-v21",date:"2026-11-21",title:"Weekly overview and local reset",body:"See saved workouts and muscle groups for the week. A protected reset is available under Local data in Menu."},
  {id:"triceps-and-sunday-v20",date:"2026-11-21",title:"Triceps in the planner and one recovery day",body:"Find direct triceps exercises and plan a lighter Saturday plus one recovery day. Saved workouts are unchanged."},
