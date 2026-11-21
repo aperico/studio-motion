@@ -15,6 +15,10 @@ Use the same browser and address to keep using the same saved plan.
 
 ## Use it
 
+In **Menu**, choose **English** or **Português (Brasil)**. The app remembers your choice
+locally, including offline. Your saved exercises, workout names, and notes are not migrated.
+
+
 - It opens on **today** in your device's local time. This is a single
   phone-first screen at all widths. See the exercises in workout order and check
   off each set as you finish. Progress stays visible while you scroll. The first unfinished
@@ -54,10 +58,12 @@ Use the same browser and address to keep using the same saved plan.
   approximate external demo is linked. External demos load only when tapped and require internet.
 - **Auto Plan Day** previews up to three different workouts for your selected
   day and focus. Select the option you want and save it; only the chosen workout
-  becomes active.
+  becomes active. **Regenerate this day** makes another full preview for that day
+  without touching other days; limited equipment can constrain variation.
 - **Auto Plan Week** is in the top bar on every day. Each preview randomizes
   exercise selection within a repeatable Monday–Sunday plan: upper A, lower A,
-  core/calves, upper B, lower B, and two short no-equipment recovery sessions.
+  core/calves, upper B, lower B, and two short no-equipment recovery sessions. Choose Balanced, Glutes & legs, or Upper body.
+  Goal choices are available to everyone and never change the plan until you save.
   Machine and cable equipment are selected initially for the strength days.
   Change equipment in Plan/Edit. Empty days are checked for saving by default. With restricted equipment, a
   preview may offer fewer than eight exercises or show an unavailable day.
@@ -69,7 +75,7 @@ Use the same browser and address to keep using the same saved plan.
   to warm up, roughly 40 seconds per rep-based set (per side when needed),
   scheduled between-set rest, and 1.5 minutes per changeover. Eight movements
   at four sets will often take more than an hour; choose fewer sets to shorten it. The weekend uses
-  one easy set per movement, across eight mobility and activation movements. Random options provide choice, not evidence that
+  one easy set per movement, across three gentle mobility and activation movements. Random options provide choice, not evidence that
   continually changing a saved routine is better or that you should lift hard
   on seven days or train to failure.
 - Use **Print / save PDF** for a printable copy of the selected day.
@@ -136,3 +142,7 @@ Commit to `main` and verify the public [What’s new](https://aperico.github.io/
 link after Pages deploys. If changing hosted content for a release, bump the
 app badge and the service-worker shell version. Announcements do not require
 an account, backend, or analytics.
+
+## Release usability checks
+
+Run the [ten-profile usability check](docs/USABILITY.md) for user-facing changes.
