@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "Studio Motion",
+  "short_name": "Studio Motion",
+  "description": "An offline workout planner and exercise checklist.",
+  "lang": "en",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#101418",
+  "background_color": "#101418",
+  "icons": [
+    { "src": "icons/studio-motion-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icons/studio-motion-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,37 @@
+"use strict";
+const scope = self.registration.scope;
+const namespace = "studio-motion:" + scope + ":";
+const shellName = namespace + "v9";
+const shellFiles = ["./", "index.html", "manifest.webmanifest", "icons/studio-motion.svg",
+  "icons/studio-motion-180.png", "icons/studio-motion-192.png", "icons/studio-motion-512.png"];
+const files = new Set(shellFiles.map(path => new URL(path, scope).href));
+self.addEventListener("install", event => {
+  event.waitUntil((async () => {
+    const current = await caches.open(shellName);
+    await current.addAll([...files].map(url => new Request(url, {cache:"reload"})));
+    await self.skipWaiting();
+  })());
+});
+self.addEventListener("activate", event => {
+  event.waitUntil((async () => {
+    for (const name of await caches.keys()) {
+      if (name.startsWith(namespace) && name !== shellName) await caches.delete(name);
+    }
+    await self.clients.claim();
+  })());
+});
+self.addEventListener("fetch", event => {
+  if (event.request.method !== "GET" || !files.has(event.request.url)) return;
+  event.respondWith((async () => {
+    const current = await caches.open(shellName);
+    try {
+      const actual = await fetch(event.request);
+      if (actual.ok && actual.type === "basic") {
+        try { await current.put(event.request, actual.clone()); } catch { /* Still serve the public shell. */ }
+      }
+      return actual;
+    } catch {
+      return (await current.match(event.request)) || Response.error();
+    }
+  })());
+});

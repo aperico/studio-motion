@@ -1,7 +1,17 @@
 # Studio Motion
 
 One offline HTML file for planning a repeating training week. Download `index.html`
-and open it in a browser. No server, install, sign-in, trackers, or external assets.
+and open it in a browser. No install, sign-in, trackers, or external services needed. The
+single HTML works offline as-is; the public web app can also be added to your Home Screen.
+
+## Home Screen
+
+Open [Studio Motion](https://aperico.github.io/studio-motion/) once while online.
+On iPhone, open it in Safari and use **Share → Add to Home Screen**. On Android,
+open it in Chrome and use **Install app** or **Add to Home screen** from its menu.
+After the app caches its own files, reopen it offline. It never transmits workouts:
+the hosted app starts with separate browser storage from a downloaded HTML file.
+Use the same browser and address to keep using the same saved plan.
 
 ## Use it
 
