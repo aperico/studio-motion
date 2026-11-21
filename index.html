@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v25 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v26 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -72,6 +72,7 @@
 .week-draft-thumb:empty{display:none}.week-draft-thumb .stage{margin:0;border-radius:6px}.week-draft-thumb .stage-label{display:none}
 .week-draft-thumb svg{display:block;width:100%;height:auto;aspect-ratio:380/245}
 .week-draft-exercise .draft-exercise-title{min-width:0;overflow-wrap:anywhere}
+.set-complete{min-height:44px;max-width:100%;margin:4px 0 2px;padding:6px 10px;white-space:normal;overflow-wrap:anywhere;color:var(--mint);font-weight:700}.set-complete[aria-disabled="true"]{color:var(--muted);cursor:default}
 </style></head>
 <body><main class="app">
 <div id="resetInterrupted" class="guide" hidden>
@@ -79,7 +80,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v25</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v26</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -335,6 +336,8 @@ const PT={
  "Load": "Carga",
  "Hold sec": "Manter (s)",
  "Load kg": "Carga (kg)",
+ "Mark a set with one tap": "Marque uma série com um toque",
+ "Tap Set completed on an exercise to mark its next unchecked set. Use the numbered boxes to correct a set.": "Toque em Série concluída no exercício para marcar a próxima série pendente. Use as caixas numeradas para corrigir uma marcação.",
  "Change weight during a workout": "Altere a carga durante o treino",
  "Tap the weight on a workout card to update it without leaving your training or changing checked sets.": "Toque na carga do cartão do exercício para alterá-la sem sair do treino nem perder as séries marcadas.",
  "Rest sec": "Descanso (s)",
@@ -1447,6 +1450,11 @@ function storeMark(row,set,checked,date){
  progressCount(persistCompletion()?"":t(" · Browser did not save the checkmarks"," · O navegador não salvou as séries"));
 }
 let undoCompletion=null,setNotice="";
+function nextUnfinishedSet(row,w=current(),date=dateForDay(day)){
+ const checked=new Set(marksFor(row,w,date));
+ for(let set=1;set<=row.sets;set++)if(!checked.has(set))return set;
+ return 0;
+}
 function progressCount(status=setNotice){
  const rows=effectiveRows(),sets=rows.reduce((total,x)=>total+x.sets,0);
  const counts=rows.map(x=>marksFor(x).filter(n=>n<=x.sets).length),done=counts.reduce((n,count)=>n+count,0);
@@ -1456,6 +1464,13 @@ function progressCount(status=setNotice){
  for(const [i,card] of [...$("trainList").children].entries()){
   card.classList.toggle("is-next",i===first);
   const label=card.querySelector(".next-exercise");if(label)label.hidden=i!==first;
+  const button=card.querySelector("[data-complete-set]"),row=rows[i];
+  if(button&&row){
+   const next=nextUnfinishedSet(row),name=nameOf(byId(row.exercise));
+   button.textContent=next?t("Set completed","Série concluída"):t("All sets completed","Todas as séries concluídas");
+   button.setAttribute("aria-disabled",String(!next));
+   button.setAttribute("aria-label",next?t("Mark set ","Marcar série ")+next+t(" complete for ", " como concluída: ")+name:t("All sets completed: ","Todas as séries concluídas: ")+name);
+  }
  }
  $("trainProgress").textContent=sets?done+" / "+sets+t(" sets · "," séries · ")+displayDate(dateForDay(day))+status:"";
  $("trainProgress").hidden=!sets;const bar=$("trainBar");bar.hidden=!sets;bar.max=sets||1;bar.value=done;
@@ -1568,13 +1583,25 @@ function renderTrainList(){
   }).join("");
   return '<li class="train-card" data-swap-row="'+i+'"><span class="next-exercise" hidden>'+t("First unfinished")+'</span><div class="row"><div class="exercise-heading"><span class="exercise-number" aria-hidden="true">'+(i+1)+'</span><h2 class="exercise-label">'+esc(nameOf(e))+'</h2></div><div class="buttons">'+infoButton(e)+replaceBtn(e)+'</div></div><div class="swap" hidden></div>'+
     (row.id!==current().items[i].id?'<p class="replace-tag">'+t("Alternate for")+" "+esc(displayDate(date))+'</p>':'')+
-    '<dl class="workout-dose">'+workoutDose(row,true)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset>'+
+    '<dl class="workout-dose">'+workoutDose(row,true)+'</dl>'+(setup(e)?'<p class="train-dose">'+esc(setup(e))+'</p>':'')+ '<fieldset class="checks"><legend>'+t("Sets")+'</legend>'+boxes+'</fieldset><button class="set-complete" type="button" data-complete-set="'+i+'" data-row-key="'+row.id+'"></button>'+
     '<div class="card-art">'+artMarkup(e)+'<p class="targets-text">'+targetText(forTarget(e))+'</p></div><details><summary>'+t("Form tips")+'</summary><p class="coach">'+esc(cueOf(e))+'</p>'+
     (contactOf(e.id)?'<p class="contact-cue">'+esc(contactOf(e.id))+'</p>':'')+
     (row.note?'<p class="guide muted">'+esc(row.note)+'</p>':'')+tipMediaMarkup(e,i)+'</details></li>';
  }).join("");
  watchArt(root);progressCount();refreshTrainingGroups();
 }
+$("trainList").addEventListener("click",event=>{
+ const button=event.target.closest("[data-complete-set]");
+ if(!button||!button.isConnected||editing||refreshDates())return;
+ const root=$("trainList"),date=root.dataset.date,w=current(),index=+button.dataset.completeSet;
+ const row=effectiveRows(w,date)[index];
+ if(!row||row.id!==button.dataset.rowKey||date!==dateForDay(day))return;
+ const set=nextUnfinishedSet(row,w,date);
+ if(!set)return;
+ const checkbox=button.closest("[data-swap-row]").querySelector('[data-set="'+set+'"]');
+ if(!checkbox)return;
+ checkbox.checked=true;setNotice="";storeMark(row,set,true,date);
+});
 $("trainList").onchange=e=>{
  const x=e.target;
  if(x.type==="checkbox"&&refreshDates())return;
@@ -2329,6 +2356,7 @@ function localizedFilters(){
 }
 // Owner-editable announcements. Newest first; plain text only and stable unique IDs.
 const announcements=[
+ {id:"one-tap-sets-v26",date:"2026-11-21",title:"Mark a set with one tap",body:"Tap Set completed on an exercise to mark its next unchecked set. Use the numbered boxes to correct a set."},
  {id:"week-planner-maps-v25",date:"2026-11-21",title:"Muscle maps in Auto Plan Week",body:"See primary muscle areas and expand the exercise list for offline thumbnails before saving."},
  {id:"workout-card-weight-v24",date:"2026-11-21",title:"Change weight during a workout",body:"Tap the weight on a workout card to update it without leaving your training or changing checked sets."},
  {id:"forearms-traps-v23",date:"2026-11-21",title:"Forearm and trapezius exercises",body:"Find targeted movements using the new Forearms and Trapezius filters and daily focuses."},

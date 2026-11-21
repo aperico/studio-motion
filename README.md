@@ -164,3 +164,7 @@ For a focused session, select **Chest & triceps** (Portuguese: **Peito e trícep
 ### Weight on workout cards
 
 Tap **Set weight** or the current kg value while training. Enter up to two decimal places (comma or point), enter zero for zero added load, or leave it blank to clear the value. **Save weight** applies it to this row of the recurring plan; a dated replacement keeps its own weight for that date only. This never changes checked sets or other days.
+
+### Mark a set during a workout
+
+Tap **Set completed** to mark the next unchecked set on that exercise. The numbered checkboxes remain available to correct any set. When all sets on the card are checked, the button shows **All sets completed** and does not move to another exercise. Checkmarks stay on that workout date in this browser.
