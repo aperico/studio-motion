@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v36 · Offline Workout Planner</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#101418"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Studio Motion"><title>Studio Motion v37 · Offline Workout Planner</title>
 <style>
 :root{color-scheme:dark;--bg:#101418;--panel:#182026;--inner:#12191e;--line:#324047;--mint:#bcf57c;--muted:#a1b1ba;--txt:#f0f4f4}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}main{width:min(1260px,100%);margin:auto;padding:24px clamp(14px,4vw,48px) 32px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px;color:var(--muted)}.brand{font-weight:800;color:var(--mint);letter-spacing:.12em}.pill{border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:.77rem}h1{font-size:clamp(2.1rem,5.3vw,4.5rem);line-height:1.02;letter-spacing:-.055em;margin:22px 0 8px}h2{font-size:1.32rem;line-height:1.25;margin:0}.intro{color:var(--muted);margin:0 0 24px}.columns{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:clamp(13px,2vw,23px);min-width:0}.kicker{font:.72rem/1.45 ui-monospace,monospace;letter-spacing:.13em;color:var(--mint);margin:0 0 5px}.muted,small{color:var(--muted)}.row,.buttons,.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.row{justify-content:space-between}.filters{margin:13px 0 8px}button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--inner);border-radius:8px;padding:8px 10px;min-width:0}button{cursor:pointer;font-weight:650}button:hover{border-color:var(--mint)}button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--mint);outline-offset:2px}button:disabled{opacity:.42;cursor:default}button.primary{background:var(--mint);color:#17230e;border-color:var(--mint)}input[type=search],#title,#sessionPicker{width:100%}.choices{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-height:440px;overflow:auto;overscroll-behavior:contain;padding:2px}.choices button{text-align:left;font-size:.86rem;padding:8px}.choices button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.stage{background:#0d1518;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:13px 0 10px;position:relative}.stage svg{width:100%;max-height:300px;display:block}.stage-label{position:absolute;left:12px;top:10px;color:#a1b1ba;font:11px ui-monospace,monospace;letter-spacing:.11em;pointer-events:none}.controls{justify-content:space-between}.controls input{width:100px;accent-color:var(--mint);padding:0}.info{padding:10px 0}.info p{margin:5px 0;color:var(--muted)}.field{display:block;font-size:.78rem;color:var(--muted);margin-top:11px}.field input,.field select{color:var(--txt);margin-top:3px}.item{background:var(--inner);border:1px solid var(--line);border-radius:11px;padding:10px;margin-top:8px}.item .view{background:none;border:none;padding:2px;text-align:left}.item .view:hover{color:var(--mint)}.item .buttons{gap:3px}.item .buttons button{padding:4px 7px}.prescription{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}.prescription input,.note input{width:100%;padding:5px 6px}.note{margin-top:5px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 10px;color:var(--mint);font-size:.86rem}.empty{border:1px dashed var(--line);border-radius:10px;padding:15px;color:var(--muted)}.save{font-size:.79rem;color:var(--muted);min-height:1.4em;margin:5px 0}.toolbox{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.toolbox summary{cursor:pointer;color:var(--muted)}footer{font-size:.8rem;color:var(--muted);margin:18px 0}.actions{margin-top:10px}.coach{border-left:2px solid var(--mint);padding-left:9px}.guide{font-size:.82rem}@media(max-width:800px){.columns{grid-template-columns:1fr}.stage svg{max-height:250px}}@media(max-width:370px){.prescription{grid-template-columns:repeat(2,1fr)}}@media print{:root{color-scheme:light;--txt:#111;--muted:#333;--panel:#fff;--inner:#fff;--line:#bbb;--bg:#fff;--mint:#111}.library,.no-print,.toolbox,.item .buttons,footer,.top,.intro{display:none!important}.columns{display:block}main,.panel{padding:0;border:none}.item{break-inside:avoid}input,select{border:0;padding:0!important}h1{font-size:28pt}}
 .week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-bottom:14px}.week button{padding:7px 8px;text-align:left;overflow:hidden}.week small{display:block;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;font-size:.69rem}.week button[aria-pressed=true]{border-color:var(--mint);color:var(--mint)}.workout-view{margin-top:12px;background:var(--inner);border:1px solid var(--line);border-radius:10px;padding:10px}.workout-view .buttons{margin-top:7px}.workout-view ol{padding-left:1.4em}.generator-fields{justify-content:flex-start;margin-bottom:9px}fieldset{border:1px solid var(--line);border-radius:8px;display:flex;gap:6px 12px;flex-wrap:wrap;margin:0;padding:8px;font-size:.82rem}fieldset input{accent-color:var(--mint)}.quicklink{margin:0 0 12px}.quicklink a{color:var(--mint)}[hidden]{display:none!important}@media(max-width:650px){.week{grid-template-columns:repeat(4,minmax(0,1fr))}.filters select{max-width:100%}}@media(max-width:390px){.prescription{grid-template-columns:repeat(2,minmax(0,1fr))}}@media print{.actions{display:none!important}}
@@ -121,7 +121,7 @@
   <button id="finishReset" type="button" aria-haspopup="dialog">Finish reset</button>
 </div>
 <header class="masthead">
-  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v36</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
+  <div class="mast-top"><span class="brand"><svg class="brandmark" viewBox="81 81 350 350" aria-hidden="true"><path d="M144 340c43 1 66-23 90-55l65-91c23-33 46-47 73-45M157 220c31 0 58 13 82 44l20 24c35 41 62 53 99 52" fill="none" stroke="#bcf57c" stroke-width="37" stroke-linecap="round" stroke-linejoin="round"/>  <circle cx="256" cy="256" r="20" fill="#ff914d" stroke="#101418" stroke-width="6"/></svg><span class="brand-title">STUDIO MOTION</span><small class="build">v37</small></span><button type="button" id="aboutToggle" aria-label="Menu: language, credits and updates" aria-controls="studioAbout" aria-expanded="false"><span>Menu</span><span id="menuUnread" class="menu-unread" aria-hidden="true" hidden></span></button></div>
   <div class="buttons no-print mast-actions"><button id="weekGenerate" type="button" aria-haspopup="dialog">Auto Plan Week</button><button class="primary" id="modeSwitch" aria-expanded="false" aria-controls="editView">Plan workout</button></div>
 </header>
 <section id="studioAbout" class="panel no-print" aria-labelledby="aboutHeading" hidden>
@@ -383,6 +383,8 @@ const PT={
  "Back extensors": "Extensores da coluna",
  "Abdominals": "Abdominais",
  "Obliques": "Oblíquos",
+ "Gluteus medius and minimus":"Glúteos médio e mínimo",
+ "Tensor fasciae latae (TFL)":"Tensor da fáscia lata (TFL)",
  "Outer hips": "Parte lateral do quadril",
  "Front hips": "Parte frontal do quadril",
  "Inner thighs": "Parte interna das coxas",
@@ -1114,6 +1116,8 @@ const regions={
  abs:["Abdominals","F","M25 37H35L35 52 30 55 25 52Z"],
  side:["Obliques","F","M20 37L24 38V49L21 51ZM40 37L36 38V49L39 51Z"],
  glute:["Glutes","B","M20 52L29 53 30 61 25 64 20 61ZM40 52L31 53 30 61 35 64 40 61Z"],
+ abductors:["Gluteus medius and minimus","B","M19 50L23 53 23 60 19 64 17 57ZM41 50L37 53 37 60 41 64 43 57Z"],
+ tfl:["Tensor fasciae latae (TFL)","F","M20 52L23 53 22 61 19 64 18 59ZM40 52L37 53 38 61 41 64 42 59Z"],
  hip:["Outer hips","B","M19 50L23 53 23 60 19 64 17 57ZM41 50L37 53 37 60 41 64 43 57Z"],
  flex:["Front hips","F","M22 50L29 54 26 62 21 59ZM38 50L31 54 34 62 39 59Z"],
  inner:["Inner thighs","F","M28 60L29 65 27 77 24 77 25 66ZM32 60L31 65 33 77 36 77 35 66Z"],
@@ -1145,7 +1149,7 @@ target("legpress db-goblet bb-squat bw-squat bw-lunge db-split","quad","glute");
 target("extension","quad");
 target("curl","ham");
 target("calf machine-seated-calf db-calf db-seated-calf bb-calf bw-calf","calf");
-target("abduct","hip");
+target("abduct","abductors","tfl");
 target("hip-adduction","inner");
 target("legpress-wide","quad glute","inner");
 target("db-shoulder-seated","delt","tri");
@@ -1200,6 +1204,8 @@ function mapPose(f,coords,sets){
   pec:f.mirror||torsoSide?[sx+.19*(hx-sx),sy+.19*(hy-sy),5,5]:null,
   abs:f.mirror||torsoSide?[sx+.57*(hx-sx),sy+.57*(hy-sy),5,4]:null,
   glute:torsoSide?[hx-.11*(kx-hx),hy-.11*(ky-hy),5,4]:null,
+  abductors:f.id==="abduct"?[hx+(kx-hx)*.18,hy+4,4,4]:null,
+  tfl:f.id==="abduct"?[hx+(kx-hx)*.40,hy+.40*(ky-hy),3,4]:null,
   hip:f.mirror?[hx+(kx-hx)*.2,hy+(ky-hy)*.2,4,4]:null,
   flex:f.id==="mob-hip"?[hx+5,hy+3,6,5]:null
  };
@@ -1429,7 +1435,7 @@ document.addEventListener("visibilitychange",()=>{
 });
 reducedMotion.addEventListener("change",syncAnimation);
 const esc=v=>String(v).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(t(selected.g)+" · "+t(selected.eq)).toUpperCase();$("name").textContent=nameOf(selected);$("libraryGuideButton").innerHTML=infoButton(selected);$("muscle").textContent=musclesOf(selected);$("setupInfo").textContent=setup(selected);$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=cueOf(selected);list()}
+function choose(id){selected=byId(id);const root=$("libraryDiagram");clearArt(root);root.innerHTML=artMarkup(selected);watchArt(root);$("group").textContent=(t(selected.g)+" · "+t(selected.eq)).toUpperCase();$("name").textContent=nameOf(selected);$("libraryGuideButton").innerHTML=infoButton(selected);$("muscle").innerHTML=targetText(forTarget(selected));$("setupInfo").textContent=setup(selected);$("selectionMap").innerHTML=bodyMaps(forTarget(selected));$("cue").textContent=cueOf(selected);list()}
 const directTriceps=e=>e.g==="Arms"&&forTarget(e)[0].includes("tri");
 const directForearms=e=>e.g==="Arms"&&forTarget(e)[0].some(x=>["grip","wristflex","wristext"].includes(x));
 const directTraps=e=>e.g==="Back"&&forTarget(e)[0].length===1&&forTarget(e)[0].includes("trap");
