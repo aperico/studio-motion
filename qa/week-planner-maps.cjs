@@ -24,7 +24,7 @@ const BASE = process.env.STUDIO_QA_URL || pathToFileURL(path.resolve(__dirname, 
    const map = index => cards.nth(index).locator('.week-draft-map svg');
    const expected = () => page.evaluate(() => proposedWeek.drafts.map(draft => {
     if (!draft || draft.rest) return [];
-    return [...new Set(draft.items.flatMap(row => forTarget(byId(row.exercise))[0]))].sort();
+    return [...new Set(draft.items.filter(row => !areaTargets.has(row.exercise)).flatMap(row => forTarget(byId(row.exercise))[0]))].sort();
    }));
    const actual = () => page.locator('#weekCards .week-card').evaluateAll(rows => rows.map(row =>
     [...row.querySelectorAll('.week-draft-map [data-region]')].map(n => n.dataset.region).sort()
@@ -38,7 +38,8 @@ const BASE = process.env.STUDIO_QA_URL || pathToFileURL(path.resolve(__dirname, 
    assert.equal(await map(0).getAttribute('role'),'img');
    assert.match(await map(0).getAttribute('aria-label'),locale==='pt-BR'?/Áreas principais/:/Main areas/);
    assert.equal(await map(0).locator('g').count(),2);
-   assert(await map(6).isVisible());
+   if ((await expected())[6].length) assert(await map(6).isVisible());
+   else assert.equal(await map(6).count(), 0);
    assert.equal(await page.locator('#weekCards .week-draft-thumb svg').count(),0);
    const exercises = cards.nth(0).locator('[data-week-exercises]');
    await exercises.locator('summary').click();
@@ -64,8 +65,9 @@ const BASE = process.env.STUDIO_QA_URL || pathToFileURL(path.resolve(__dirname, 
    await page.locator('#weekGenerate').click();
    assert.equal(await map(0).count(),0);
    assert(await checks.nth(0).isDisabled());
-   assert.equal(await page.locator('#weekCards .week-draft-map svg').count(),1);
-   assert(await map(6).isVisible());
+   assert.equal(await page.locator('#weekCards .week-draft-map svg').count(),(await expected()).filter(regions => regions.length).length);
+   if ((await expected())[6].length) assert(await map(6).isVisible());
+   else assert.equal(await map(6).count(), 0);
    assert.equal(await storage(),before);
    if (!BASE.startsWith('file:')) {
     await page.evaluate(() => navigator.serviceWorker.ready);

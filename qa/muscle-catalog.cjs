@@ -28,6 +28,21 @@ const path = require('node:path');
           assert.equal(await page.locator('#libraryDiagram [data-target="tfl"]').count(), 1);
         }
       }
+      await page.evaluate(() => {
+        for (const id of ['bw-lunge','bb-thrust','bb-calf','bw-close','cable-pallof']) {
+          const exercise = byId(id);
+          if (!draw(exercise, 0, 'start') || !draw(exercise, 1, 'finish')) throw Error(id);
+        }
+      });
+      const edits = await page.evaluate(() => ({
+        lunge: byId('bw-lunge').p[12] !== byId('bw-lunge').q[12],
+        thrust: draw(byId('bb-thrust'), 1, 'thrust').includes('data-equipment="bench"'),
+        calf: draw(byId('bb-calf'), 1, 'calf').includes('data-equipment="shoulder-bar"'),
+        hands: draw(byId('bw-close'), 1, 'close').includes('data-hand-position="close"'),
+        pallof: byId('cable-pallof').p.slice(0, 6).every((v, i) => v === byId('cable-pallof').q[i]),
+        mobility: workoutOverview([{ exercise: 'mob-brace', sets: 1 }]).primary.length === 0
+      }));
+      assert(Object.values(edits).every(Boolean));
       if (process.argv.includes('--manifest')) console.log(JSON.stringify({ locale, catalog }));
       else console.log(locale, width, 'offline catalog and representative map checks passed');
       await page.close();
