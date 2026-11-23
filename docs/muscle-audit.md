@@ -10,3 +10,11 @@ Machine-specific EMG supports gluteus medius and TFL involvement. These papers m
 - [de Farias et al., hip angle and recruitment in machine abduction](https://www.nature.com/articles/s41598-026-69830-7)
 
 Remaining review: validate each variant's anatomical mapping and pose, including variants that share a simplified rig. The manifest and representative render checks are the starting point for that work.
+
+## Live and historical comparison
+
+The public HTML and service worker matched the v36 release commit `b487195` byte-for-byte. Git history shows that the original muscle-map commit `7c1ba2f` used `target("abduct","hip")`, as did the v36 base. Neither specifies hamstrings. The screenshot discrepancy remains unexplained, since neither the public bytes nor the historical abduction mapping reproduced it.
+
+The isolated 320 px PT-BR upgrade test serves the actual v36 HTML and worker first, then switches the same origin to the candidate. It seeds a synthetic saved abduction workout and logs a set before the upgrade. The test verifies the corrected caption, byte-for-byte persistence of local storage, and an offline reload retaining the workout and mark. Run `node qa/muscle-upgrade.cjs` with Playwright available.
+
+[Anatomical reference for synergistic hip abduction by TFL and the gluteus medius and minimus](https://www.ncbi.nlm.nih.gov/sites/books/NBK499870/).
