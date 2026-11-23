@@ -43,6 +43,29 @@ const path = require('node:path');
         mobility: workoutOverview([{ exercise: 'mob-brace', sets: 1 }]).primary.length === 0
       }));
       assert(Object.values(edits).every(Boolean));
+      const roller = await page.evaluate(() => {
+        const exercise = byId('wrist-roller-cord');
+        return [0, 0.5, 1].map(phase => {
+          const pose = exercise.p.map((v, i) => Math.round(v + (exercise.q[i]-v)*phase));
+          const [ex, ey, wx, wy] = pose.slice(6, 10);
+          const node = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+          node.innerHTML = draw(exercise, phase, 'roller');
+          return ['wristflex', 'wristext'].map(region => {
+            const mark = node.querySelector('[data-target="' + region + '"]');
+            const x = Number(mark.getAttribute('cx')) - ex;
+            const y = Number(mark.getAttribute('cy')) - ey;
+            const dx = wx-ex, dy = wy-ey;
+            const length = Math.hypot(dx, dy);
+            return { along: (x*dx+y*dy)/length**2, across: (dx*y-dy*x)/length };
+          });
+        });
+      });
+      for (const [flexor, extensor] of roller) {
+        assert(Math.abs(flexor.along - 0.5) < 0.01);
+        assert(Math.abs(extensor.along - 0.5) < 0.01);
+        assert(Math.abs(flexor.across - 2.5) < 0.01);
+        assert(Math.abs(extensor.across + 2.5) < 0.01);
+      }
       if (process.argv.includes('--manifest')) console.log(JSON.stringify({ locale, catalog }));
       else console.log(locale, width, 'offline catalog and representative map checks passed');
       await page.close();

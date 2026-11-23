@@ -1212,10 +1212,13 @@ function bodyMaps(sets){
 function mapPose(f,coords,sets){
  const [hx,hy,sx,sy,bx,by,ex,ey,wx,wy,kx,ky,ax,ay]=coords;
  const torsoSide=48<Math.abs(sx-hx)&&!f.mirror;
+ const forearmLength=Math.hypot(wx-ex,wy-ey)||1;
+ const forearmNormal=[-(wy-ey)/forearmLength,(wx-ex)/forearmLength];
+ const forearmSpot=offset=>[(ex+wx)/2+offset*forearmNormal[0],(ey+wy)/2+offset*forearmNormal[1],5,2];
  const spots={
   midDelt:[sx-2,sy,4,5],brachioradialis:[ex+.35*(wx-ex),ey+.35*(wy-ey),3,4],
   trap:[sx-.8,sy-3,6,3],delt:[sx,sy,5,4],rear:[sx-3,sy-2,5,4],bi:[(sx+ex)/2,(sy+ey)/2,4.5,4],tri:[(sx+ex)/2,(sy+ey)/2,4.5,4],
-  grip:[(ex+wx)/2,(ey+wy)/2,4,3],wristflex:[(ex+225)/2,161,5,3],wristext:[(ex+225)/2,157,5,3],quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
+  grip:[(ex+wx)/2,(ey+wy)/2,4,3],wristflex:f.f==="wristbench"?[(ex+225)/2,161,5,3]:forearmSpot(2.5),wristext:f.f==="wristbench"?[(ex+225)/2,157,5,3]:forearmSpot(-2.5),quad:[hx+.58*(kx-hx),hy+.58*(ky-hy),5,4],ham:[hx+.53*(kx-hx),hy+.53*(ky-hy),5,4],
   calf:[kx+.48*(ax-kx),ky+.48*(ay-ky),4,4],shin:[kx+.61*(ax-kx),ky+.61*(ay-ky),4,3],
   pec:f.mirror||torsoSide?[sx+.19*(hx-sx),sy+.19*(hy-sy),5,5]:null,
   abs:f.mirror||torsoSide?[sx+.57*(hx-sx),sy+.57*(hy-sy),5,4]:null,
